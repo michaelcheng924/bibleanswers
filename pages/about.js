@@ -10,10 +10,7 @@ const About = () => (
     <Nav />
 
     <ReadingContainer marginTop={50}>
-      <div className="about-heading">
-        Welcome to Bible Answers, where technology meets apologetics and
-        theology
-      </div>
+      <div className="about-heading">Welcome to Bible Answers.</div>
     </ReadingContainer>
 
     <style jsx>{`

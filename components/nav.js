@@ -4,7 +4,10 @@ import Link from "next/link";
 const Nav = () => (
   <nav>
     <Link href="/">
-      <a className="app-name">Bible Answers</a>
+      <a className="app-name">
+        <img src="../static/logo.png" className="logo" />
+        Bible Answers
+      </a>
     </Link>
 
     <div className="right-links">
@@ -28,10 +31,15 @@ const Nav = () => (
         padding: 0 20px;
       }
       .app-name {
-        color: rgba(0, 0, 0, 0.84);
+        align-items: center;
+        color: #039be5;
+        display: flex;
         font-size: 24px;
         font-weight: bold;
         text-decoration: none;
+      }
+      .logo {
+        margin-right: 10px;
       }
       .right-links a {
         color: rgba(0, 0, 0, 0.54);

@@ -1,5 +1,5 @@
-import whatIsTheGospel from "./whatIsTheGospel";
+import gospel from "./gospel";
 
-const ANSWERS = [whatIsTheGospel];
+const ANSWERS = [gospel];
 
 export default ANSWERS;

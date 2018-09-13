@@ -11,7 +11,7 @@ const Home = () => (
     <Nav />
 
     <TitleSection {...gospel} />
-    <ReadingContainer>{gospel.content}</ReadingContainer>
+    <ReadingContainer marginBottom={20}>{gospel.content}</ReadingContainer>
 
     <style jsx>{``}</style>
   </div>
