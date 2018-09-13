@@ -2,6 +2,7 @@ import { B, Heading, Paragraph, Quote } from "../../components/writing";
 
 const content = (
   <div>
+    <a id="introduction" />
     <Heading>Introduction</Heading>
     <Paragraph first>
       Does your life have purpose and meaning? Or are you simply a product of
@@ -28,6 +29,7 @@ const content = (
       the gospel.
     </Paragraph>
 
+    <a id="bible" />
     <Heading>Bible</Heading>
     <Paragraph first>
       The Bible is how God has chosen to reveal Himself and His plans to humans.
@@ -56,6 +58,7 @@ const content = (
       Next, we will learn what the Bible teaches us about God.
     </Paragraph>
 
+    <a id="god" />
     <Heading>God</Heading>
     <Paragraph first>
       What has God revealed about Himself through the Bible? First, God is the{" "}
@@ -88,6 +91,7 @@ const content = (
       Next, we will learn about sin, which is the problem of every human.
     </Paragraph>
 
+    <a id="sin" />
     <Heading>Sin</Heading>
     <Paragraph first>
       Every human being is guilty of sin before God in two ways:
@@ -140,6 +144,7 @@ const content = (
       next.
     </Paragraph>
 
+    <a id="jesus" />
     <Heading>Jesus</Heading>
     <Paragraph first>
       Jesus is both <B>fully God</B> and <B>fully human</B>. In the verses
@@ -188,6 +193,7 @@ const content = (
       salvation.
     </Paragraph>
 
+    <a id="salvation" />
     <Heading> Salvation</Heading>
     <Paragraph first>
       Jesus taught that to be saved, we must <B>repent</B> and <B>believe</B>{" "}
@@ -236,6 +242,7 @@ const content = (
       to learn more about the God of the Bible.
     </Paragraph>
 
+    <a id="next" />
     <Heading>Next Steps</Heading>
     <Paragraph first>
       The most important thing to do as one who believes in Jesus is to{" "}

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Paragraph = ({ children, first }) => (
+const Paragraph = ({ children, first, noMargin }) => (
   <div>
     {children}
 
@@ -9,13 +9,13 @@ const Paragraph = ({ children, first }) => (
         color: rgba(0, 0, 0, 0.84);
         font-size: 21px;
         line-height: 1.58;
-        margin-top: ${first ? "8px" : "29px"};
+        margin-top: ${first ? "8px" : noMargin ? "0" : "29px"};
       }
 
       @media screen and (max-width: 768px) {
         div {
           font-size: 18px;
-          margin-top: ${first ? "8px" : "21px"};
+          margin-top: ${first ? "8px" : noMargin ? "0" : "21px"};
         }
       }
     `}</style>

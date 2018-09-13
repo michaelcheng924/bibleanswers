@@ -1,11 +1,12 @@
 import React from "react";
 
-const Title = ({ imagePosition, imageUrl, subtitle, title }) => (
+const Title = ({ imagePosition = "30% 70%", imageUrl, subtitle, title }) => (
   <div className="title-section">
     <div className="title-info-container">
       <div className="title-info">
         <h1>{title}</h1>
         <div className="subtitle">{subtitle}</div>
+        <div className="divider">...</div>
       </div>
     </div>
 
@@ -44,6 +45,10 @@ const Title = ({ imagePosition, imageUrl, subtitle, title }) => (
         margin-bottom: 30px;
       }
 
+      .divider {
+        display: none;
+      }
+
       .cover-image {
         background-image: url(${imageUrl});
         background-position: ${imagePosition};
@@ -79,7 +84,14 @@ const Title = ({ imagePosition, imageUrl, subtitle, title }) => (
         .subtitle {
           font-size: 20px;
           line-height: 24px;
-          margin-bottom: 24px;
+          margin-bottom: 10px;
+        }
+
+        .divider {
+          display: block;
+          font-size: 35px;
+          letter-spacing: 0.6em;
+          text-align: center;
         }
 
         .cover-image {
