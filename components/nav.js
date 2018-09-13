@@ -1,59 +1,45 @@
-import React from 'react'
-import Link from 'next/link'
-
-const links = [
-  { href: 'https://github.com/segmentio/create-next-app', label: 'Github' }
-].map(link => {
-  link.key = `nav-link-${link.href}-${link.label}`
-  return link
-})
+import React from "react";
+import Link from "next/link";
 
 const Nav = () => (
   <nav>
-    <ul>
-      <li>
-        <Link prefetch href="/">
-          <a>Home</a>
-        </Link>
-      </li>
-      <ul>
-        {links.map(({ key, href, label }) => (
-          <li key={key}>
-            <Link href={href}>
-              <a>{label}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </ul>
+    <Link href="/">
+      <a className="app-name">Bible Answers</a>
+    </Link>
+
+    <div className="right-links">
+      <Link href="/about">
+        <a>About</a>
+      </Link>
+    </div>
 
     <style jsx>{`
       :global(body) {
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-          Helvetica, sans-serif;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
       }
       nav {
-        text-align: center;
-      }
-      ul {
+        align-items: center;
         display: flex;
+        height: 65px;
         justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1040px;
+        padding: 0 20px;
       }
-      nav > ul {
-        padding: 4px 16px;
-      }
-      li {
-        display: flex;
-        padding: 6px 8px;
-      }
-      a {
-        color: #067df7;
+      .app-name {
+        color: rgba(0, 0, 0, 0.84);
+        font-size: 24px;
+        font-weight: bold;
         text-decoration: none;
-        font-size: 13px;
+      }
+      .right-links a {
+        color: rgba(0, 0, 0, 0.54);
+        font-size: 16px;
+        text-decoration: none;
       }
     `}</style>
   </nav>
-)
+);
 
-export default Nav
+export default Nav;
