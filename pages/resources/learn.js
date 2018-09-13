@@ -24,8 +24,6 @@ const Learn = () => (
         return <ListItem key={resource.url} showUrl {...resource} />;
       })}
     </ReadingContainer>
-
-    <style jsx>{``}</style>
   </div>
 );
 

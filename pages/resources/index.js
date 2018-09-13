@@ -24,8 +24,6 @@ const Resources = () => (
         return <ListItem key={resource.url} {...resource} />;
       })}
     </ReadingContainer>
-
-    <style jsx>{``}</style>
   </div>
 );
 

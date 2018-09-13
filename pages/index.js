@@ -19,8 +19,6 @@ const Home = () => (
         return <ListItem key={pageData.url} {...pageData} />;
       })}
     </ReadingContainer>
-
-    <style jsx>{``}</style>
   </div>
 );
 
