@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { B, Heading, Paragraph, Quote } from "../../components/writing";
 
 const content = (
@@ -259,6 +260,11 @@ const content = (
       great resources to continue learning about God through the Bible.
     </Paragraph>
     <Paragraph>
+      <Link href="/resources/learn">
+        <a className="resources">Resources: Learn</a>
+      </Link>
+    </Paragraph>
+    <Paragraph>
       In addition to continuing to learn about the Bible, you should find a
       solid church where you can fellowship and share life with other believers.
       The Bible is clear that we should be regularly meeting with other
@@ -274,6 +280,18 @@ const content = (
       Visit the Church Finder page for a list of church finders/directories that
       you can use to find a solid church:
     </Paragraph>
+    <Paragraph>
+      <Link href="/resources/church-finders">
+        <a className="resources">Resources: Church Finders</a>
+      </Link>
+    </Paragraph>
+
+    <style jsx>{`
+      .resources {
+        color: #689f38;
+        text-decoration: none;
+      }
+    `}</style>
   </div>
 );
 

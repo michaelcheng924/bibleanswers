@@ -12,7 +12,7 @@ const Learn = () => (
       title="Resources - Learn | Bible Answers"
       description="Resources for learning more about the Bible"
     />
-    <Nav />
+    <Nav active="resources" />
 
     <TitleSection
       imageUrl="../../static/grow.png"

@@ -7,7 +7,7 @@ import { ReadingContainer } from "../components/writing";
 const About = () => (
   <div>
     <Head title="About | Bible Answers" />
-    <Nav />
+    <Nav active="about" />
 
     <ReadingContainer marginTop={50}>
       <div className="about-heading">Welcome to Bible Answers.</div>

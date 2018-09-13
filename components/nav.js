@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const Nav = () => (
+const Nav = ({ active }) => (
   <nav>
     <Link href="/">
       <a className="app-name">
@@ -11,8 +11,15 @@ const Nav = () => (
     </Link>
 
     <div className="right-links">
+      <Link href="/resources">
+        <a style={{ fontWeight: active === "resources" ? "bold" : "inherit" }}>
+          Resources
+        </a>
+      </Link>
       <Link href="/about">
-        <a>About</a>
+        <a style={{ fontWeight: active === "about" ? "bold" : "inherit" }}>
+          About
+        </a>
       </Link>
     </div>
 
@@ -44,6 +51,7 @@ const Nav = () => (
       .right-links a {
         color: rgba(0, 0, 0, 0.54);
         font-size: 16px;
+        margin-left: 20px;
         text-decoration: none;
       }
     `}</style>

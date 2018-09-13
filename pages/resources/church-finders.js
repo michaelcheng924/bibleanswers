@@ -12,7 +12,7 @@ const ChurchFinders = () => (
       title="Resources - Church Finders | Bible Answers"
       description="Find a solid church to attend regularly"
     />
-    <Nav />
+    <Nav active="resources" />
 
     <TitleSection
       imageUrl="../../static/church.png"
