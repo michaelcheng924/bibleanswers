@@ -12,7 +12,7 @@ const Home = () => (
       title="Bible Answers - Explaining and Defending the Bible"
       description="Reformed apologetics and theologry. Answers to questions about the Bible."
     />
-    <Nav />
+    <Nav home={false} />
 
     <ReadingContainer padding={0}>
       {ANSWERS.map(pageData => {

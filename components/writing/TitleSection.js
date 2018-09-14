@@ -52,7 +52,7 @@ const Title = ({ imagePosition = "30% 70%", imageUrl, subtitle, title }) => (
       .cover-image {
         background-image: url(${imageUrl});
         background-position: ${imagePosition};
-        min-height: 400px;
+        height: 400px;
         width: 50%;
       }
 
@@ -95,7 +95,7 @@ const Title = ({ imagePosition = "30% 70%", imageUrl, subtitle, title }) => (
         }
 
         .cover-image {
-          min-height: 500px;
+          height: 500px;
           order: -1;
           width: 100%;
         }

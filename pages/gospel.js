@@ -8,17 +8,17 @@ import {
   ReadingContainer,
   TitleSection
 } from "../components/writing";
-import gospel from "../constants/answers/gospel";
+import answerData from "../constants/answers/gospel";
 
 const Home = () => (
   <div>
     <Head
-      title="What is the Gospel? | Bible Answers"
-      description={gospel.subtitle}
+      title={`${answerData.title} | Bible Answers`}
+      description={answerData.subtitle}
     />
     <Nav />
 
-    <TitleSection {...gospel} />
+    <TitleSection {...answerData} />
     <ReadingContainer marginBottom={20}>
       <Heading>Sections</Heading>
       <Paragraph first>
@@ -44,7 +44,7 @@ const Home = () => (
           7. Next Steps
         </a>
       </Paragraph>
-      {gospel.content}
+      {answerData.content}
     </ReadingContainer>
 
     <style jsx>{`

@@ -1,7 +1,11 @@
 import React from "react";
-import { FaBullhorn, FaPlus } from "react-icons/fa";
+import { FaBullhorn, FaCloud, FaPlus, FaTint } from "react-icons/fa";
 
 const TAG_MAPPING = {
+  baptism: {
+    color: "#1976D2",
+    Icon: FaTint
+  },
   evangelism: {
     color: "#EF6C00",
     Icon: FaBullhorn
@@ -9,6 +13,10 @@ const TAG_MAPPING = {
   gospel: {
     color: "#039BE5",
     Icon: FaPlus
+  },
+  salvation: {
+    color: "#43A047",
+    Icon: FaCloud
   }
 };
 
