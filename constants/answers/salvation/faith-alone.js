@@ -16,7 +16,8 @@ const content = (
       <B>
         true saving faith is never alone, but will always result in a
         transformed life that seeks to obey God.
-      </B>
+      </B>{" "}
+      Here, we will focus on the first part of that answer.
     </Paragraph>
 
     <Heading>Sinners are saved by faith alone</Heading>
@@ -44,6 +45,13 @@ const content = (
       since those who choose to have faith would be making a wiser decision than
       those who refuse to have faith.
     </Paragraph>
+
+    <Heading2>Romans 3:22</Heading2>
+    <Quote first>
+      For by grace you have been saved through faith. And this is not your own
+      doing; it is the gift of God, not a result of works, so that no one may
+      boast.
+    </Quote>
   </div>
 );
 

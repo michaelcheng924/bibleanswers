@@ -178,7 +178,9 @@ class Nav extends Component {
             text-decoration: none;
           }
           .logo {
+            height: 22px;
             margin-right: 10px;
+            width: 32px;
           }
           .nav-right {
             color: rgba(0, 0, 0, 0.54);

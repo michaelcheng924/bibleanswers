@@ -20,7 +20,7 @@ const TAG_MAPPING = {
   }
 };
 
-const Tag = ({ tag }) => {
+const Tag = ({ renderedTag, tag }) => {
   const { color, Icon } = TAG_MAPPING[tag];
 
   return (
@@ -29,7 +29,7 @@ const Tag = ({ tag }) => {
         <div className="tag-icon">
           <Icon />
         </div>
-        {tag}
+        {renderedTag}
       </div>
 
       <style jsx>{`
