@@ -4,6 +4,6 @@ import faithAlone from "./salvation/faith-alone";
 
 import gospel from "./gospel";
 
-const ANSWERS = [/* baptismActs238*/ faithAlone, gospel];
+const ANSWERS = [gospel];
 
 export default ANSWERS;
