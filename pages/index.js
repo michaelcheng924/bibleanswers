@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import Head from "../components/head";
 import Nav from "../components/nav";
 import { FaFilter, FaSearch } from "react-icons/fa";
-import { map, partial, some } from "lodash";
+import { intersection, map, partial, some } from "lodash";
 
+import { closest } from "../components/nav";
 import { TAG_MAPPING } from "../components/Tag";
 import Popover from "../components/Popover";
 import ANSWERS from "../constants/answers";
@@ -19,10 +20,28 @@ class Home extends Component {
     tags: []
   };
 
-  getAnswersList() {
-    return ANSWERS.filter(answer => {
-      const { search } = this.state;
+  onDocumentClick = event => {
+    if (
+      this.state.showFilter &&
+      !closest(event.target, ".icon-filter") &&
+      !closest(event.target, ".filter-popover") &&
+      !event.target.classList.contains("filter-popover") &&
+      !event.target.classList.contains("tag-name")
+    ) {
+      this.setState({ showFilter: false });
+    }
+  };
 
+  getAnswersList() {
+    const { search, tags } = this.state;
+
+    const answers = tags.length
+      ? ANSWERS.filter(answer => {
+          return intersection(answer.tags, tags).length;
+        })
+      : ANSWERS;
+
+    return answers.filter(answer => {
       const lowerSearch = search.toLowerCase();
       const lowerTitle = answer.title.toLowerCase();
       const lowerSubtitle = answer.subtitle.toLowerCase();
@@ -55,7 +74,7 @@ class Home extends Component {
   renderTags(tags, onClick, remove, marginTop = 0) {
     return map(tags, tag => {
       return (
-        <div className="tag" onClick={partial(onClick, tag)}>
+        <div key={tag} className="tag" onClick={partial(onClick, tag)}>
           <Tag remove={remove} tag={tag} />
 
           <style jsx>{`
@@ -81,7 +100,7 @@ class Home extends Component {
       <div className="filter-popover">
         <div className="filter-popover-label">Selected filters:</div>
         <div className="filter-tags" style={{ marginBottom: 10 }}>
-          {this.renderTags(tags, this.onTagClick, true)}
+          {this.renderTags(tags, this.onRemoveTag, true)}
         </div>
         <div className="filter-popover-label">Filter by:</div>
         <div className="filter-tags">
@@ -124,7 +143,7 @@ class Home extends Component {
           title="Bible Answers - Explaining and Defending the Bible"
           description="Reformed apologetics and theologry. Answers to questions about the Bible."
         />
-        <Nav home={false} />
+        <Nav home={false} onDocumentClick={this.onDocumentClick} />
 
         <ReadingContainer marginTop={20} padding={0}>
           <div className="search-container">
@@ -157,7 +176,7 @@ class Home extends Component {
                 value={search}
               />
               <div className="search-tags">
-                {this.renderTags(tags, this.onTagClick, true, 10)}
+                {this.renderTags(tags, this.onRemoveTag, true, 10)}
               </div>
             </div>
           </div>

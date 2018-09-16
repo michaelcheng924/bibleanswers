@@ -4,7 +4,7 @@ import { FaBars, FaChevronLeft, FaHome } from "react-icons/fa";
 import Popover from "./Popover";
 import css from "classnames";
 
-function closest(el, selector) {
+export function closest(el, selector) {
   var matchesFn;
 
   // find vendor prefix
@@ -65,6 +65,12 @@ class Nav extends Component {
   }
 
   onDocumentClick = event => {
+    const { onDocumentClick } = this.props;
+
+    if (onDocumentClick) {
+      onDocumentClick(event);
+    }
+
     if (
       !event.target.classList.contains("popover-link-container") &&
       !closest(event.target, ".nav-right")
