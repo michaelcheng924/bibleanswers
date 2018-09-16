@@ -4,7 +4,7 @@ import Tag from "./Tag";
 
 class ListItem extends Component {
   renderText(text) {
-    const { search } = this.props;
+    const { search = "" } = this.props;
 
     const lowerSearch = search.toLowerCase();
     const lowerText = text.toLowerCase();
