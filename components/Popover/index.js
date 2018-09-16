@@ -489,7 +489,7 @@ class Popover extends React.Component {
     Object.assign(this, { containerEl });
   };
   render() {
-    const { className = "", style = {}, tipSize } = this.props;
+    const { className = "", style = {}, tipSize, width = 230 } = this.props;
     const { standing } = this.state;
 
     const popoverProps = {
@@ -508,7 +508,7 @@ class Popover extends React.Component {
             boxShadow: "0 1px 2px rgba(0,0,0,.25), 0 0 1px rgba(0,0,0,.35)",
             position: "relative",
             top: -8,
-            width: 230
+            width
           }}
         />
         <Tip direction={faces[standing]} size={tipSize} />

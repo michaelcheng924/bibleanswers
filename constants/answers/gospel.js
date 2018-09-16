@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { B, Heading, Paragraph, Quote } from "../../components/writing";
+import { B, Heading, Image, Paragraph, Quote } from "../../components/writing";
 
 const content = (
   <div>
@@ -11,6 +11,7 @@ const content = (
       naturalistic, uncaring universe?
     </Paragraph>
     <Paragraph>
+      <Image src="../../static/universe.png" />
       The truth is that your life does indeed have purpose and meaning. God
       created the universe and humans, and He has revealed exactly why He
       created us.
@@ -46,6 +47,7 @@ const content = (
       ." (2 Timothy 3:16-17)
     </Quote>
     <Paragraph>
+      <Image src="../../static/bible.png" float="right" />
       The Bible is all we need to be "complete, equipped for every good work."
       We do not need anything else besides the Bible. Neither the additional
       teachings of the Roman Catholic Church, nor any direct revelation or voice
@@ -70,6 +72,7 @@ const content = (
       "In the beginning, God created the heavens and the earth." (Genesis 1:1)
     </Quote>
     <Paragraph>
+      <Image src="../../static/earth.png" />
       That God is creator means that He has <B>authority</B> over everything in
       the universe. He created the universe for a specific purpose, namely,{" "}
       <B>for His glory</B>.
@@ -109,6 +112,7 @@ const content = (
       5:12)
     </Quote>
     <Paragraph>
+      <Image src="../../static/blood.png" float="right" />
       Although every human is guilty of sin simply "through one man" (Adam),
       every human is also guilty of <B>personal sin</B>.
     </Paragraph>
@@ -160,6 +164,7 @@ const content = (
       "And <B>the Word became flesh</B> and dwelt among us..." (John 1:14a)
     </Quote>
     <Paragraph>
+      <Image src="../../static/cross.png" />
       Jesus accomplished two primary things during his life to save sinners.
       First, on the cross, he became a <B>substitute sacrifice</B> for the sins
       of all who would believe in him. In other words, he paid the punishment
@@ -205,6 +210,7 @@ const content = (
       and <B>believe</B> in the gospel." (Mark 1:15)
     </Quote>
     <Paragraph>
+      <Image src="../../static/heaven.png" float="right" />
       To <B>repent</B> means to feel sorrow for and hatred toward your sin and
       to actively turn away from your sin and toward obedience to God.
     </Paragraph>
@@ -255,6 +261,7 @@ const content = (
       Jesus Christ whom you have sent." (John 17:3)
     </Quote>
     <Paragraph>
+      <Image src="../../static/grow.png" />
       Eternal life, or heaven, is about "knowing" God, which means that there is
       no end to this endeavor. Visit the "Resources" page below for a list of
       great resources to continue learning about God through the Bible.

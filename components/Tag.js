@@ -1,7 +1,7 @@
 import React from "react";
-import { FaBullhorn, FaCloud, FaPlus, FaTint } from "react-icons/fa";
+import { FaBullhorn, FaCloud, FaPlus, FaTimes, FaTint } from "react-icons/fa";
 
-const TAG_MAPPING = {
+export const TAG_MAPPING = {
   baptism: {
     color: "#1976D2",
     Icon: FaTint
@@ -20,7 +20,7 @@ const TAG_MAPPING = {
   }
 };
 
-const Tag = ({ renderedTag, tag }) => {
+const Tag = ({ remove, renderedTag, tag }) => {
   const { color, Icon } = TAG_MAPPING[tag];
 
   return (
@@ -29,11 +29,13 @@ const Tag = ({ renderedTag, tag }) => {
         <div className="tag-icon">
           <Icon />
         </div>
-        {renderedTag}
+        {renderedTag || tag}
+        {remove ? <FaTimes style={{ marginLeft: 4 }} /> : null}
       </div>
 
       <style jsx>{`
         .tag-name {
+          align-items: center;
           border: 1px solid ${color};
           border-radius: 14.5px;
           color: ${color};
