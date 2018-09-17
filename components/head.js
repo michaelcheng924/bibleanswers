@@ -42,6 +42,11 @@ class Head extends Component {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
 
+        <meta
+          name="google-site-verification"
+          content="PogUvZDNzxJevjFCQGGbb4EwscTEwgdxz1SQSTYJoxU"
+        />
+
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=UA-125895534-1"
