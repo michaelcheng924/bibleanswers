@@ -30,7 +30,9 @@ const Tag = ({ remove, renderedTag, tag }) => {
           <Icon />
         </div>
         {renderedTag || tag}
-        {remove ? <FaTimes style={{ marginLeft: 4 }} /> : null}
+        {remove ? (
+          <FaTimes className="icon-cross" style={{ marginLeft: 4 }} />
+        ) : null}
       </div>
 
       <style jsx>{`

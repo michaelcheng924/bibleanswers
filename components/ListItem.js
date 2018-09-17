@@ -35,7 +35,16 @@ class ListItem extends Component {
   }
 
   render() {
-    const { imageUrl, showUrl, subtitle, tags, title, url } = this.props;
+    const {
+      added,
+      imageUrl,
+      showUrl,
+      subtitle,
+      tags,
+      title,
+      updated,
+      url
+    } = this.props;
 
     return (
       <Link href={url} key={url}>
@@ -54,6 +63,13 @@ class ListItem extends Component {
                     />
                   );
                 })}
+                <div className="date">
+                  {updated
+                    ? `Updated: ${updated}`
+                    : added
+                      ? `Added: ${added}`
+                      : null}
+                </div>
               </div>
             ) : null}
             {showUrl ? <div className="url">{url}</div> : null}
@@ -87,6 +103,12 @@ class ListItem extends Component {
             }
 
             .tags {
+              margin-top: 12px;
+            }
+
+            .date {
+              color: rgba(0, 0, 0, 0.54);
+              font-size: 12px;
               margin-top: 12px;
             }
 

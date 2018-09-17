@@ -309,6 +309,7 @@ const whatIsTheGospel = {
   imagePosition: "79% 50%",
   tags: ["gospel"],
   url: "/gospel",
+  added: "9/15/18",
   content
 };
 

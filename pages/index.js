@@ -24,6 +24,7 @@ class Home extends Component {
     if (
       this.state.showFilter &&
       !closest(event.target, ".icon-filter") &&
+      !closest(event.target, ".icon-cross") &&
       !closest(event.target, ".filter-popover") &&
       !event.target.classList.contains("filter-popover") &&
       !event.target.classList.contains("tag-name")
@@ -35,13 +36,13 @@ class Home extends Component {
   getAnswersList() {
     const { search, tags } = this.state;
 
-    const answers = tags.length
+    let answers = tags.length
       ? ANSWERS.filter(answer => {
           return intersection(answer.tags, tags).length;
         })
       : ANSWERS;
 
-    return answers.filter(answer => {
+    answers = answers.filter(answer => {
       const lowerSearch = search.toLowerCase();
       const lowerTitle = answer.title.toLowerCase();
       const lowerSubtitle = answer.subtitle.toLowerCase();
@@ -54,6 +55,10 @@ class Home extends Component {
       });
 
       return matchesTitle || matchesSubtitle || matchesTags;
+    });
+
+    return answers.sort((a, b) => {
+      return new Date(b.updated || b.added) - new Date(a.updated || a.added);
     });
   }
 
@@ -99,12 +104,23 @@ class Home extends Component {
     return (
       <div className="filter-popover">
         <div className="filter-popover-label">Selected filters:</div>
-        <div className="filter-tags" style={{ marginBottom: 10 }}>
-          {this.renderTags(tags, this.onRemoveTag, true)}
+        <div
+          className="filter-tags"
+          style={{ marginBottom: tags.length ? 10 : 20 }}
+        >
+          {tags.length ? (
+            this.renderTags(tags, this.onRemoveTag, true)
+          ) : (
+            <div className="no-tags">No tags selected</div>
+          )}
         </div>
         <div className="filter-popover-label">Filter by:</div>
         <div className="filter-tags">
-          {this.renderTags(allTags, this.onTagClick)}
+          {allTags.length ? (
+            this.renderTags(allTags, this.onTagClick)
+          ) : (
+            <div className="no-tags">All tags selected</div>
+          )}
         </div>
 
         <style jsx>{`
@@ -129,6 +145,11 @@ class Home extends Component {
             cursor: pointer;
             margin-bottom: 10px;
           }
+
+          .no-tags {
+            color: rgba(0, 0, 0, 0.54);
+            font-style: italic;
+          }
         `}</style>
       </div>
     );
@@ -136,6 +157,8 @@ class Home extends Component {
 
   render() {
     const { inputFocused, search, showFilter, tags } = this.state;
+
+    const answers = this.getAnswersList();
 
     return (
       <div>
@@ -181,11 +204,23 @@ class Home extends Component {
             </div>
           </div>
 
-          {this.getAnswersList().map(pageData => {
-            return (
-              <ListItem key={pageData.url} {...pageData} search={search} />
-            );
-          })}
+          {answers.length ? (
+            this.getAnswersList().map(pageData => {
+              return (
+                <ListItem key={pageData.url} {...pageData} search={search} />
+              );
+            })
+          ) : (
+            <div>
+              <div className="empty-text">No results matched your search</div>
+              <div
+                className="empty-clear"
+                onClick={() => this.setState({ search: "", tags: [] })}
+              >
+                Clear search
+              </div>
+            </div>
+          )}
         </ReadingContainer>
 
         <style jsx>{`
@@ -212,6 +247,21 @@ class Home extends Component {
           .search-tags {
             display: flex;
             flex-wrap: wrap;
+          }
+
+          .empty-text {
+            color: rgba(0, 0, 0, 0.54);
+            font-size: 24px;
+            margin-top: 30px;
+            text-align: center;
+          }
+
+          .empty-clear {
+            color: #689f38;
+            cursor: pointer;
+            font-size: 20px;
+            margin-top: 10px;
+            text-align: center;
           }
         `}</style>
       </div>
