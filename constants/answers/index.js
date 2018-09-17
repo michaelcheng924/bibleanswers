@@ -1,9 +1,7 @@
-import baptismActs238 from "./baptism/acts-2-38";
-
-import faithAlone from "./salvation/faith-alone";
-
 import gospel from "./gospel";
 
-const ANSWERS = [gospel];
+import agnosticism from "./worldview/agnosticism";
+
+const ANSWERS = [gospel, agnosticism];
 
 export default ANSWERS;

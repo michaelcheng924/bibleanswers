@@ -2,10 +2,15 @@ import React from "react";
 import Head from "../../components/head";
 import Nav from "../../components/nav";
 
-import { ReadingContainer, TitleSection } from "../../components/writing";
-import answerData from "../../constants/answers/salvation/faith-alone";
+import {
+  Heading,
+  Paragraph,
+  ReadingContainer,
+  TitleSection
+} from "../../components/writing";
+import answerData from "../../constants/answers/worldview/agnosticism";
 
-const FaithAlone = () => (
+const Agnosticism = () => (
   <div>
     <Head
       title={`${answerData.title} | Bible Answers`}
@@ -18,4 +23,4 @@ const FaithAlone = () => (
   </div>
 );
 
-export default FaithAlone;
+export default Agnosticism;

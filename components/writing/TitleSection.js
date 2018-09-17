@@ -1,11 +1,21 @@
 import React from "react";
 
-const Title = ({ imagePosition = "30% 70%", imageUrl, subtitle, title }) => (
+const Title = ({
+  added,
+  imagePosition = "30% 70%",
+  imageUrl,
+  subtitle,
+  title,
+  updated
+}) => (
   <div className="title-section">
     <div className="title-info-container">
       <div className="title-info">
         <h1>{title}</h1>
         <div className="subtitle">{subtitle}</div>
+        <div className="date">
+          {updated ? `Updated: ${updated}` : added ? `Added: ${added}` : null}
+        </div>
         <div className="divider">...</div>
       </div>
     </div>
@@ -43,6 +53,12 @@ const Title = ({ imagePosition = "30% 70%", imageUrl, subtitle, title }) => (
         font-weight: 400;
         line-height: 28px;
         margin-bottom: 30px;
+      }
+
+      .date {
+        color: rgba(0, 0, 0, 0.54);
+        font-size: 16px;
+        font-style: italic;
       }
 
       .divider {

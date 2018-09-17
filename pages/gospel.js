@@ -10,7 +10,7 @@ import {
 } from "../components/writing";
 import answerData from "../constants/answers/gospel";
 
-const Home = () => (
+const Gospel = () => (
   <div>
     <Head
       title={`${answerData.title} | Bible Answers`}
@@ -57,4 +57,4 @@ const Home = () => (
   </div>
 );
 
-export default Home;
+export default Gospel;

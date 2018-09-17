@@ -23,6 +23,7 @@ class Home extends Component {
   onDocumentClick = event => {
     if (
       this.state.showFilter &&
+      !event.target.classList.contains("icon-filter") &&
       !closest(event.target, ".icon-filter") &&
       !closest(event.target, ".icon-cross") &&
       !closest(event.target, ".filter-popover") &&

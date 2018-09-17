@@ -1,10 +1,22 @@
 import React from "react";
-import { FaBullhorn, FaCloud, FaPlus, FaTimes, FaTint } from "react-icons/fa";
+import {
+  FaBook,
+  FaBullhorn,
+  FaCloud,
+  FaPlus,
+  FaTimes,
+  FaTint,
+  FaGlobe
+} from "react-icons/fa";
 
 export const TAG_MAPPING = {
   // baptism: {
   //   color: "#1976D2",
   //   Icon: FaTint
+  // },
+  // bible: {
+  //   color: "#795548",
+  //   Icon: FaBook
   // },
   // evangelism: {
   //   color: "#EF6C00",
@@ -13,11 +25,15 @@ export const TAG_MAPPING = {
   gospel: {
     color: "#039BE5",
     Icon: FaPlus
-  }
+  },
   // salvation: {
   //   color: "#43A047",
   //   Icon: FaCloud
-  // }
+  // },
+  worldview: {
+    color: "#26A69A",
+    Icon: FaGlobe
+  }
 };
 
 const Tag = ({ remove, renderedTag, tag }) => {
