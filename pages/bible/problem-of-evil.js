@@ -3,9 +3,9 @@ import Head from "../../components/head";
 import Nav from "../../components/nav";
 
 import { ReadingContainer, TitleSection } from "../../components/writing";
-import answerData from "../../constants/answers/worldview/agnosticism";
+import answerData from "../../constants/answers/bible/problem-of-evil";
 
-const Agnosticism = () => (
+const ProblemOfEvil = () => (
   <div>
     <Head
       title={`${answerData.title} | Bible Answers`}
@@ -18,4 +18,4 @@ const Agnosticism = () => (
   </div>
 );
 
-export default Agnosticism;
+export default ProblemOfEvil;

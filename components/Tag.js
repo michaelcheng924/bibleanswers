@@ -14,10 +14,10 @@ export const TAG_MAPPING = {
   //   color: "#1976D2",
   //   Icon: FaTint
   // },
-  // bible: {
-  //   color: "#795548",
-  //   Icon: FaBook
-  // },
+  bible: {
+    color: "#795548",
+    Icon: FaBook
+  },
   // evangelism: {
   //   color: "#EF6C00",
   //   Icon: FaBullhorn
