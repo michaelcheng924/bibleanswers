@@ -120,7 +120,13 @@ class ListItem extends Component {
 
             .answer-image {
               margin-left: 20px;
-              max-height: 110px;
+              width: 80px;
+            }
+
+            @media screen and (max-width: 768px) {
+              .answer-title {
+                font-size: 18px;
+              }
             }
           `}</style>
         </a>
