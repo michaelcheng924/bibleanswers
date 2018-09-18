@@ -3,6 +3,8 @@ import {
   Heading,
   Heading2,
   Image,
+  LI,
+  OL,
   Paragraph,
   Quote
 } from "../../../components/writing";
@@ -12,17 +14,17 @@ const content = (
     <Heading>What is the problem of evil?</Heading>
     <Paragraph first>
       The "problem of evil" is this:
-      <ol>
-        <li>The Bible teaches that God is love and that He is all-powerful.</li>
-        <li>
+      <OL>
+        <LI>The Bible teaches that God is love and that He is all-powerful.</LI>
+        <LI>
           If God is love and He is all-powerful, then evil and suffering would
           not exist in the world.
-        </li>
-        <li>
+        </LI>
+        <LI>
           Evil and suffering exist in the world. Therefore, the God of the Bible
           does not exist.
-        </li>
-      </ol>
+        </LI>
+      </OL>
     </Paragraph>
 
     <Heading>The solution to the "problem"</Heading>

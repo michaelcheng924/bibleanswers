@@ -12,6 +12,14 @@ const Image = ({ float = "left", height = "auto", src, width = 320 }) => (
         margin-right: ${float === "left" ? "20px" : 0};
         width: ${width}px;
       }
+
+      @media screen and (max-width: 500px) {
+        .image {
+          display: block;
+          float: none;
+          margin: 0 auto 21px;
+        }
+      }
     `}</style>
   </div>
 );
