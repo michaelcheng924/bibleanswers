@@ -1,4 +1,4 @@
-const content = `
+const html = `
   <div class="writing">
     <a id="introduction" />
 
@@ -289,15 +289,4 @@ const content = `
   </div>
 `;
 
-const gospel = {
-  title: "What is the Gospel?",
-  subtitle: "Learn the basics of the Bible, God, sin, Jesus, and salvation",
-  imageUrl: "../../static/cover-gospel.jpeg",
-  imagePosition: "79% 50%",
-  tags: ["gospel"],
-  url: "/gospel",
-  added: "9/15/18",
-  content
-};
-
-export default gospel;
+export default html;
