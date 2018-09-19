@@ -1,21 +1,46 @@
-import React from "react";
-import Head from "../../components/head";
-import Nav from "../../components/nav";
+import React, { Component } from "react";
+import axios from "axios";
 
-import { ReadingContainer, TitleSection } from "../../components/writing";
-import answerData from "../../constants/answers/bible/problem-of-evil";
+import Page from "../../components/Page";
 
-const ProblemOfEvil = () => (
-  <div>
-    <Head
-      title={`${answerData.title} | Bible Answers`}
-      description={answerData.subtitle}
-    />
-    <Nav />
+const uid = "problem-of-evil";
 
-    <TitleSection {...answerData} />
-    <ReadingContainer marginBottom={20}>{answerData.content}</ReadingContainer>
-  </div>
-);
+class Gospel extends Component {
+  state = {
+    post: null
+  };
 
-export default ProblemOfEvil;
+  componentWillMount() {
+    axios
+      .get(`http://bibleanswers-backend.herokuapp.com/api/posts/${uid}`)
+      .then(response => {
+        this.setState({
+          post: response.data.post
+        });
+      });
+  }
+
+  render() {
+    const { post } = this.state;
+
+    if (!post) {
+      return (
+        <div>
+          Loading...{" "}
+          <style jsx>{`
+            div {
+              font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+              font-size: 30px;
+              margin-top: 50px;
+              text-align: center;
+            }
+          `}</style>
+        </div>
+      );
+    }
+
+    return <Page {...post} />;
+  }
+}
+
+export default Gospel;

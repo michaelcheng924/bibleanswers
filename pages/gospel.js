@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Head from "../components/head";
-import Nav from "../components/nav";
 
 import { Heading, Paragraph, ReadingContainer } from "../components/writing";
 import Page from "../components/Page";
@@ -50,15 +48,35 @@ class Gospel extends Component {
             7. Next Steps
           </a>
         </Paragraph>
+
+        <style jsx>{`
+          .jump-to-section {
+            color: #689f38;
+            display: block;
+            text-decoration: none;
+          }
+        `}</style>
       </ReadingContainer>
     );
   }
 
   render() {
-    const post = this.state;
+    const { post } = this.state;
 
     if (!post) {
-      return "Loading...";
+      return (
+        <div>
+          Loading...{" "}
+          <style jsx>{`
+            div {
+              font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+              font-size: 30px;
+              margin-top: 50px;
+              text-align: center;
+            }
+          `}</style>
+        </div>
+      );
     }
 
     return <Page {...post} renderBefore={this.renderBefore} />;

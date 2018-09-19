@@ -15,7 +15,7 @@ class Page extends Component {
 
         <TitleSection {...this.props} />
 
-        {renderBefore()}
+        {renderBefore && renderBefore()}
 
         <ReadingContainer marginBottom={20}>
           <div dangerouslySetInnerHTML={{ __html: content }} />
@@ -61,6 +61,11 @@ class Page extends Component {
           .writing img.image-right {
             float: right;
             margin-left: 20px;
+          }
+
+          .writing .link {
+            color: #689f38;
+            text-decoration: none;
           }
 
           @media screen and (max-width: 768px) {

@@ -1,9 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Head from "../components/head";
-import Nav from "../components/nav";
-
-import { ReadingContainer } from "../components/writing";
 
 import html from "../constants/answers/test";
 import Page from "../components/Page";
