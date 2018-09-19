@@ -9,6 +9,7 @@ import {
   TitleSection
 } from "../components/writing";
 import answerData from "../constants/answers/gospel";
+import whatIsTheGospel from "../constants/answers/gospel";
 
 const Gospel = () => (
   <div>
@@ -44,7 +45,7 @@ const Gospel = () => (
           7. Next Steps
         </a>
       </Paragraph>
-      {answerData.content}
+      {whatIsTheGospel.content}
     </ReadingContainer>
 
     <style jsx>{`
