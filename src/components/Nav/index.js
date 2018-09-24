@@ -62,12 +62,6 @@ class Nav extends Component {
   }
 
   onDocumentClick = event => {
-    const { onDocumentClick } = this.props;
-
-    if (onDocumentClick) {
-      onDocumentClick(event);
-    }
-
     if (
       !event.target.classList.contains("popover-link-container") &&
       !closest(event.target, ".nav-right")

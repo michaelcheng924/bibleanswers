@@ -19,6 +19,14 @@ class Home extends Component {
     tags: []
   };
 
+  componentDidUpdate(prevProps, prevState) {
+    if (!prevState.showFilter && this.state.showFilter) {
+      document.addEventListener("click", this.onDocumentClick);
+    } else if (prevState.showFilter && !this.state.showFilter) {
+      document.removeEventListener("click", this.onDocumentClick);
+    }
+  }
+
   onDocumentClick = event => {
     if (
       this.state.showFilter &&
@@ -79,16 +87,13 @@ class Home extends Component {
   renderTags(tags, onClick, remove, marginTop = 0) {
     return map(tags, tag => {
       return (
-        <div key={tag} className="tag" onClick={partial(onClick, tag)}>
+        <div
+          key={tag}
+          className="tag"
+          onClick={partial(onClick, tag)}
+          style={{ marginTop: marginTop }}
+        >
           <Tag remove={remove} tag={tag} />
-
-          <style jsx>{`
-            .tag {
-              cursor: pointer;
-              margin-bottom: 10px;
-              margin-top: ${marginTop}px;
-            }
-          `}</style>
         </div>
       );
     });
@@ -168,7 +173,7 @@ class Home extends Component {
                 onBlur={() => this.setState({ inputFocused: false })}
                 placeholder="Search"
                 style={{
-                  borderBottom: inputFocused ? "1px solid #039be5;" : ""
+                  borderBottom: inputFocused ? "1px solid #039be5" : ""
                 }}
                 value={search}
               />
