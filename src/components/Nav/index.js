@@ -105,7 +105,7 @@ class Nav extends Component {
       <div>
         {POPOVER_LINKS.map(link => {
           const classNames = css("popover-link", {
-            active: link.label === this.props.active
+            active: link.url === this.props.pathname
           });
 
           return (

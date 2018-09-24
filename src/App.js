@@ -49,7 +49,9 @@ class App extends Component {
   renderNav() {
     const { pathname } = this.state;
 
-    return <Nav home={pathname !== "/"} back={this.showBack()} />;
+    return (
+      <Nav home={pathname !== "/"} back={this.showBack()} pathname={pathname} />
+    );
   }
 
   renderPage({ history }) {
