@@ -30,7 +30,7 @@ const post = {
   uid: "agnosticism",
   title: "Is agnosticism self-contradictory?",
   subtitle: "The fatal flaw of agnosticism",
-  imageUrl: "http://bibleanswers.io/static/images/question-marks.png",
+  imageUrl: "/images/question-marks.png",
   imagePosition: "79% 50%",
   tags: ["worldview"],
   url: "/answers/worldview/agnosticism",

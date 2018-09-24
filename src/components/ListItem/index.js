@@ -1,7 +1,6 @@
 import "./styles.css";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Tag from "../Tag";
 
 class ListItem extends Component {
   renderText(text) {
@@ -51,15 +50,6 @@ class ListItem extends Component {
             </div>
             {tags ? (
               <div className="tags">
-                {tags.map(tag => {
-                  return (
-                    <Tag
-                      key={tag}
-                      renderedTag={this.renderText(tag)}
-                      tag={tag}
-                    />
-                  );
-                })}
                 <div className="list-item__date">
                   {updated
                     ? `Updated: ${updated}`

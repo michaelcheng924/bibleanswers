@@ -49,7 +49,7 @@ const data = {
   title:
     "Are Genesis 1 and 2 contradictory regarding when plants were created?",
   subtitle: "Were plants and vegetation created before or after man?",
-  imageUrl: "http://bibleanswers.io/static/images/vegetation.png",
+  imageUrl: "/images/vegetation.png",
   imagePosition: "79% 50%",
   tags: ["bible"],
   url: "/answers/bible/genesis-1-2-plants",

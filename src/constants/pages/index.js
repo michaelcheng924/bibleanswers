@@ -1,8 +1,17 @@
+import { keyBy } from "lodash";
+
 import home from "./home";
 import about from "./about";
 import { resources, resourcesLearn, resourcesChurchFinders } from "./resources";
 
-import { POSTS_BY_URL } from "../posts";
+import { POSTS_ARRAY } from "../posts";
+
+const POSTS_BY_URL = keyBy(POSTS_ARRAY, "url");
+
+const getPostData = pathname => {
+  const splitPathname = pathname;
+  return POSTS_BY_URL[splitPathname];
+};
 
 const PAGES = {
   "/": home,
@@ -13,4 +22,4 @@ const PAGES = {
   ...POSTS_BY_URL
 };
 
-export { PAGES };
+export { PAGES, getPostData };

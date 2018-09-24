@@ -28,7 +28,7 @@ const post = {
   title: "What did Cornelius Tacitus write about Jesus?",
   subtitle:
     "Tacitus provides strong evidence that Jesus existed, was crucified, and perhaps rose from the dead",
-  imageUrl: "http://bibleanswers.io/static/images/tacitus.png",
+  imageUrl: "/images/tacitus.png",
   imagePosition: "79% 50%",
   tags: ["jesus"],
   url: "/answers/jesus/tacitus",

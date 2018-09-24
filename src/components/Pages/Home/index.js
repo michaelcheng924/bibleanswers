@@ -1,22 +1,23 @@
 import "./styles.css";
 import React, { Component } from "react";
-import { FaFilter, FaSearch } from "react-icons/fa";
-import { intersection, map, partial, some } from "lodash";
+import { FaSearch } from "react-icons/fa";
+import { cloneDeep, isNumber, remove, some } from "lodash";
 
-import { POSTS } from "../../../constants/posts";
+import {
+  POSTS_ORGANIZED,
+  POSTS_BY_MOST_RECENT
+} from "../../../constants/posts";
 import { closest } from "../../Nav";
-import Popover from "../../Popover";
 import { ReadingContainer } from "../../Writing";
 import ListItem from "../../ListItem";
-import Tag, { TAG_MAPPING } from "../../Tag";
 
 class Home extends Component {
   state = {
     inputFocused: false,
-    posts: POSTS,
     search: "",
     showFilter: false,
-    tags: []
+    tags: [],
+    view: "Most recent"
   };
 
   componentDidUpdate(prevProps, prevState) {
@@ -42,32 +43,92 @@ class Home extends Component {
   };
 
   getAnswersList() {
-    const { posts, search, tags } = this.state;
+    const { search, view } = this.state;
 
-    let answers = tags.length
-      ? posts.filter(answer => {
-          return intersection(answer.tags, tags).length;
-        })
-      : posts;
+    const lowerSearch = search.toLowerCase();
 
-    answers = answers.filter(answer => {
-      const lowerSearch = search.toLowerCase();
-      const lowerTitle = answer.title.toLowerCase();
-      const lowerSubtitle = answer.subtitle.toLowerCase();
+    let answers;
 
-      const matchesTitle = lowerTitle.indexOf(lowerSearch) !== -1;
-      const matchesSubtitle = lowerSubtitle.indexOf(lowerSearch) !== -1;
-      const matchesTags = some(answer.tags, tag => {
-        const lowerTag = tag.toLowerCase();
-        return lowerTag.indexOf(lowerSearch) !== -1;
+    if (view === "Most recent") {
+      answers = POSTS_BY_MOST_RECENT.filter(answer => {
+        const lowerTitle = answer.title.toLowerCase();
+        const lowerSubtitle = answer.subtitle.toLowerCase();
+
+        const matchesTitle = lowerTitle.indexOf(lowerSearch) !== -1;
+        const matchesSubtitle = lowerSubtitle.indexOf(lowerSearch) !== -1;
+        const matchesTags = some(answer.tags, tag => {
+          const lowerTag = tag.toLowerCase();
+          return lowerTag.indexOf(lowerSearch) !== -1;
+        });
+
+        return matchesTitle || matchesSubtitle || matchesTags;
       });
 
-      return matchesTitle || matchesSubtitle || matchesTags;
+      answers.sort((a, b) => {
+        return new Date(b.updated || b.added) - new Date(a.updated || a.added);
+      });
+    } else {
+      answers = cloneDeep(POSTS_ORGANIZED);
+      answers = answers.reduce(
+        (result, headingData) => {
+          headingData.categories.forEach(categoryData => {
+            if (categoryData.posts) {
+              categoryData.posts = categoryData.posts.filter(post => {
+                const lowerTitle = post.title.toLowerCase();
+
+                const matches = lowerTitle.indexOf(lowerSearch) !== -1;
+
+                if (matches) {
+                  result.postCount++;
+                }
+
+                return matches;
+              });
+            } else {
+              categoryData.subcategories.forEach(subcategoryData => {
+                subcategoryData.posts = subcategoryData.posts.filter(post => {
+                  const lowerTitle = post.title.toLowerCase();
+
+                  const matches = lowerTitle.indexOf(lowerSearch) !== -1;
+
+                  if (matches) {
+                    result.postCount++;
+                  }
+
+                  return matches;
+                });
+              });
+            }
+          });
+
+          result.postsOrganized.push(headingData);
+
+          return result;
+        },
+        {
+          postsOrganized: [],
+          postCount: 0
+        }
+      );
+    }
+
+    remove(answers.postsOrganized, headingData => {
+      remove(headingData.categories, categoryData => {
+        if (categoryData.posts) {
+          return !categoryData.posts.length;
+        }
+
+        remove(categoryData.subcategories, subcategoryData => {
+          return !subcategoryData.posts.length;
+        });
+
+        return !categoryData.subcategories.length;
+      });
+
+      return !headingData.categories.length;
     });
 
-    return answers.sort((a, b) => {
-      return new Date(b.updated || b.added) - new Date(a.updated || a.added);
-    });
+    return answers;
   }
 
   onTagClick = tag => {
@@ -84,112 +145,66 @@ class Home extends Component {
     this.setState({ tags });
   };
 
-  renderTags(tags, onClick, remove, marginTop = 0) {
-    return map(tags, tag => {
-      return (
-        <div
-          key={tag}
-          className="tag"
-          onClick={partial(onClick, tag)}
-          style={{ marginTop: marginTop }}
-        >
-          <Tag remove={remove} tag={tag} />
-        </div>
-      );
-    });
-  }
+  renderView(label) {
+    const { view } = this.state;
 
-  renderFilterPopover() {
-    const { posts, tags } = this.state;
+    const style = {};
 
-    const allTags = Object.keys(TAG_MAPPING).filter(tag => {
-      return !some(tags, selectedTag => selectedTag === tag);
-    });
+    if (view === label) {
+      style.fontWeight = "bold";
+      style.pointEvents = "none";
+    }
 
     return (
-      <div className="filter-popover">
-        <div className="results">
-          {`${this.getAnswersList().length}/${posts.length} results`}
-        </div>
-        <div className="filter-popover-label">Selected filters:</div>
-        <div
-          className="filter-tags"
-          style={{ marginBottom: tags.length ? 10 : 20 }}
-        >
-          {tags.length ? (
-            this.renderTags(tags, this.onRemoveTag, true)
-          ) : (
-            <div className="no-tags">No tags selected</div>
-          )}
-        </div>
-        <div className="filter-popover-label">Filter by:</div>
-        <div className="filter-tags">
-          {allTags.length ? (
-            this.renderTags(allTags, this.onTagClick)
-          ) : (
-            <div className="no-tags">All tags selected</div>
-          )}
+      <div
+        className="view"
+        style={style}
+        onClick={() => this.setState({ view: label })}
+      >
+        {label}
+      </div>
+    );
+  }
+
+  renderSearch(answers) {
+    const { inputFocused, search } = this.state;
+
+    return (
+      <div className="search-container">
+        <FaSearch
+          style={{
+            color: inputFocused ? "#039be5" : "rgba(0,0,0,.54)"
+          }}
+        />
+        <div>
+          <input
+            className="search"
+            onChange={event => this.setState({ search: event.target.value })}
+            onFocus={() => this.setState({ inputFocused: true })}
+            onBlur={() => this.setState({ inputFocused: false })}
+            placeholder="Search"
+            style={{
+              borderBottom: inputFocused ? "1px solid #039be5" : ""
+            }}
+            value={search}
+          />
+          <div className="results">
+            {`Showing ${
+              isNumber(answers.postCount) ? answers.postCount : answers.length
+            }/${POSTS_BY_MOST_RECENT.length} results`}
+          </div>
         </div>
       </div>
     );
   }
 
-  render() {
-    const { inputFocused, posts, search, showFilter, tags } = this.state;
-
-    const answers = this.getAnswersList();
+  renderRecent(answers) {
+    const { search } = this.state;
 
     return (
       <div>
-        <ReadingContainer marginTop={20} padding={0}>
-          <div className="search-container">
-            <Popover
-              isOpen={showFilter}
-              body={this.renderFilterPopover()}
-              place="below"
-              style={{
-                color: inputFocused ? "#039be5" : ""
-              }}
-              width="100%"
-            >
-              <FaFilter
-                className="icon-filter"
-                onClick={() => this.setState({ showFilter: !showFilter })}
-                style={{
-                  color: showFilter ? "039be5" : "rgba(0,0,0,.54)",
-                  cursor: "pointer",
-                  marginRight: 10
-                }}
-              />
-            </Popover>
-            <FaSearch />
-            <div>
-              <input
-                className="search"
-                onChange={event =>
-                  this.setState({ search: event.target.value })
-                }
-                onFocus={() => this.setState({ inputFocused: true })}
-                onBlur={() => this.setState({ inputFocused: false })}
-                placeholder="Search"
-                style={{
-                  borderBottom: inputFocused ? "1px solid #039be5" : ""
-                }}
-                value={search}
-              />
-              <div className="search-tags">
-                {this.renderTags(tags, this.onRemoveTag, true, 10)}
-              </div>
-              <div className="results">
-                {`Showing ${this.getAnswersList().length}/${
-                  posts.length
-                } results`}
-              </div>
-            </div>
-          </div>
-
-          {answers.length ? (
-            this.getAnswersList().map(pageData => {
+        {answers.length
+          ? answers.map(pageData => {
               return (
                 <ListItem
                   key={pageData.url}
@@ -199,17 +214,109 @@ class Home extends Component {
                 />
               );
             })
-          ) : (
-            <div>
-              <div className="empty-text">No results matched your search</div>
-              <div
-                className="empty-clear"
-                onClick={() => this.setState({ search: "", tags: [] })}
-              >
-                Clear search
-              </div>
-            </div>
-          )}
+          : this.renderClear()}
+      </div>
+    );
+  }
+
+  renderPosts(postsData) {
+    const { search } = this.state;
+
+    const lowerSearch = search.toLowerCase();
+
+    return postsData
+      .map(post => {
+        const { title } = post;
+
+        const lowerText = title.toLowerCase();
+
+        const startIndex = lowerText.indexOf(lowerSearch);
+
+        if (startIndex === -1) {
+          return title;
+        }
+
+        const first = title.slice(0, startIndex);
+        const highlight = title.slice(startIndex, startIndex + search.length);
+        const last = title.slice(startIndex + search.length);
+
+        return `<p class="first"><a href="${
+          post.url
+        }">${first}<span class="highlight">${highlight}</span>${last}</a></p>`;
+      })
+      .join(" ");
+  }
+
+  renderOrganized(answers) {
+    const html = `
+      <div class="writing">
+        ${answers.postsOrganized
+          .map((headingData, index) => {
+            return `
+            <h3 class="${index ? "" : "first"}">${headingData.heading}</h3>
+            ${headingData.categories
+              .map(categoryData => {
+                return `
+                <h4>${categoryData.category}</h4>
+                ${
+                  categoryData.subcategories
+                    ? categoryData.subcategories
+                        .map(subcategoryData => {
+                          return `
+                    <p class="first"><em>${subcategoryData.subcategory}</em></p>
+                    ${this.renderPosts(subcategoryData.posts)}
+                  `;
+                        })
+                        .join(" ")
+                    : this.renderPosts(categoryData.posts)
+                }
+              `;
+              })
+              .join(" ")}
+          `;
+          })
+          .join(" ")}
+      </div>
+    `;
+
+    return answers.postCount ? (
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+    ) : (
+      this.renderClear()
+    );
+  }
+
+  renderClear() {
+    return (
+      <div>
+        <div className="empty-text">No results matched your search</div>
+        <div
+          className="empty-clear"
+          onClick={() => this.setState({ search: "", tags: [] })}
+        >
+          Clear search
+        </div>
+      </div>
+    );
+  }
+
+  render() {
+    const { view } = this.state;
+
+    const answers = this.getAnswersList();
+
+    return (
+      <div>
+        <ReadingContainer marginBottom={20} marginTop={20} padding={0}>
+          <div className="views-container">
+            <div className="views-label">Views:</div>
+            {this.renderView("Most recent")}
+            {this.renderView("Organized")}
+          </div>
+          {this.renderSearch(answers)}
+          {view === "Most recent"
+            ? this.renderRecent(answers)
+            : this.renderOrganized(answers)}
         </ReadingContainer>
       </div>
     );

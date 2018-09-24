@@ -156,7 +156,7 @@ const post = {
   uid: "gospel",
   title: "What is the Gospel?",
   subtitle: "Learn the basics of the Bible, God, sin, Jesus, and salvation",
-  imageUrl: "http://bibleanswers.io/static/images/cover-gospel.jpeg",
+  imageUrl: "/images/cover-gospel.jpeg",
   imagePosition: "79% 50%",
   tags: ["gospel"],
   url: "/gospel",

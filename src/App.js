@@ -5,7 +5,7 @@ import Switch from "react-router-dom/Switch";
 import { get } from "lodash";
 
 import { PAGES } from "./constants/pages";
-import { getPostData } from "./constants/posts";
+import { getPostData } from "./constants/pages";
 import Nav from "./components/Nav";
 import Home from "./components/Pages/Home";
 import Resources from "./components/Pages/Resources";

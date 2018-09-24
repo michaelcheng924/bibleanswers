@@ -46,9 +46,13 @@ const post = {
     'Does "the problem of evil" prove that the Bible is self-contradictory?',
   subtitle:
     "If God is all-powerful and all-loving, then how can evil and suffering exist in the world?",
-  imageUrl: "http://bibleanswers.io/static/images/suffering.png",
+  imageUrl: "/images/suffering.png",
   imagePosition: "79% 50%",
-  tags: ["bible"],
+  topics: [
+    "Defending the biblical worldview",
+    "Bible",
+    "Alleged contradictions"
+  ],
   url: "/answers/bible/problem-of-evil",
   added: "9/17/18",
   content

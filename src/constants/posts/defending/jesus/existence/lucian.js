@@ -27,7 +27,7 @@ const post = {
   title: "What did Lucian of Samosata write about Jesus?",
   subtitle:
     "Lucian provides strong evidence that Jesus existed and was crucified",
-  imageUrl: "http://bibleanswers.io/static/images/lucian.png",
+  imageUrl: "/images/lucian.png",
   imagePosition: "79% 50%",
   tags: ["jesus"],
   url: "/answers/jesus/lucian",
