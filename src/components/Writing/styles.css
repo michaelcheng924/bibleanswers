@@ -1,0 +1,191 @@
+/* READING CONTAINER */
+
+.reading-container {
+  margin: 0 auto;
+  max-width: 740px;
+}
+
+/* TITLE SECTION */
+
+.title-section {
+  display: flex;
+  margin: 0 65px;
+}
+
+.title-info-container {
+  width: 50%;
+}
+
+.title-info {
+  margin-left: auto;
+  max-width: 552px;
+  padding: 60px 60px 32px 0;
+}
+
+h1 {
+  color: rgba(0, 0, 0, 0.84);
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 64px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+
+.date {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 16px;
+  font-style: italic;
+}
+
+.divider {
+  display: none;
+}
+
+.cover-image {
+  height: 400px;
+  width: 50%;
+}
+
+@media screen and (max-width: 1199px) {
+  .title-section {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .title-info-container {
+    margin: 30px auto 0;
+    max-width: 740px;
+    padding: 0 20px;
+    width: calc(100% - 40px);
+  }
+
+  .title-info {
+    max-width: none;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 40px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  .divider {
+    display: block;
+    font-size: 35px;
+    letter-spacing: 0.6em;
+    text-align: center;
+  }
+
+  .cover-image {
+    height: 500px;
+    order: -1;
+    width: 100%;
+  }
+}
+
+/* PAGE */
+
+.writing h3 {
+  color: rgba(0, 0, 0, 0.84);
+  font-size: 34px;
+  line-height: 1.15;
+  margin: 0;
+  margin-top: 56px;
+}
+
+.writing h4 {
+  color: rgba(0, 0, 0, 0.84);
+  font-size: 26px;
+  line-height: 1.22;
+  margin: 0;
+  margin-top: 30px;
+}
+
+.writing p,
+.writing ol,
+.writing blockquote {
+  color: rgba(0, 0, 0, 0.84);
+  font-size: 21px;
+  line-height: 1.58;
+  margin: 0;
+  margin-top: 29px;
+}
+
+.writing blockquote {
+  font-style: italic;
+  margin-left: 20px;
+}
+
+.writing .first {
+  margin-top: 8px;
+}
+
+.writing img {
+  margin-top: 29px;
+}
+
+.writing img.image-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.writing img.image-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.writing .link {
+  color: #689f38;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .writing h3 {
+    font-size: 30px;
+    margin-top: 28px;
+  }
+
+  h4 {
+    font-size: 24px;
+    margin-top: 22px;
+  }
+
+  .writing p,
+  .writing ol {
+    font-size: 18px;
+    margin-top: 21px;
+  }
+
+  .writing blockquote {
+    font-size: 18px;
+    margin-top: 21px;
+  }
+
+  .writing img {
+    margin-top: 21px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .writing img {
+    display: block;
+    float: none !important;
+    margin: 21px auto 0 !important;
+  }
+}

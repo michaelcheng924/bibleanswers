@@ -1,0 +1,12 @@
+.tag-name {
+  align-items: center;
+  border-radius: 14.5px;
+  display: inline-flex;
+  font-size: 15px;
+  margin-right: 10px;
+  padding: 4px 8px;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
