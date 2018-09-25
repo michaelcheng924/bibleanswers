@@ -145,7 +145,7 @@ class Home extends Component {
     this.setState({ tags });
   };
 
-  renderView(label) {
+  renderOrderBy(label) {
     const { view } = this.state;
 
     const style = {};
@@ -313,9 +313,9 @@ class Home extends Component {
           padding={view === "Most recent" ? 0 : "0 20px"}
         >
           <div className="views-container">
-            <div className="views-label">Views:</div>
-            {this.renderView("Most recent")}
-            {this.renderView("Organized")}
+            <div className="views-label">Order by:</div>
+            {this.renderOrderBy("Most recent")}
+            {this.renderOrderBy("Topic")}
           </div>
           {this.renderSearch(answers)}
           {view === "Most recent"
