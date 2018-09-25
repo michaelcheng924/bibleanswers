@@ -96,6 +96,7 @@ h1 {
 
   .cover-image {
     height: 500px;
+    margin-left: 0;
     order: -1;
     width: 100%;
   }

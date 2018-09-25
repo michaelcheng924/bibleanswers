@@ -307,7 +307,11 @@ class Home extends Component {
 
     return (
       <div>
-        <ReadingContainer marginBottom={20} marginTop={20} padding={0}>
+        <ReadingContainer
+          marginBottom={20}
+          marginTop={20}
+          padding={view === "Most recent" ? 0 : "0 20px"}
+        >
           <div className="views-container">
             <div className="views-label">Views:</div>
             {this.renderView("Most recent")}
