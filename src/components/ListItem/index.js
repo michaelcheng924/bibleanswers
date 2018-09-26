@@ -48,17 +48,13 @@ class ListItem extends Component {
             <div className="list-item__subtitle">
               {this.renderText(subtitle)}
             </div>
-            {tags ? (
-              <div className="tags">
-                <div className="list-item__date">
-                  {updated
-                    ? `Updated: ${updated}`
-                    : added
-                      ? `Added: ${added}`
-                      : null}
-                </div>
-              </div>
-            ) : null}
+            <div className="list-item__date">
+              {updated
+                ? `Updated: ${updated}`
+                : added
+                  ? `Added: ${added}`
+                  : null}
+            </div>
             {showUrl ? <div className="url">{url}</div> : null}
           </div>
           <img className="answer-image" src={imageUrl} alt={title} />
