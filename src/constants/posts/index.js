@@ -1,11 +1,15 @@
 // GOSPEL
 import gospel from "./gospel";
 
+// BIBLE - AUTHORSHIP
+import papias from "./defending/bible/authorship/papias";
+
 // BIBLE - CONTRADICTIONS
 import genesis12Plants from "./defending/bible/contradictions/genesis12Plants";
 import problemOfEvil from "./defending/bible/contradictions/problemOfEvil";
 
 // JESUS - EXISTENCE
+import didJesusExist from "./defending/jesus/existence/didJesusExist";
 import lucian from "./defending/jesus/existence/lucian";
 import tacitus from "./defending/jesus/existence/tacitus";
 
@@ -21,7 +25,16 @@ const POSTS_ORGANIZED = [
         subcategories: [
           {
             subcategory: "Did Jesus exist?",
-            posts: [tacitus, lucian]
+            posts: [didJesusExist, tacitus, lucian]
+          }
+        ]
+      },
+      {
+        category: "Bible",
+        subcategories: [
+          {
+            subcategory: "Authorship",
+            posts: [papias]
           }
         ]
       },

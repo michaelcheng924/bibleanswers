@@ -70,6 +70,7 @@ h1 {
   }
 
   .title-info {
+    margin-left: 0;
     max-width: none;
     padding: 0;
   }
@@ -131,8 +132,11 @@ h1 {
 }
 
 .writing blockquote {
+  border-left: 3px solid rgba(0, 0, 0, 0.84);
   font-style: italic;
-  margin-left: 20px;
+  left: -20px;
+  padding-left: 20px;
+  position: relative;
 }
 
 .writing .first {
@@ -156,6 +160,13 @@ h1 {
 .writing a {
   color: #689f38;
   text-decoration: none;
+}
+
+.writing superscript {
+  font-size: 14px;
+  margin-left: 2px;
+  position: relative;
+  top: -5px;
 }
 
 @media screen and (max-width: 768px) {
