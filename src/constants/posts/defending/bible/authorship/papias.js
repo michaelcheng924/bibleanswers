@@ -14,6 +14,18 @@ function textRef(number) {
   return `<superscript><a href="#footnote-${number}" id="text-${number}">[${number}]</a></superscript>`;
 }
 
+function renderRefs() {
+  return `
+    <h4>References</h4>
+
+    <ol class="first">
+      ${map(references, (reference, number) => {
+        return `<li><a href="#text-${number}" id="footnote-${number}">^</a> ${reference}</li>`;
+      }).join(" ")}
+    </ol>
+  `;
+}
+
 const content = `
   <div class="writing">
     <h3>Who is Papias?</h3>
@@ -63,19 +75,13 @@ const content = `
 
     <p>In any case, what Papias writes here is strong evidence that Matthew is indeed the original author, whether of the Hebrew original or also of the Greek translation, of the book of Matthew that is one of the four gospels.</p>
 
-    <h4>References</h4>
-
-    <ol class="first">
-      ${map(references, (reference, number) => {
-        return `<li><a href="#text-${number}" id="footnote-${number}">^</a> ${reference}</li>`;
-      }).join(" ")}
-    </ol>
+    ${renderRefs()}
   </div>
 `;
 
 const post = {
   title: "Papias and gospel authorship",
-  subtitle: "Support for traditional authorship of the gospels",
+  subtitle: "Support for the traditional authorship of Mark and Matthew",
   imageUrl: "/images/papias.png",
   imagePosition: "79% 50%",
   url: "/answers/bible/papias-authorship",
