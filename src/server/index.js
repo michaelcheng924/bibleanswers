@@ -1,4 +1,3 @@
-require("dotenv").config();
 import App from "../App";
 import React from "react";
 import bodyParser from "body-parser";
@@ -7,7 +6,9 @@ import express from "express";
 import { renderToString } from "react-dom/server";
 
 import routes from "./routes";
+import { Post } from "./db";
 import { PAGES } from "../constants/pages";
+require("dotenv").config();
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
