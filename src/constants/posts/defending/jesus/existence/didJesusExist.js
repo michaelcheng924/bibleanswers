@@ -92,10 +92,10 @@ const content = `
     <p>Here, Zindler's language is, at best, over-simplified and confusing, and, at worst, deceptive. Here are several points in response:</p>
 
     <ol>
-      <li>First, what exactly is "knows all the gospels but has only heard of Matthew and Mark" supposed to mean? I simply have no idea what "knows all the gospels" is supposed to mean, and the assertion, "but has only heard of Matthew and Mark" is extremely misleading. More accurately, Papias only mentions Matthew and Mark in the passage we have concerning what he says about gospel authorship. To conclude that Papias "has only heard" of the gospels mentioned in this passage requires an enormous leap of logic.</li>
-      <li>Second, ignoring everything else, it remains that Papias wrote about Matthew and Mark, and that Papias lived at a time that was very close to the time that the original authors would have lived. There are strong arguments that Papias's writing demonstrates that Mark was indeed the author of Mark and that Matthew's writing was likely the foundation upon which the Greek version of Matthew was based. Zindler unjustifiably dismisses the weight of Papias's writing by making another misleading statement concerning Justin Martyr, which we will examine in the third point below.</li>
+      <li>First, what exactly is "knows all the gospels but has only heard of Matthew and Mark" supposed to mean? I simply have no idea what "knows all the gospels" is supposed to mean, and the assertion, "but has only heard of Matthew and Mark" is extremely misleading. More accurately, Papias only mentions Matthew and Mark in the passage we have concerning what he says about gospel authorship. To conclude that Papias "has only heard" of the gospels mentioned in this passage requires an enormous leap of logic. He could simply not have written anything about the other gospels. We simply do not know.</li>
+      <li>Second, ignoring everything else, it remains that Papias wrote about Matthew and Mark, and that Papias lived at a time that was very close to the time that the original authors would have lived. There are strong arguments that Papias's writing demonstrates that Mark was indeed the author of Mark and that Matthew's writing was likely the foundation upon which the Greek version of Matthew was based. Zindler unjustifiably dismisses the weight of Papias's writing by making another misleading statement concerning Justin Martyr, which we will examine in the third point below. For more information, see <a href="/bible/papias-authorship" target="_blank">Papias and gospel authorship</a>.</li>
       <li>Papias writes that Justin Martyr "knows of none of the four supposed authors," which is another very misleading statement. Just because Martyr does not mention any of the authors by name does not at all mean that he "knows of none of the four supposed authors." Zindler is making a completely unjustified assertion here, and not only that, Martyr's writings contain information that is relevant to Mark's authorship, which we will examine in the fourth point below.</li>
-      <li>In his writings, Martyr mentions the "memoirs of [Peter]," and says that in these memoirs, it is written that Jesus changed the name of one of the apostles to Peter and also changed the name of the sons of Zebedee to Boanerges, meaning sons of thunder. These two events are not in the so-called Gospel of Peter, but they are both in the Gospel of Mark, and the second event is found <strong>only</strong> in Mark. Furthermore, Papias wrote that Mark was Peter's interpreter, which would lead us to believe that Mark was the author of Peter's memoirs.</li>
+      <li>In his writings, Martyr mentions the "memoirs of [Peter]," and says that in these memoirs, it is written that Jesus changed the name of one of the apostles to Peter and also changed the name of the sons of Zebedee to Boanerges, meaning sons of thunder. These two events are not in the so-called Gospel of Peter, but they are both in the Gospel of Mark, and the second event is found <strong>only</strong> in Mark. Furthermore, Papias wrote that Mark was Peter's interpreter, which would lead us to believe that Mark was the author of Peter's memoirs. For more information, see <a href="/bible/martyr-authorship" target="_blank">Justin Martyr and the Authorship of Mark?</a></li>
     </ol>
 
     <h3>Irenaeus</h3>
@@ -114,7 +114,15 @@ const content = `
 
     <blockquote class="first">It is clear that the gospels of Matthew and Luke could not possibly have been written by an eye-witness of the tales they tell. Both writers plagiarize (largely word-for-word) up to 90% of the gospel of Mark, to which they add sayings of Jesus and would-be historical details.</blockquote>
 
-    <p>Again, this is absolutely terrible reasoning from Zindler, as well as deceptive wording.</p>
+    <p>Again, this is absolutely terrible reasoning from Zindler, as well as deceptive wording. A more position way of phrasing what Zindler writes is, "Both writers use Mark as a source, and they include additional details in specific ways to emphasize the particular message they are trying to communicate."</p>
+
+    <p>That Matthew and Luke utilized ("plagiarized" is an unnecessarily loaded term) Mark does <strong>not at all</strong> lead to the conclusion that "Matthew and Luke could not possibly have been written by an eye-witness of the tales they tell."</p>
+
+    <h3>Matthew and Luke's genealogies</h3>
+
+    <blockquote class="first">Ignoring the fact that Matthew and Luke contradict each other in such critical details as the genealogy of Jesus – and thus cannot both be correct –</blockquote>
+
+    <p>There are several legitimate explanations for the seeming discrepency between Matthew and Luke's genealogies.</p>
 
     <h3>Work in progress...</h3>
   </div>

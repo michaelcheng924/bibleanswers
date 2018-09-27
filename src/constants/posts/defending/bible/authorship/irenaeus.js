@@ -80,6 +80,7 @@ const post = {
   imagePosition: "79% 50%",
   url: "/answers/bible/irenaeus-authorship",
   added: "9/26/18",
+  tags: ["bible", "authorship", "irenaeus"],
   content
 };
 

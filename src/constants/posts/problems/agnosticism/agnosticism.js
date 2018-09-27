@@ -32,9 +32,9 @@ const post = {
   subtitle: "The fatal flaw of agnosticism",
   imageUrl: "/images/question-marks.png",
   imagePosition: "79% 50%",
-  tags: ["worldview"],
   url: "/answers/worldview/agnosticism",
   added: "9/17/18",
+  tags: ["worldview", "agnosticism"],
   content
 };
 

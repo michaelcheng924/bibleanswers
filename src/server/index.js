@@ -1,33 +1,13 @@
-import App from "./App";
+require("dotenv").config();
+import App from "../App";
 import React from "react";
+import bodyParser from "body-parser";
 import { StaticRouter } from "react-router-dom";
 import express from "express";
 import { renderToString } from "react-dom/server";
 
-import bodyParser from "body-parser";
-import { PAGES } from "./constants/pages";
-import mongoose from "mongoose";
-
-mongoose.connect(
-  "mongodb://heroku_xh6ll6gg:t3osessavn6r7dqhjeeis0p810@ds163382.mlab.com:63382/heroku_xh6ll6gg" ||
-    process.env.MONGODB_URI,
-  { useNewUrlParser: true }
-);
-
-var postSchema = new mongoose.Schema({
-  uid: String,
-  title: String,
-  subtitle: String,
-  imageUrl: String,
-  imagePosition: String,
-  tags: Array,
-  url: String,
-  added: String,
-  updated: String,
-  content: String
-});
-
-var Post = mongoose.model("Post", postSchema);
+import routes from "./routes";
+import { PAGES } from "../constants/pages";
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
@@ -92,42 +72,7 @@ const server = express();
 
 server.use(bodyParser.json());
 
-server.get("/api/posts", function(req, res) {
-  Post.find({}, (err, posts) => {
-    res.send({
-      posts
-    });
-  });
-});
-
-server.get("/api/answers/:category/:topic", function(req, res) {
-  const { category, topic } = req.params;
-
-  Post.findOne({ url: `/${category}/${topic}` }, (err, post) => {
-    res.send({
-      post
-    });
-  });
-});
-
-server.post("/api/posts", function(req, res) {
-  const post = new Post(req.body);
-  post.save(() => {
-    res.send({ post });
-  });
-});
-
-server.patch("/api/posts/:id", function(req, res) {
-  Post.update({ _id: req.params.id }, req.body, () => {
-    res.send({ success: true });
-  });
-});
-
-server.delete("/api/post/:id", function(req, res) {
-  Post.deleteOne({ _id: req.params.id }, () => {
-    res.send({ success: true });
-  });
-});
+routes(server);
 
 server
   .disable("x-powered-by")

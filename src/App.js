@@ -14,6 +14,7 @@ import ChurchFinders from "./components/Pages/Resources/ChurchFinders";
 import About from "./components/Pages/About";
 import Gospel from "./components/Pages/Gospel";
 import { Page } from "./components/Writing";
+import Admin from "./components/Admin";
 
 class App extends Component {
   state = {
@@ -75,6 +76,7 @@ class App extends Component {
           <Route path="/about" component={About} />
           <Route path="/gospel" component={Gospel} />
           <Route path="/answers/:category/:topic" render={this.renderPage} />
+          <Route path="/admin" component={Admin} />
         </Switch>
       </div>
     );

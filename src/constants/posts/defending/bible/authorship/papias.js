@@ -86,6 +86,7 @@ const post = {
   imagePosition: "79% 50%",
   url: "/answers/bible/papias-authorship",
   added: "9/26/18",
+  tags: ["bible", "authorship", "papias"],
   content
 };
 

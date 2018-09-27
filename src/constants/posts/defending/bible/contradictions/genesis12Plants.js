@@ -51,9 +51,9 @@ const data = {
   subtitle: "Were plants and vegetation created before or after man?",
   imageUrl: "/images/vegetation.png",
   imagePosition: "79% 50%",
-  tags: ["bible"],
   url: "/answers/bible/genesis-1-2-plants",
   added: "9/21/18",
+  tags: ["bible", "contradictions", "genesis"],
   content
 };
 

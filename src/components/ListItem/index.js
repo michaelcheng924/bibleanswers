@@ -34,7 +34,6 @@ class ListItem extends Component {
       imageUrl,
       showUrl,
       subtitle,
-      tags,
       title,
       updated,
       url
