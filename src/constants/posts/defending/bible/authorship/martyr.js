@@ -24,13 +24,13 @@ const content = `
   <div class="writing">
     <h3>What does Justin Martyr write about the authorship of Mark?</h3>
 
-    <p class="first">Although Martyr does not directly reference the book of Mark, reasoning based upon Martyr's writing leads us to believe that Mark is indeed the author of the book of Mark. Here is what Martyr writes:</p>
+    <p class="first">Although Justin does not directly reference the book of Mark, reasoning based upon Justin's writing leads us to believe that Mark is indeed the author of the book of Mark. Here is what Justin writes:</p>
 
-    <blockquote>And when it is said that He changed the name of one of the apostles to Peter; and when it is written in the memoirs of Him that this so happened, as well as that He changed the names of other two brothers, the sons of Zebedee, to Boanerges, which means sons of thunder...</blockquote>${textRef(
+    <blockquote>And when it is said that He changed the name of one of the apostles to Peter; and when it is written in the memoirs of Him that this so happened, as well as that He changed the names of other two brothers, the sons of Zebedee, to Boanerges, which means sons of thunder...${textRef(
       1
-    )}
+    )}</blockquote>
 
-    <p>Here, Martyr refers to the "memoirs of [Peter]," and he writes that in these memoirs, it is written that Jesus "changed the name of one of the apostles to Peter" and "changed the names of other two brothers, the sons of Zebedee, to Boanerges."</p>
+    <p>Here, Justin refers to the "memoirs of [Peter]," and he writes that in these memoirs, it is written that Jesus "changed the name of one of the apostles to Peter" and "changed the names of other two brothers, the sons of Zebedee, to Boanerges."</p>
     
     <h3>Gospel of Peter or Gospel of Mark?</h3>
 
@@ -40,9 +40,9 @@ const content = `
 
     <blockquote>He appointed the twelve: Simon (to whom he gave the name Peter); James the son of Zebedee and John the brother of James (to whom he gave the name Boanerges, that is, Sons of Thunder);</blockquote>
 
-    <p>From this, we can conclude that Martyr's reference to the "memoirs of [Peter]" is a reference to the book of the gospels that we call Mark. This matches exactly with what we know about the relationship between Peter and Mark, namely, that Mark interpreted and wrote on behalf of Peter (see <a href="/answers/bible/papias-authorship">Papias and gospel authorship</a> for what Papias writes about this).</p>
+    <p>From this, we can conclude that Justin's reference to the "memoirs of [Peter]" is a reference to the book of the gospels that we call Mark. This matches exactly with what we know about the relationship between Peter and Mark, namely, that Mark interpreted and wrote on behalf of Peter (see <a href="/answers/bible/papias-authorship">Papias and gospel authorship</a> for what Papias writes about this).</p>
 
-    <p>Thus, Martyr's writing provides support for the traditional authorship of the gospel of Mark.</p>
+    <p>Thus, Justin's writing provides support for the traditional authorship of the gospel of Mark.</p>
 
     ${renderRefs()}
   </div>

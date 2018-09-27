@@ -4,6 +4,7 @@ import gospel from "./gospel";
 // BIBLE - AUTHORSHIP
 import papias from "./defending/bible/authorship/papias";
 import martyr from "./defending/bible/authorship/martyr";
+import irenaeus from "./defending/bible/authorship/irenaeus";
 
 // BIBLE - CONTRADICTIONS
 import genesis12Plants from "./defending/bible/contradictions/genesis12Plants";
@@ -35,7 +36,7 @@ const POSTS_ORGANIZED = [
         subcategories: [
           {
             subcategory: "Authorship",
-            posts: [papias, martyr]
+            posts: [papias, martyr, irenaeus]
           }
         ]
       },
