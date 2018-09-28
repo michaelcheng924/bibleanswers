@@ -12,6 +12,8 @@ const content = `
 
     <p>There are three things of particular note in this passage:</p>
 
+    <p></p>
+
     <ol>
       <li>Lucian is a trustworthy source because he is hostile to Christianity</li>
       <li>The "man" whom Christians worship clearly refers to Jesus. Even though Jesus is not mentioned by name, Jesus is the only person who would fit this description.</li>

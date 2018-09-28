@@ -3,7 +3,7 @@ const content = `
     <h3>What is the problem of evil?</h3>
     <p class="first">The "problem of evil" is this:</p>
 
-    <p />
+    <p></p>
     <ol>
       <li>The Bible teaches that God is love and that He is all-powerful.</li>
       <li>If God is love and He is all-powerful, then evil and suffering would not exist in the world.</li>

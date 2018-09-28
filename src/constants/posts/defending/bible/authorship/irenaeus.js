@@ -1,24 +1,8 @@
-import { map } from "lodash";
+import { textRef, renderRefs } from "../../../../../utils/writing";
 
 const references = {
   1: "Irenaeus, <em>Adversus Haereses</em> (Book 3, Chapter 1)"
 };
-
-function textRef(number) {
-  return `<superscript><a href="#footnote-${number}" id="text-${number}">[${number}]</a></superscript>`;
-}
-
-function renderRefs() {
-  return `
-    <h4>References</h4>
-
-    <ol class="first">
-      ${map(references, (reference, number) => {
-        return `<li><a href="#text-${number}" id="footnote-${number}">^</a> ${reference}</li>`;
-      }).join(" ")}
-    </ol>
-  `;
-}
 
 const content = `
   <div class="writing">
@@ -68,7 +52,7 @@ const content = `
 
     <p>Those who want to say that the authorship of the gospels is in serious doubt must undertake logical gymnastics to explain away what Irenaeus clearly writes concerning the authorship of the gospels.</p>
 
-    ${renderRefs()}
+    ${renderRefs(references)}
   </div>
 `;
 

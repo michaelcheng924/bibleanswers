@@ -1,24 +1,8 @@
-import { map } from "lodash";
+import { textRef, renderRefs } from "../../../../../utils/writing";
 
 const references = {
   1: "Martyr, <em>Dialogue with Trypho</em> 106; ANF"
 };
-
-function textRef(number) {
-  return `<superscript><a href="#footnote-${number}" id="text-${number}">[${number}]</a></superscript>`;
-}
-
-function renderRefs() {
-  return `
-    <h4>References</h4>
-
-    <ol class="first">
-      ${map(references, (reference, number) => {
-        return `<li><a href="#text-${number}" id="footnote-${number}">^</a> ${reference}</li>`;
-      }).join(" ")}
-    </ol>
-  `;
-}
 
 const content = `
   <div class="writing">
@@ -44,7 +28,7 @@ const content = `
 
     <p>Thus, Justin's writing provides support for the traditional authorship of the gospel of Mark.</p>
 
-    ${renderRefs()}
+    ${renderRefs(references)}
   </div>
 `;
 

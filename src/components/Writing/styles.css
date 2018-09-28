@@ -162,7 +162,7 @@ h1 {
   text-decoration: none;
 }
 
-.writing superscript {
+.writing span {
   font-size: 14px;
   margin-left: 2px;
   position: relative;

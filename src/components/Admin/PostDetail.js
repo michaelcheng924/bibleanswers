@@ -46,65 +46,16 @@ export default class Template extends Component {
     return (
       <div>
         <button onClick={this.props.onBack}>Back</button>
-        <form onSubmit={this.editPost}>
-          <div>
-            <input
-              placeholder="Title"
-              ref={title => (this.title = title)}
-              defaultValue={title}
-            />
-          </div>
-          <div>
-            <input
-              placeholder="Subtitle"
-              ref={subtitle => (this.subtitle = subtitle)}
-              defaultValue={subtitle}
-            />
-          </div>
-          <div>
-            <input
-              placeholder="Image URL"
-              ref={imageUrl => (this.imageUrl = imageUrl)}
-              defaultValue={imageUrl}
-            />
-          </div>
-          <div>
-            <input
-              placeholder="Image Position"
-              ref={imagePosition => (this.imagePosition = imagePosition)}
-              defaultValue={imagePosition}
-            />
-          </div>
-          <div>
-            <input
-              placeholder="URL"
-              ref={url => (this.url = url)}
-              defaultValue={url}
-            />
-          </div>
-          <div>
-            <input
-              placeholder="Added Date"
-              ref={added => (this.added = added)}
-              defaultValue={added}
-            />
-          </div>
-          <div>
-            <input
-              placeholder="Updated Date"
-              ref={updated => (this.updated = updated)}
-              defaultValue={updated}
-            />
-          </div>
-          <div>
-            <textarea
-              placeholder="Content"
-              ref={content => (this.content = content)}
-              defaultValue={content}
-            />
-          </div>
-          <button>Edit</button>
-        </form>
+        <div className="writing">
+          <h3>{title}</h3>
+          <div className="subtitle">{subtitle}</div>
+          <div>{imageUrl}</div>
+          <div>{imagePosition}</div>
+          <div>{url}</div>
+          <div>{added}</div>
+          <div>{updated}</div>
+          <p>{content}</p>
+        </div>
       </div>
     );
   }

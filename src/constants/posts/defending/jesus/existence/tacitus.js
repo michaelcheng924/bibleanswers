@@ -12,6 +12,8 @@ const content = `
 
     <p>There are four things of particular note in this passage:</p>
 
+    <p></p>
+
     <ol>
       <li>Tacitus is a trustworthy source because he is neither Christian nor Jewish</li>
       <li>Tacitus's mention of "Christus" demonstrates that Jesus actually existed and lived.</li>

@@ -20,6 +20,8 @@ const content = `
 
     <p>Three points to note here:</p>
 
+    <p></p>
+
     <ol>
       <li>First, "more reasonable" is a very subjective position. After reading this post's responses to Zindler's arguments, one will just as easily be able to say that it is "more reasonable" to believe that Jesus existed. In fact, the fact that the large majority of people believe that Jesus existed points to his existence being "more reasonable" to believe than his non-existence.</li>
       <li>The definitive argument for Jesus' existence does not rest in anything external to the Bible, but rather in presuppositional argumentation, which states that one must presuppose the Bible (or, that God has revealed Truth through the Bible) in order for Truth, logic, and knowledge to even be possible in the first place. Thus, one who denies the Bible denies the only legitimate explanation for knowledge itself. Presuppositional apologetics will be covered in another post.</li>
@@ -56,6 +58,8 @@ const content = `
 
     <p>The book of revelation provides support for the historicity of Jesus in two ways:</p>
 
+    <p></p>
+    
     <ol>
       <li>Its author is John, one of Jesus' apostles, an eyewitness of Jesus' life. In a citation below, Zindler says that it is "extremely doubtful" that John was even a historical figure, but the burden of proof for this claim is certainly upon the skeptic, since the book itself says that the author is John and there was no dispute about Revelation's authorship until relatively recently.</li>
       <li>It references someone named Jesus, whom John knew and had a relationship with. It is illogical to believe that John is writing about an imaginary character he invented. Although the Jesus John refers to in Revelation is the post-resurrected, post-ascended Jesus, it can be assumed that this Jesus is the same Jesus that John knew while Jesus lived on the earth.</li>
@@ -73,6 +77,8 @@ const content = `
 
     <p>Here are the numerous problems with this paragraph:</p>
 
+    <p></p>
+    
     <ol>
       <li>Oftentimes, when someone writes that "most biblical scholars" hold to a particular position, that person means "most biblical scholars that I consider legitimate, and I do not consider biblical scholars who hold a conservative view of the Bible to be legitimate." The term "most biblical scholars" is quite subjective and not at all an accurate or useful term when used in this way.</li>
       <li>Although the Jesus in Revelation is the post-resurrected, post-ascended Jesus, John still describes Jesus as having a human form, and we can assume that this is the same Jesus that John wrote about earlier as having lived and walked on the earth as a human man.</li>
@@ -91,6 +97,8 @@ const content = `
 
     <p>Here, Zindler's language is, at best, over-simplified and confusing, and, at worst, deceptive. Here are several points in response:</p>
 
+    <p></p>
+    
     <ol>
       <li>First, what exactly is "knows all the gospels but has only heard of Matthew and Mark" supposed to mean? I simply have no idea what "knows all the gospels" is supposed to mean, and the assertion, "but has only heard of Matthew and Mark" is extremely misleading. More accurately, Papias only mentions Matthew and Mark in the passage we have concerning what he says about gospel authorship. To conclude that Papias "has only heard" of the gospels mentioned in this passage requires an enormous leap of logic. He could simply not have written anything about the other gospels. We simply do not know.</li>
       <li>Second, ignoring everything else, it remains that Papias wrote about Matthew and Mark, and that Papias lived at a time that was very close to the time that the original authors would have lived. There are strong arguments that Papias's writing demonstrates that Mark was indeed the author of Mark and that Matthew's writing was likely the foundation upon which the Greek version of Matthew was based. Zindler unjustifiably dismisses the weight of Papias's writing by making another misleading statement concerning Justin Martyr, which we will examine in the third point below. For more information, see <a href="/bible/papias-authorship" target="_blank">Papias and gospel authorship</a>.</li>
