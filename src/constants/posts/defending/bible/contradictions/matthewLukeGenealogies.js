@@ -37,7 +37,6 @@ const post = {
   title: "Are Matthew and Luke's genealogies contradictory?",
   subtitle: "There are several reasonable explanations",
   imageUrl: "/images/genealogy.png",
-  imagePosition: "79% 50%",
   url: "/answers/bible/matthew-luke-genealogy",
   added: "9/27/18",
   content

@@ -26,7 +26,14 @@ class App extends Component {
 
     this.props.history.listen(location => {
       this.setState({ pathname: location.pathname });
-      document.title = get(PAGES[location.pathname], "title", PAGES["/"].title);
+
+      let title = get(PAGES[location.pathname], "title", PAGES["/"].title);
+
+      if (title.indexOf("Bible Answers") === -1) {
+        title = `${title} | Bible Answers`;
+      }
+
+      document.title = title;
     });
   }
 

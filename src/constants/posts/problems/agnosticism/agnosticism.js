@@ -31,7 +31,6 @@ const post = {
   title: "Is agnosticism self-contradictory?",
   subtitle: "The fatal flaw of agnosticism",
   imageUrl: "/images/question-marks.png",
-  imagePosition: "79% 50%",
   url: "/answers/worldview/agnosticism",
   added: "9/17/18",
   tags: ["worldview", "agnosticism"],

@@ -30,7 +30,6 @@ const post = {
   subtitle:
     "Lucian provides strong evidence that Jesus existed and was crucified",
   imageUrl: "/images/lucian.png",
-  imagePosition: "79% 50%",
   tags: ["jesus"],
   url: "/answers/jesus/lucian",
   added: "9/21/18",

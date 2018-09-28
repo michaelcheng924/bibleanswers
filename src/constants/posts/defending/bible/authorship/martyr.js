@@ -36,7 +36,6 @@ const post = {
   title: "Justin Martyr and the authorship of Mark",
   subtitle: "Support for the traditional authorship of Mark",
   imageUrl: "/images/martyr.png",
-  imagePosition: "79% 50%",
   url: "/answers/bible/justin-martyr-mark",
   added: "9/26/18",
   tags: ["bible", "authorship", "justin martyr"],

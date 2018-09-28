@@ -1,8 +1,9 @@
+import EXPLAINING from "./explaining";
 import DEFENDING from "./defending";
 import PROBLEMS from "./problems";
 import PRACTICAL from "./practical";
 
-const POSTS_ORGANIZED = [DEFENDING, PROBLEMS, PRACTICAL];
+const POSTS_ORGANIZED = [EXPLAINING, DEFENDING, PROBLEMS, PRACTICAL];
 
 const POSTS_ARRAY = POSTS_ORGANIZED.reduce((result, headerData) => {
   headerData.categories.forEach(categoryData => {

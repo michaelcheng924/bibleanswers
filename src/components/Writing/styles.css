@@ -130,12 +130,26 @@ h1 {
 
 .writing p,
 .writing ol,
+.writing ul,
 .writing blockquote {
   color: rgba(0, 0, 0, 0.84);
   font-size: 21px;
   line-height: 1.58;
   margin: 0;
   margin-top: 29px;
+}
+
+.writing ul {
+  list-style: none;
+}
+
+.writing ul li:before {
+  color: #689f38;
+  content: "▶";
+  font-size: 9px;
+  left: -5px;
+  position: relative;
+  top: -3px;
 }
 
 .writing blockquote {
@@ -148,6 +162,14 @@ h1 {
 
 .writing .first {
   margin-top: 8px;
+}
+
+.writing .nomargin {
+  margin: 0;
+}
+
+.writing .indent {
+  margin-left: 20px;
 }
 
 .writing img {

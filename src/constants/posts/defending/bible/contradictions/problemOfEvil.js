@@ -47,7 +47,6 @@ const post = {
   subtitle:
     "If God is all-powerful and all-loving, then how can evil and suffering exist in the world?",
   imageUrl: "/images/suffering.png",
-  imagePosition: "79% 50%",
   url: "/answers/bible/problem-of-evil",
   added: "9/17/18",
   tags: ["bible", "contradictions"],

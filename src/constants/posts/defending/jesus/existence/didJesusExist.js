@@ -141,7 +141,6 @@ const post = {
     "Did Jesus Exist? A point-by-point response to atheists.org's Frank Zindler",
   subtitle: "Refuting Zindler's unconvincing arguments",
   imageUrl: "/images/cross-jesus-exist.png",
-  imagePosition: "79% 50%",
   url: "/answers/jesus/did-jesus-exist",
   added: "9/21/18",
   content

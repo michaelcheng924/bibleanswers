@@ -157,7 +157,6 @@ const post = {
   title: "What is the Gospel?",
   subtitle: "Learn the basics of the Bible, God, sin, Jesus, and salvation",
   imageUrl: "/images/cover-gospel.jpeg",
-  imagePosition: "79% 50%",
   tags: ["gospel"],
   url: "/gospel",
   added: "9/15/18",

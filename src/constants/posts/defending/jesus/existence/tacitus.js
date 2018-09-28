@@ -31,7 +31,6 @@ const post = {
   subtitle:
     "Tacitus provides strong evidence that Jesus existed, was crucified, and perhaps rose from the dead",
   imageUrl: "/images/tacitus.png",
-  imagePosition: "79% 50%",
   tags: ["jesus"],
   url: "/answers/jesus/tacitus",
   added: "9/21/18",

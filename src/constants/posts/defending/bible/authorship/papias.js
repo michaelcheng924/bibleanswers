@@ -69,7 +69,6 @@ const post = {
   title: "Papias and gospel authorship",
   subtitle: "Support for the traditional authorship of Mark and Matthew",
   imageUrl: "/images/papias.png",
-  imagePosition: "79% 50%",
   url: "/answers/bible/papias-authorship",
   added: "9/26/18",
   tags: ["bible", "authorship", "papias"],

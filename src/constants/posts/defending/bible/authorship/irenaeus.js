@@ -61,7 +61,6 @@ const post = {
   subtitle:
     "Support for the traditional authorship of Matthew, Mark, Luke, and John",
   imageUrl: "/images/irenaeus.png",
-  imagePosition: "79% 50%",
   url: "/answers/bible/irenaeus-authorship",
   added: "9/26/18",
   tags: ["bible", "authorship", "irenaeus"],

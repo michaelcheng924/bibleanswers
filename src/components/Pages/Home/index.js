@@ -240,14 +240,14 @@ class Home extends Component {
         const highlight = title.slice(startIndex, startIndex + search.length);
         const last = title.slice(startIndex + search.length);
 
-        return `<p class="first"><a href="${
+        return `<li><a href="${
           post.url
-        }">${first}<span class="highlight">${highlight}</span>${last}</a></p>`;
+        }">${first}<span class="highlight">${highlight}</span>${last}</a></li>`;
       })
       .join(" ");
   }
 
-  renderOrganized(answers) {
+  renderTopics(answers) {
     const html = `
       <div class="writing">
         ${answers.postsOrganized
@@ -264,11 +264,17 @@ class Home extends Component {
                         .map(subcategoryData => {
                           return `
                     <p class="first"><em>${subcategoryData.subcategory}</em></p>
-                    ${this.renderPosts(subcategoryData.posts)}
+                    <ul class="first">
+                      ${this.renderPosts(subcategoryData.posts)}
+                    </ul>
                   `;
                         })
                         .join(" ")
-                    : this.renderPosts(categoryData.posts)
+                    : `
+                      <ul class="first">
+                        ${this.renderPosts(categoryData.posts)}
+                      </ul>
+                    `
                 }
               `;
               })
@@ -320,7 +326,7 @@ class Home extends Component {
           {this.renderSearch(answers)}
           {view === "Most recent"
             ? this.renderRecent(answers)
-            : this.renderOrganized(answers)}
+            : this.renderTopics(answers)}
         </ReadingContainer>
       </div>
     );
