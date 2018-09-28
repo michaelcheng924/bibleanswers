@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./styles.css";
-import gospel from "../../../constants/posts/gospel";
+import gospel from "../../../constants/posts/practical/sharing/gospel";
 import { Page } from "../../Writing";
 
 function beforeContent() {

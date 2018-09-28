@@ -21,13 +21,9 @@ const Title = ({
         </div>
       </div>
 
-      <div
-        className="cover-image"
-        style={{
-          backgroundImage: `url(${imageUrl})`,
-          backgroundPosition: imagePosition
-        }}
-      />
+      <div className="cover-image-container">
+        <img className="cover-image" src={imageUrl} alt={title} />
+      </div>
     </div>
   );
 };

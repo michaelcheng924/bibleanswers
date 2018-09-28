@@ -37,11 +37,16 @@ const About = () => (
           <a
             href="https://www.facebook.com/permalink.php?story_fbid=473522429796321&id=472739386541292&notif_id=1537987200032073&notif_t=page_post_reaction"
             target="_blank"
+            rel="noopener noreferrer"
           >
             this Facebook ad
           </a>
           , which links to{" "}
-          <a href="http://bibleanswers.io/gospel" target="_blank">
+          <a
+            href="http://bibleanswers.io/gospel"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             this gospel summary page
           </a>
           .

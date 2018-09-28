@@ -50,10 +50,17 @@ h1 {
   display: none;
 }
 
-.cover-image {
-  height: 400px;
+.cover-image-container {
+  align-items: center;
+  display: flex;
   margin-left: 20px;
+  max-height: 400px;
+  overflow: hidden;
   width: calc(50% - 10px);
+}
+
+.cover-image {
+  width: 100%;
 }
 
 @media screen and (max-width: 1199px) {
@@ -95,9 +102,9 @@ h1 {
     text-align: center;
   }
 
-  .cover-image {
-    height: 500px;
+  .cover-image-container {
     margin-left: 0;
+    max-height: 500px;
     order: -1;
     width: 100%;
   }
