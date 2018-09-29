@@ -4,9 +4,9 @@ import bodyParser from "body-parser";
 import { StaticRouter } from "react-router-dom";
 import express from "express";
 import { renderToString } from "react-dom/server";
+import { find } from "lodash";
 
-import routes from "./routes";
-import { Post } from "./db";
+import { ALL_POSTS } from "../constants/posts";
 import { PAGES } from "../constants/pages";
 require("dotenv").config();
 
@@ -77,16 +77,16 @@ const server = express();
 
 server.use(bodyParser.json());
 
-routes(server);
-
 server
   .disable("x-powered-by")
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
   .get("/*", (req, res) => {
     if (req.url.indexOf("/answers") !== -1) {
-      Post.findOne({ url: req.url.split("/answers")[1] }, (err, result) => {
-        sendResponse(req, res, result);
-      });
+      const post = find(
+        ALL_POSTS,
+        postData => postData.url === req.url.split("/answers")[1]
+      );
+      sendResponse(req, res, post);
     } else {
       sendResponse(req, res);
     }
