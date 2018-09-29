@@ -11,7 +11,7 @@ const Resources = () => (
       title="Resources"
       subtitle="A collection of links to websites to help you grow in your faith"
     />
-    <ReadingContainer marginTop={50}>
+    <ReadingContainer style={{ marginTop: 50 }}>
       {RESOURCES.map(resource => {
         return <ListItem key={resource.url} {...resource} />;
       })}

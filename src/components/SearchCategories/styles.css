@@ -1,0 +1,20 @@
+.search-categories__container {
+  margin-bottom: 20px;
+}
+
+.search-categories__root {
+  display: flex;
+  justify-content: space-around;
+}
+
+.search-category {
+  color: #689F38;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.search-category__active {
+  color: #039BE5;
+  font-weight: bold;
+  pointer-events: none;
+}

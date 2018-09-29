@@ -2,6 +2,8 @@
 
 .reading-container {
   margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
   max-width: 740px;
 }
 
@@ -24,7 +26,6 @@
 }
 
 h1 {
-  color: rgba(0, 0, 0, 0.84);
   font-size: 56px;
   font-weight: 500;
   line-height: 64px;
@@ -113,7 +114,6 @@ h1 {
 /* PAGE */
 
 .writing h3 {
-  color: rgba(0, 0, 0, 0.84);
   font-size: 34px;
   line-height: 1.15;
   margin: 0;
@@ -121,7 +121,6 @@ h1 {
 }
 
 .writing h4 {
-  color: rgba(0, 0, 0, 0.84);
   font-size: 26px;
   line-height: 1.22;
   margin: 0;
@@ -130,30 +129,14 @@ h1 {
 
 .writing p,
 .writing ol,
-.writing ul,
 .writing blockquote {
-  color: rgba(0, 0, 0, 0.84);
   font-size: 21px;
   line-height: 1.58;
   margin: 0;
   margin-top: 29px;
 }
 
-.writing ul {
-  list-style: none;
-}
-
-.writing ul li:before {
-  color: #689f38;
-  content: "▶";
-  font-size: 9px;
-  left: -5px;
-  position: relative;
-  top: -3px;
-}
-
 .writing blockquote {
-  border-left: 3px solid rgba(0, 0, 0, 0.84);
   font-style: italic;
   left: -20px;
   padding-left: 20px;
@@ -162,14 +145,6 @@ h1 {
 
 .writing .first {
   margin-top: 8px;
-}
-
-.writing .nomargin {
-  margin: 0;
-}
-
-.writing .indent {
-  margin-left: 20px;
 }
 
 .writing img {

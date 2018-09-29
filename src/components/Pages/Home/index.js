@@ -1,24 +1,36 @@
 import "./styles.css";
 import React, { Component } from "react";
-import { FaSearch } from "react-icons/fa";
-import { cloneDeep, isNumber, remove, some } from "lodash";
+import { Link } from "react-router-dom";
 
-import {
-  POSTS_ORGANIZED,
-  POSTS_BY_MOST_RECENT
-} from "../../../constants/posts";
-import { closest } from "../../Nav";
+import { some } from "lodash";
+import css from "classnames";
+
+import APOLOGETICS from "../../../constants/posts/apologetics";
+import THEOLOGY from "../../../constants/posts/theology";
+import { ALL_POSTS, POSTS_BY_MOST_RECENT } from "../../../constants/posts";
 import { ReadingContainer } from "../../Writing";
 import ListItem from "../../ListItem";
+import Search from "../../Search";
+import SearchCategories from "../../SearchCategories";
+
+const DATA_MAPPING = {
+  apologetics: APOLOGETICS,
+  theology: THEOLOGY
+};
 
 class Home extends Component {
-  state = {
-    inputFocused: false,
-    search: "",
-    showFilter: false,
-    tags: [],
-    view: "Most recent"
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      category: props.match.params.category || "",
+      inputFocused: false,
+      root: props.match.params.root || "newest",
+      search: "",
+      showFilter: false,
+      tags: []
+    };
+  }
 
   componentDidUpdate(prevProps, prevState) {
     if (!prevState.showFilter && this.state.showFilter) {
@@ -26,269 +38,107 @@ class Home extends Component {
     } else if (prevState.showFilter && !this.state.showFilter) {
       document.removeEventListener("click", this.onDocumentClick);
     }
+
+    const { category, root } = this.props.match.params;
+
+    if (prevProps.match.params.root !== root) {
+      this.setState({ root });
+    }
+
+    if (prevProps.match.params.category !== category) {
+      this.setState({ category });
+    }
   }
 
-  onDocumentClick = event => {
-    if (
-      this.state.showFilter &&
-      !event.target.classList.contains("icon-filter") &&
-      !closest(event.target, ".icon-filter") &&
-      !closest(event.target, ".icon-cross") &&
-      !closest(event.target, ".filter-popover") &&
-      !event.target.classList.contains("filter-popover") &&
-      !event.target.classList.contains("tag-name")
-    ) {
-      this.setState({ showFilter: false });
-    }
+  setRoot = root => {
+    this.setState({ root });
   };
 
-  getAnswersList() {
-    const { search, view } = this.state;
+  onSearchChange = event => {
+    this.setState({ search: event.target.value });
+  };
+
+  getPostsList(posts) {
+    const { search } = this.state;
 
     const lowerSearch = search.toLowerCase();
 
-    let answers;
+    return posts.filter(answer => {
+      const lowerTitle = answer.title.toLowerCase();
+      const lowerSubtitle = answer.subtitle.toLowerCase();
 
-    if (view === "Most recent") {
-      answers = POSTS_BY_MOST_RECENT.filter(answer => {
-        const lowerTitle = answer.title.toLowerCase();
-        const lowerSubtitle = answer.subtitle.toLowerCase();
-
-        const matchesTitle = lowerTitle.indexOf(lowerSearch) !== -1;
-        const matchesSubtitle = lowerSubtitle.indexOf(lowerSearch) !== -1;
-        const matchesTags = some(answer.tags, tag => {
-          const lowerTag = tag.toLowerCase();
-          return lowerTag.indexOf(lowerSearch) !== -1;
-        });
-
-        return matchesTitle || matchesSubtitle || matchesTags;
+      const matchesTitle = lowerTitle.indexOf(lowerSearch) !== -1;
+      const matchesSubtitle = lowerSubtitle.indexOf(lowerSearch) !== -1;
+      const matchesTags = some(answer.tags, tag => {
+        const lowerTag = tag.toLowerCase();
+        return lowerTag.indexOf(lowerSearch) !== -1;
       });
 
-      answers.sort((a, b) => {
-        return new Date(b.updated || b.added) - new Date(a.updated || a.added);
-      });
-    } else {
-      answers = cloneDeep(POSTS_ORGANIZED);
-      answers = answers.reduce(
-        (result, headingData) => {
-          headingData.categories.forEach(categoryData => {
-            if (categoryData.posts) {
-              categoryData.posts = categoryData.posts.filter(post => {
-                const lowerTitle = post.title.toLowerCase();
+      return matchesTitle || matchesSubtitle || matchesTags;
+    });
+  }
 
-                const matches = lowerTitle.indexOf(lowerSearch) !== -1;
+  renderNewest() {
+    const posts = this.getPostsList(POSTS_BY_MOST_RECENT);
 
-                if (matches) {
-                  result.postCount++;
-                }
+    return this.renderPosts(posts);
+  }
 
-                return matches;
-              });
-            } else {
-              categoryData.subcategories.forEach(subcategoryData => {
-                subcategoryData.posts = subcategoryData.posts.filter(post => {
-                  const lowerTitle = post.title.toLowerCase();
+  renderCategories() {
+    const { category, root } = this.state;
 
-                  const matches = lowerTitle.indexOf(lowerSearch) !== -1;
+    if (root === "newest") {
+      return null;
+    }
 
-                  if (matches) {
-                    result.postCount++;
-                  }
+    const data = DATA_MAPPING[root];
 
-                  return matches;
-                });
-              });
-            }
+    return (
+      <div>
+        <ReadingContainer>
+          <div className="writing">
+            <h4>{data.heading}</h4>
+          </div>
+        </ReadingContainer>
+        {data.categories.map(categoryData => {
+          const classNames = css("first", {
+            "search-category__active": categoryData.categoryUrl === category
           });
 
-          result.postsOrganized.push(headingData);
-
-          return result;
-        },
-        {
-          postsOrganized: [],
-          postCount: 0
-        }
-      );
-    }
-
-    remove(answers.postsOrganized, headingData => {
-      remove(headingData.categories, categoryData => {
-        if (categoryData.posts) {
-          return !categoryData.posts.length;
-        }
-
-        remove(categoryData.subcategories, subcategoryData => {
-          return !subcategoryData.posts.length;
-        });
-
-        return !categoryData.subcategories.length;
-      });
-
-      return !headingData.categories.length;
-    });
-
-    return answers;
-  }
-
-  onTagClick = tag => {
-    const { tags } = this.state;
-
-    tags.push(tag);
-
-    this.setState({ tags: tags.sort() });
-  };
-
-  onRemoveTag = clickedTag => {
-    const tags = this.state.tags.filter(tag => tag !== clickedTag);
-
-    this.setState({ tags });
-  };
-
-  renderOrderBy(label) {
-    const { view } = this.state;
-
-    const style = {};
-
-    if (view === label) {
-      style.fontWeight = "bold";
-      style.pointEvents = "none";
-    }
-
-    return (
-      <div
-        className="view"
-        style={style}
-        onClick={() => this.setState({ view: label })}
-      >
-        {label}
+          return (
+            <div key={categoryData.categoryUrl}>
+              <ReadingContainer>
+                <div className="writing">
+                  <Link to={`/categories/${root}/${categoryData.categoryUrl}`}>
+                    <p className={classNames}>{categoryData.category}</p>
+                  </Link>
+                </div>
+              </ReadingContainer>
+              <ReadingContainer style={{ padding: 0 }}>
+                {categoryData.categoryUrl === category
+                  ? this.renderPosts(categoryData.posts)
+                  : null}
+              </ReadingContainer>
+            </div>
+          );
+        })}
       </div>
     );
   }
 
-  renderSearch(answers) {
-    const { inputFocused, search } = this.state;
-
-    return (
-      <div className="search-container">
-        <FaSearch
-          style={{
-            color: inputFocused ? "#039be5" : "rgba(0,0,0,.54)"
-          }}
-        />
-        <div>
-          <input
-            className="search"
-            onChange={event => this.setState({ search: event.target.value })}
-            onFocus={() => this.setState({ inputFocused: true })}
-            onBlur={() => this.setState({ inputFocused: false })}
-            placeholder="Search"
-            style={{
-              borderBottom: inputFocused ? "1px solid #039be5" : ""
-            }}
-            value={search}
-          />
-          <div className="results">
-            {`Showing ${
-              isNumber(answers.postCount) ? answers.postCount : answers.length
-            }/${POSTS_BY_MOST_RECENT.length} results`}
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  renderRecent(answers) {
+  renderPosts(posts) {
     const { search } = this.state;
 
     return (
       <div>
-        {answers.length
-          ? answers.map(pageData => {
+        {posts.length
+          ? posts.map(pageData => {
               return (
-                <ListItem
-                  key={pageData.url}
-                  {...pageData}
-                  search={search}
-                  url={pageData.url}
-                />
+                <ListItem key={pageData.url} {...pageData} search={search} />
               );
             })
           : this.renderClear()}
       </div>
-    );
-  }
-
-  renderPosts(postsData) {
-    const { search } = this.state;
-
-    const lowerSearch = search.toLowerCase();
-
-    return postsData
-      .map(post => {
-        const { title } = post;
-
-        const lowerText = title.toLowerCase();
-
-        const startIndex = lowerText.indexOf(lowerSearch);
-
-        if (startIndex === -1) {
-          return title;
-        }
-
-        const first = title.slice(0, startIndex);
-        const highlight = title.slice(startIndex, startIndex + search.length);
-        const last = title.slice(startIndex + search.length);
-
-        return `<li><a href="${
-          post.url
-        }">${first}<span class="highlight">${highlight}</span>${last}</a></li>`;
-      })
-      .join(" ");
-  }
-
-  renderTopics(answers) {
-    const html = `
-      <div class="writing">
-        ${answers.postsOrganized
-          .map((headingData, index) => {
-            return `
-            <h3 class="${index ? "" : "first"}">${headingData.heading}</h3>
-            ${headingData.categories
-              .map(categoryData => {
-                return `
-                <h4>${categoryData.category}</h4>
-                ${
-                  categoryData.subcategories
-                    ? categoryData.subcategories
-                        .map(subcategoryData => {
-                          return `
-                    <p class="first"><em>${subcategoryData.subcategory}</em></p>
-                    <ul class="first">
-                      ${this.renderPosts(subcategoryData.posts)}
-                    </ul>
-                  `;
-                        })
-                        .join(" ")
-                    : `
-                      <ul class="first">
-                        ${this.renderPosts(categoryData.posts)}
-                      </ul>
-                    `
-                }
-              `;
-              })
-              .join(" ")}
-          `;
-          })
-          .join(" ")}
-      </div>
-    `;
-
-    return answers.postCount ? (
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    ) : (
-      this.renderClear()
     );
   }
 
@@ -306,27 +156,37 @@ class Home extends Component {
     );
   }
 
-  render() {
-    const { view } = this.state;
+  renderOptions() {
+    return (
+      <div className="home-options">
+        <div className="home-option">Apologetics</div>
+        <div className="home-option">Theology</div>
+      </div>
+    );
+  }
 
-    const answers = this.getAnswersList();
+  render() {
+    const { category, root, search } = this.state;
+
+    const posts = this.getPostsList(ALL_POSTS);
 
     return (
-      <div>
-        <ReadingContainer
-          marginBottom={20}
-          marginTop={20}
-          padding={view === "Most recent" ? 0 : "0 20px"}
-        >
-          <div className="views-container">
-            <div className="views-label">Order by:</div>
-            {this.renderOrderBy("Most recent")}
-            {this.renderOrderBy("Topic")}
-          </div>
-          {this.renderSearch(answers)}
-          {view === "Most recent"
-            ? this.renderRecent(answers)
-            : this.renderTopics(answers)}
+      <div className="home-container">
+        <ReadingContainer style={{ padding: 0 }}>
+          <Search
+            posts={posts}
+            onSearchChange={this.onSearchChange}
+            search={search}
+          />
+          <SearchCategories
+            category={category}
+            renderPosts={this.renderPosts}
+            root={root}
+            setRoot={this.setRoot}
+          />
+          {root === "newest" || search
+            ? this.renderNewest()
+            : this.renderCategories()}
         </ReadingContainer>
       </div>
     );

@@ -1,13 +1,6 @@
 import React from "react";
 
-const Title = ({
-  added,
-  imagePosition = "30% 70%",
-  imageUrl,
-  subtitle,
-  title,
-  updated
-}) => {
+const Title = ({ added, imageUrl, subtitle, title, updated }) => {
   return (
     <div className="title-section">
       <div className="title-info-container">

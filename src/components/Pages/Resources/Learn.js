@@ -11,7 +11,7 @@ const Learn = () => (
       title="Resources - Learn"
       subtitle="Resources for learning more about the Bible"
     />
-    <ReadingContainer marginTop={50}>
+    <ReadingContainer style={{ marginTop: 50 }}>
       {LEARN.map(resource => {
         return <ListItem key={resource.url} showUrl {...resource} />;
       })}

@@ -31,7 +31,11 @@ function sendResponse(req, res, result = {}) {
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta charset="utf-8" />
-        <title>${data.title} | Bible Answers</title>
+        <title>${
+          data.title
+            ? data.title + " | Bible Answers"
+            : "Bible Answers: Explaining and Defending the Bible's Teachings"
+        }</title>
 
         <meta name="description" content=${data.description || data.subtitle} />
 

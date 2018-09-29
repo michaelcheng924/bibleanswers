@@ -12,7 +12,6 @@
 }
 
 .answer-title {
-  color: rgba(0, 0, 0, 0.84);
   font-size: 24px;
   font-weight: 600;
 }
@@ -39,9 +38,18 @@
   margin-top: 15px;
 }
 
-.answer-image {
+.answer-image-container {
+  flex-shrink: 0;
+  height: 80px;
   margin-left: 20px;
+  overflow: hidden;
   width: 80px;
+}
+
+.answer-image {
+  left: -30px;
+  height: 80px;
+  position: relative;
 }
 
 @media screen and (max-width: 768px) {

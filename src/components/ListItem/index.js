@@ -3,6 +3,12 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 class ListItem extends Component {
+  getImageUrl = () => {
+    const splitUrl = this.props.imageUrl.split(".");
+
+    return `${splitUrl[0]}_small.${splitUrl[1]}`;
+  };
+
   renderText(text) {
     const { search = "" } = this.props;
 
@@ -29,15 +35,7 @@ class ListItem extends Component {
   }
 
   render() {
-    const {
-      added,
-      imageUrl,
-      showUrl,
-      subtitle,
-      title,
-      updated,
-      url
-    } = this.props;
+    const { added, showUrl, subtitle, title, updated, url } = this.props;
 
     return (
       <Link to={url} key={url}>
@@ -56,7 +54,13 @@ class ListItem extends Component {
             </div>
             {showUrl ? <div className="url">{url}</div> : null}
           </div>
-          <img className="answer-image" src={imageUrl} alt={title} />
+          <div className="answer-image-container">
+            <img
+              className="answer-image"
+              src={this.getImageUrl()}
+              alt={title}
+            />
+          </div>
         </div>
       </Link>
     );

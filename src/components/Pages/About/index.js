@@ -11,7 +11,7 @@ const About = () => (
       imageUrl="/images/about.png"
       imagePosition="52% 70%"
     />
-    <ReadingContainer marginBottom={20}>
+    <ReadingContainer style={{ marginBottom: 20 }}>
       <div className="writing">
         <h3>About Bible Answers</h3>
 

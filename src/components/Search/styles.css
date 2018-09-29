@@ -1,0 +1,24 @@
+.search-container {
+  color: rgba(0, 0, 0, 0.54);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.search {
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.54);
+  display: block;
+  font-size: 20px;
+  margin-left: 4px;
+  outline: none;
+  text-align: center;
+  width: 300px;
+}
+
+.results {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}

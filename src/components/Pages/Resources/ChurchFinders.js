@@ -11,7 +11,7 @@ const ChurchFinders = () => (
       title="Resources - Church Finders"
       subtitle="Find a solid church to attend regularly"
     />
-    <ReadingContainer marginTop={50}>
+    <ReadingContainer style={{ marginTop: 50 }}>
       {CHURCH_FINDERS.map(resource => {
         return <ListItem key={resource.url} showUrl {...resource} />;
       })}

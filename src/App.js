@@ -47,10 +47,6 @@ class App extends Component {
       return "/resources";
     }
 
-    if (pathname.indexOf("/answers") !== -1) {
-      return "/";
-    }
-
     return false;
   }
 
@@ -73,6 +69,7 @@ class App extends Component {
         {this.renderNav()}
         <Switch>
           <Route exact path="/" component={Home} />
+
           <Route exact path="/resources" component={Resources} />
           <Route exact path="/resources/learn" component={Learn} />
           <Route
@@ -80,9 +77,13 @@ class App extends Component {
             path="/resources/church-finders"
             component={ChurchFinders}
           />
+
           <Route path="/about" component={About} />
           <Route path="/gospel" component={Gospel} />
-          <Route path="/answers/:category/:topic" render={this.renderPage} />
+          <Route path="/answers" render={this.renderPage} />
+
+          <Route path="/categories/:root/:category" component={Home} />
+          <Route path="/categories/:root" component={Home} />
           <Route path="/admin" component={Admin} />
         </Switch>
       </div>

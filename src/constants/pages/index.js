@@ -4,9 +4,9 @@ import home from "./home";
 import about from "./about";
 import { resources, resourcesLearn, resourcesChurchFinders } from "./resources";
 
-import { POSTS_ARRAY } from "../posts";
+import { ALL_POSTS } from "../posts";
 
-const POSTS_BY_URL = keyBy(POSTS_ARRAY, "url");
+const POSTS_BY_URL = keyBy(ALL_POSTS, "url");
 
 const getPostData = pathname => {
   const splitPathname = pathname;
