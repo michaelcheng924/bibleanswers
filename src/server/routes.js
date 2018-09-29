@@ -58,7 +58,6 @@ function routes(server) {
   server.post("/api/admin/updateposts", authorize, (req, res) => {
     Post.deleteMany({}, () => {
       Post.create(ALL_POSTS, err => {
-        console.log(err, ALL_POSTS);
         res.send({
           success: true
         });
