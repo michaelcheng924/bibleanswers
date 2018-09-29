@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { FaSearch } from "react-icons/fa";
-import { isNumber } from "lodash";
+import { FaTimes, FaSearch } from "react-icons/fa";
+import { isNumber, partial } from "lodash";
 
 import "./styles.css";
 import { ALL_POSTS } from "../../constants/posts";
@@ -12,13 +12,15 @@ export default class Template extends Component {
 
   render() {
     const { inputFocused } = this.state;
-    const { onSearchChange, posts, search } = this.props;
+    const { onClearSearch, onSearchChange, posts, search } = this.props;
 
     return (
       <div className="search-container">
         <FaSearch
           style={{
-            color: inputFocused ? "#039be5" : "rgba(0,0,0,.54)"
+            color: inputFocused ? "#039be5" : "rgba(0,0,0,.54)",
+            position: "relative",
+            top: 5
           }}
         />
         <div>
@@ -39,6 +41,17 @@ export default class Template extends Component {
             }/${ALL_POSTS.length} results`}
           </div>
         </div>
+        {search ? (
+          <FaTimes
+            style={{
+              color: "#F44336",
+              cursor: "pointer",
+              position: "relative",
+              top: 5
+            }}
+            onClick={onClearSearch}
+          />
+        ) : null}
       </div>
     );
   }

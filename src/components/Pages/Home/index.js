@@ -24,38 +24,27 @@ class Home extends Component {
 
     this.state = {
       category: props.match.params.category || "",
-      inputFocused: false,
       root: props.match.params.root || "newest",
-      search: "",
-      showFilter: false,
-      tags: []
+      search: ""
     };
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (!prevState.showFilter && this.state.showFilter) {
-      document.addEventListener("click", this.onDocumentClick);
-    } else if (prevState.showFilter && !this.state.showFilter) {
-      document.removeEventListener("click", this.onDocumentClick);
-    }
-
-    const { category, root } = this.props.match.params;
-
-    if (prevProps.match.params.root !== root) {
-      this.setState({ root });
-    }
-
-    if (prevProps.match.params.category !== category) {
-      this.setState({ category });
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.path !== "/" && this.props.match.path === "/") {
+      this.setState({ category: "", root: "newest", search: "" });
     }
   }
 
   setRoot = root => {
-    this.setState({ root });
+    this.setState({ root, search: root === "newest" ? this.state.search : "" });
   };
 
   onSearchChange = event => {
     this.setState({ search: event.target.value });
+  };
+
+  onClearSearch = () => {
+    this.setState({ search: "" });
   };
 
   getPostsList(posts) {
@@ -101,16 +90,28 @@ class Home extends Component {
           </div>
         </ReadingContainer>
         {data.categories.map(categoryData => {
+          const isActive = categoryData.categoryUrl === category;
+
           const classNames = css("first", {
-            "search-category__active": categoryData.categoryUrl === category
+            "search-category__active": isActive
           });
 
           return (
             <div key={categoryData.categoryUrl}>
               <ReadingContainer>
                 <div className="writing">
-                  <Link to={`/categories/${root}/${categoryData.categoryUrl}`}>
-                    <p className={classNames}>{categoryData.category}</p>
+                  <Link
+                    onClick={() =>
+                      this.setState({
+                        category: isActive ? "" : categoryData.categoryUrl
+                      })
+                    }
+                    to={`/categories/${root}/${categoryData.categoryUrl}`}
+                  >
+                    <p className={classNames}>
+                      {categoryData.category}
+                      <span className={isActive ? "caret-up" : "caret-down"} />
+                    </p>
                   </Link>
                 </div>
               </ReadingContainer>
@@ -146,10 +147,7 @@ class Home extends Component {
     return (
       <div>
         <div className="empty-text">No results matched your search</div>
-        <div
-          className="empty-clear"
-          onClick={() => this.setState({ search: "", tags: [] })}
-        >
+        <div className="empty-clear" onClick={this.onClearSearch}>
           Clear search
         </div>
       </div>
@@ -175,6 +173,7 @@ class Home extends Component {
         <ReadingContainer style={{ padding: 0 }}>
           <Search
             posts={posts}
+            onClearSearch={this.onClearSearch}
             onSearchChange={this.onSearchChange}
             search={search}
           />

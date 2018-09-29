@@ -21,3 +21,29 @@
   display: flex;
   justify-content: center;
 }
+
+.writing .caret-down {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  
+  border-top: 5px solid #43A047;
+
+  margin-left: 6px;
+  position: relative;
+  top: 7px;
+}
+
+.writing .caret-up {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  
+  border-bottom: 5px solid #039BE5;
+
+  margin-left: 6px;
+  position: relative;
+  top: -13px;
+}

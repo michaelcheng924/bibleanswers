@@ -54,7 +54,11 @@ class App extends Component {
     const { pathname } = this.state;
 
     return (
-      <Nav home={pathname !== "/"} back={this.showBack()} pathname={pathname} />
+      <Nav
+        home={pathname !== "/" && pathname.indexOf("/categories") === -1}
+        back={this.showBack()}
+        pathname={pathname}
+      />
     );
   }
 
