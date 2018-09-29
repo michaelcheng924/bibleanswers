@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-import { POSTS_ARRAY } from "../constants/posts";
+import { ALL_POSTS } from "../constants/posts";
 import { Post } from "./db";
 
 function authorize(req, res, next) {
@@ -57,8 +57,8 @@ function routes(server) {
 
   server.post("/api/admin/updateposts", authorize, (req, res) => {
     Post.deleteMany({}, () => {
-      Post.create(POSTS_ARRAY, err => {
-        console.log(err, POSTS_ARRAY);
+      Post.create(ALL_POSTS, err => {
+        console.log(err, ALL_POSTS);
         res.send({
           success: true
         });

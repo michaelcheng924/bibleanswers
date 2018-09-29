@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { FaTimes, FaSearch } from "react-icons/fa";
-import { isNumber, partial } from "lodash";
+import { isNumber } from "lodash";
 
 import "./styles.css";
 import { ALL_POSTS } from "../../constants/posts";
