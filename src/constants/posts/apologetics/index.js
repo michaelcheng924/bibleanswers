@@ -5,6 +5,7 @@ import agnosticism from "./agnosticism";
 
 const APOLOGETICS = {
   heading: "Apologetics: Defending the Christian worldview",
+  url: "/categories/apologetics",
   categories: [
     agnosticism,
     bibleAuthorship,

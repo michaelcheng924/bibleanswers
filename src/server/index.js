@@ -4,22 +4,21 @@ import bodyParser from "body-parser";
 import { StaticRouter } from "react-router-dom";
 import express from "express";
 import { renderToString } from "react-dom/server";
-import { find } from "lodash";
 
+import { db } from "./db";
 import routes from "./routes";
-import { ALL_POSTS } from "../constants/posts";
 import { PAGES } from "../constants/pages";
 require("dotenv").config();
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
-function sendResponse(req, res, post = {}) {
+function sendResponse(req, res, posts = []) {
   const data = PAGES[req.url] || {};
 
   const context = {};
   const markup = renderToString(
     <StaticRouter context={context} location={req.url}>
-      <App post={post} />
+      <App posts={posts} />
     </StaticRouter>
   );
 
@@ -64,7 +63,7 @@ function sendResponse(req, res, post = {}) {
 
           gtag('config', 'UA-125895534-1');
 
-          __TEST__ = "TEST"
+          __INITIAL_POSTS__ = ${JSON.stringify(posts)}
         </script>
 
     </head>
@@ -86,22 +85,13 @@ server
   .disable("x-powered-by")
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
   .get("/*", (req, res) => {
-    if (req.url.indexOf("/answers") !== -1) {
-      // const ref = db
-      //   .collection("posts")
-      //   .where("url", "==", req.url.split("/answers")[1]);
+    db.collection("posts")
+      .get()
+      .then(snapshot => {
+        const posts = snapshot.docs.map(doc => doc.data());
 
-      // ref.get().then(snapshot => {
-      //   console.log(snapshot.docs);
-      const post = find(
-        ALL_POSTS,
-        postData => postData.url === req.url.split("/answers")[1]
-      );
-      sendResponse(req, res, post);
-      // });
-    } else {
-      sendResponse(req, res);
-    }
+        sendResponse(req, res, posts);
+      });
   });
 
 export default server;

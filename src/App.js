@@ -2,10 +2,9 @@ import "./App.css";
 import React, { Component } from "react";
 import Route from "react-router-dom/Route";
 import Switch from "react-router-dom/Switch";
-import { get } from "lodash";
+import { find, get, keyBy } from "lodash";
 
-import { PAGES } from "./constants/pages";
-import { getPostData } from "./constants/pages";
+import { getTitleMapping } from "./constants/pages";
 import Nav from "./components/Nav";
 import Home from "./components/Pages/Home";
 import Resources from "./components/Pages/Resources";
@@ -16,9 +15,17 @@ import Gospel from "./components/Pages/Gospel";
 import { Page } from "./components/Writing";
 
 class App extends Component {
-  state = {
-    pathname: ""
-  };
+  constructor(props) {
+    super(props);
+
+    const postsByUrl = keyBy(props.posts, "url");
+
+    this.state = {
+      postsByUrl,
+      pathname: "",
+      titleMapping: getTitleMapping(postsByUrl)
+    };
+  }
 
   componentDidMount() {
     this.setState({ pathname: window.location.pathname });
@@ -26,7 +33,9 @@ class App extends Component {
     this.props.history.listen(location => {
       this.setState({ pathname: location.pathname });
 
-      let title = get(PAGES[location.pathname], "title", PAGES["/"].title);
+      let title =
+        this.state.titleMapping[location.pathname].title ||
+        this.state.titleMapping["/"].title;
 
       if (title.indexOf("Bible Answers") === -1) {
         title = `${title} | Bible Answers`;
@@ -34,8 +43,6 @@ class App extends Component {
 
       document.title = title;
     });
-
-    console.log(window.__TEST__);
   }
 
   showBack() {
@@ -63,10 +70,11 @@ class App extends Component {
     );
   }
 
-  renderPage({ history }) {
-    const post = getPostData(history.location.pathname) || {};
+  renderPage = ({ history }) => {
+    const post = this.state.postsByUrl[history.location.pathname];
+
     return <Page post={post} />;
-  }
+  };
 
   render() {
     return (

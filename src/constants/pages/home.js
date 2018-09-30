@@ -1,6 +1,5 @@
 const home = {
-  title:
-    "Bible Answers - Apologetics: Explaining and Defending the Bible's Teachings",
+  title: "Bible Answers - Defending and Explaining the Biblical Worldview",
   description: "Answers to questions about Christianity and the Bible"
 };
 

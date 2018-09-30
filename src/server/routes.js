@@ -1,7 +1,6 @@
 import { db } from "./db";
 
 function routes(server) {
-  console.log("???");
   server.get("/api/posts", (req, res) => {
     db.collection("posts")
       .get()
