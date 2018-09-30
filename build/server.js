@@ -23,7 +23,7 @@ module.exports =
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "1afc48e6ed2e6472ecce";
+/******/ 	var hotCurrentHash = "2ac9a7900dd7d54345c7";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -5395,68 +5395,6 @@ var port = "3000" || 3000;
 
 /***/ }),
 
-/***/ "./src/server/db.js":
-/*!**************************!*\
-  !*** ./src/server/db.js ***!
-  \**************************/
-/*! exports provided: db, updateStore */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "db", function() { return db; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateStore", function() { return updateStore; });
-/* harmony import */ var _constants_posts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants/posts */ "./src/constants/posts/index.js");
-
-var admin = __webpack_require__(/*! firebase-admin */ "firebase-admin");
-
-var serviceAccount = __webpack_require__(/*! ./firestore.json */ "./src/server/firestore.json");
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
-
-var db = admin.firestore();
-
-function updateStore() {
-  // DELETE ALL
-  var deleteBatch = db.batch();
-
-  db.collection("posts").get().then(function (snapshot) {
-    snapshot.docs.forEach(function (doc) {
-      deleteBatch.delete(doc.ref);
-    });
-
-    return deleteBatch.commit().then(function () {
-      console.log("DELETED ALL");
-
-      // SET ALL
-      _constants_posts__WEBPACK_IMPORTED_MODULE_0__["ALL_POSTS"].forEach(function (post) {
-        db.collection("posts").doc(post.title).set(post);
-      });
-
-      console.log("FINISHED");
-
-      return snapshot.size;
-    });
-  });
-}
-
-
-
-/***/ }),
-
-/***/ "./src/server/firestore.json":
-/*!***********************************!*\
-  !*** ./src/server/firestore.json ***!
-  \***********************************/
-/*! exports provided: type, project_id, private_key_id, private_key, client_email, client_id, auth_uri, token_uri, auth_provider_x509_cert_url, client_x509_cert_url, default */
-/***/ (function(module) {
-
-module.exports = {"type":"service_account","project_id":"radiant-clone-195303","private_key_id":"dd905fe23b393497b5c64ae69ef0ee77660c959f","private_key":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCqcWHMpj73mkiI\nAuCl3lkVi8ggJOxD9cAUB4Q08E3npxxhOBZQCQtay7Pu1FHRAtj/AJkZ50gC1gaZ\nBv5x+A4hFUfrPHQQebk5jptAbIkyYDqOUINUrY05YseLxt/B9LU1zRzntli0Vd/H\nBhU8wDAGzziJNxkpq9cN+f3M4LKCr8KwTTgmiKvmGke9cGIfYRsyKvP2sfYgq9qE\nY77FMNCsiHhohNRhMZy4uTRsVnevuy2PyvOBArNDUCuA1iqaa+lkP/yhoX7LQivY\nnzVWg13r7X+URXkhBn25gOGME3298+TvRXc6eGjWn4rXAWr4YWdN01SsznCB8NQ2\n/PqvppZjAgMBAAECggEAM4glSBEpb4YbkNfB4RRpPbzt7F4NevylrsiY/cJ742Kg\nj3o8MMWTQ8fb5oUWGYnxXqPpJi5JlOXtx72YF5AmgXUkMeistMCAsni90swd7Pew\nLJAGLQdt7+BAMbAWvdcFJLeXmi0FA70E8/EQYbY/rwde8gmRF4rHcgfX5uY2wpDw\nDOPRfSa1cQw+Lr4KWfrDP0sGxW/s6tbIQ5Ny/vdslMkMHBl0Wi21/Wn2YDy82v/A\n8eaq8PF1QKm/cWLTAES+cruEY1mHRfPGHXxcJrFRNzXUQjOerS+E8af00g/JASVN\nVBwR36Z5Ppnd4r/deESgMa6ETxHNM73rsNRx5XxoFQKBgQDSeZN+9+12Vs2o1uU6\nNg2HJx/bkvfkSZ+W1Iiea9MEyv7ZP7k81jrmzL1dfWDw4vuzusj4f/VGfCOh7X7X\ne/10pbER23NRW1QTWXS0NARHLdgX1sPvlmHD7fX7xhpMbH4fZQ5zCFvWn/DK4MzJ\nGtUEHJzwrnXPysTcrXMg2tM5/wKBgQDPTybxVqe72gTNh0a824HarNW4/XAf+jTn\nA8sZL6Y3yOQvQ+genIpS8P2lBYQBWQlaK4YgZi1hLKjERMQFS4mzfw0hHd5Mjg1S\ncf6dLtrLhDVqHfreda2yaL1MUVuOkw54saJ24dsHuz6/fRkrGSCAO2dK0xh72SSS\nOsitV8H7nQKBgH9pW5F8EoMVzw/Lbx6LBCtx0sZANNI8g2ByLnYAfdCj9hybh849\nPZDkFipXMO0B6y8E/o34IAnYMlXfCG73vxnzB7rwpuF0MPQ5rf08k+5m4S6lMx2B\nYpOSJNuSM+9ZqgvlSBb402eckM6vwSholtUTYSoN4oG0lPGmClC0RzQPAoGATLST\nyy5uB8LGjimkkdKCfKAAwF798scIdgXgSyRnUzLAw4BTzafMQp4qq7mbu0fvfu6l\nxS0pU1BL7bsn8HGftMuo1v0POLJC2aOWOyCQEkeL4ATRwyg1qdK5YBimUN22uA+5\n9lThTz4IHKA0BM9aSDgyouvynjidIIIhqInVG70CgYAUTEfo7SsZkUlWM8yTzvzv\nXbjAuE471OPCnsZPqYJLeSszocG9acw8UePi0wPf6d3898A0abiR5mxZ3PY6nwYE\nXsx3efzAUodqGYR5sjrtdQ4hCPibPrppgmvN9/jb8eXBcdq1S+wwuQxAgj0OHW8D\nWx9jzWrRkSmDsgWy2/YYig==\n-----END PRIVATE KEY-----\n","client_email":"bible-answers@radiant-clone-195303.iam.gserviceaccount.com","client_id":"113329724355034530680","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_x509_cert_url":"https://www.googleapis.com/robot/v1/metadata/x509/bible-answers%40radiant-clone-195303.iam.gserviceaccount.com"};
-
-/***/ }),
-
 /***/ "./src/server/index.js":
 /*!*****************************!*\
   !*** ./src/server/index.js ***!
@@ -5479,9 +5417,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_dom_server__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lodash */ "lodash");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./routes */ "./src/server/routes.js");
-/* harmony import */ var _constants_posts__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../constants/posts */ "./src/constants/posts/index.js");
-/* harmony import */ var _constants_pages__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../constants/pages */ "./src/constants/pages/index.js");
+/* harmony import */ var _constants_posts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../constants/posts */ "./src/constants/posts/index.js");
+/* harmony import */ var _constants_pages__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../constants/pages */ "./src/constants/pages/index.js");
 var _jsxFileName = "/Users/michael.cheng/code/bibleanswers/web/src/server/index.js";
 
 
@@ -5492,7 +5429,7 @@ var _jsxFileName = "/Users/michael.cheng/code/bibleanswers/web/src/server/index.
 
 
 // import { db } from "./db";
-
+// import routes from "./routes";
 
 
 __webpack_require__(/*! dotenv */ "dotenv").config();
@@ -5502,7 +5439,7 @@ var assets = __webpack_require__(/*! ./build/assets.json */ "./build/assets.json
 function sendResponse(req, res) {
   var post = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
-  var data = _constants_pages__WEBPACK_IMPORTED_MODULE_9__["PAGES"][req.url] || {};
+  var data = _constants_pages__WEBPACK_IMPORTED_MODULE_8__["PAGES"][req.url] || {};
 
   var context = {};
   var markup = Object(react_dom_server__WEBPACK_IMPORTED_MODULE_5__["renderToString"])(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
@@ -5530,7 +5467,7 @@ var server = express__WEBPACK_IMPORTED_MODULE_4___default()();
 
 server.use(body_parser__WEBPACK_IMPORTED_MODULE_2___default.a.json());
 
-Object(_routes__WEBPACK_IMPORTED_MODULE_7__["default"])(server);
+// routes(server);
 
 server.disable("x-powered-by").use(express__WEBPACK_IMPORTED_MODULE_4___default.a.static("/Users/michael.cheng/code/bibleanswers/web/public")).get("/*", function (req, res) {
   if (req.url.indexOf("/answers") !== -1) {
@@ -5540,7 +5477,7 @@ server.disable("x-powered-by").use(express__WEBPACK_IMPORTED_MODULE_4___default.
 
     // ref.get().then(snapshot => {
     //   console.log(snapshot.docs);
-    var post = Object(lodash__WEBPACK_IMPORTED_MODULE_6__["find"])(_constants_posts__WEBPACK_IMPORTED_MODULE_8__["ALL_POSTS"], function (postData) {
+    var post = Object(lodash__WEBPACK_IMPORTED_MODULE_6__["find"])(_constants_posts__WEBPACK_IMPORTED_MODULE_7__["ALL_POSTS"], function (postData) {
       return postData.url === req.url.split("/answers")[1];
     });
     sendResponse(req, res, post);
@@ -5551,35 +5488,6 @@ server.disable("x-powered-by").use(express__WEBPACK_IMPORTED_MODULE_4___default.
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (server);
-
-/***/ }),
-
-/***/ "./src/server/routes.js":
-/*!******************************!*\
-  !*** ./src/server/routes.js ***!
-  \******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _db__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./db */ "./src/server/db.js");
-
-
-function routes(server) {
-  console.log("???");
-  server.get("/api/posts", function (req, res) {
-    _db__WEBPACK_IMPORTED_MODULE_0__["db"].collection("posts").get().then(function (snapshot) {
-      var posts = snapshot.docs.map(function (doc) {
-        return doc.data();
-      });
-
-      res.send({ posts: posts });
-    });
-  });
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (routes);
 
 /***/ }),
 
@@ -5786,17 +5694,6 @@ module.exports = require("dotenv");
 /***/ (function(module, exports) {
 
 module.exports = require("express");
-
-/***/ }),
-
-/***/ "firebase-admin":
-/*!*********************************!*\
-  !*** external "firebase-admin" ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("firebase-admin");
 
 /***/ }),
 

@@ -7,7 +7,7 @@ import { renderToString } from "react-dom/server";
 import { find } from "lodash";
 
 // import { db } from "./db";
-import routes from "./routes";
+// import routes from "./routes";
 import { ALL_POSTS } from "../constants/posts";
 import { PAGES } from "../constants/pages";
 require("dotenv").config();
@@ -81,7 +81,7 @@ const server = express();
 
 server.use(bodyParser.json());
 
-routes(server);
+// routes(server);
 
 server
   .disable("x-powered-by")
