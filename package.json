@@ -8,7 +8,10 @@
     "test": "razzle test --env=jsdom",
     "prestart:prod": "yarn build",
     "start:prod": "NODE_ENV=production node build/server.js",
-    "deploy": "git push heroku master"
+    "deploy": "git push heroku master",
+    "staging": "git push heroku-staging master",
+    "htail": "heroku logs --tail --app bible-answers",
+    "stail": "heroku logs --tail --app bibleanswers-staging"
   },
   "dependencies": {
     "axios": "^0.18.0",

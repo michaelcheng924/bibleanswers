@@ -10,4 +10,3 @@ build
 .env.*.local
 
 .env
-firestore.json
