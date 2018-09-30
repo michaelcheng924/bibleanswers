@@ -11,7 +11,9 @@
     "deploy": "git push heroku master",
     "staging": "git push heroku-staging master",
     "htail": "heroku logs --tail --app bible-answers",
-    "stail": "heroku logs --tail --app bibleanswers-staging"
+    "stail": "heroku logs --tail --app bibleanswers-staging",
+    "rh": "heroku restart --app bible-answers",
+    "rs": "heroku restart --app bibleanswers-staging"
   },
   "dependencies": {
     "axios": "^0.18.0",
