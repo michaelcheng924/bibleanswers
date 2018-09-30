@@ -23,7 +23,7 @@ module.exports =
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "04ed2af144f18d126c43";
+/******/ 	var hotCurrentHash = "1afc48e6ed2e6472ecce";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -5479,10 +5479,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_dom_server__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lodash */ "lodash");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _db__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./db */ "./src/server/db.js");
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./routes */ "./src/server/routes.js");
-/* harmony import */ var _constants_posts__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../constants/posts */ "./src/constants/posts/index.js");
-/* harmony import */ var _constants_pages__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../constants/pages */ "./src/constants/pages/index.js");
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./routes */ "./src/server/routes.js");
+/* harmony import */ var _constants_posts__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../constants/posts */ "./src/constants/posts/index.js");
+/* harmony import */ var _constants_pages__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../constants/pages */ "./src/constants/pages/index.js");
 var _jsxFileName = "/Users/michael.cheng/code/bibleanswers/web/src/server/index.js";
 
 
@@ -5492,7 +5491,7 @@ var _jsxFileName = "/Users/michael.cheng/code/bibleanswers/web/src/server/index.
 
 
 
-
+// import { db } from "./db";
 
 
 
@@ -5503,7 +5502,7 @@ var assets = __webpack_require__(/*! ./build/assets.json */ "./build/assets.json
 function sendResponse(req, res) {
   var post = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
-  var data = _constants_pages__WEBPACK_IMPORTED_MODULE_10__["PAGES"][req.url] || {};
+  var data = _constants_pages__WEBPACK_IMPORTED_MODULE_9__["PAGES"][req.url] || {};
 
   var context = {};
   var markup = Object(react_dom_server__WEBPACK_IMPORTED_MODULE_5__["renderToString"])(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
@@ -5531,7 +5530,7 @@ var server = express__WEBPACK_IMPORTED_MODULE_4___default()();
 
 server.use(body_parser__WEBPACK_IMPORTED_MODULE_2___default.a.json());
 
-Object(_routes__WEBPACK_IMPORTED_MODULE_8__["default"])(server);
+Object(_routes__WEBPACK_IMPORTED_MODULE_7__["default"])(server);
 
 server.disable("x-powered-by").use(express__WEBPACK_IMPORTED_MODULE_4___default.a.static("/Users/michael.cheng/code/bibleanswers/web/public")).get("/*", function (req, res) {
   if (req.url.indexOf("/answers") !== -1) {
@@ -5541,7 +5540,7 @@ server.disable("x-powered-by").use(express__WEBPACK_IMPORTED_MODULE_4___default.
 
     // ref.get().then(snapshot => {
     //   console.log(snapshot.docs);
-    var post = Object(lodash__WEBPACK_IMPORTED_MODULE_6__["find"])(_constants_posts__WEBPACK_IMPORTED_MODULE_9__["ALL_POSTS"], function (postData) {
+    var post = Object(lodash__WEBPACK_IMPORTED_MODULE_6__["find"])(_constants_posts__WEBPACK_IMPORTED_MODULE_8__["ALL_POSTS"], function (postData) {
       return postData.url === req.url.split("/answers")[1];
     });
     sendResponse(req, res, post);

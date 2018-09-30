@@ -6,7 +6,7 @@ import express from "express";
 import { renderToString } from "react-dom/server";
 import { find } from "lodash";
 
-import { db } from "./db";
+// import { db } from "./db";
 import routes from "./routes";
 import { ALL_POSTS } from "../constants/posts";
 import { PAGES } from "../constants/pages";
