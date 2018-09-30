@@ -33,7 +33,7 @@ const post = {
   imageUrl: "/images/question-marks.png",
   url: "/answers/worldview/agnosticism",
   added: "9/17/18",
-  tags: ["worldview", "agnosticism"],
+  tags: ["apologetics", "worldview", "agnosticism"],
   content
 };
 

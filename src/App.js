@@ -14,7 +14,6 @@ import ChurchFinders from "./components/Pages/Resources/ChurchFinders";
 import About from "./components/Pages/About";
 import Gospel from "./components/Pages/Gospel";
 import { Page } from "./components/Writing";
-import Admin from "./components/Admin";
 
 class App extends Component {
   state = {
@@ -35,6 +34,8 @@ class App extends Component {
 
       document.title = title;
     });
+
+    console.log(window.__TEST__);
   }
 
   showBack() {
@@ -88,7 +89,6 @@ class App extends Component {
 
           <Route path="/categories/:root/:category" component={Home} />
           <Route path="/categories/:root" component={Home} />
-          <Route path="/admin" component={Admin} />
         </Switch>
       </div>
     );

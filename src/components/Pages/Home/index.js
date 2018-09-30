@@ -18,7 +18,7 @@ const DATA_MAPPING = {
   theology: THEOLOGY
 };
 
-class Home extends Component {
+export default class Posts extends Component {
   constructor(props) {
     super(props);
 
@@ -27,6 +27,10 @@ class Home extends Component {
       root: props.match.params.root || "newest",
       search: ""
     };
+  }
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
   }
 
   componentDidUpdate(prevProps) {
@@ -170,6 +174,9 @@ class Home extends Component {
 
     return (
       <div className="home-container">
+        <div className="home-image-section">
+          Defending and explaining the biblical worldview
+        </div>
         <ReadingContainer style={{ padding: 0 }}>
           <Search
             posts={posts}
@@ -191,5 +198,3 @@ class Home extends Component {
     );
   }
 }
-
-export default Home;

@@ -1,5 +1,53 @@
 .home-container {
+  align-items: center;
   display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.home-image-section {
+  align-items: center;
+  background-image: url('/images/bible-home.png');
+  background-position: center;
+  color: #fff;
+  display: flex;
+  font-size: 30px;
+  font-style: italic;
+  height: 100px;
+  justify-content: center;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.home-features {
+  color: #039BE5;
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+  text-align: center;
+  width: 250px;
+}
+
+.home-feature {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-icon {
+  align-items: center;
+  display: flex;
+}
+
+.home-plus {
+  margin: 0 15px;
+}
+
+.home-feature-name {
+  margin-top: 15px;
 }
 
 .empty-text {
@@ -22,28 +70,3 @@
   justify-content: center;
 }
 
-.writing .caret-down {
-  width: 0; 
-  height: 0; 
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  
-  border-top: 5px solid #43A047;
-
-  margin-left: 6px;
-  position: relative;
-  top: 7px;
-}
-
-.writing .caret-up {
-  width: 0; 
-  height: 0; 
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  
-  border-bottom: 5px solid #039BE5;
-
-  margin-left: 6px;
-  position: relative;
-  top: -13px;
-}

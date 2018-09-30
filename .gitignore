@@ -6,6 +6,8 @@ npm-debug.log*
 coverage
 node_modules
 public/static
+build
 .env.*.local
 
 .env
+firestore.json

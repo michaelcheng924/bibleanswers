@@ -15,6 +15,7 @@
     "css-vendor": "^1.1.0",
     "dotenv": "^6.0.0",
     "express": "^4.15.2",
+    "firebase-admin": "^6.0.0",
     "jsonwebtoken": "^8.3.0",
     "lodash": "^4.17.11",
     "mongoose": "^5.2.17",

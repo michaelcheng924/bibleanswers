@@ -27,9 +27,23 @@ const content = `
       <li>Matthew's genealogy occurs at the very beginning, whereas Luke's genealogy occurs later in the book, after Mary has been introduced, which makes it possible that Luke is actually tracing Jesus back through Mary, instead of Joseph.</li>
     </ol>
 
-    <p>The fact that Matthew and Luke's genealogies clearly have different purposes and themes helps us approach the differences between them with the question, "Why are they different?", rather than with the declaration, "They are contradictory."</p>
+    <p>The fact that Matthew and Luke's genealogies clearly have different purposes and themes helps us approach the differences between them with the question, "<strong>Why</strong> are they different?", rather than with the declaration, "They are contradictory."</p>
 
-    <h4></h4>
+    <h4>Luke's genealogy may be of Mary's</h4>
+
+    <p class="first">One possible explanation for the seeming discrepancy between the two genealogies is that Matthew's genealogy is of Joseph's, while Luke's genealogy is of Mary's. There was no Greek word for "son-in-law," so perhaps Joseph was the "son of Heli" in the sense that he was married to Mary, Heli's daughter. Then, Joseph would have descended from David's son Solomon, while Mary would have descended from David's son Nathan.</p>
+
+    <p>Although it would have been unusual to trace a genealogy through a mother's side (Mary's side), Mary was an extraordinary woman. Furthermore, Luke's genealogy does not occur until later in the book, after Luke has introduced Mary and told part of the story from her point of view.</p>
+
+    <h4>Eusebius's explanation</h4>
+
+    <p class="first">Another possible explanation, which was held by the church historian Eusebius, is that Matthew's genealogy is a biological genealogy, while Luke's genealogy is legal genealogy. In Jewish tradition, if a man died without having any sons, his brother would marry the widow and have a son who could carry on the family name. Eusebius noted that Melchi (Luke 3:24) and Matthan (Matthew 1:15) were both married to the same woman at different times, which would make Heli (Luke 3:23) and Jacob (Matthew 1:15) half-brothers.</p>
+
+    <p>Then, perhaps, when Heli died without a son, his half-brother Jacob married Heli's widow. This would mean that Joseph is <em>legally</em> the son of Heli, but <em>biologically</em> the son of Jacob. Then, Jacob would be the descendent of Solomon, and Heli would be the descendent of Nathan.</p>
+
+    <h4>We should give Matthew and Luke the benefit of the doubt</h4>
+
+    <p class="first">Because of all of the factors listed above, we should assume that Matthew and Luke would not write genealogies that are so directly contradictory. It is likely that they would have been able to double-check their facts, especially because genealogies were extremely important to the Jews. Furthermore, it is likely they used similar sources, and perhaps even communicated with one another, before writing their genealogies, in which case it would be silly to believe that they would write contradictory genealogies.</p>
   </div>
 `;
 
