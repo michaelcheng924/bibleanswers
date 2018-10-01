@@ -4,7 +4,7 @@ import problemOfEvil from "./problemOfEvil";
 
 const CONTRADICTIONS = {
   category: 'Bible "contradictions"',
-  categoryUrl: "bible-contradictions",
+  url: "bible-contradictions",
   posts: [genesis12Plants, matthewLukeGenealogies, problemOfEvil]
 };
 

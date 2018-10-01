@@ -2,7 +2,7 @@ import agnosticism from "./agnosticism";
 
 const AGNOSTICISM = {
   category: "Agnosticism",
-  categoryUrl: "agnosticism",
+  url: "agnosticism",
   posts: [agnosticism]
 };
 

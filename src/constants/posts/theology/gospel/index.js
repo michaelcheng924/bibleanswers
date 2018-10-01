@@ -2,7 +2,7 @@ import gospel from "./gospel";
 
 const GOSPEL = {
   category: "Gospel",
-  categoryUrl: "gospel",
+  url: "gospel",
   posts: [gospel]
 };
 

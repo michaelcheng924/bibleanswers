@@ -4,16 +4,20 @@ import bodyParser from "body-parser";
 import { StaticRouter } from "react-router-dom";
 import express from "express";
 import { renderToString } from "react-dom/server";
+import { keyBy } from "lodash";
 
-import { db } from "./db";
+import { db, updateStore } from "./db";
 import routes from "./routes";
-import { PAGES } from "../constants/pages";
+import { getTitleMapping, getTitle } from "../constants/pages";
 require("dotenv").config();
+
+// updateStore();
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
 function sendResponse(req, res, posts = []) {
-  const data = PAGES[req.url] || {};
+  const titleMapping = getTitleMapping(keyBy(posts, "url"));
+  const title = getTitle(titleMapping, req.url);
 
   const context = {};
   const markup = renderToString(
@@ -31,13 +35,11 @@ function sendResponse(req, res, posts = []) {
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta charset="utf-8" />
-        <title>${
-          data.title
-            ? data.title + " | Bible Answers"
-            : "Bible Answers: Explaining and Defending the Bible's Teachings"
-        }</title>
+        <title>${title}</title>
 
-        <meta name="description" content=${data.description || data.subtitle} />
+        <meta name="description" content=${
+          titleMapping[req.url] ? titleMapping[req.url].subtitle : ""
+        } />
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 

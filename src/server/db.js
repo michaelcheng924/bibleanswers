@@ -1,7 +1,5 @@
-import { ALL_POSTS } from "../constants/posts";
+import { POSTS_ORGANIZED } from "../constants/posts";
 const admin = require("firebase-admin");
-
-// const serviceAccount = require("./firestore.json");
 
 const serviceAccount = {
   type: process.env.FIRESTORE_TYPE,
@@ -25,7 +23,7 @@ const db = admin.firestore();
 
 function updateStore() {
   // DELETE ALL
-  var deleteBatch = db.batch();
+  const deleteBatch = db.batch();
 
   db.collection("posts")
     .get()
@@ -38,13 +36,28 @@ function updateStore() {
         console.log("DELETED ALL");
 
         // SET ALL
-        ALL_POSTS.forEach(post => {
-          db.collection("posts")
-            .doc(post.title)
-            .set(post);
+        const addBatch = db.batch();
+
+        POSTS_ORGANIZED.forEach(root => {
+          root.categories.forEach(category => {
+            category.posts.forEach((post, index) => {
+              const modifiedPost = {
+                ...post,
+                root,
+                category,
+                index
+              };
+
+              const ref = db.collection("posts").doc(post.title);
+
+              addBatch.set(ref, modifiedPost);
+            });
+          });
         });
 
-        console.log("FINISHED");
+        addBatch.commit().then(() => {
+          console.log("FINISHED");
+        });
 
         return snapshot.size;
       });

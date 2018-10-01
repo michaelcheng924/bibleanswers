@@ -1,9 +1,6 @@
+import "./styles.css";
 import React, { Component } from "react";
 import { FaTimes, FaSearch } from "react-icons/fa";
-import { isNumber } from "lodash";
-
-import "./styles.css";
-import { ALL_POSTS } from "../../constants/posts";
 
 export default class Template extends Component {
   state = {
@@ -12,7 +9,13 @@ export default class Template extends Component {
 
   render() {
     const { inputFocused } = this.state;
-    const { onClearSearch, onSearchChange, posts, search } = this.props;
+    const {
+      filteredPosts,
+      onClearSearch,
+      onSearchChange,
+      posts,
+      search
+    } = this.props;
 
     return (
       <div className="search-container">
@@ -36,9 +39,7 @@ export default class Template extends Component {
             value={search}
           />
           <div className="results">
-            {`Showing ${
-              isNumber(posts.postCount) ? posts.postCount : posts.length
-            }/${ALL_POSTS.length} results`}
+            {`Showing ${filteredPosts.length}/${posts.length} results`}
           </div>
         </div>
         {search ? (

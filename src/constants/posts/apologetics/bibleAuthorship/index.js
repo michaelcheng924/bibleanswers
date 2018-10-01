@@ -4,7 +4,7 @@ import irenaeus from "./irenaeus";
 
 const AUTHORSHIP = {
   category: "Bible authorship",
-  categoryUrl: "bible-authorship",
+  url: "bible-authorship",
   posts: [papias, martyr, irenaeus]
 };
 

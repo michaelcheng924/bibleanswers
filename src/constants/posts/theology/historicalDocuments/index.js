@@ -6,7 +6,7 @@ import thirtyNineArticles from "./thirtyNineArticles";
 
 const historicalDocuments = {
   category: "Historical documents",
-  categoryUrl: "historical-documents",
+  url: "historical-documents",
   posts: [
     apostlesCreed,
     niceneCreed,

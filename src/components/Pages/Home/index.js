@@ -2,20 +2,17 @@ import "./styles.css";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { some } from "lodash";
+import { identity, map, some } from "lodash";
 import css from "classnames";
 
-import APOLOGETICS from "../../../constants/posts/apologetics";
-import THEOLOGY from "../../../constants/posts/theology";
-import { ALL_POSTS, POSTS_BY_MOST_RECENT } from "../../../constants/posts";
 import { ReadingContainer } from "../../Writing";
 import ListItem from "../../ListItem";
 import Search from "../../Search";
 import SearchCategories from "../../SearchCategories";
 
 const DATA_MAPPING = {
-  apologetics: APOLOGETICS,
-  theology: THEOLOGY
+  apologetics: "/categories/apologetics",
+  theology: "/categories/theology"
 };
 
 export default class Posts extends Component {
@@ -51,7 +48,7 @@ export default class Posts extends Component {
     this.setState({ search: "" });
   };
 
-  getPostsList(posts) {
+  getFilteredPosts(posts) {
     const { search } = this.state;
 
     const lowerSearch = search.toLowerCase();
@@ -71,20 +68,25 @@ export default class Posts extends Component {
     });
   }
 
-  renderNewest() {
-    const posts = this.getPostsList(POSTS_BY_MOST_RECENT);
-
-    return this.renderPosts(posts);
+  renderNewest(filteredPosts) {
+    return this.renderPosts(filteredPosts);
   }
 
   renderCategories() {
     const { category, root } = this.state;
+    const { structuredPosts } = this.props;
 
     if (root === "newest") {
       return null;
     }
 
-    const data = DATA_MAPPING[root];
+    const data = structuredPosts[DATA_MAPPING[root]];
+
+    const categories = map(data.categories, identity).sort((a, b) => {
+      const textA = a.category.toUpperCase();
+      const textB = b.category.toUpperCase();
+      return textA < textB ? -1 : textA > textB ? 1 : 0;
+    });
 
     return (
       <div>
@@ -93,24 +95,24 @@ export default class Posts extends Component {
             <h4>{data.heading}</h4>
           </div>
         </ReadingContainer>
-        {data.categories.map(categoryData => {
-          const isActive = categoryData.categoryUrl === category;
+        {categories.map(categoryData => {
+          const isActive = categoryData.url === category;
 
           const classNames = css("first", {
             "search-category__active": isActive
           });
 
           return (
-            <div key={categoryData.categoryUrl}>
+            <div key={categoryData.url}>
               <ReadingContainer>
                 <div className="writing">
                   <Link
                     onClick={() =>
                       this.setState({
-                        category: isActive ? "" : categoryData.categoryUrl
+                        category: isActive ? "" : categoryData.url
                       })
                     }
-                    to={`/categories/${root}/${categoryData.categoryUrl}`}
+                    to={`/categories/${root}/${categoryData.url}`}
                   >
                     <p className={classNames}>
                       {categoryData.category}
@@ -120,7 +122,7 @@ export default class Posts extends Component {
                 </div>
               </ReadingContainer>
               <ReadingContainer style={{ padding: 0 }}>
-                {categoryData.categoryUrl === category
+                {categoryData.url === category
                   ? this.renderPosts(categoryData.posts)
                   : null}
               </ReadingContainer>
@@ -169,8 +171,9 @@ export default class Posts extends Component {
 
   render() {
     const { category, root, search } = this.state;
+    const { posts } = this.props;
 
-    const posts = this.getPostsList(ALL_POSTS);
+    const filteredPosts = this.getFilteredPosts(this.props.posts);
 
     return (
       <div className="home-container">
@@ -179,9 +182,10 @@ export default class Posts extends Component {
         </div>
         <ReadingContainer style={{ padding: 0 }}>
           <Search
-            posts={posts}
+            filteredPosts={filteredPosts}
             onClearSearch={this.onClearSearch}
             onSearchChange={this.onSearchChange}
+            posts={posts}
             search={search}
           />
           <SearchCategories
@@ -191,7 +195,7 @@ export default class Posts extends Component {
             setRoot={this.setRoot}
           />
           {root === "newest" || search
-            ? this.renderNewest()
+            ? this.renderNewest(filteredPosts)
             : this.renderCategories()}
         </ReadingContainer>
       </div>

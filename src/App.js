@@ -2,9 +2,10 @@ import "./App.css";
 import React, { Component } from "react";
 import Route from "react-router-dom/Route";
 import Switch from "react-router-dom/Switch";
-import { find, get, keyBy } from "lodash";
+import { keyBy } from "lodash";
 
-import { getTitleMapping } from "./constants/pages";
+import { getStructuredPosts } from "./utils/posts";
+import { getTitleMapping, getTitle } from "./constants/pages";
 import Nav from "./components/Nav";
 import Home from "./components/Pages/Home";
 import Resources from "./components/Pages/Resources";
@@ -13,16 +14,23 @@ import ChurchFinders from "./components/Pages/Resources/ChurchFinders";
 import About from "./components/Pages/About";
 import Gospel from "./components/Pages/Gospel";
 import { Page } from "./components/Writing";
+import NoMatch from "./components/Pages/NoMatch";
 
 class App extends Component {
   constructor(props) {
     super(props);
+
+    props.posts.sort((a, b) => {
+      return new Date(b.updated || b.added) - new Date(a.updated || a.added);
+    });
 
     const postsByUrl = keyBy(props.posts, "url");
 
     this.state = {
       postsByUrl,
       pathname: "",
+      posts: props.posts || [],
+      structuredPosts: getStructuredPosts(props.posts),
       titleMapping: getTitleMapping(postsByUrl)
     };
   }
@@ -33,13 +41,7 @@ class App extends Component {
     this.props.history.listen(location => {
       this.setState({ pathname: location.pathname });
 
-      let title =
-        this.state.titleMapping[location.pathname].title ||
-        this.state.titleMapping["/"].title;
-
-      if (title.indexOf("Bible Answers") === -1) {
-        title = `${title} | Bible Answers`;
-      }
+      const title = getTitle(this.state.titleMapping, location.pathname);
 
       document.title = title;
     });
@@ -70,6 +72,14 @@ class App extends Component {
     );
   }
 
+  renderHome = ({ match }) => {
+    const { posts, structuredPosts } = this.state;
+
+    return (
+      <Home match={match} posts={posts} structuredPosts={structuredPosts} />
+    );
+  };
+
   renderPage = ({ history }) => {
     const post = this.state.postsByUrl[history.location.pathname];
 
@@ -81,7 +91,7 @@ class App extends Component {
       <div>
         {this.renderNav()}
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" render={this.renderHome} />
 
           <Route exact path="/resources" component={Resources} />
           <Route exact path="/resources/learn" component={Learn} />
@@ -95,8 +105,10 @@ class App extends Component {
           <Route path="/gospel" component={Gospel} />
           <Route path="/answers" render={this.renderPage} />
 
-          <Route path="/categories/:root/:category" component={Home} />
-          <Route path="/categories/:root" component={Home} />
+          <Route path="/categories/:root/:category" render={this.renderHome} />
+          <Route path="/categories/:root" render={this.renderHome} />
+
+          <Route component={NoMatch} />
         </Switch>
       </div>
     );

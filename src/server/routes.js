@@ -1,3 +1,5 @@
+import fs from "fs";
+
 import { db } from "./db";
 
 function routes(server) {
@@ -9,6 +11,12 @@ function routes(server) {
 
         res.send({ posts });
       });
+  });
+
+  server.post("/api/sitemap", (req, res) => {
+    fs.writeFile(`${__dirname}/sitemap.xml`, req.body.sitemap, err => {
+      res.send({ success: true });
+    });
   });
 }
 

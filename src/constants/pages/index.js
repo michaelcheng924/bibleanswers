@@ -13,4 +13,15 @@ function getTitleMapping(postsByUrl) {
   };
 }
 
-export { getTitleMapping };
+function getTitle(titleMapping, pathname) {
+  let data = titleMapping[pathname] || titleMapping["/"];
+  let title = data.title;
+
+  if (title.indexOf("Bible Answers") === -1) {
+    title = `${title} | Bible Answers`;
+  }
+
+  return title;
+}
+
+export { getTitleMapping, getTitle };

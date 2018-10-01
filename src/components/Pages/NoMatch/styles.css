@@ -1,0 +1,12 @@
+.no-match {
+  color: rgba(0, 0, 0, .54);
+  font-size: 30px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.no-match a {
+  color: #689F38;
+  display: block;
+  margin-top: 20px;
+}
