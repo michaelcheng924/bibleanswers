@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "next start"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +14,6 @@
   "dependencies": {
     "express": "^4.16.4",
     "next": "^7.0.2",
-    "next-routes": "^1.4.2",
     "react": "^16.6.1",
     "react-dom": "^16.6.1"
   }
