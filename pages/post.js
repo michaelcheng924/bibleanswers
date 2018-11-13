@@ -63,61 +63,7 @@ const Post = ({ post }) => {
 
       <TitleSection {...post} />
 
-      <p>
-        <label htmlFor="headingInputElement">
-          <p>
-            <b>Type your heading:</b>
-          </p>
-          <Amp.AmpState specName="amp-state" id="headingInput">
-            {defaultHeading}
-          </Amp.AmpState>
-          <AmpHelpers.Action
-            events={{
-              change: ["AMP.setState({ headingInput: { text: event.value } })"]
-            }}
-          >
-            {props => {
-              return <input {...props} type="text" id="headingInputElement" />;
-            }}
-          </AmpHelpers.Action>
-        </label>
-        <AmpHelpers.Action
-          events={{
-            tap: ["AMP.setState({ heading: { text: headingInput.text } })"]
-          }}
-        >
-          {props => <button {...props}>Set Heading</button>}
-        </AmpHelpers.Action>
-      </p>
-
-      <p>
-        <AmpHelpers.Action
-          events={{
-            tap: ["awesome-carousel.toggleVisibility"]
-          }}
-        >
-          {props => <button {...props}>Toggle Carousel Visibility</button>}
-        </AmpHelpers.Action>
-      </p>
-
-      <Amp.AmpCarousel
-        id="awesome-carousel"
-        height="610"
-        layout="fixed-height"
-        type="carousel"
-      >
-        {[...Array(6)].map((v, index) => (
-          <StyledAmpImg
-            specName="default"
-            key={Buffer.from(Math.random().toString()).toString("base64")}
-            data-filter={index}
-            src="/static/amp.jpg"
-            width="1080"
-            height="610"
-            alt="AMP"
-          />
-        ))}
-      </Amp.AmpCarousel>
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
       <h1>Hacker News</h1>
       <RelativeAmpList
