@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import Container from "../components/Container";
 import ReadingContainer from "../components/ReadingContainer";
 import ListItem from "../components/ListItem";
 
@@ -51,7 +52,7 @@ const Tag = ({ title, subtitle, description, posts = [] }) => {
   } "${title}" Questions and Answers | Bible Answers`;
 
   return (
-    <div>
+    <Container>
       <title>{pageTitle}</title>
       <meta type="description" content={description} />
 
@@ -72,7 +73,7 @@ const Tag = ({ title, subtitle, description, posts = [] }) => {
           );
         })}
       </ReadingContainer>
-    </div>
+    </Container>
   );
 };
 

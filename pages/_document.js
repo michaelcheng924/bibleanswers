@@ -1,4 +1,4 @@
-import Document, { Head, Main, NextScript } from "next/document";
+import Document from "next/document";
 import { ServerStyleSheet } from "styled-components";
 import {
   AmpScripts,
@@ -7,19 +7,16 @@ import {
 } from "react-amphtml/setup";
 import * as Amp from "react-amphtml";
 
+import SITEMAP from "../constants/sitemap";
 import Nav from "../components/Nav";
 
-const BODY_STYLES = `
-  body {
-    color: rgba(0, 0, 0, .84);
-    margin: 0;
-    padding: 0;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  }
-`;
-
 export default class MyDocument extends Document {
-  static getInitialProps({ req, renderPage }) {
+  static getInitialProps({ req, res, renderPage }) {
+    if (req.url === "/sitemap.xml") {
+      res.set("Content-Type", "text/xml");
+      res.send(SITEMAP);
+    }
+
     const ampScripts = new AmpScripts();
     const sheet = new ServerStyleSheet();
 
@@ -62,12 +59,20 @@ export default class MyDocument extends Document {
       .slice(0, 1) || <title>ampreact</title>;
 
     const metaDescription =
-      page.head.filter(({ type }) => type === "meta").slice(1, 2) || "";
+      page.head.filter(({ type }) => type === "meta").slice(1, 2) || null;
+
+    const schemaInfo =
+      page.head
+        .filter(({ type }) => {
+          return type === "script";
+        })
+        .slice(0, 1) || null;
 
     return {
       ...page,
       title,
       metaDescription,
+      schemaInfo,
       url: req.url,
       ampScriptTags,
       ampStyleTag
@@ -78,6 +83,7 @@ export default class MyDocument extends Document {
     const {
       title,
       metaDescription,
+      schemaInfo,
       url,
       ampScriptTags,
       ampStyleTag,
@@ -91,6 +97,7 @@ export default class MyDocument extends Document {
           <link rel="icon" href="https://i.imgur.com/lnlvtFf.png" />
           {title}
           {metaDescription}
+          {schemaInfo}
           {headerBoilerplate(url)}
           {ampScriptTags}
           {ampStyleTag}

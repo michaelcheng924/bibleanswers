@@ -5,15 +5,9 @@ import * as Amp from "react-amphtml";
 import fetch from "isomorphic-unfetch";
 
 import GlobalStyle from "../components/GlobalStyle";
+import Container from "../components/Container";
 import ReadingContainer from "../components/ReadingContainer";
 import TitleSection from "../components/TitleSection";
-
-const Container = styled.div`
-  color: rgba(0, 0, 0, 0.84);
-  margin: 0;
-  padding: 0;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-`;
 
 const RelativeAmpList = styled(Amp.AmpList)`
   position: relative;
@@ -30,11 +24,53 @@ const Post = ({ post, slug }) => {
     ];
   }
 
+  const { title, description, image_url, date_added, updated_at, html } = post;
+
+  const schemaInfo = ``;
+
+  const datePublished = date_added ? new Date(date_added) : new Date();
+
   return (
     <Container>
       <Head>
-        <title>{post.title} | Bible Answers</title>
-        <meta name="description" content={post.description} />
+        <title>{title} | Bible Answers</title>
+        <meta name="description" content={description} />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "http://schema.org",
+              "@type": "Article",
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": "https://google.com/article"
+              },
+              headline: title,
+              image: {
+                "@type": "ImageObject",
+                url: image_url,
+                height: 400,
+                width: 1200
+              },
+              datePublished: datePublished,
+              dateModified: new Date(updated_at).toISOString(),
+              author: {
+                "@type": "Person",
+                name: "Michael Cheng"
+              },
+              publisher: {
+                "@type": "Organization",
+                name: "Bible Answers",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://i.imgur.com/dJPxPY9.png"
+                }
+              },
+              description: description
+            })
+          }}
+        />
       </Head>
 
       <GlobalStyle />
@@ -42,7 +78,7 @@ const Post = ({ post, slug }) => {
       <TitleSection {...post} />
 
       <ReadingContainer>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
 
         <div className="writing">
           <h3>Related posts</h3>

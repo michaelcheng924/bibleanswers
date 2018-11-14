@@ -3,15 +3,9 @@ import styled from "styled-components";
 import fetch from "isomorphic-unfetch";
 import { FaTag } from "react-icons/fa";
 
+import Container from "../components/Container";
 import ListItem from "../components/ListItem";
 import ReadingContainer from "../components/ReadingContainer";
-
-const Container = styled.div`
-  color: rgba(0, 0, 0, 0.84);
-  margin: 0;
-  padding: 0;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-`;
 
 const Title = styled.h2`
   align-items: center;
@@ -31,17 +25,21 @@ const PostsTagsContainer = styled.div`
 `;
 
 const TagText = styled.div`
-  align-items: center;
   color: #689f38;
   cursor: pointer;
-  display: flex;
   font-size: 18px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 `;
 
 const LinkTag = styled.a`
-  color: #689f38;
   text-decoration: none;
+`;
+
+const PostsInProgress = styled.a`
+  color: #689f38;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
 `;
 
 const Home = ({ recentPosts = [], tags = [] }) => (
@@ -49,6 +47,22 @@ const Home = ({ recentPosts = [], tags = [] }) => (
     <title>
       Bible Answers | Explaining and Defending the Christian Worldview
     </title>
+
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "http://schema.org",
+          "@type": "WebSite",
+          url: "https://bibleanswers.io/",
+          potentialAction: {
+            "@type": "SearchAction",
+            target: "https://bibleanswers.io/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        })
+      }}
+    />
 
     <PostsTagsContainer>
       <ReadingContainer style={{ padding: 0 }}>
@@ -64,22 +78,28 @@ const Home = ({ recentPosts = [], tags = [] }) => (
 
       <ReadingContainer style={{ width: "initial" }}>
         <Title style={{ padding: 0 }}>Tags</Title>
-        {tags.map(tag => {
-          return (
-            <LinkTag key={tag.url} href={tag.url}>
-              <TagText>
-                <FaTag style={{ marginRight: 6, height: 14, width: 14 }} />
-                {tag.title} ({tag.posts_count})
-              </TagText>
-            </LinkTag>
-          );
-        })}
+        <ul>
+          {tags.map(tag => {
+            return (
+              <LinkTag key={tag.url} href={tag.url}>
+                <li>
+                  <TagText>
+                    {tag.title} ({tag.posts_count})
+                  </TagText>
+                </li>
+              </LinkTag>
+            );
+          })}
+        </ul>
+        <PostsInProgress href="/posts-in-progress">
+          Posts in progress
+        </PostsInProgress>
       </ReadingContainer>
     </PostsTagsContainer>
   </Container>
 );
 
-Home.getInitialProps = async function({ query }) {
+Home.getInitialProps = async function() {
   const res = await fetch("http://bibleanswersapi.herokuapp.com/homefetch");
   const data = await res.json();
 

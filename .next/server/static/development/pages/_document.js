@@ -133,6 +133,20 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./constants/sitemap.js":
+/*!******************************!*\
+  !*** ./constants/sitemap.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var SITEMAP = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset\n      xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\"\n      xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n      xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9\n            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\">\n<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->\n\n\n<url>\n  <loc>https://bibleanswers.io/</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>1.00</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/did-people-live-hundreds-years-genesis-5</loc>\n  <lastmod>2018-11-14T18:37:58+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/genesis-4-17-cain-wife</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/genesis-3-16-pain-women-child-bearing</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/genesis-3-9-gods-omniscience</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/baptism-necessary-acts-2-38</loc>\n  <lastmod>2018-11-14T18:37:58+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/are-there-one-many-gods</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/baptism-necessary-acts-22-16</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/baptism-necessary-galatians-3-27</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/baptism-necessary-salvation-1-peter-3-21</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/resurrection-narratives-harmony</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/1%20corinthians</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/1%20john</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/agnosticism</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/apologetics</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/authorship</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/bad-logic</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/baptism</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/contradictions</loc>\n  <lastmod>2018-11-14T18:37:58+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/calvinism</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/creation</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/creeds-confessions</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/deuteronomy</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/faith</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/genesis</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/baptism-necessary</loc>\n  <lastmod>2018-11-14T18:37:58+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/is-god-good</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/isaiah</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/jesus-existence</loc>\n  <lastmod>2018-11-14T18:37:58+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/john</loc>\n  <lastmod>2018-11-14T18:37:58+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/luke</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/mark</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/matthew</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/presuppositional-apologetics</loc>\n  <lastmod>2018-11-14T18:37:58+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/resurrection-narratives-harmony</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/textual-criticism</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/gospel</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/theology</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/trinity</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/tags/worldview</loc>\n  <lastmod>2018-11-14T18:37:58+00:00</lastmod>\n  <priority>0.80</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/agnosticism</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/were-angels-sitting-standing</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/jesus-appear-first</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/tacitus</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/where-were-angels</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/problem-of-evil</loc>\n  <lastmod>2018-11-14T18:37:58+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/how-many-angels-tomb</loc>\n  <lastmod>2018-11-14T18:37:58+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/lucian</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/when-stone-rolled-away</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/genesis-1-2-plants</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/what-is-presuppositional-apologetics</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/how-many-women-went-tomb</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/is-faith-blind</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/justin-martyr-mark</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/when-women-arrive-tomb</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/did-jesus-exist</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/rylands-p52</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/bible-disagreements</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/papias-authorship</loc>\n  <lastmod>2018-11-14T18:37:58+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/irenaeus-authorship</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/matthew-luke-genealogy</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/foreknowledge</loc>\n  <lastmod>2018-11-14T18:37:58+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/chalcedonian-creed</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/apostles-creed</loc>\n  <lastmod>2018-11-14T18:37:58+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/nicene-creed</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/athanasian-creed</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/answers/thirty-nine-articles</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n<url>\n  <loc>https://bibleanswers.io/gospel</loc>\n  <lastmod>2018-11-14T18:37:59+00:00</lastmod>\n  <priority>0.64</priority>\n</url>\n\n\n</urlset>";
+/* harmony default export */ __webpack_exports__["default"] = (SITEMAP);
+
+/***/ }),
+
 /***/ "./pages/_document.js":
 /*!****************************!*\
   !*** ./pages/_document.js ***!
@@ -153,7 +167,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_amphtml_setup__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_amphtml_setup__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_amphtml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-amphtml */ "react-amphtml");
 /* harmony import */ var react_amphtml__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_amphtml__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Nav */ "./components/Nav.js");
+/* harmony import */ var _constants_sitemap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../constants/sitemap */ "./constants/sitemap.js");
+/* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Nav */ "./components/Nav.js");
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -183,7 +198,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-var BODY_STYLES = "\n  body {\n    color: rgba(0, 0, 0, .84);\n    margin: 0;\n    padding: 0;\n    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;\n  }\n";
+
 
 var MyDocument =
 /*#__PURE__*/
@@ -202,6 +217,7 @@ function (_Document) {
       var _this$props = this.props,
           title = _this$props.title,
           metaDescription = _this$props.metaDescription,
+          schemaInfo = _this$props.schemaInfo,
           url = _this$props.url,
           ampScriptTags = _this$props.ampScriptTags,
           ampStyleTag = _this$props.ampStyleTag,
@@ -215,7 +231,7 @@ function (_Document) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("head", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
         rel: "icon",
         href: "https://i.imgur.com/lnlvtFf.png"
-      }), title, metaDescription, Object(react_amphtml_setup__WEBPACK_IMPORTED_MODULE_3__["headerBoilerplate"])(url), ampScriptTags, ampStyleTag), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      }), title, metaDescription, schemaInfo, Object(react_amphtml_setup__WEBPACK_IMPORTED_MODULE_3__["headerBoilerplate"])(url), ampScriptTags, ampStyleTag), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], {
         isAmp: true
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         dangerouslySetInnerHTML: {
@@ -227,7 +243,14 @@ function (_Document) {
     key: "getInitialProps",
     value: function getInitialProps(_ref) {
       var req = _ref.req,
+          res = _ref.res,
           renderPage = _ref.renderPage;
+
+      if (req.url === "/sitemap.xml") {
+        res.set("Content-Type", "text/xml");
+        res.send(_constants_sitemap__WEBPACK_IMPORTED_MODULE_5__["default"]);
+      }
+
       var ampScripts = new react_amphtml_setup__WEBPACK_IMPORTED_MODULE_3__["AmpScripts"]();
       var sheet = new styled_components__WEBPACK_IMPORTED_MODULE_2__["ServerStyleSheet"]();
       var page = renderPage(function (App) {
@@ -270,10 +293,15 @@ function (_Document) {
       var metaDescription = page.head.filter(function (_ref4) {
         var type = _ref4.type;
         return type === "meta";
-      }).slice(1, 2) || "";
+      }).slice(1, 2) || null;
+      var schemaInfo = page.head.filter(function (_ref5) {
+        var type = _ref5.type;
+        return type === "script";
+      }).slice(0, 1) || null;
       return _objectSpread({}, page, {
         title: title,
         metaDescription: metaDescription,
+        schemaInfo: schemaInfo,
         url: req.url,
         ampScriptTags: ampScriptTags,
         ampStyleTag: ampStyleTag

@@ -38435,8 +38435,18 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-function _templateObject4() {
+function _templateObject5() {
   var data = _taggedTemplateLiteral(["\n  color: #689f38;\n  text-decoration: none;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  align-items: center;\n  color: #689f38;\n  cursor: pointer;\n  display: flex;\n  font-size: 18px;\n  margin-bottom: 8px;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -38446,7 +38456,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  align-items: center;\n  color: #689f38;\n  cursor: pointer;\n  display: flex;\n  font-size: 18px;\n  margin-bottom: 8px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-wrap: wrap;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -38456,7 +38466,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-wrap: wrap;\n"]);
+  var data = _taggedTemplateLiteral(["\n  align-items: center;\n  display: flex;\n  font-size: 34px;\n  line-height: 1.15;\n  padding: 0 20px;\n\n  @media screen and (max-width: 768px) {\n    font-size: 30px;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -38466,7 +38476,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  align-items: center;\n  display: flex;\n  font-size: 34px;\n  line-height: 1.15;\n  padding: 0 20px;\n\n  @media screen and (max-width: 768px) {\n    font-size: 30px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  color: rgba(0, 0, 0, 0.84);\n  margin: 0;\n  padding: 0;\n  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -38483,17 +38493,18 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h2(_templateObject());
-var PostsTagsContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject2());
-var TagText = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject3());
-var LinkTag = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].a(_templateObject4());
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
+var Title = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h2(_templateObject2());
+var PostsTagsContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject3());
+var TagText = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject4());
+var LinkTag = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].a(_templateObject5());
 
 var Home = function Home(_ref) {
   var _ref$recentPosts = _ref.recentPosts,
       recentPosts = _ref$recentPosts === void 0 ? [] : _ref$recentPosts,
       _ref$tags = _ref.tags,
       tags = _ref$tags === void 0 ? [] : _ref$tags;
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, "Bible Answers | Explaining and Defending the Christian Worldview"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PostsTagsContainer, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ReadingContainer__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Container, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, "Bible Answers | Explaining and Defending the Christian Worldview"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PostsTagsContainer, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ReadingContainer__WEBPACK_IMPORTED_MODULE_6__["default"], {
     style: {
       padding: 0
     }

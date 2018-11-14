@@ -1,0 +1,354 @@
+const SITEMAP = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://bibleanswers.io/</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/did-people-live-hundreds-years-genesis-5</loc>
+  <lastmod>2018-11-14T18:37:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/genesis-4-17-cain-wife</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/genesis-3-16-pain-women-child-bearing</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/genesis-3-9-gods-omniscience</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/baptism-necessary-acts-2-38</loc>
+  <lastmod>2018-11-14T18:37:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/are-there-one-many-gods</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/baptism-necessary-acts-22-16</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/baptism-necessary-galatians-3-27</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/baptism-necessary-salvation-1-peter-3-21</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/resurrection-narratives-harmony</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/1%20corinthians</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/1%20john</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/agnosticism</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/apologetics</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/authorship</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/bad-logic</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/baptism</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/contradictions</loc>
+  <lastmod>2018-11-14T18:37:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/calvinism</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/creation</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/creeds-confessions</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/deuteronomy</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/faith</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/genesis</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/baptism-necessary</loc>
+  <lastmod>2018-11-14T18:37:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/is-god-good</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/isaiah</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/jesus-existence</loc>
+  <lastmod>2018-11-14T18:37:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/john</loc>
+  <lastmod>2018-11-14T18:37:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/luke</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/mark</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/matthew</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/presuppositional-apologetics</loc>
+  <lastmod>2018-11-14T18:37:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/resurrection-narratives-harmony</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/textual-criticism</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/gospel</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/theology</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/trinity</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/tags/worldview</loc>
+  <lastmod>2018-11-14T18:37:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/agnosticism</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/were-angels-sitting-standing</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/jesus-appear-first</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/tacitus</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/where-were-angels</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/problem-of-evil</loc>
+  <lastmod>2018-11-14T18:37:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/how-many-angels-tomb</loc>
+  <lastmod>2018-11-14T18:37:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/lucian</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/when-stone-rolled-away</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/genesis-1-2-plants</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/what-is-presuppositional-apologetics</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/how-many-women-went-tomb</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/is-faith-blind</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/justin-martyr-mark</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/when-women-arrive-tomb</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/did-jesus-exist</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/rylands-p52</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/bible-disagreements</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/papias-authorship</loc>
+  <lastmod>2018-11-14T18:37:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/irenaeus-authorship</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/matthew-luke-genealogy</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/foreknowledge</loc>
+  <lastmod>2018-11-14T18:37:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/chalcedonian-creed</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/apostles-creed</loc>
+  <lastmod>2018-11-14T18:37:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/nicene-creed</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/athanasian-creed</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/thirty-nine-articles</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/gospel</loc>
+  <lastmod>2018-11-14T18:37:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>`;
+
+export default SITEMAP;

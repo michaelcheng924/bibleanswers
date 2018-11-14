@@ -18,6 +18,7 @@ const ListItemContainer = styled.div`
 `;
 
 const ListItemTitle = styled.div`
+  color: rgba(0, 0, 0, 0.84);
   font-size: 20px;
   font-weight: 600;
   line-height: 25px;
