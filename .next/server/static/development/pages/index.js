@@ -108,6 +108,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_amphtml__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-amphtml */ "react-amphtml");
+/* harmony import */ var react_amphtml__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_amphtml__WEBPACK_IMPORTED_MODULE_3__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -127,7 +129,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  left: -50px;\n  height: 80px;\n  position: relative;\n"]);
+  var data = _taggedTemplateLiteral(["\n  height: 80px;\n  position: relative;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -191,12 +193,13 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
 var ListItemContainer = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject());
 var ListItemTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject2());
 var ListItemSubtitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject3());
 var ListItemDate = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject4());
 var AnswerImageContainer = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject5());
-var Image = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.img(_templateObject6());
+var StyledAmpImg = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(react_amphtml__WEBPACK_IMPORTED_MODULE_3__["AmpImg"])(_templateObject6());
 
 var ListItem =
 /*#__PURE__*/
@@ -217,13 +220,12 @@ function (_Component) {
           image_url_small = _this$props.image_url_small,
           subtitle = _this$props.subtitle,
           title = _this$props.title;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemTitle, null, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemSubtitle, null, subtitle), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemDate, null, date_added ? moment__WEBPACK_IMPORTED_MODULE_1___default()(new Date(date_added)).format("MMM Do, YYYY") : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("amp-img", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemTitle, null, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemSubtitle, null, subtitle), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemDate, null, date_added ? moment__WEBPACK_IMPORTED_MODULE_1___default()(new Date(date_added)).format("MMM Do, YYYY") : null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AnswerImageContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledAmpImg, {
+        specName: "default",
         src: image_url_small,
+        width: "80",
         height: "80",
-        width: "80"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AnswerImageContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Image, {
-        src: image_url_small,
-        alt: title
+        alt: "AMP"
       })));
     }
   }]);
@@ -293,8 +295,18 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-function _templateObject4() {
+function _templateObject5() {
   var data = _taggedTemplateLiteral(["\n  color: #689f38;\n  text-decoration: none;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  align-items: center;\n  color: #689f38;\n  cursor: pointer;\n  display: flex;\n  font-size: 18px;\n  margin-bottom: 8px;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -304,7 +316,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  align-items: center;\n  color: #689f38;\n  cursor: pointer;\n  display: flex;\n  font-size: 18px;\n  margin-bottom: 8px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-wrap: wrap;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -314,7 +326,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-wrap: wrap;\n"]);
+  var data = _taggedTemplateLiteral(["\n  align-items: center;\n  display: flex;\n  font-size: 34px;\n  line-height: 1.15;\n  padding: 0 20px;\n\n  @media screen and (max-width: 768px) {\n    font-size: 30px;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -324,7 +336,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  align-items: center;\n  display: flex;\n  font-size: 34px;\n  line-height: 1.15;\n  padding: 0 20px;\n\n  @media screen and (max-width: 768px) {\n    font-size: 30px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  color: rgba(0, 0, 0, 0.84);\n  margin: 0;\n  padding: 0;\n  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -341,17 +353,18 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.h2(_templateObject());
-var PostsTagsContainer = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject2());
-var TagText = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject3());
-var LinkTag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.a(_templateObject4());
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject());
+var Title = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.h2(_templateObject2());
+var PostsTagsContainer = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject3());
+var TagText = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject4());
+var LinkTag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.a(_templateObject5());
 
 var Home = function Home(_ref) {
   var _ref$recentPosts = _ref.recentPosts,
       recentPosts = _ref$recentPosts === void 0 ? [] : _ref$recentPosts,
       _ref$tags = _ref.tags,
       tags = _ref$tags === void 0 ? [] : _ref$tags;
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, "Bible Answers | Explaining and Defending the Christian Worldview"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PostsTagsContainer, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ReadingContainer__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Container, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, "Bible Answers | Explaining and Defending the Christian Worldview"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PostsTagsContainer, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ReadingContainer__WEBPACK_IMPORTED_MODULE_6__["default"], {
     style: {
       padding: 0
     }
@@ -479,6 +492,17 @@ module.exports = require("moment");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-amphtml":
+/*!********************************!*\
+  !*** external "react-amphtml" ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-amphtml");
 
 /***/ }),
 

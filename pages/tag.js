@@ -46,11 +46,13 @@ const Tag = ({ title, subtitle, description, posts = [] }) => {
     return [<h1>Tag not found</h1>, <a href="/">Bible Answers Home</a>];
   }
 
+  const pageTitle = `${
+    posts.length
+  } "${title}" Questions and Answers | Bible Answers`;
+
   return (
     <div>
-      <title>
-        {posts.length} "{title}" Questions and Answers | Bible Answers
-      </title>
+      <title>{pageTitle}</title>
       <meta type="description" content={description} />
 
       <ReadingContainer style={{ marginBottom: 0 }}>

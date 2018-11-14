@@ -6,6 +6,13 @@ import { FaTag } from "react-icons/fa";
 import ListItem from "../components/ListItem";
 import ReadingContainer from "../components/ReadingContainer";
 
+const Container = styled.div`
+  color: rgba(0, 0, 0, 0.84);
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+`;
+
 const Title = styled.h2`
   align-items: center;
   display: flex;
@@ -38,7 +45,7 @@ const LinkTag = styled.a`
 `;
 
 const Home = ({ recentPosts = [], tags = [] }) => (
-  <div>
+  <Container>
     <title>
       Bible Answers | Explaining and Defending the Christian Worldview
     </title>
@@ -69,7 +76,7 @@ const Home = ({ recentPosts = [], tags = [] }) => (
         })}
       </ReadingContainer>
     </PostsTagsContainer>
-  </div>
+  </Container>
 );
 
 Home.getInitialProps = async function({ query }) {

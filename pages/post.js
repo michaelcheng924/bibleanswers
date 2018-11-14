@@ -15,33 +15,12 @@ const Container = styled.div`
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 `;
 
-const StyledAmpImg = styled(Amp.AmpImg)`
-  filter: ${props => {
-    switch (props["data-filter"]) {
-      case 1:
-        return "blur(10px)";
-      case 2:
-        return "hue-rotate(180deg)";
-      case 3:
-        return "invert(100%)";
-      case 4:
-        return "grayscale(100%)";
-      case 5:
-        return "sepia(100%)";
-      case 6:
-        return "saturate(100%)";
-      default:
-        return "none";
-    }
-  }};
-`;
-
 const RelativeAmpList = styled(Amp.AmpList)`
   position: relative;
   min-height: 2rem;
 `;
 
-const Post = ({ post }) => {
+const Post = ({ post, slug }) => {
   if (!post) {
     return [
       <h1>Post not found</h1>,
@@ -64,38 +43,25 @@ const Post = ({ post }) => {
 
       <ReadingContainer>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </ReadingContainer>
 
-      {/* <h1>Hacker News</h1>
-      <RelativeAmpList
-        specName="default"
-        src={`https://www.graphqlhub.com/graphql?query=${encodeURIComponent(`
-              {
-                hn {
-                  topStories {
-                    id
-                    title
-                    score
-                    descendants
-                  }
-                }
-              }
-            `)}`}
-        items="data.hn.topStories"
-        layout="fill"
-      >
-        <Amp.Template specName="default" type="amp-mustache">
-          <div>
-            <a
-              href="https://news.ycombinator.com/item?id={{id}}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {"{{title}} ⭐ {{score}} 💬 {{descendants}}"}
-            </a>
-          </div>
-        </Amp.Template>
-      </RelativeAmpList> */}
+        <div className="writing">
+          <h3>Related posts</h3>
+          <RelativeAmpList
+            specName="default"
+            src={`https://bibleanswersapi.herokuapp.com/relatedposts/${slug}`}
+            items="items"
+            layout="fill"
+          >
+            <Amp.Template specName="default" type="amp-mustache">
+              <div>
+                <a href="{{url}}" target="_blank" rel="noopener noreferrer">
+                  <p className="first">&rsaquo; {"{{title}}"}</p>
+                </a>
+              </div>
+            </Amp.Template>
+          </RelativeAmpList>
+        </div>
+      </ReadingContainer>
     </Container>
   );
 };
@@ -107,7 +73,8 @@ Post.getInitialProps = async function({ query }) {
   const data = await res.json();
 
   return {
-    post: data
+    post: data,
+    slug: query.slug
   };
 };
 

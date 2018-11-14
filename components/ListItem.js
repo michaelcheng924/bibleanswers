@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import moment from "moment";
 import styled from "styled-components";
+import * as Amp from "react-amphtml";
 
 const ListItemContainer = styled.div`
   align-items: center;
@@ -44,8 +45,7 @@ const AnswerImageContainer = styled.div`
   width: 80px;
 `;
 
-const Image = styled.img`
-  left: -50px;
+const StyledAmpImg = styled(Amp.AmpImg)`
   height: 80px;
   position: relative;
 `;
@@ -64,10 +64,15 @@ class ListItem extends Component {
               ? moment(new Date(date_added)).format("MMM Do, YYYY")
               : null}
           </ListItemDate>
-          <amp-img src={image_url_small} height="80" width="80" />
         </div>
         <AnswerImageContainer>
-          <Image src={image_url_small} alt={title} />
+          <StyledAmpImg
+            specName="default"
+            src={image_url_small}
+            width="80"
+            height="80"
+            alt="AMP"
+          />
         </AnswerImageContainer>
       </ListItemContainer>
     );
