@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -186,6 +186,35 @@ var StyledAmpImage = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(re
 
 /***/ }),
 
+/***/ "./components/GlobalStyle.js":
+/*!***********************************!*\
+  !*** ./components/GlobalStyle.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n.writing h3 {\n  font-size: 34px;\n  line-height: 1.15;\n  margin: 0;\n  margin-top: 56px;\n}\n\n.writing h4 {\n  font-size: 26px;\n  line-height: 1.22;\n  margin: 0;\n  margin-top: 30px;\n}\n\n.writing h3 + p,\n.writing h3 + ol,\n.writing h3 + ul,\n.writing h3 + blockquote,\n.writing h4 + p,\n.writing h4 + ol,\n.writing h4 + ul,\n.writing h4 + blockquote {\n  margin-top: 8px;\n}\n\n.writing p,\n.writing ol,\n.writing ul,\n.writing blockquote {\n  font-size: 21px;\n  line-height: 1.58;\n  margin: 0;\n  margin-top: 29px;\n}\n\n.writing ol,\n.writing ul {\n  padding: 0 40px;\n}\n\n.writing li {\n  margin-bottom: 10px;\n}\n\n.writing li:last-child {\n  margin-bottom: 0;\n}\n\n.writing blockquote {\n  border-left: 3px solid rgba(0, 0, 0, .84);\n  font-style: italic;\n  left: -20px;\n  padding-left: 20px;\n  position: relative;\n}\n\n.writing .first {\n  margin-top: 8px;\n}\n\n.writing .nomargin {\n  margin-top: 0;\n}\n\n.writing .indent {\n  margin-left: 20px;\n}\n\n.writing .image {\n  margin-top: 29px;\n}\n\n.writing .image-left {\n  float: left;\n  margin-right: 20px;\n}\n\n.writing .image-right {\n  float: right;\n  margin-left: 20px;\n}\n\n.writing a {\n  color: #689f38;\n  text-decoration: none;\n}\n\n.writing .scripture {\n  color: #039BE5;\n}\n\n.writing .reference {\n  font-size: 14px;\n  margin-left: 2px;\n  position: relative;\n  top: -5px;\n}\n\n@media screen and (max-width: 768px) {\n  .writing h3 {\n    font-size: 30px;\n    margin-top: 28px;\n  }\n\n  .writing h4 {\n    font-size: 24px;\n    margin-top: 22px;\n  }\n\n  .writing p,\n  .writing ol {\n    font-size: 18px;\n    margin-top: 21px;\n  }\n\n  .writing blockquote {\n    font-size: 18px;\n    margin-top: 21px;\n  }\n\n  .writing .image {\n    margin-top: 21px;\n  }\n}\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+var GlobalStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["createGlobalStyle"])(_templateObject());
+/* harmony default export */ __webpack_exports__["default"] = (GlobalStyle);
+
+/***/ }),
+
 /***/ "./components/ReadingContainer.js":
 /*!****************************************!*\
   !*** ./components/ReadingContainer.js ***!
@@ -197,15 +226,21 @@ var StyledAmpImage = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(re
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var children = _ref.children;
+  var children = _ref.children,
+      style = _ref.style;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
+    style: _objectSpread({
       margin: "0 auto 20px",
       maxWidth: 740,
+      width: "100%",
       padding: "0 20px"
-    }
+    }, style)
   }, children);
 });
 
@@ -238,7 +273,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-position: center;\n  width: 100%;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -363,10 +398,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_amphtml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-amphtml */ "react-amphtml");
 /* harmony import */ var react_amphtml__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_amphtml__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_amphtml_helpers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-amphtml/helpers */ "react-amphtml/helpers");
-/* harmony import */ var react_amphtml_helpers__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_amphtml_helpers__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_GlobalStyle__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/GlobalStyle */ "./components/GlobalStyle.js");
 /* harmony import */ var _components_ReadingContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ReadingContainer */ "./components/ReadingContainer.js");
 /* harmony import */ var _components_TitleSection__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/TitleSection */ "./components/TitleSection.js");
 
@@ -374,16 +408,6 @@ __webpack_require__.r(__webpack_exports__);
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _templateObject3() {
   var data = _taggedTemplateLiteral(["\n  position: relative;\n  min-height: 2rem;\n"]);
@@ -451,9 +475,6 @@ var StyledAmpImg = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(reac
   }
 });
 var RelativeAmpList = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(react_amphtml__WEBPACK_IMPORTED_MODULE_4__["AmpList"])(_templateObject3());
-var defaultHeading = {
-  text: "Hello, World!"
-};
 
 var Post = function Post(_ref) {
   var post = _ref.post;
@@ -464,60 +485,14 @@ var Post = function Post(_ref) {
     }, "Bible Answers Home"))];
   }
 
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Container, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, post.title, " | Bible Answers")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_TitleSection__WEBPACK_IMPORTED_MODULE_8__["default"], post), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    htmlFor: "headingInputElement"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("b", null, "Type your heading:")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_amphtml__WEBPACK_IMPORTED_MODULE_4__["AmpState"], {
-    specName: "amp-state",
-    id: "headingInput"
-  }, defaultHeading), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_amphtml_helpers__WEBPACK_IMPORTED_MODULE_5__["Action"], {
-    events: {
-      change: ["AMP.setState({ headingInput: { text: event.value } })"]
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Container, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, post.title, " | Bible Answers"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
+    name: "description",
+    content: post.description
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_GlobalStyle__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_TitleSection__WEBPACK_IMPORTED_MODULE_8__["default"], post), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ReadingContainer__WEBPACK_IMPORTED_MODULE_7__["default"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    dangerouslySetInnerHTML: {
+      __html: post.html
     }
-  }, function (props) {
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", _extends({}, props, {
-      type: "text",
-      id: "headingInputElement"
-    }));
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_amphtml_helpers__WEBPACK_IMPORTED_MODULE_5__["Action"], {
-    events: {
-      tap: ["AMP.setState({ heading: { text: headingInput.text } })"]
-    }
-  }, function (props) {
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", props, "Set Heading");
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_amphtml_helpers__WEBPACK_IMPORTED_MODULE_5__["Action"], {
-    events: {
-      tap: ["awesome-carousel.toggleVisibility"]
-    }
-  }, function (props) {
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", props, "Toggle Carousel Visibility");
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_amphtml__WEBPACK_IMPORTED_MODULE_4__["AmpCarousel"], {
-    id: "awesome-carousel",
-    height: "610",
-    layout: "fixed-height",
-    type: "carousel"
-  }, _toConsumableArray(Array(6)).map(function (v, index) {
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledAmpImg, {
-      specName: "default",
-      key: Buffer.from(Math.random().toString()).toString("base64"),
-      "data-filter": index,
-      src: "/static/amp.jpg",
-      width: "1080",
-      height: "610",
-      alt: "AMP"
-    });
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", null, "Hacker News"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(RelativeAmpList, {
-    specName: "default",
-    src: "https://www.graphqlhub.com/graphql?query=".concat(encodeURIComponent("\n              {\n                hn {\n                  topStories {\n                    id\n                    title\n                    score\n                    descendants\n                  }\n                }\n              }\n            ")),
-    items: "data.hn.topStories",
-    layout: "fill"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_amphtml__WEBPACK_IMPORTED_MODULE_4__["Template"], {
-    specName: "default",
-    type: "amp-mustache"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: "https://news.ycombinator.com/item?id={{id}}",
-    target: "_blank",
-    rel: "noopener noreferrer"
-  }, "{{title}} ⭐ {{score}} 💬 {{descendants}}")))));
+  })));
 };
 
 Post.getInitialProps =
@@ -533,7 +508,7 @@ function () {
           case 0:
             query = _ref2.query;
             _context.next = 3;
-            return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6___default()("http://bibleanswersapi.herokuapp.com/posts/".concat(query.slug));
+            return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default()("http://bibleanswersapi.herokuapp.com/posts/".concat(query.slug));
 
           case 3:
             res = _context.sent;
@@ -563,7 +538,7 @@ function () {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!*****************************!*\
   !*** multi ./pages/post.js ***!
   \*****************************/
@@ -638,17 +613,6 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-amphtml");
-
-/***/ }),
-
-/***/ "react-amphtml/helpers":
-/*!****************************************!*\
-  !*** external "react-amphtml/helpers" ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-amphtml/helpers");
 
 /***/ }),
 

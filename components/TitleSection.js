@@ -84,6 +84,7 @@ const CoverImageContainer = styled.div`
 `;
 
 const StyledAmpImg = styled(Amp.AmpImg)`
+  background-position: center;
   width: 100%;
 `;
 

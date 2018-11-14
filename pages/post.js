@@ -2,9 +2,9 @@ import React from "react";
 import Head from "next/head";
 import styled from "styled-components";
 import * as Amp from "react-amphtml";
-import * as AmpHelpers from "react-amphtml/helpers";
 import fetch from "isomorphic-unfetch";
 
+import GlobalStyle from "../components/GlobalStyle";
 import ReadingContainer from "../components/ReadingContainer";
 import TitleSection from "../components/TitleSection";
 
@@ -41,10 +41,6 @@ const RelativeAmpList = styled(Amp.AmpList)`
   min-height: 2rem;
 `;
 
-const defaultHeading = {
-  text: "Hello, World!"
-};
-
 const Post = ({ post }) => {
   if (!post) {
     return [
@@ -59,13 +55,18 @@ const Post = ({ post }) => {
     <Container>
       <Head>
         <title>{post.title} | Bible Answers</title>
+        <meta name="description" content={post.description} />
       </Head>
+
+      <GlobalStyle />
 
       <TitleSection {...post} />
 
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <ReadingContainer>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      </ReadingContainer>
 
-      <h1>Hacker News</h1>
+      {/* <h1>Hacker News</h1>
       <RelativeAmpList
         specName="default"
         src={`https://www.graphqlhub.com/graphql?query=${encodeURIComponent(`
@@ -94,7 +95,7 @@ const Post = ({ post }) => {
             </a>
           </div>
         </Amp.Template>
-      </RelativeAmpList>
+      </RelativeAmpList> */}
     </Container>
   );
 };
