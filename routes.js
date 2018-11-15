@@ -4,3 +4,4 @@ routes.add("post", "/answers/:slug");
 routes.add("tag", "/tags/:slug");
 
 routes.add("export", "/export");
+routes.add("sitemap", "/sitemap");

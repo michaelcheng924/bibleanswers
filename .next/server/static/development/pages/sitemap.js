@@ -88,32 +88,65 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 25);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 25:
+/***/ "./pages/sitemap.js":
+/*!**************************!*\
+  !*** ./pages/sitemap.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Sitemap = function Sitemap() {
+  return null;
+};
+
+Sitemap.getInitialProps = function (_ref) {
+  var res = _ref.res;
+  isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_0___default()("https://bibleanswersapi.herokuapp.com/sitemap").then(function (r) {
+    return r.json();
+  }).then(function (sitemap) {
+    res.set("Content-Type", "text/xml");
+    res.send(sitemap);
+  });
+  return {};
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Sitemap);
+
+/***/ }),
+
+/***/ 3:
+/*!********************************!*\
+  !*** multi ./pages/sitemap.js ***!
+  \********************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(26);
+module.exports = __webpack_require__(/*! ./pages/sitemap.js */"./pages/sitemap.js");
 
 
 /***/ }),
 
-/***/ 26:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(27)
-
-
-/***/ }),
-
-/***/ 27:
+/***/ "isomorphic-unfetch":
+/*!*************************************!*\
+  !*** external "isomorphic-unfetch" ***!
+  \*************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("next/app");
+module.exports = require("isomorphic-unfetch");
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=sitemap.js.map

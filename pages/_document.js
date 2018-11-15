@@ -12,7 +12,7 @@ import Nav from "../components/Nav";
 
 export default class MyDocument extends Document {
   static getInitialProps({ req, res, renderPage }) {
-    if (req.url === "/sitemap.xml") {
+    if (req.url === "/sitemap") {
       res.set("Content-Type", "text/xml");
       res.send(SITEMAP);
     }
