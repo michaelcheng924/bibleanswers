@@ -8,6 +8,7 @@ import GlobalStyle from "../components/GlobalStyle";
 import Container from "../components/Container";
 import ReadingContainer from "../components/ReadingContainer";
 import TitleSection from "../components/TitleSection";
+import Help from "../components/Help";
 
 const RelativeAmpList = styled(Amp.AmpList)`
   position: relative;
@@ -24,9 +25,15 @@ const Post = ({ post, slug }) => {
     ];
   }
 
-  const { title, description, image_url, date_added, updated_at, html } = post;
-
-  const schemaInfo = ``;
+  const {
+    title,
+    description,
+    image_url,
+    date_added,
+    updated_at,
+    html,
+    published
+  } = post;
 
   const datePublished = date_added ? new Date(date_added) : new Date();
 
@@ -78,7 +85,11 @@ const Post = ({ post, slug }) => {
       <TitleSection {...post} />
 
       <ReadingContainer>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        {published ? (
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        ) : (
+          <Help description={description} title={title} />
+        )}
 
         <div className="writing">
           <h3>Related posts</h3>

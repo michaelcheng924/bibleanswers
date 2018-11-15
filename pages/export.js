@@ -12,10 +12,6 @@ class Export extends Component {
     };
   };
 
-  componentDidMount() {
-    this.textarea.select();
-  }
-
   render() {
     const { posts, tags } = this.props;
 
@@ -23,6 +19,8 @@ class Export extends Component {
       exportPathMap: function() {
         return {
           "/": { page: "/" },
+          "/all-posts": { page: "/all-posts" },
+          "/posts-in-progress": { page: "/posts-in-progress" },
           ${posts
             .map(
               post =>

@@ -35,14 +35,15 @@ const LinkTag = styled.a`
   text-decoration: none;
 `;
 
-const PostsInProgress = styled.a`
+const MoreLink = styled.a`
   color: #689f38;
   cursor: pointer;
   font-size: 18px;
   margin-top: 10px;
+  text-decoration: none;
 `;
 
-const Home = ({ recentPosts = [], tags = [] }) => (
+const Home = ({ recentPosts = [], tags = [], postsCount }) => (
   <Container>
     <title>
       Bible Answers | Explaining and Defending the Christian Worldview
@@ -74,6 +75,9 @@ const Home = ({ recentPosts = [], tags = [] }) => (
             </LinkTag>
           );
         })}
+        <center>
+          <MoreLink href="all-posts">All {postsCount} posts</MoreLink>
+        </center>
       </ReadingContainer>
 
       <ReadingContainer style={{ width: "initial" }}>
@@ -91,9 +95,7 @@ const Home = ({ recentPosts = [], tags = [] }) => (
             );
           })}
         </ul>
-        <PostsInProgress href="/posts-in-progress">
-          Posts in progress
-        </PostsInProgress>
+        <MoreLink href="/posts-in-progress">Posts in progress</MoreLink>
       </ReadingContainer>
     </PostsTagsContainer>
   </Container>
@@ -101,11 +103,13 @@ const Home = ({ recentPosts = [], tags = [] }) => (
 
 Home.getInitialProps = async function() {
   const res = await fetch("http://bibleanswersapi.herokuapp.com/homefetch");
+
   const data = await res.json();
 
   return {
     recentPosts: data.recent_posts,
-    tags: data.tags
+    tags: data.tags,
+    postsCount: data.posts_count
   };
 };
 

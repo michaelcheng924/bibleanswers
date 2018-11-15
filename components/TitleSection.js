@@ -95,14 +95,16 @@ const Divider = styled.div`
   text-align: center;
 `;
 
-export default ({ title, subtitle, image_url, date_added, user = {} }) => (
+export default ({ title, subtitle, image_url, date_added, user }) => (
   <TitleSection>
     <TitleInfoContainer>
       <TitleInfo>
         <TitleText>{title}</TitleText>
         <Subtitle>{subtitle || "Help us write this article!"}</Subtitle>
 
-        <Author date_added={date_added} image={user.image} name={user.name} />
+        {user ? (
+          <Author date_added={date_added} image={user.image} name={user.name} />
+        ) : null}
 
         <Divider>...</Divider>
       </TitleInfo>
