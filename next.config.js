@@ -4,6 +4,7 @@ module.exports = {
       "/": { page: "/" },
       "/all-posts": { page: "/all-posts" },
       "/posts-in-progress": { page: "/posts-in-progress" },
+      "/sitemap": { page: "/sitemap" },
       "/answers/chalcedonian-creed": {
         page: "/post",
         query: { slug: "chalcedonian-creed" }
