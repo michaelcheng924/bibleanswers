@@ -18,10 +18,10 @@ class Export extends Component {
     const value = `module.exports = {
       exportPathMap: function() {
         return {
-          "/sitemap": { page: "/" },
           "/": { page: "/" },
           "/all-posts": { page: "/all-posts" },
           "/posts-in-progress": { page: "/posts-in-progress" },
+          "/sitemap": { page: "/sitemap" },
           ${posts
             .map(
               post =>
