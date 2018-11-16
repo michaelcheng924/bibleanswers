@@ -203,7 +203,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     style: _objectSpread({
       margin: "0 auto 20px",
       maxWidth: 740,
-      width: "100%",
+      width: "calc(100% - 40px)",
       padding: "0 20px"
     }, style)
   }, children);
@@ -38598,7 +38598,7 @@ _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function 
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default()("http://bibleanswersapi.herokuapp.com/homefetch");
+          return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default()("https://bibleanswersapi.herokuapp.com/homefetch");
 
         case 2:
           res = _context.sent;
@@ -38643,7 +38643,7 @@ _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function 
 
 /***/ }),
 
-/***/ 6:
+/***/ 7:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -38668,5 +38668,5 @@ module.exports = dll_ecba6b44147cc8018369;
 
 /***/ })
 
-},[[6,"static/runtime/webpack.js"]]]));;
+},[[7,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=index.js.map

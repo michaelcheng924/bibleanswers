@@ -459,6 +459,10 @@ module.exports = {
         page: "/post",
         query: { slug: "did-anyone-ascend-heaven-before-jesus" }
       },
+      "/answers/is-anyone-righteous-have-all-sinned": {
+        page: "/post",
+        query: { slug: "is-anyone-righteous-have-all-sinned" }
+      },
       "/answers/genesis-3-16-pain-women-child-bearing": {
         page: "/post",
         query: { slug: "genesis-3-16-pain-women-child-bearing" }
@@ -503,10 +507,13 @@ module.exports = {
       "/tags/theology": { page: "/tag", query: { slug: "theology" } },
       "/tags/2 kings": { page: "/tag", query: { slug: "2 kings" } },
       "/tags/hebrews": { page: "/tag", query: { slug: "hebrews" } },
+      "/tags/romans": { page: "/tag", query: { slug: "romans" } },
       "/tags/1 john": { page: "/tag", query: { slug: "1 john" } },
+      "/tags/psalms": { page: "/tag", query: { slug: "psalms" } },
       "/tags/isaiah": { page: "/tag", query: { slug: "isaiah" } },
       "/tags/luke": { page: "/tag", query: { slug: "luke" } },
       "/tags/1 corinthians": { page: "/tag", query: { slug: "1 corinthians" } },
+      "/tags/job": { page: "/tag", query: { slug: "job" } },
       "/tags/jonah": { page: "/tag", query: { slug: "jonah" } },
       "/tags/malachi": { page: "/tag", query: { slug: "malachi" } },
       "/tags/matthew": { page: "/tag", query: { slug: "matthew" } },
