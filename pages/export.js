@@ -3,7 +3,7 @@ import fetch from "isomorphic-unfetch";
 
 class Export extends Component {
   static getInitialProps = async () => {
-    const res = await fetch("http://bibleanswersapi.herokuapp.com/export");
+    const res = await fetch("https://bibleanswersapi.herokuapp.com/export");
     const data = await res.json();
 
     return {

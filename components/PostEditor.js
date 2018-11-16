@@ -243,11 +243,11 @@ class PostEditor extends Component {
     delete finalPost.tags;
 
     let method = "post";
-    let url = "http://bibleanswersapi.herokuapp.com/posts";
+    let url = "https://bibleanswersapi.herokuapp.com/posts";
 
     if (post.id) {
       method = "patch";
-      url = `http://bibleanswersapi.herokuapp.com/posts/${post.id}`;
+      url = `https://bibleanswersapi.herokuapp.com/posts/${post.id}`;
     }
 
     axios[method](url, finalPost, headers).then(response => {
@@ -266,7 +266,7 @@ class PostEditor extends Component {
     if (confirm) {
       axios
         .delete(
-          `http://bibleanswersapi.herokuapp.com/posts/${this.state.post.id}`
+          `https://bibleanswersapi.herokuapp.com/posts/${this.state.post.id}`
         )
         .then(() => {
           this.props.onFetchPostsTags().then(() => {

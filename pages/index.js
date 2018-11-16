@@ -102,7 +102,7 @@ const Home = ({ recentPosts = [], tags = [], postsCount }) => (
 );
 
 Home.getInitialProps = async function() {
-  const res = await fetch("http://bibleanswersapi.herokuapp.com/homefetch");
+  const res = await fetch("https://bibleanswersapi.herokuapp.com/homefetch");
 
   const data = await res.json();
 

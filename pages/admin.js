@@ -36,7 +36,7 @@ class Admin extends Component {
 
   onFetchPostsTags = () => {
     return axios
-      .get("http://bibleanswersapi.herokuapp.com/initialfetch")
+      .get("https://bibleanswersapi.herokuapp.com/initialfetch")
       .then(response => {
         this.setState({
           posts: response.data.posts,

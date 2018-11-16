@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import fetch from "isomorphic-unfetch";
+import { FaTag } from "react-icons/fa";
 
 import Container from "../components/Container";
 import ReadingContainer from "../components/ReadingContainer";
@@ -18,15 +19,14 @@ const Title = styled.h1`
 `;
 
 const Heading = styled.h2`
-  font-size: 26px;
-  line-height: 1.22;
-  margin: 0;
-  margin-top: 30px;
+  align-items: center;
+  display: flex;
+  font-size: 34px;
+  line-height: 1.15;
   padding: 0 20px;
 
   @media screen and (max-width: 768px) {
-    font-size: 24px;
-    margin-top: 22px;
+    font-size: 30px;
   }
 `;
 
@@ -51,78 +51,39 @@ const Divider = styled.div`
   text-align: center;
 `;
 
-const LinkTag = styled.a`
-  color: #689f38;
-  text-decoration: none;
+const PostContainer = styled.li`
+  margin-bottom: 10px;
 `;
 
-const TagsJumpContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 8px;
-  padding: 0 20px;
-`;
-
-const TagJump = styled.div`
-  border: 1px solid rgba(0, 0, 0, 0.54);
-  border-radius: 3px;
-  font-size: 16px;
-  margin: 0 10px 10px 0;
-  padding: 5px 10px;
-  width: 150px;
-`;
-
-const AllPosts = ({ tags = [], posts_count }) => {
-  const title = `${posts_count} Bible Questions and Answers | Bible Answers`;
+const AllPosts = ({ posts = [] }) => {
+  const title = `${posts.length} Bible Questions and Answers | Bible Answers`;
 
   return (
     <Container>
       <title>{title}</title>
       <meta
         type="description"
-        content={`All ${posts_count} of Bible Answers's questions and answers. Learn about and defend the Bible with these questions and answers about a wide range of categories.`}
+        content={`All ${
+          posts.length
+        } of Bible Answers's questions and answers. Learn about and defend the Bible with these questions and answers about a wide range of categories.`}
       />
 
       <ReadingContainer style={{ marginBottom: 0 }}>
-        <Title>{posts_count} Bible Questions and Answers</Title>
+        <Title>{posts.length} Bible Questions and Answers</Title>
         <Subtitle>Browse all of our questions and answers</Subtitle>
         <Divider>...</Divider>
       </ReadingContainer>
-      <a id="top">
-        <Heading>Tags</Heading>
-      </a>
-      <TagsJumpContainer>
-        {tags.map(tag => {
+      <ReadingContainer>
+        <Heading>All posts</Heading>
+        {posts.map(post => {
           return (
-            <LinkTag key={tag.url} href={`#${tag.url}`}>
-              <TagJump>
-                {tag.title} ({tag.posts.length})
-              </TagJump>
-            </LinkTag>
-          );
-        })}
-      </TagsJumpContainer>
-      <br />
-      <ReadingContainer style={{ padding: 0 }}>
-        {tags.map(tag => {
-          return (
-            <div key={tag.url}>
-              <a id={tag.url}>
-                <Heading>
-                  {tag.title} ({tag.posts.length}){" "}
-                  <LinkTag href="#top" style={{ fontSize: 13 }}>
-                    Back to top
-                  </LinkTag>
-                </Heading>
-              </a>
-              {tag.posts.map(post => {
-                return (
-                  <LinkTag href={post.url} key={post.url}>
-                    <ListItem {...post} />
-                  </LinkTag>
-                );
-              })}
-            </div>
+            <a
+              key={post.url}
+              href={post.url}
+              style={{ textDecoration: "none" }}
+            >
+              <ListItem {...post} />
+            </a>
           );
         })}
       </ReadingContainer>
@@ -131,12 +92,10 @@ const AllPosts = ({ tags = [], posts_count }) => {
 };
 
 AllPosts.getInitialProps = async function({ query }) {
-  const res = await fetch(
-    `http://bibleanswersapi.herokuapp.com/tags_for_all_posts`
-  );
+  const res = await fetch(`https://bibleanswersapi.herokuapp.com/all_posts`);
   const data = await res.json();
 
-  return { tags: data.tags, posts_count: data.posts_count };
+  return { posts: data };
 };
 
 export default AllPosts;

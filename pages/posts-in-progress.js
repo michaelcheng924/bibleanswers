@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import fetch from "isomorphic-unfetch";
+import { FaTag } from "react-icons/fa";
 
 import Container from "../components/Container";
 import ReadingContainer from "../components/ReadingContainer";
-import ListItem from "../components/ListItem";
 
 const Title = styled.h1`
   align-items: center;
@@ -18,15 +18,14 @@ const Title = styled.h1`
 `;
 
 const Heading = styled.h2`
-  font-size: 26px;
-  line-height: 1.22;
-  margin: 0;
-  margin-top: 30px;
+  align-items: center;
+  display: flex;
+  font-size: 34px;
+  line-height: 1.15;
   padding: 0 20px;
 
   @media screen and (max-width: 768px) {
-    font-size: 24px;
-    margin-top: 22px;
+    font-size: 30px;
   }
 `;
 
@@ -51,103 +50,94 @@ const Divider = styled.div`
   text-align: center;
 `;
 
-const LinkTag = styled.a`
+const PostContainer = styled.li`
+  margin-bottom: 20px;
+`;
+
+const PostTitle = styled.div`
   color: #689f38;
-  display: block;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: bold;
   text-decoration: none;
 `;
 
-const TagsJumpContainer = styled.div`
+const PostTags = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 8px;
-  padding: 0 20px;
 `;
 
-const TagJump = styled.div`
-  border: 1px solid rgba(0, 0, 0, 0.54);
-  border-radius: 3px;
-  font-size: 16px;
-  margin: 0 10px 10px 0;
-  padding: 5px 10px;
-  width: 150px;
+const PostTag = styled.div`
+  align-items: center;
+  display: flex;
+  margin-right: 10px;
+  margin-top: 4px;
+  text-decoration: none;
 `;
 
-const AllPosts = ({ tags = [], posts_count }) => {
-  const title = `${posts_count} Bible Questions and Answers In Progress) | Bible Answers`;
+const PostsInProgress = ({ posts = [] }) => {
+  const title = `${
+    posts.length
+  } Bible Questions and Answers (In Progress) | Bible Answers`;
 
   return (
     <Container>
       <title>{title}</title>
       <meta
         type="description"
-        content={`All ${posts_count} of Bible Answers's questions and answers that are in progress. Learn about and defend the Bible with these questions and answers about a wide range of categories.`}
+        content={`All ${
+          posts.length
+        } of Bible Answers's questions and answers that are in progress. Learn about and defend the Bible with these questions and answers about a wide range of categories.`}
       />
 
       <ReadingContainer style={{ marginBottom: 0 }}>
-        <Title>{posts_count} Bible Questions and Answers (In Progress)</Title>
+        <Title>{posts.length} Bible Questions and Answers (In Progress)</Title>
         <Subtitle>
           Browse all of our questions and answers that are in progress
         </Subtitle>
         <Divider>...</Divider>
       </ReadingContainer>
-      <a id="top">
-        <Heading>Tags</Heading>
-      </a>
-      <TagsJumpContainer>
-        {tags.map(tag => {
-          return (
-            <LinkTag key={tag.url} href={`#${tag.url}`}>
-              <TagJump>
-                {tag.title} ({tag.posts.length})
-              </TagJump>
-            </LinkTag>
-          );
-        })}
-      </TagsJumpContainer>
-      <br />
-      <ReadingContainer style={{ padding: 0 }}>
-        {tags.map(tag => {
-          return (
-            <div key={tag.url}>
-              <a id={tag.url}>
-                <Heading>
-                  {tag.title} ({tag.posts.length}){" "}
-                  <LinkTag
-                    href="#top"
-                    style={{ fontSize: 13, display: "inline-block" }}
-                  >
-                    Back to top
-                  </LinkTag>
-                </Heading>
-              </a>
-              {tag.posts.map(post => {
-                return (
-                  <LinkTag
-                    href={post.url}
-                    key={post.url}
-                    style={{ padding: "0 20px", marginTop: 10 }}
-                  >
-                    {post.title}
-                  </LinkTag>
-                );
-              })}
-            </div>
-          );
-        })}
+      <ReadingContainer>
+        <Heading>Posts in progress</Heading>
+        <ul>
+          {posts.map(post => {
+            return (
+              <PostContainer key={post.url}>
+                <a href={post.url} style={{ textDecoration: "none" }}>
+                  <PostTitle>{post.title}</PostTitle>
+                </a>
+                <PostTags>
+                  {post.tags.map(tag => {
+                    return (
+                      <PostTag key={tag.title}>
+                        <FaTag
+                          style={{
+                            marginRight: 6,
+                            marginTop: 4,
+                            height: 13,
+                            width: 13
+                          }}
+                        />
+                        <div>{tag.title}</div>
+                      </PostTag>
+                    );
+                  })}
+                </PostTags>
+              </PostContainer>
+            );
+          })}
+        </ul>
       </ReadingContainer>
     </Container>
   );
 };
 
-AllPosts.getInitialProps = async function({ query }) {
+PostsInProgress.getInitialProps = async function({ query }) {
   const res = await fetch(
-    `http://bibleanswersapi.herokuapp.com/tags_for_unfinished`
+    `https://bibleanswersapi.herokuapp.com/posts_in_progress`
   );
   const data = await res.json();
 
-  return { tags: data.tags, posts_count: data.posts_count };
+  return { posts: data };
 };
 
-export default AllPosts;
+export default PostsInProgress;

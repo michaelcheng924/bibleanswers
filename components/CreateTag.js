@@ -27,7 +27,7 @@ class CreateTag extends Component {
     const { headers, onFetchPostsTags } = this.props;
 
     axios
-      .post("http://bibleanswersapi.herokuapp.com/tags", this.state, headers)
+      .post("https://bibleanswersapi.herokuapp.com/tags", this.state, headers)
       .then(() => {
         onFetchPostsTags();
 

@@ -12,7 +12,7 @@ export default class Login extends Component {
 
     if (token) {
       axios
-        .post("http://bibleanswersapi.herokuapp.com/checktoken", { token })
+        .post("https://bibleanswersapi.herokuapp.com/checktoken", { token })
         .then(response => {
           if (response.data.success) {
             this.props.onLoginSuccess(token);
@@ -25,7 +25,7 @@ export default class Login extends Component {
     event.preventDefault();
 
     axios
-      .post("http://bibleanswersapi.herokuapp.com/login", {
+      .post("https://bibleanswersapi.herokuapp.com/login", {
         password: this.state.pw,
         username: this.state.username
       })

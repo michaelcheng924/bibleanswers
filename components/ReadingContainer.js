@@ -5,7 +5,7 @@ export default ({ children, style }) => (
     style={{
       margin: "0 auto 20px",
       maxWidth: 740,
-      width: "100%",
+      width: "calc(100% - 40px)",
       padding: "0 20px",
       ...style
     }}

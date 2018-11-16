@@ -209,7 +209,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     style: _objectSpread({
       margin: "0 auto 20px",
       maxWidth: 740,
-      width: "100%",
+      width: "calc(100% - 40px)",
       padding: "0 20px"
     }, style)
   }, children);
@@ -35976,7 +35976,7 @@ function () {
           case 0:
             query = _ref2.query;
             _context.next = 3;
-            return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default()("http://bibleanswersapi.herokuapp.com/posts/".concat(query.slug));
+            return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default()("https://bibleanswersapi.herokuapp.com/posts/".concat(query.slug));
 
           case 3:
             res = _context.sent;

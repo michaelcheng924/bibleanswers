@@ -664,7 +664,7 @@ function (_Component) {
       var _this$props = _this.props,
           headers = _this$props.headers,
           onFetchPostsTags = _this$props.onFetchPostsTags;
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://bibleanswersapi.herokuapp.com/tags", _this.state, headers).then(function () {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("https://bibleanswersapi.herokuapp.com/tags", _this.state, headers).then(function () {
         onFetchPostsTags();
 
         _this.setState({
@@ -963,7 +963,7 @@ function (_Component) {
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "onSubmit", function (event) {
       event.preventDefault();
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://bibleanswersapi.herokuapp.com/login", {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("https://bibleanswersapi.herokuapp.com/login", {
         password: _this.state.pw,
         username: _this.state.username
       }).then(function (response) {
@@ -984,7 +984,7 @@ function (_Component) {
       var token = localStorage.getItem("bible-answers-token");
 
       if (token) {
-        axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://bibleanswersapi.herokuapp.com/checktoken", {
+        axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("https://bibleanswersapi.herokuapp.com/checktoken", {
           token: token
         }).then(function (response) {
           if (response.data.success) {
@@ -1280,11 +1280,11 @@ function (_Component) {
 
       delete finalPost.tags;
       var method = "post";
-      var url = "http://bibleanswersapi.herokuapp.com/posts";
+      var url = "https://bibleanswersapi.herokuapp.com/posts";
 
       if (post.id) {
         method = "patch";
-        url = "http://bibleanswersapi.herokuapp.com/posts/".concat(post.id);
+        url = "https://bibleanswersapi.herokuapp.com/posts/".concat(post.id);
       }
 
       axios__WEBPACK_IMPORTED_MODULE_2___default.a[method](url, finalPost, headers).then(function (response) {
@@ -1355,7 +1355,7 @@ function (_Component) {
       var confirm = window.confirm("Are you sure?");
 
       if (confirm) {
-        axios__WEBPACK_IMPORTED_MODULE_2___default.a.delete("http://bibleanswersapi.herokuapp.com/posts/".concat(this.state.post.id)).then(function () {
+        axios__WEBPACK_IMPORTED_MODULE_2___default.a.delete("https://bibleanswersapi.herokuapp.com/posts/".concat(this.state.post.id)).then(function () {
           _this2.props.onFetchPostsTags().then(function () {
             _this2.props.history.push("/admin");
           });
@@ -1554,7 +1554,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     style: _objectSpread({
       margin: "0 auto 20px",
       maxWidth: 740,
-      width: "100%",
+      width: "calc(100% - 40px)",
       padding: "0 20px"
     }, style)
   }, children);
@@ -72676,7 +72676,7 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "onFetchPostsTags", function () {
-      return axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("http://bibleanswersapi.herokuapp.com/initialfetch").then(function (response) {
+      return axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("https://bibleanswersapi.herokuapp.com/initialfetch").then(function (response) {
         _this.setState({
           posts: response.data.posts,
           postsBySlug: lodash_keyBy__WEBPACK_IMPORTED_MODULE_2___default()(response.data.posts, "slug"),

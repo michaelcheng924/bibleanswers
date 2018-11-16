@@ -79,7 +79,7 @@ const Tag = ({ title, subtitle, description, posts = [] }) => {
 
 Tag.getInitialProps = async function({ query }) {
   const res = await fetch(
-    `http://bibleanswersapi.herokuapp.com/tags/${query.slug}`
+    `https://bibleanswersapi.herokuapp.com/tags/${query.slug}`
   );
   const data = await res.json();
 

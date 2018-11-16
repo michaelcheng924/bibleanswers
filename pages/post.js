@@ -115,7 +115,7 @@ const Post = ({ post, slug }) => {
 
 Post.getInitialProps = async function({ query }) {
   const res = await fetch(
-    `http://bibleanswersapi.herokuapp.com/posts/${query.slug}`
+    `https://bibleanswersapi.herokuapp.com/posts/${query.slug}`
   );
   const data = await res.json();
 
