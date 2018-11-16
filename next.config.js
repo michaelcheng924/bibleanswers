@@ -123,10 +123,6 @@ module.exports = {
         page: "/post",
         query: { slug: "why-believe-bible" }
       },
-      "/answers/does-god-change-his-mind": {
-        page: "/post",
-        query: { slug: "does-god-change-his-mind" }
-      },
       "/answers/do-sons-bear-sins-father": {
         page: "/post",
         query: { slug: "do-sons-bear-sins-father" }
@@ -471,6 +467,10 @@ module.exports = {
         page: "/post",
         query: { slug: "genesis-4-17-cain-wife" }
       },
+      "/answers/does-god-change-his-mind": {
+        page: "/post",
+        query: { slug: "does-god-change-his-mind" }
+      },
       "/answers/rylands-p52": { page: "/post", query: { slug: "rylands-p52" } },
       "/gospel": { page: "/post", query: { slug: "gospel" } },
       "/answers/did-people-live-hundreds-years-genesis-5": {
@@ -482,6 +482,7 @@ module.exports = {
         query: { slug: "baptism-necessary-john-3-5" }
       },
       "/tags/genesis": { page: "/tag", query: { slug: "genesis" } },
+      "/tags/exodus": { page: "/tag", query: { slug: "exodus" } },
       "/tags/deuteronomy": { page: "/tag", query: { slug: "deuteronomy" } },
       "/tags/apologetics": { page: "/tag", query: { slug: "apologetics" } },
       "/tags/authorship": { page: "/tag", query: { slug: "authorship" } },
@@ -506,6 +507,8 @@ module.exports = {
       "/tags/isaiah": { page: "/tag", query: { slug: "isaiah" } },
       "/tags/luke": { page: "/tag", query: { slug: "luke" } },
       "/tags/1 corinthians": { page: "/tag", query: { slug: "1 corinthians" } },
+      "/tags/jonah": { page: "/tag", query: { slug: "jonah" } },
+      "/tags/malachi": { page: "/tag", query: { slug: "malachi" } },
       "/tags/matthew": { page: "/tag", query: { slug: "matthew" } },
       "/tags/mark": { page: "/tag", query: { slug: "mark" } },
       "/tags/john": { page: "/tag", query: { slug: "john" } },
