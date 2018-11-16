@@ -5,3 +5,5 @@ routes.add("tag", "/tags/:slug");
 
 routes.add("export", "/export");
 routes.add("sitemap", "/sitemap");
+
+routes.add("admin", "/admin");

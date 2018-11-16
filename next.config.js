@@ -4,62 +4,54 @@ module.exports = {
       "/": { page: "/" },
       "/all-posts": { page: "/all-posts" },
       "/posts-in-progress": { page: "/posts-in-progress" },
-      "/sitemap": { page: "/sitemap" },
-      "/answers/chalcedonian-creed": {
+      "/admin": { page: "/admin" },
+      "/answers/baptism-necessary-salvation-1-peter-3-21": {
         page: "/post",
-        query: { slug: "chalcedonian-creed" }
-      },
-      "/answers/are-there-one-many-gods": {
-        page: "/post",
-        query: { slug: "are-there-one-many-gods" }
-      },
-      "/answers/thirty-nine-articles": {
-        page: "/post",
-        query: { slug: "thirty-nine-articles" }
-      },
-      "/answers/jesus-appear-first": {
-        page: "/post",
-        query: { slug: "jesus-appear-first" }
-      },
-      "/answers/resurrection-narratives-harmony": {
-        page: "/post",
-        query: { slug: "resurrection-narratives-harmony" }
+        query: { slug: "baptism-necessary-salvation-1-peter-3-21" }
       },
       "/answers/baptism-necessary-galatians-3-27": {
         page: "/post",
         query: { slug: "baptism-necessary-galatians-3-27" }
       },
-      "/answers/baptism-necessary-salvation-1-peter-3-21": {
+      "/answers/chalcedonian-creed": {
         page: "/post",
-        query: { slug: "baptism-necessary-salvation-1-peter-3-21" }
+        query: { slug: "chalcedonian-creed" }
+      },
+      "/answers/jesus-appear-first": {
+        page: "/post",
+        query: { slug: "jesus-appear-first" }
+      },
+      "/answers/thirty-nine-articles": {
+        page: "/post",
+        query: { slug: "thirty-nine-articles" }
+      },
+      "/answers/are-there-one-many-gods": {
+        page: "/post",
+        query: { slug: "are-there-one-many-gods" }
+      },
+      "/answers/resurrection-narratives-harmony": {
+        page: "/post",
+        query: { slug: "resurrection-narratives-harmony" }
       },
       "/answers/baptism-necessary-acts-22-16": {
         page: "/post",
         query: { slug: "baptism-necessary-acts-22-16" }
       },
-      "/answers/when-stone-rolled-away": {
-        page: "/post",
-        query: { slug: "when-stone-rolled-away" }
-      },
       "/answers/were-one-two-animals-brought-jesus": {
         page: "/post",
         query: { slug: "were-one-two-animals-brought-jesus" }
+      },
+      "/answers/when-stone-rolled-away": {
+        page: "/post",
+        query: { slug: "when-stone-rolled-away" }
       },
       "/answers/problem-of-evil": {
         page: "/post",
         query: { slug: "problem-of-evil" }
       },
-      "/answers/athanasian-creed": {
-        page: "/post",
-        query: { slug: "athanasian-creed" }
-      },
       "/answers/is-it-sin-make-graven-images": {
         page: "/post",
         query: { slug: "is-it-sin-make-graven-images" }
-      },
-      "/answers/was-immoral-god-command-destruction-women-children": {
-        page: "/post",
-        query: { slug: "was-immoral-god-command-destruction-women-children" }
       },
       "/answers/was-immoral-god-command-destruction-women-children": {
         page: "/post",
@@ -97,31 +89,39 @@ module.exports = {
         page: "/post",
         query: { slug: "did-jesus-exist" }
       },
-      "/answers/nicene-creed": {
+      "/answers/athanasian-creed": {
         page: "/post",
-        query: { slug: "nicene-creed" }
-      },
-      "/answers/lucian": { page: "/post", query: { slug: "lucian" } },
-      "/answers/where-were-angels": {
-        page: "/post",
-        query: { slug: "where-were-angels" }
-      },
-      "/answers/genesis-1-2-plants": {
-        page: "/post",
-        query: { slug: "genesis-1-2-plants" }
+        query: { slug: "athanasian-creed" }
       },
       "/answers/papias-authorship": {
         page: "/post",
         query: { slug: "papias-authorship" }
       },
+      "/answers/genesis-1-2-plants": {
+        page: "/post",
+        query: { slug: "genesis-1-2-plants" }
+      },
+      "/answers/where-were-angels": {
+        page: "/post",
+        query: { slug: "where-were-angels" }
+      },
+      "/answers/lucian": { page: "/post", query: { slug: "lucian" } },
+      "/answers/nicene-creed": {
+        page: "/post",
+        query: { slug: "nicene-creed" }
+      },
+      "/answers/agnosticism": { page: "/post", query: { slug: "agnosticism" } },
       "/answers/bible-disagreements": {
         page: "/post",
         query: { slug: "bible-disagreements" }
       },
-      "/answers/agnosticism": { page: "/post", query: { slug: "agnosticism" } },
       "/answers/is-faith-blind": {
         page: "/post",
         query: { slug: "is-faith-blind" }
+      },
+      "/answers/why-believe-bible": {
+        page: "/post",
+        query: { slug: "why-believe-bible" }
       },
       "/answers/does-god-change-his-mind": {
         page: "/post",
@@ -177,13 +177,17 @@ module.exports = {
         page: "/post",
         query: { slug: "isaiah-7-14-maiden-virgin" }
       },
-      "/answers/foreknowledge": {
+      "/answers/should-we-call-anyone-father-besides-god": {
         page: "/post",
-        query: { slug: "foreknowledge" }
+        query: { slug: "should-we-call-anyone-father-besides-god" }
       },
       "/answers/born-of-water-meaning": {
         page: "/post",
         query: { slug: "born-of-water-meaning" }
+      },
+      "/answers/apostles-creed": {
+        page: "/post",
+        query: { slug: "apostles-creed" }
       },
       "/answers/noah-how-many-kinds": {
         page: "/post",
@@ -192,10 +196,6 @@ module.exports = {
       "/answers/do-we-still-need-to-keep-sabbath": {
         page: "/post",
         query: { slug: "do-we-still-need-to-keep-sabbath" }
-      },
-      "/answers/should-we-call-anyone-father-besides-god": {
-        page: "/post",
-        query: { slug: "should-we-call-anyone-father-besides-god" }
       },
       "/answers/did-god-speak-about-sacrifices-at-exodus": {
         page: "/post",
@@ -222,6 +222,10 @@ module.exports = {
         page: "/post",
         query: { slug: "did-michal-have-any-children" }
       },
+      "/answers/foreknowledge": {
+        page: "/post",
+        query: { slug: "foreknowledge" }
+      },
       "/answers/irenaeus-authorship": {
         page: "/post",
         query: { slug: "irenaeus-authorship" }
@@ -237,10 +241,6 @@ module.exports = {
       "/answers/how-many-fighting-men-were-there-in-israel-judah": {
         page: "/post",
         query: { slug: "how-many-fighting-men-were-there-in-israel-judah" }
-      },
-      "/answers/was-it-wrong-god-give laws-buying slaves": {
-        page: "/post",
-        query: { slug: "was-it-wrong-god-give laws-buying slaves" }
       },
       "/answers/how-many-years-famine-threatened-david-seven-three": {
         page: "/post",
@@ -279,13 +279,17 @@ module.exports = {
         query: { slug: "how-old-ahaziah-began-to-rule-over-jerusalem" }
       },
       "/answers/tacitus": { page: "/post", query: { slug: "tacitus" } },
+      "/answers/is-bible-wrong-say-houses-plundered-wives-ravished": {
+        page: "/post",
+        query: { slug: "is-bible-wrong-say-houses-plundered-wives-ravished" }
+      },
+      "/answers/was-it-wrong-god-give-laws-buying-slaves": {
+        page: "/post",
+        query: { slug: "was-it-wrong-god-give-laws-buying-slaves" }
+      },
       "/answers/has-anyone-seen-god": {
         page: "/post",
         query: { slug: "has-anyone-seen-god" }
-      },
-      "/answers/was-it-wrong-god-give laws-buying slaves": {
-        page: "/post",
-        query: { slug: "was-it-wrong-god-give laws-buying slaves" }
       },
       "/answers/how-old-jehoiachin-when-he-became-king": {
         page: "/post",
@@ -299,10 +303,6 @@ module.exports = {
         page: "/post",
         query: { slug: "who-king-abijahs-mother-maacah-micaiah" }
       },
-      "/answers/is-bible-wrong-say-houses-plundered-wives-ravished": {
-        page: "/post",
-        query: { slug: "is-bible-wrong-say-houses-plundered-wives-ravished" }
-      },
       "/answers/is-jesus-god-creator-all-things": {
         page: "/post",
         query: { slug: "is-jesus-god-creator-all-things" }
@@ -315,13 +315,13 @@ module.exports = {
         page: "/post",
         query: { slug: "did-coniah-have-children" }
       },
-      "/answers/were-angels-sitting-standing": {
-        page: "/post",
-        query: { slug: "were-angels-sitting-standing" }
-      },
       "/answers/matthew-luke-genealogy": {
         page: "/post",
         query: { slug: "matthew-luke-genealogy" }
+      },
+      "/answers/were-angels-sitting-standing": {
+        page: "/post",
+        query: { slug: "were-angels-sitting-standing" }
       },
       "/answers/was-lot-righteous-gave-daughters-to-crows": {
         page: "/post",
@@ -403,29 +403,17 @@ module.exports = {
         page: "/post",
         query: { slug: "will-earth-remain-forever" }
       },
-      "/answers/justin-martyr-mark": {
-        page: "/post",
-        query: { slug: "justin-martyr-mark" }
-      },
       "/answers/when-women-arrive-tomb": {
         page: "/post",
         query: { slug: "when-women-arrive-tomb" }
       },
+      "/answers/justin-martyr-mark": {
+        page: "/post",
+        query: { slug: "justin-martyr-mark" }
+      },
       "/answers/cosmological-argument-gods-existence": {
         page: "/post",
         query: { slug: "cosmological-argument-gods-existence" }
-      },
-      "/answers/what-is-presuppositional-apologetics": {
-        page: "/post",
-        query: { slug: "what-is-presuppositional-apologetics" }
-      },
-      "/answers/how-many-women-went-tomb": {
-        page: "/post",
-        query: { slug: "how-many-women-went-tomb" }
-      },
-      "/answers/how-many-angels-tomb": {
-        page: "/post",
-        query: { slug: "how-many-angels-tomb" }
       },
       "/answers/does-god-exist": {
         page: "/post",
@@ -443,6 +431,18 @@ module.exports = {
         page: "/post",
         query: { slug: "moral-argument-gods-existence" }
       },
+      "/answers/how-many-angels-tomb": {
+        page: "/post",
+        query: { slug: "how-many-angels-tomb" }
+      },
+      "/answers/how-many-women-went-tomb": {
+        page: "/post",
+        query: { slug: "how-many-women-went-tomb" }
+      },
+      "/answers/what-is-presuppositional-apologetics": {
+        page: "/post",
+        query: { slug: "what-is-presuppositional-apologetics" }
+      },
       "/answers/should-we-let-good-works-be-seen": {
         page: "/post",
         query: { slug: "should-we-let-good-works-be-seen" }
@@ -459,6 +459,10 @@ module.exports = {
         page: "/post",
         query: { slug: "genesis-3-9-gods-omniscience" }
       },
+      "/answers/did-anyone-ascend-heaven-before-jesus": {
+        page: "/post",
+        query: { slug: "did-anyone-ascend-heaven-before-jesus" }
+      },
       "/answers/genesis-3-16-pain-women-child-bearing": {
         page: "/post",
         query: { slug: "genesis-3-16-pain-women-child-bearing" }
@@ -467,24 +471,16 @@ module.exports = {
         page: "/post",
         query: { slug: "genesis-4-17-cain-wife" }
       },
-      "/answers/apostles-creed": {
+      "/answers/rylands-p52": { page: "/post", query: { slug: "rylands-p52" } },
+      "/gospel": { page: "/post", query: { slug: "gospel" } },
+      "/answers/did-people-live-hundreds-years-genesis-5": {
         page: "/post",
-        query: { slug: "apostles-creed" }
-      },
-      "/answers/did-anyone-ascend-heaven-before-jesus": {
-        page: "/post",
-        query: { slug: "did-anyone-ascend-heaven-before-jesus" }
+        query: { slug: "did-people-live-hundreds-years-genesis-5" }
       },
       "/answers/baptism-necessary-john-3-5": {
         page: "/post",
         query: { slug: "baptism-necessary-john-3-5" }
       },
-      "/answers/did-people-live-hundreds-years-genesis-5": {
-        page: "/post",
-        query: { slug: "did-people-live-hundreds-years-genesis-5" }
-      },
-      "/gospel": { page: "/post", query: { slug: "gospel" } },
-      "/answers/rylands-p52": { page: "/post", query: { slug: "rylands-p52" } },
       "/tags/genesis": { page: "/tag", query: { slug: "genesis" } },
       "/tags/deuteronomy": { page: "/tag", query: { slug: "deuteronomy" } },
       "/tags/apologetics": { page: "/tag", query: { slug: "apologetics" } },
@@ -504,6 +500,8 @@ module.exports = {
       },
       "/tags/gospel": { page: "/tag", query: { slug: "gospel" } },
       "/tags/theology": { page: "/tag", query: { slug: "theology" } },
+      "/tags/2 kings": { page: "/tag", query: { slug: "2 kings" } },
+      "/tags/hebrews": { page: "/tag", query: { slug: "hebrews" } },
       "/tags/1 john": { page: "/tag", query: { slug: "1 john" } },
       "/tags/isaiah": { page: "/tag", query: { slug: "isaiah" } },
       "/tags/luke": { page: "/tag", query: { slug: "luke" } },

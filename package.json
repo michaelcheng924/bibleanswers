@@ -9,22 +9,28 @@
     "start": "next build & NODE_ENV=production node server.js",
     "deploy": "git push heroku master",
     "heroku-postbuild": "yarn run build",
-    "export": "next build && next export"
+    "export": "next build && next export && cp ./constants/sitemap.xml ./out"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "express": "^4.16.4",
     "isomorphic-unfetch": "^3.0.0",
     "lodash": "^4.17.11",
+    "mobx": "^5.6.0",
     "moment": "^2.22.2",
     "next": "^7.0.2",
     "next-routes": "^1.4.2",
+    "prismjs": "^1.15.0",
     "react": "^16.6.1",
     "react-amphtml": "^3.0.1",
     "react-dom": "^16.6.1",
     "react-icons": "^3.2.2",
+    "react-select": "^2.1.1",
+    "react-simple-code-editor": "^0.7.1",
+    "react-textarea-autosize": "^7.1.0-1",
     "styled-components": "^4.1.1"
   }
 }

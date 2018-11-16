@@ -21,7 +21,7 @@ class Export extends Component {
           "/": { page: "/" },
           "/all-posts": { page: "/all-posts" },
           "/posts-in-progress": { page: "/posts-in-progress" },
-          "/sitemap": { page: "/sitemap" },
+          "/admin": { page: "/admin" },
           ${posts
             .map(
               post =>

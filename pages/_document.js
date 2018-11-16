@@ -1,4 +1,4 @@
-import Document from "next/document";
+import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 import {
   AmpScripts,
@@ -7,16 +7,10 @@ import {
 } from "react-amphtml/setup";
 import * as Amp from "react-amphtml";
 
-import SITEMAP from "../constants/sitemap";
 import Nav from "../components/Nav";
 
 export default class MyDocument extends Document {
-  static getInitialProps({ req, res, renderPage }) {
-    if (req.url === "/sitemap") {
-      res.set("Content-Type", "text/xml");
-      res.send(SITEMAP);
-    }
-
+  static getInitialProps({ req, renderPage }) {
     const ampScripts = new AmpScripts();
     const sheet = new ServerStyleSheet();
 
@@ -75,11 +69,26 @@ export default class MyDocument extends Document {
       schemaInfo,
       url: req.url,
       ampScriptTags,
-      ampStyleTag
+      ampStyleTag,
+      noAmp: req.url === "/admin"
     };
   }
 
   render() {
+    if (this.props.noAmp) {
+      return (
+        <html>
+          <Head>
+            <style>{`body { margin: 0 } /* custom! */`}</style>
+          </Head>
+          <body className="custom_class">
+            <Main />
+            <NextScript />
+          </body>
+        </html>
+      );
+    }
+
     const {
       title,
       metaDescription,
