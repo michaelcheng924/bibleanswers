@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import fetch from "isomorphic-unfetch";
-import { FaTag } from "react-icons/fa";
 
 import Container from "../components/Container";
 import ListItem from "../components/ListItem";
@@ -43,63 +42,74 @@ const MoreLink = styled.a`
   text-decoration: none;
 `;
 
-const Home = ({ recentPosts = [], tags = [], postsCount }) => (
-  <Container>
-    <title>
-      Bible Answers | Explaining and Defending the Christian Worldview
-    </title>
+const Home = ({ recentPosts = [], tags = [], postsCount }) => {
+  useEffect(() => {
+    var cx = "002602022467339721509:o7qkawmakey";
+    var gcse = document.createElement("script");
+    gcse.type = "text/javascript";
+    gcse.async = true;
+    gcse.src = "https://cse.google.com/cse.js?cx=" + cx;
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(gcse, s);
 
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
-          "@context": "http://schema.org",
-          "@type": "WebSite",
-          url: "https://bibleanswers.io/",
-          potentialAction: {
-            "@type": "SearchAction",
-            target: "https://bibleanswers.io/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        })
-      }}
-    />
+    const placeholderInterval = setInterval(() => {
+      const searchBox = document.getElementById("gsc-i-id1");
 
-    <PostsTagsContainer>
-      <ReadingContainer style={{ padding: 0 }}>
-        <Title>Recent posts</Title>
-        {recentPosts.map(post => {
-          return (
-            <LinkTag key={post.url} href={post.url}>
-              <ListItem {...post} />
-            </LinkTag>
-          );
-        })}
-        <center>
-          <MoreLink href="all-posts">All {postsCount} posts</MoreLink>
-        </center>
-      </ReadingContainer>
+      if (searchBox) {
+        searchBox.placeholder = "Search Bible Answers";
+        clearInterval(placeholderInterval);
+      }
+    }, 50);
+  });
 
-      <ReadingContainer style={{ width: "initial" }}>
-        <Title style={{ padding: 0 }}>Tags</Title>
-        <ul>
-          {tags.map(tag => {
+  return (
+    <Container>
+      <title>
+        Bible Answers | Explaining and Defending the Christian Worldview
+      </title>
+
+      <PostsTagsContainer>
+        <ReadingContainer style={{ padding: 0, width: "initial" }}>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: "<gcse:search placeholder='Search'></gcse:search>"
+            }}
+            style={{ width: 320, margin: "0 auto" }}
+          />
+          <Title>Recent posts</Title>
+          {recentPosts.map(post => {
             return (
-              <LinkTag key={tag.url} href={tag.url}>
-                <li>
-                  <TagText>
-                    {tag.title} ({tag.posts_count})
-                  </TagText>
-                </li>
+              <LinkTag key={post.url} href={post.url}>
+                <ListItem {...post} noAmp />
               </LinkTag>
             );
           })}
-        </ul>
-        <MoreLink href="/posts-in-progress">Posts in progress</MoreLink>
-      </ReadingContainer>
-    </PostsTagsContainer>
-  </Container>
-);
+          <center>
+            <MoreLink href="all-posts">All {postsCount} posts</MoreLink>
+          </center>
+        </ReadingContainer>
+
+        <ReadingContainer>
+          <Title style={{ padding: 0 }}>Tags</Title>
+          <ul>
+            {tags.map(tag => {
+              return (
+                <LinkTag key={tag.url} href={tag.url}>
+                  <li>
+                    <TagText>
+                      {tag.title} ({tag.posts_count})
+                    </TagText>
+                  </li>
+                </LinkTag>
+              );
+            })}
+          </ul>
+          <MoreLink href="/posts-in-progress">Posts in progress</MoreLink>
+        </ReadingContainer>
+      </PostsTagsContainer>
+    </Container>
+  );
+};
 
 Home.getInitialProps = async function() {
   const res = await fetch("https://bibleanswersapi.herokuapp.com/homefetch");

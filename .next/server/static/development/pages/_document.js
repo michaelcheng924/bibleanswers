@@ -196,12 +196,34 @@ function (_Document) {
   }
 
   _createClass(MyDocument, [{
+    key: "renderWebsiteScript",
+    value: function renderWebsiteScript() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
+        type: "application/ld+json",
+        dangerouslySetInnerHTML: {
+          __html: JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            url: "https://bibleanswers.io/",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: "https://bibleanswers.io/search?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })
+        }
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       if (this.props.noAmp) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("html", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_1__["Head"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("style", null, "body { margin: 0 } /* custom! */")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("body", {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("html", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_1__["Head"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+          rel: "icon",
+          href: "https://i.imgur.com/lnlvtFf.png"
+        }), this.props.url === "/" ? this.renderWebsiteScript() : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("style", null, "body { margin: 0 } /* custom! */")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("body", {
           className: "custom_class"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], null)));
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], null)));
       }
 
       var _this$props = this.props,
@@ -288,7 +310,7 @@ function (_Document) {
         url: req.url,
         ampScriptTags: ampScriptTags,
         ampStyleTag: ampStyleTag,
-        noAmp: req.url === "/admin"
+        noAmp: req.url === "/admin" || req.url === "/"
       });
     }
   }]);

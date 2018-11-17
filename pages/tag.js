@@ -64,7 +64,7 @@ const Tag = ({ title, subtitle, description, posts = [] }) => {
         <Divider>...</Divider>
       </ReadingContainer>
       <br />
-      <ReadingContainer style={{ padding: 0 }}>
+      <ReadingContainer style={{ padding: 0, width: "initial" }}>
         {posts.map(post => {
           return (
             <LinkTag href={post.url} key={post.url}>

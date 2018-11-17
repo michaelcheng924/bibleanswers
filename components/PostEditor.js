@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Textarea from "react-textarea-autosize";
 import axios from "axios";
 import Select from "react-select";
-import { defer, find } from "lodash";
+import { find, throttle } from "lodash";
 import Editor from "react-simple-code-editor";
 import { highlight, languages } from "prismjs/components/prism-core";
 import "prismjs/components/prism-clike";
@@ -82,7 +82,9 @@ class PostEditor extends Component {
 
     this.state = {
       post: props.post,
-      success: false
+      saving: false,
+      success: false,
+      error: false
     };
   }
 
@@ -150,6 +152,14 @@ class PostEditor extends Component {
       }
     });
   };
+
+  throttleSave = throttle(
+    function() {
+      this.onSave();
+    },
+    1000,
+    { leading: false }
+  );
 
   onHtmlPress = e => {
     e.persist();
@@ -230,7 +240,7 @@ class PostEditor extends Component {
   };
 
   onSave = () => {
-    const { headers, history, onFetchPostsTags, onSetPost } = this.props;
+    const { headers, onFetchPostsTags } = this.props;
     const { post } = this.state;
 
     let finalPost = {
@@ -250,14 +260,24 @@ class PostEditor extends Component {
       url = `https://bibleanswersapi.herokuapp.com/posts/${post.id}`;
     }
 
-    axios[method](url, finalPost, headers).then(response => {
-      this.setState({ success: true }, () => {
-        setTimeout(() => {
-          this.setState({ success: false, post: response.data });
-        }, 500);
+    this.setState({ saving: true });
+
+    axios[method](url, finalPost, headers)
+      .then(response => {
+        this.setState({ success: true }, () => {
+          setTimeout(() => {
+            this.setState({
+              saving: false,
+              success: false,
+              post: response.data
+            });
+          }, 500);
+        });
+        onFetchPostsTags();
+      })
+      .catch(() => {
+        this.setState({ error: true, saving: false });
       });
-      onFetchPostsTags();
-    });
   };
 
   deletePost() {
@@ -277,21 +297,36 @@ class PostEditor extends Component {
   }
 
   renderSaveButtons() {
-    const { success } = this.state;
+    const { error, saving, success } = this.state;
+
+    let status = null;
+
+    if (saving) {
+      status = (
+        <img
+          src="https://i.imgur.com/P7fXP4s.gif"
+          style={{ height: 30, width: 30 }}
+        />
+      );
+    }
+
+    if (success || error) {
+      status = (
+        <div
+          style={{
+            background: success ? "#43A047" : "#F44336",
+            color: "#fff",
+            padding: "5px 10px"
+          }}
+        >
+          {success ? "SUCCESS!" : "ERROR!"}
+        </div>
+      );
+    }
 
     return (
       <div className="admin__save-buttons">
-        {success ? (
-          <div
-            style={{
-              background: "#43A047",
-              color: "#fff",
-              padding: "5px 10px"
-            }}
-          >
-            SUCCESS!
-          </div>
-        ) : null}
+        {status}
         <input
           type="checkbox"
           onChange={this.onPublishedChange}

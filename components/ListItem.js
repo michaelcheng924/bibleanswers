@@ -53,7 +53,7 @@ const StyledAmpImg = styled(Amp.AmpImg)`
 
 class ListItem extends Component {
   render() {
-    const { date_added, image_url_small, subtitle, title } = this.props;
+    const { date_added, image_url_small, subtitle, title, noAmp } = this.props;
 
     return (
       <ListItemContainer>
@@ -67,13 +67,21 @@ class ListItem extends Component {
           </ListItemDate>
         </div>
         <AnswerImageContainer>
-          <StyledAmpImg
-            specName="default"
-            src={image_url_small}
-            width="80"
-            height="80"
-            alt="AMP"
-          />
+          {noAmp ? (
+            <img
+              src={image_url_small}
+              alt={title}
+              style={{ height: 80, width: 80 }}
+            />
+          ) : (
+            <StyledAmpImg
+              specName="default"
+              src={image_url_small}
+              width="80"
+              height="80"
+              alt="AMP"
+            />
+          )}
         </AnswerImageContainer>
       </ListItemContainer>
     );

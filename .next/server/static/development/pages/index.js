@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -257,8 +257,16 @@ function (_Component) {
           date_added = _this$props.date_added,
           image_url_small = _this$props.image_url_small,
           subtitle = _this$props.subtitle,
-          title = _this$props.title;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemTitle, null, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemSubtitle, null, subtitle), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemDate, null, date_added ? moment__WEBPACK_IMPORTED_MODULE_1___default()(new Date(date_added)).format("MMM Do, YYYY") : null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AnswerImageContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledAmpImg, {
+          title = _this$props.title,
+          noAmp = _this$props.noAmp;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemTitle, null, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemSubtitle, null, subtitle), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemDate, null, date_added ? moment__WEBPACK_IMPORTED_MODULE_1___default()(new Date(date_added)).format("MMM Do, YYYY") : null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AnswerImageContainer, null, noAmp ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: image_url_small,
+        alt: title,
+        style: {
+          height: 80,
+          width: 80
+        }
+      }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledAmpImg, {
         specName: "default",
         src: image_url_small,
         width: "80",
@@ -298,8 +306,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     style: _objectSpread({
       margin: "0 auto 20px",
       maxWidth: 740,
-      width: "calc(100% - 40px)",
-      padding: "0 20px"
+      padding: "0 20px",
+      width: "calc(100% - 40px)"
     }, style)
   }, children);
 });
@@ -323,16 +331,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-icons/fa */ "react-icons/fa");
-/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_Container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Container */ "./components/Container.js");
-/* harmony import */ var _components_ListItem__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ListItem */ "./components/ListItem.js");
-/* harmony import */ var _components_ReadingContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ReadingContainer */ "./components/ReadingContainer.js");
+/* harmony import */ var _components_Container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Container */ "./components/Container.js");
+/* harmony import */ var _components_ListItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ListItem */ "./components/ListItem.js");
+/* harmony import */ var _components_ReadingContainer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ReadingContainer */ "./components/ReadingContainer.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _templateObject5() {
   var data = _taggedTemplateLiteral(["\n  color: #689f38;\n  cursor: pointer;\n  font-size: 18px;\n  margin-top: 10px;\n  text-decoration: none;\n"]);
@@ -392,7 +400,6 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.h2(_templateObject());
 var PostsTagsContainer = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject2());
 var TagText = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject3());
@@ -405,36 +412,46 @@ var Home = function Home(_ref) {
       _ref$tags = _ref.tags,
       tags = _ref$tags === void 0 ? [] : _ref$tags,
       postsCount = _ref.postsCount;
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Container__WEBPACK_IMPORTED_MODULE_5__["default"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, "Bible Answers | Explaining and Defending the Christian Worldview"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("script", {
-    type: "application/ld+json",
-    dangerouslySetInnerHTML: {
-      __html: JSON.stringify({
-        "@context": "http://schema.org",
-        "@type": "WebSite",
-        url: "https://bibleanswers.io/",
-        potentialAction: {
-          "@type": "SearchAction",
-          target: "https://bibleanswers.io/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      })
-    }
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PostsTagsContainer, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ReadingContainer__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+    var cx = "002602022467339721509:o7qkawmakey";
+    var gcse = document.createElement("script");
+    gcse.type = "text/javascript";
+    gcse.async = true;
+    gcse.src = "https://cse.google.com/cse.js?cx=" + cx;
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(gcse, s);
+    var placeholderInterval = setInterval(function () {
+      var searchBox = document.getElementById("gsc-i-id1");
+
+      if (searchBox) {
+        searchBox.placeholder = "Search Bible Answers";
+        clearInterval(placeholderInterval);
+      }
+    }, 50);
+  });
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Container__WEBPACK_IMPORTED_MODULE_4__["default"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, "Bible Answers | Explaining and Defending the Christian Worldview"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PostsTagsContainer, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ReadingContainer__WEBPACK_IMPORTED_MODULE_6__["default"], {
     style: {
-      padding: 0
+      padding: 0,
+      width: "initial"
     }
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Title, null, "Recent posts"), recentPosts.map(function (post) {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    dangerouslySetInnerHTML: {
+      __html: "<gcse:search placeholder='Search'></gcse:search>"
+    },
+    style: {
+      width: 320,
+      margin: "0 auto"
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Title, null, "Recent posts"), recentPosts.map(function (post) {
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LinkTag, {
       key: post.url,
       href: post.url
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ListItem__WEBPACK_IMPORTED_MODULE_6__["default"], post));
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ListItem__WEBPACK_IMPORTED_MODULE_5__["default"], _extends({}, post, {
+      noAmp: true
+    })));
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("center", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MoreLink, {
     href: "all-posts"
-  }, "All ", postsCount, " posts"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ReadingContainer__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    style: {
-      width: "initial"
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Title, {
+  }, "All ", postsCount, " posts"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ReadingContainer__WEBPACK_IMPORTED_MODULE_6__["default"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Title, {
     style: {
       padding: 0
     }
@@ -485,7 +502,7 @@ _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function 
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -549,17 +566,6 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-amphtml");
-
-/***/ }),
-
-/***/ "react-icons/fa":
-/*!*********************************!*\
-  !*** external "react-icons/fa" ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-icons/fa");
 
 /***/ }),
 
