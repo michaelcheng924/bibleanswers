@@ -113,7 +113,7 @@ const Admin = () => {
           post={post}
           tags={tags}
         />
-      ) : (
+      ) : posts.length ? (
         <AdminMain
           headers={headers}
           onFetchPostsTags={onFetchPostsTags}
@@ -121,6 +121,11 @@ const Admin = () => {
           posts={posts}
           postsBySlug={postsBySlug}
           tags={tags}
+        />
+      ) : (
+        <img
+          src="https://i.imgur.com/P7fXP4s.gif"
+          style={{ height: 30, width: 30 }}
         />
       )}
     </Container>

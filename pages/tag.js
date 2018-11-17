@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import fetch from "isomorphic-unfetch";
 
 import Container from "../components/Container";
 import ReadingContainer from "../components/ReadingContainer";
@@ -54,7 +55,6 @@ const Tag = ({ title, subtitle, description, posts = [] }) => {
   return (
     <Container>
       <title>{pageTitle}</title>
-      <meta type="description" content={description} />
 
       <ReadingContainer style={{ marginBottom: 0 }}>
         <Title>

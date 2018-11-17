@@ -41,7 +41,6 @@ const Post = ({ post, slug }) => {
     <Container>
       <Head>
         <title>{title} | Bible Answers</title>
-        <meta name="description" content={description} />
 
         <script
           type="application/ld+json"

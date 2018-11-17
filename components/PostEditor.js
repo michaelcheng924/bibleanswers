@@ -102,6 +102,8 @@ class PostEditor extends Component {
   }
 
   componentWillUnmount() {
+    this.props.onFetchPostsTags();
+
     document.removeEventListener("keydown", this.handleKeyPress);
     document.removeEventListener("keyup", this.handleKeyPress);
   }
@@ -152,14 +154,6 @@ class PostEditor extends Component {
       }
     });
   };
-
-  throttleSave = throttle(
-    function() {
-      this.onSave();
-    },
-    1000,
-    { leading: false }
-  );
 
   onHtmlPress = e => {
     e.persist();
@@ -273,6 +267,7 @@ class PostEditor extends Component {
             });
           }, 500);
         });
+
         onFetchPostsTags();
       })
       .catch(() => {

@@ -61,19 +61,13 @@ const AllPosts = ({ posts = [] }) => {
   return (
     <Container>
       <title>{title}</title>
-      <meta
-        type="description"
-        content={`All ${
-          posts.length
-        } of Bible Answers's questions and answers. Learn about and defend the Bible with these questions and answers about a wide range of categories.`}
-      />
 
       <ReadingContainer style={{ marginBottom: 0 }}>
         <Title>{posts.length} Bible Questions and Answers</Title>
         <Subtitle>Browse all of our questions and answers</Subtitle>
         <Divider>...</Divider>
       </ReadingContainer>
-      <ReadingContainer>
+      <ReadingContainer style={{ padding: 0, width: "initial" }}>
         <Heading>All posts</Heading>
         {posts.map(post => {
           return (

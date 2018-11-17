@@ -230,10 +230,6 @@ module.exports = {
         page: "/post",
         query: { slug: "who-incited-david-to-count-people-israel" }
       },
-      "/answers/god-author-confusion-babel": {
-        page: "/post",
-        query: { slug: "god-author-confusion-babel" }
-      },
       "/answers/how-many-fighting-men-were-there-in-israel-judah": {
         page: "/post",
         query: { slug: "how-many-fighting-men-were-there-in-israel-judah" }
@@ -474,6 +470,10 @@ module.exports = {
       "/answers/does-god-change-his-mind": {
         page: "/post",
         query: { slug: "does-god-change-his-mind" }
+      },
+      "/answers/god-author-confusion-babel": {
+        page: "/post",
+        query: { slug: "god-author-confusion-babel" }
       },
       "/answers/rylands-p52": { page: "/post", query: { slug: "rylands-p52" } },
       "/gospel": { page: "/post", query: { slug: "gospel" } },

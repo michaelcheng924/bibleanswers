@@ -82,12 +82,6 @@ const PostsInProgress = ({ posts = [] }) => {
   return (
     <Container>
       <title>{title}</title>
-      <meta
-        type="description"
-        content={`All ${
-          posts.length
-        } of Bible Answers's questions and answers that are in progress. Learn about and defend the Bible with these questions and answers about a wide range of categories.`}
-      />
 
       <ReadingContainer style={{ marginBottom: 0 }}>
         <Title>{posts.length} Bible Questions and Answers (In Progress)</Title>

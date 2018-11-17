@@ -5,5 +5,7 @@ routes.add("tag", "/tags/:slug");
 
 routes.add("export", "/export");
 routes.add("sitemap", "/sitemap");
+routes.add("privacy-policy", "/privacy-policy");
+routes.add("terms-of-service", "/terms-of-service");
 
 routes.add("admin", "/admin");

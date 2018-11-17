@@ -8,6 +8,7 @@ import {
 import * as Amp from "react-amphtml";
 
 import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 export default class MyDocument extends Document {
   static getInitialProps({ req, renderPage }) {
@@ -54,9 +55,6 @@ export default class MyDocument extends Document {
       })
       .slice(0, 1) || <title>ampreact</title>;
 
-    const metaDescription =
-      page.head.filter(({ type }) => type === "meta").slice(1, 2) || null;
-
     const schemaInfo =
       page.head
         .filter(({ type }) => {
@@ -67,7 +65,6 @@ export default class MyDocument extends Document {
     return {
       ...page,
       title,
-      metaDescription,
       schemaInfo,
       url: req.url,
       ampScriptTags,
@@ -109,6 +106,7 @@ export default class MyDocument extends Document {
             <Nav />
             <Main />
             <NextScript />
+            <Footer />
           </body>
         </html>
       );
@@ -116,7 +114,6 @@ export default class MyDocument extends Document {
 
     const {
       title,
-      metaDescription,
       schemaInfo,
       url,
       ampScriptTags,
@@ -130,7 +127,6 @@ export default class MyDocument extends Document {
         <head>
           <link rel="icon" href="https://i.imgur.com/lnlvtFf.png" />
           {title}
-          {metaDescription}
           {schemaInfo}
           {headerBoilerplate(url)}
           {ampScriptTags}
@@ -139,6 +135,7 @@ export default class MyDocument extends Document {
         <body>
           <Nav isAmp />
           <div dangerouslySetInnerHTML={{ __html: html }} />
+          <Footer />
         </body>
       </Amp.Html>
     );
