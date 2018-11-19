@@ -11,15 +11,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/tag": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/privacy-policy": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/terms-of-service": [
+    "/admin": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
@@ -27,7 +19,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/post": [
+    "/tag": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],

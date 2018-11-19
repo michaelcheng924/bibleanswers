@@ -1,11 +1,11 @@
 import React from "react";
 
-import Container from "../components/Container";
+import { AmpContainer } from "../components/Container";
 import ReadingContainer from "../components/ReadingContainer";
 
 const PrivacyPolicy = () => (
   <ReadingContainer style={{ marginBottom: 20 }}>
-    <Container>
+    <AmpContainer>
       <div className="writing">
         <h1>Privacy Policy</h1>
 
@@ -271,7 +271,7 @@ const PrivacyPolicy = () => (
           </li>
         </ul>
       </div>
-    </Container>
+    </AmpContainer>
   </ReadingContainer>
 );
 

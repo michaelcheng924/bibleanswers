@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import fetch from "isomorphic-unfetch";
-import { FaTag } from "react-icons/fa";
 
-import Container from "../components/Container";
+import { AmpContainer } from "../components/Container";
 import ReadingContainer from "../components/ReadingContainer";
-import ListItem from "../components/ListItem";
+import { AmpListItem } from "../components/ListItem";
 
 const Title = styled.h1`
   align-items: center;
@@ -59,7 +58,7 @@ const AllPosts = ({ posts = [] }) => {
   const title = `${posts.length} Bible Questions and Answers | Bible Answers`;
 
   return (
-    <Container>
+    <AmpContainer>
       <title>{title}</title>
 
       <ReadingContainer style={{ marginBottom: 0 }}>
@@ -76,12 +75,12 @@ const AllPosts = ({ posts = [] }) => {
               href={post.url}
               style={{ textDecoration: "none" }}
             >
-              <ListItem {...post} />
+              <AmpListItem {...post} />
             </a>
           );
         })}
       </ReadingContainer>
-    </Container>
+    </AmpContainer>
   );
 };
 

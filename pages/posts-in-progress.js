@@ -3,7 +3,7 @@ import styled from "styled-components";
 import fetch from "isomorphic-unfetch";
 import { FaTag } from "react-icons/fa";
 
-import Container from "../components/Container";
+import { AmpContainer } from "../components/Container";
 import ReadingContainer from "../components/ReadingContainer";
 
 const Title = styled.h1`
@@ -80,7 +80,7 @@ const PostsInProgress = ({ posts = [] }) => {
   } Bible Questions and Answers (In Progress) | Bible Answers`;
 
   return (
-    <Container>
+    <AmpContainer>
       <title>{title}</title>
 
       <ReadingContainer style={{ marginBottom: 0 }}>
@@ -121,7 +121,7 @@ const PostsInProgress = ({ posts = [] }) => {
           })}
         </ul>
       </ReadingContainer>
-    </Container>
+    </AmpContainer>
   );
 };
 

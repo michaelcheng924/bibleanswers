@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
+const AmpGlobalStyle = createGlobalStyle`
 .writing h3 {
   font-size: 34px;
   line-height: 1.15;
@@ -88,10 +88,6 @@ const GlobalStyle = createGlobalStyle`
   text-decoration: none;
 }
 
-.writing .scripture {
-  color: #039BE5;
-}
-
 .writing .reference {
   font-size: 14px;
   margin-left: 2px;
@@ -127,4 +123,4 @@ const GlobalStyle = createGlobalStyle`
 }
 `;
 
-export default GlobalStyle;
+export { AmpGlobalStyle };

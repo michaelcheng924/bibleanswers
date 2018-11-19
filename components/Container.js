@@ -8,8 +8,23 @@ const StyledContainer = styled.div`
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 `;
 
-const Container = ({ children }) => (
+const AmpContainer = ({ children }) => (
   <StyledContainer>{children}</StyledContainer>
 );
 
-export default Container;
+const Container = ({ children }) => (
+  <div className="container">
+    {children}
+
+    <style jsx>{`
+      .container {
+        color: rgba(0, 0, 0, 0.84);
+        margin: 0;
+        padding: 0;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      }
+    `}</style>
+  </div>
+);
+
+export { AmpContainer, Container };

@@ -1,43 +1,47 @@
 import React from "react";
-import Container from "./Container";
+import { AmpContainer, Container } from "./Container";
 
-const Footer = () => (
-  <div
-    className="footer"
-    style={{
-      background: "#01579B",
-      justifyContent: "center",
-      padding: "10px 20px"
-    }}
-  >
-    <Container>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center"
-        }}
-      >
-        <a
-          href="/privacy-policy"
-          style={{ color: "#fff", marginRight: 20, textDecoration: "none" }}
+const Footer = ({ isAmp }) => {
+  const ContainerComponent = isAmp ? AmpContainer : Container;
+
+  return (
+    <div
+      className="footer"
+      style={{
+        background: "#01579B",
+        justifyContent: "center",
+        padding: "10px 20px"
+      }}
+    >
+      <ContainerComponent>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center"
+          }}
         >
-          Privacy
-        </a>
-        <a
-          href="/terms-of-service"
-          style={{ color: "#fff", marginRight: 20, textDecoration: "none" }}
-        >
-          Terms
-        </a>
-        <a
-          href="/sitemap.xml"
-          style={{ color: "#fff", textDecoration: "none" }}
-        >
-          Sitemap
-        </a>
-      </div>
-    </Container>
-  </div>
-);
+          <a
+            href="/privacy-policy"
+            style={{ color: "#fff", marginRight: 20, textDecoration: "none" }}
+          >
+            Privacy
+          </a>
+          <a
+            href="/terms-of-service"
+            style={{ color: "#fff", marginRight: 20, textDecoration: "none" }}
+          >
+            Terms
+          </a>
+          <a
+            href="/sitemap.xml"
+            style={{ color: "#fff", textDecoration: "none" }}
+          >
+            Sitemap
+          </a>
+        </div>
+      </ContainerComponent>
+    </div>
+  );
+};
 
 export default Footer;

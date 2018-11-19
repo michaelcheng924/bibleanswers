@@ -1,11 +1,11 @@
 import React from "react";
 
-import Container from "../components/Container";
+import { AmpContainer } from "../components/Container";
 import ReadingContainer from "../components/ReadingContainer";
 
 const TermsOfService = () => (
   <ReadingContainer style={{ marginBottom: 20 }}>
-    <Container>
+    <AmpContainer>
       <div className="writing">
         <h3>Welcome to Bible Answers</h3>
         <p>
@@ -280,7 +280,7 @@ const TermsOfService = () => (
           contact us.
         </p>
       </div>
-    </Container>
+    </AmpContainer>
   </ReadingContainer>
 );
 

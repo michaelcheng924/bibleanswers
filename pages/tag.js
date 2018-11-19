@@ -1,10 +1,12 @@
 import React from "react";
+import Head from "next/head";
 import styled from "styled-components";
 import fetch from "isomorphic-unfetch";
 
-import Container from "../components/Container";
+import { AmpContainer } from "../components/Container";
+import { AmpTitleSection } from "../components/TitleSection";
 import ReadingContainer from "../components/ReadingContainer";
-import ListItem from "../components/ListItem";
+import { AmpListItem } from "../components/ListItem";
 
 const Title = styled.h2`
   align-items: center;
@@ -43,37 +45,84 @@ const LinkTag = styled.a`
   text-decoration: none;
 `;
 
-const Tag = ({ title, subtitle, description, posts = [] }) => {
+const Tag = ({
+  title,
+  subtitle,
+  description,
+  image_url,
+  date_added,
+  updated_at,
+  posts = [],
+  user = {}
+}) => {
   if (!title) {
     return [<h1>Tag not found</h1>, <a href="/">Bible Answers Home</a>];
   }
 
-  const pageTitle = `${
-    posts.length
-  } "${title}" Questions and Answers | Bible Answers`;
+  const pageTitle = `${posts.length} "${title}" Questions and Answers`;
+
+  const datePublished = date_added ? new Date(date_added) : new Date();
 
   return (
-    <Container>
-      <title>{pageTitle}</title>
+    <AmpContainer>
+      <Head>
+        <title>{pageTitle} | Bible Answers</title>
 
-      <ReadingContainer style={{ marginBottom: 0 }}>
-        <Title>
-          {posts.length} "{title}" Questions and Answers
-        </Title>
-        <Subtitle>{subtitle}</Subtitle>
-        <Divider>...</Divider>
-      </ReadingContainer>
-      <br />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "http://schema.org",
+              "@type": "Article",
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": "https://google.com/article"
+              },
+              headline: title,
+              image: {
+                "@type": "ImageObject",
+                url: image_url,
+                height: 400,
+                width: 1200
+              },
+              datePublished: datePublished,
+              dateModified: new Date(updated_at).toISOString(),
+              author: {
+                "@type": "Person",
+                name: "Michael Cheng"
+              },
+              publisher: {
+                "@type": "Organization",
+                name: "Bible Answers",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://i.imgur.com/dJPxPY9.png"
+                }
+              },
+              description: description
+            })
+          }}
+        />
+      </Head>
+
+      <AmpTitleSection
+        title={pageTitle}
+        subtitle={subtitle}
+        image_url={image_url}
+        date_added={date_added}
+        user={user}
+      />
+
       <ReadingContainer style={{ padding: 0, width: "initial" }}>
         {posts.map(post => {
           return (
             <LinkTag href={post.url} key={post.url}>
-              <ListItem {...post} />
+              <AmpListItem {...post} />
             </LinkTag>
           );
         })}
       </ReadingContainer>
-    </Container>
+    </AmpContainer>
   );
 };
 

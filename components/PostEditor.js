@@ -237,6 +237,11 @@ class PostEditor extends Component {
     const { headers, onFetchPostsTags } = this.props;
     const { post } = this.state;
 
+    if (post.published && (!post.subtitle || !post.date_added)) {
+      this.setState({ error: true });
+      return;
+    }
+
     let finalPost = {
       ...post,
       tag_ids: post.tags.map(tag => tag.id),
@@ -275,7 +280,7 @@ class PostEditor extends Component {
       });
   };
 
-  deletePost() {
+  deletePost = () => {
     const confirm = window.confirm("Are you sure?");
 
     if (confirm) {
@@ -289,7 +294,7 @@ class PostEditor extends Component {
           });
         });
     }
-  }
+  };
 
   renderSaveButtons() {
     const { error, saving, success } = this.state;
@@ -404,7 +409,6 @@ class PostEditor extends Component {
             <strong>url: </strong>
           </div>
           <Textarea
-            disabled
             onChange={this.onChange}
             name="url"
             placeholder="url"

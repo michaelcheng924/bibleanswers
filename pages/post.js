@@ -4,10 +4,10 @@ import styled from "styled-components";
 import * as Amp from "react-amphtml";
 import fetch from "isomorphic-unfetch";
 
-import GlobalStyle from "../components/GlobalStyle";
-import Container from "../components/Container";
+import { AmpGlobalStyle } from "../components/GlobalStyle";
+import { AmpContainer } from "../components/Container";
 import ReadingContainer from "../components/ReadingContainer";
-import TitleSection from "../components/TitleSection";
+import { AmpTitleSection } from "../components/TitleSection";
 import Help from "../components/Help";
 
 const RelativeAmpList = styled(Amp.AmpList)`
@@ -38,7 +38,7 @@ const Post = ({ post, slug }) => {
   const datePublished = date_added ? new Date(date_added) : new Date();
 
   return (
-    <Container>
+    <AmpContainer>
       <Head>
         <title>{title} | Bible Answers</title>
 
@@ -79,9 +79,9 @@ const Post = ({ post, slug }) => {
         />
       </Head>
 
-      <GlobalStyle />
+      <AmpGlobalStyle />
 
-      <TitleSection {...post} />
+      <AmpTitleSection {...post} />
 
       <ReadingContainer>
         {published ? (
@@ -108,7 +108,7 @@ const Post = ({ post, slug }) => {
           </RelativeAmpList>
         </div>
       </ReadingContainer>
-    </Container>
+    </AmpContainer>
   );
 };
 

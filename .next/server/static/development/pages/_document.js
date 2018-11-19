@@ -97,15 +97,21 @@ module.exports =
 /*!*********************************!*\
   !*** ./components/Container.js ***!
   \*********************************/
-/*! exports provided: default */
+/*! exports provided: AmpContainer, Container */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AmpContainer", function() { return AmpContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Container", function() { return Container; });
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+
+
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n  color: rgba(0, 0, 0, 0.84);\n  margin: 0;\n  padding: 0;\n  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;\n"]);
 
@@ -120,14 +126,24 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var StyledContainer = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject());
+var StyledContainer = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject());
 
-var Container = function Container(_ref) {
+var AmpContainer = function AmpContainer(_ref) {
   var children = _ref.children;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledContainer, null, children);
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledContainer, null, children);
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Container);
+var Container = function Container(_ref2) {
+  var children = _ref2.children;
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "jsx-1997678190" + " " + "container"
+  }, children, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    styleId: "1997678190",
+    css: ".container.jsx-1997678190{color:rgba(0,0,0,0.84);margin:0;padding:0;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9taWNoYWVsLmNoZW5nL2NvZGUvbmV4dC1iaWJsZWFuc3dlcnMvY29tcG9uZW50cy9Db250YWluZXIuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBa0JnQixBQUdtQyx1QkFDakIsU0FDQyxVQUMrQyxzREFDM0QiLCJmaWxlIjoiL1VzZXJzL21pY2hhZWwuY2hlbmcvY29kZS9uZXh0LWJpYmxlYW5zd2Vycy9jb21wb25lbnRzL0NvbnRhaW5lci5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCBzdHlsZWQgZnJvbSBcInN0eWxlZC1jb21wb25lbnRzXCI7XG5cbmNvbnN0IFN0eWxlZENvbnRhaW5lciA9IHN0eWxlZC5kaXZgXG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODQpO1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDA7XG4gIGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2EgTmV1ZSwgSGVsdmV0aWNhLCBBcmlhbCwgc2Fucy1zZXJpZjtcbmA7XG5cbmNvbnN0IEFtcENvbnRhaW5lciA9ICh7IGNoaWxkcmVuIH0pID0+IChcbiAgPFN0eWxlZENvbnRhaW5lcj57Y2hpbGRyZW59PC9TdHlsZWRDb250YWluZXI+XG4pO1xuXG5jb25zdCBDb250YWluZXIgPSAoeyBjaGlsZHJlbiB9KSA9PiAoXG4gIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyXCI+XG4gICAge2NoaWxkcmVufVxuXG4gICAgPHN0eWxlIGpzeD57YFxuICAgICAgLmNvbnRhaW5lciB7XG4gICAgICAgIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODQpO1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2EgTmV1ZSwgSGVsdmV0aWNhLCBBcmlhbCwgc2Fucy1zZXJpZjtcbiAgICAgIH1cbiAgICBgfTwvc3R5bGU+XG4gIDwvZGl2PlxuKTtcblxuZXhwb3J0IHsgQW1wQ29udGFpbmVyLCBDb250YWluZXIgfTtcbiJdfQ== */\n/*@ sourceURL=/Users/michael.cheng/code/next-bibleanswers/components/Container.js */"
+  }));
+};
+
+
 
 /***/ }),
 
@@ -146,7 +162,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var Footer = function Footer() {
+var Footer = function Footer(_ref) {
+  var isAmp = _ref.isAmp;
+  var ContainerComponent = isAmp ? _Container__WEBPACK_IMPORTED_MODULE_1__["AmpContainer"] : _Container__WEBPACK_IMPORTED_MODULE_1__["Container"];
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "footer",
     style: {
@@ -154,7 +172,7 @@ var Footer = function Footer() {
       justifyContent: "center",
       padding: "10px 20px"
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Container__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContainerComponent, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
       display: "flex",
       justifyContent: "center"
@@ -236,18 +254,21 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MyDocument; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/document */ "next/document");
-/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_amphtml_setup__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-amphtml/setup */ "react-amphtml/setup");
-/* harmony import */ var react_amphtml_setup__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_amphtml_setup__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_amphtml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-amphtml */ "react-amphtml");
-/* harmony import */ var react_amphtml__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_amphtml__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Nav */ "./components/Nav.js");
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Footer */ "./components/Footer.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "@babel/runtime/regenerator");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/document */ "next/document");
+/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_amphtml_setup__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-amphtml/setup */ "react-amphtml/setup");
+/* harmony import */ var react_amphtml_setup__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_amphtml_setup__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_amphtml__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-amphtml */ "react-amphtml");
+/* harmony import */ var react_amphtml__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_amphtml__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Nav */ "./components/Nav.js");
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Footer */ "./components/Footer.js");
+
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -255,6 +276,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -293,7 +318,7 @@ function (_Document) {
   _createClass(MyDocument, [{
     key: "renderWebsiteScript",
     value: function renderWebsiteScript() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("script", {
         type: "application/ld+json",
         dangerouslySetInnerHTML: {
           __html: JSON.stringify({
@@ -313,12 +338,12 @@ function (_Document) {
     key: "render",
     value: function render() {
       if (this.props.noAmp) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("html", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_1__["Head"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+        return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("html", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["Head"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
           rel: "icon",
           href: "https://i.imgur.com/lnlvtFf.png"
-        }), this.props.url === "/" ? this.renderWebsiteScript() : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("style", null, "body { margin: 0 } /* custom! */")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("body", {
+        }), this.props.url === "/" ? this.renderWebsiteScript() : null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("style", null, "body { margin: 0 } /* custom! */")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("body", {
           className: "custom_class"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], null)));
       }
 
       var _this$props = this.props,
@@ -330,82 +355,119 @@ function (_Document) {
           html = _this$props.html;
       /* eslint-disable react/no-danger */
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_amphtml__WEBPACK_IMPORTED_MODULE_4__["Html"], {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_amphtml__WEBPACK_IMPORTED_MODULE_5__["Html"], {
         specName: "html \u26A1 for top-level html",
         lang: "en",
         amp: "amp"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("head", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("head", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
         rel: "icon",
         href: "https://i.imgur.com/lnlvtFf.png"
-      }), title, schemaInfo, Object(react_amphtml_setup__WEBPACK_IMPORTED_MODULE_3__["headerBoilerplate"])(url), ampScriptTags, ampStyleTag), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      }), title, schemaInfo, Object(react_amphtml_setup__WEBPACK_IMPORTED_MODULE_4__["headerBoilerplate"])(url), ampScriptTags, ampStyleTag), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], {
         isAmp: true
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         dangerouslySetInnerHTML: {
           __html: html
         }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        isAmp: true
+      })));
     }
   }], [{
     key: "getInitialProps",
-    value: function getInitialProps(_ref) {
-      var req = _ref.req,
-          renderPage = _ref.renderPage;
-      var ampScripts = new react_amphtml_setup__WEBPACK_IMPORTED_MODULE_3__["AmpScripts"]();
-      var sheet = new styled_components__WEBPACK_IMPORTED_MODULE_2__["ServerStyleSheet"]();
-      var page = renderPage(function (App) {
-        return function (props) {
-          return sheet.collectStyles(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_amphtml_setup__WEBPACK_IMPORTED_MODULE_3__["AmpScriptsManager"], {
-            ampScripts: ampScripts
-          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, props)));
-        };
-      });
-      var ampScriptTags = ampScripts.getScriptElements(); // AMP only allows for 1 style tag, so we need to compbine all the style
-      // tags generated by styled-components
+    value: function () {
+      var _getInitialProps = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(ctx) {
+        var req, renderPage, noAmp, initialProps, ampScripts, sheet, page, ampScriptTags, ampStyleTag, title, schemaInfo;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                req = ctx.req, renderPage = ctx.renderPage;
+                noAmp = req.url === "/admin" || req.url === "/" || req.url.indexOf("/confessions") !== -1;
 
-      /* eslint-disable react/no-danger */
+                if (!noAmp) {
+                  _context.next = 7;
+                  break;
+                }
 
-      var ampStyleTag = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("style", {
-        "amp-custom": "",
-        dangerouslySetInnerHTML: {
-          __html: sheet.getStyleElement().reduce(function (css) {
-            var _ref2 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
-                _ref2$props = _ref2.props;
+                _context.next = 5;
+                return next_document__WEBPACK_IMPORTED_MODULE_2___default.a.getInitialProps(ctx);
 
-            _ref2$props = _ref2$props === void 0 ? {} : _ref2$props;
-            var _ref2$props$dangerous = _ref2$props.dangerouslySetInnerHTML;
-            _ref2$props$dangerous = _ref2$props$dangerous === void 0 ? {} : _ref2$props$dangerous;
+              case 5:
+                initialProps = _context.sent;
+                return _context.abrupt("return", _objectSpread({}, initialProps, {
+                  noAmp: true
+                }));
 
-            var _ref2$props$dangerous2 = _ref2$props$dangerous.__html,
-                __html = _ref2$props$dangerous2 === void 0 ? "" : _ref2$props$dangerous2;
+              case 7:
+                ampScripts = new react_amphtml_setup__WEBPACK_IMPORTED_MODULE_4__["AmpScripts"]();
+                sheet = new styled_components__WEBPACK_IMPORTED_MODULE_3__["ServerStyleSheet"]();
+                page = renderPage(function (App) {
+                  return function (props) {
+                    return sheet.collectStyles(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_amphtml_setup__WEBPACK_IMPORTED_MODULE_4__["AmpScriptsManager"], {
+                      ampScripts: ampScripts
+                    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(App, props)));
+                  };
+                });
+                ampScriptTags = ampScripts.getScriptElements(); // AMP only allows for 1 style tag, so we need to compbine all the style
+                // tags generated by styled-components
 
-            return "".concat(css).concat(__html);
-          }, "")
-        }
-      });
-      /* eslint-enable */
-      // Get the dynamic `<title />` from the head generated by next.js
+                /* eslint-disable react/no-danger */
 
-      var title = page.head.filter(function (_ref3) {
-        var type = _ref3.type;
-        return type === "title";
-      }).slice(0, 1) || react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", null, "ampreact");
-      var schemaInfo = page.head.filter(function (_ref4) {
-        var type = _ref4.type;
-        return type === "script";
-      }).slice(0, 1) || null;
-      return _objectSpread({}, page, {
-        title: title,
-        schemaInfo: schemaInfo,
-        url: req.url,
-        ampScriptTags: ampScriptTags,
-        ampStyleTag: ampStyleTag,
-        noAmp: req.url === "/admin" || req.url === "/"
-      });
-    }
+                ampStyleTag = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("style", {
+                  "amp-custom": "",
+                  dangerouslySetInnerHTML: {
+                    __html: sheet.getStyleElement().reduce(function (css) {
+                      var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+                          _ref$props = _ref.props;
+
+                      _ref$props = _ref$props === void 0 ? {} : _ref$props;
+                      var _ref$props$dangerousl = _ref$props.dangerouslySetInnerHTML;
+                      _ref$props$dangerousl = _ref$props$dangerousl === void 0 ? {} : _ref$props$dangerousl;
+
+                      var _ref$props$dangerousl2 = _ref$props$dangerousl.__html,
+                          __html = _ref$props$dangerousl2 === void 0 ? "" : _ref$props$dangerousl2;
+
+                      return "".concat(css).concat(__html);
+                    }, "")
+                  }
+                });
+                /* eslint-enable */
+                // Get the dynamic `<title />` from the head generated by next.js
+
+                title = page.head.filter(function (_ref2) {
+                  var type = _ref2.type;
+                  return type === "title";
+                }).slice(0, 1) || react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, "ampreact");
+                schemaInfo = page.head.filter(function (_ref3) {
+                  var type = _ref3.type;
+                  return type === "script";
+                }).slice(0, 1) || null;
+                return _context.abrupt("return", _objectSpread({}, page, {
+                  title: title,
+                  schemaInfo: schemaInfo,
+                  url: req.url,
+                  ampScriptTags: ampScriptTags,
+                  ampStyleTag: ampStyleTag
+                }));
+
+              case 15:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      return function getInitialProps(_x) {
+        return _getInitialProps.apply(this, arguments);
+      };
+    }()
   }]);
 
   return MyDocument;
-}(next_document__WEBPACK_IMPORTED_MODULE_1___default.a);
+}(next_document__WEBPACK_IMPORTED_MODULE_2___default.a);
 
 
 
@@ -420,6 +482,17 @@ function (_Document) {
 
 module.exports = __webpack_require__(/*! ./pages/_document.js */"./pages/_document.js");
 
+
+/***/ }),
+
+/***/ "@babel/runtime/regenerator":
+/*!*********************************************!*\
+  !*** external "@babel/runtime/regenerator" ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@babel/runtime/regenerator");
 
 /***/ }),
 
@@ -475,6 +548,17 @@ module.exports = require("react-amphtml/setup");
 /***/ (function(module, exports) {
 
 module.exports = require("styled-components");
+
+/***/ }),
+
+/***/ "styled-jsx/style":
+/*!***********************************!*\
+  !*** external "styled-jsx/style" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-jsx/style");
 
 /***/ })
 

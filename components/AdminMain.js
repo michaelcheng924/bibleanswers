@@ -42,6 +42,7 @@ class AdminMain extends Component {
       headers,
       onFetchPostsTags,
       onSetPost,
+      onSetTag,
       posts,
       postsBySlug,
       tags
@@ -60,7 +61,7 @@ class AdminMain extends Component {
             postsBySlug={postsBySlug}
             tags={tags}
           />
-          <AdminTagsList headers={headers} tags={tags} />
+          <AdminTagsList headers={headers} onSetTag={onSetTag} tags={tags} />
         </div>
       </div>
     );

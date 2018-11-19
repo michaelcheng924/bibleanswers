@@ -8,7 +8,9 @@ class CreateTag extends Component {
     url: "",
     title: "",
     description: "",
-    subtitle: ""
+    subtitle: "",
+    image_url: "",
+    date_added: ""
   };
 
   onChange = event => {
@@ -36,17 +38,27 @@ class CreateTag extends Component {
           url: "",
           title: "",
           description: "",
-          subtitle: ""
+          subtitle: "",
+          image_url: "",
+          date_added: ""
         });
       });
   };
 
   render() {
-    const { slug, url, title, description, subtitle } = this.state;
+    const {
+      slug,
+      url,
+      title,
+      description,
+      subtitle,
+      image_url,
+      date_added
+    } = this.state;
 
     return (
       <div className="admin__create-tag">
-        <div>{JSON.stringify(this.state)}</div>
+        {/* <div>{JSON.stringify(this.state)}</div> */}
         <h3>Create Tag</h3>
         <div>
           <strong>slug: </strong>
@@ -94,6 +106,25 @@ class CreateTag extends Component {
           placeholder="subtitle"
           value={subtitle}
         />
+        <div>
+          <strong>date_added: </strong>
+        </div>
+        <Textarea
+          onChange={this.onChange}
+          name="date_added"
+          placeholder="date_added"
+          value={date_added}
+        />
+        <div>
+          <strong>image_url: </strong>
+        </div>
+        <Textarea
+          onChange={this.onChange}
+          name="image_url"
+          placeholder="image_url"
+          value={image_url}
+        />
+        <img src={image_url} alt={title} style={{ width: 200 }} />
         <button onClick={this.createTag}>Create</button>
       </div>
     );

@@ -21,6 +21,8 @@ class Export extends Component {
           "/": { page: "/" },
           "/all-posts": { page: "/all-posts" },
           "/posts-in-progress": { page: "/posts-in-progress" },
+          "/privacy-policy": { page: "/privacy-policy" },
+          "/terms-of-service": { page: "/terms-of-service" },
           "/admin": { page: "/admin" },
           ${posts
             .map(

@@ -3583,9 +3583,9 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-amphtml@^3.0.1:
+"react-amphtml@git+https://git@github.com/michaelcheng924/react-amphtml.git":
   version "3.0.1"
-  resolved "https://registry.yarnpkg.com/react-amphtml/-/react-amphtml-3.0.1.tgz#4d3878b5ad5defbb640c74fb76cbb1efbcbb38ff"
+  resolved "git+https://git@github.com/michaelcheng924/react-amphtml.git#1ba16c16e919206201f8ac408a833de55b10caa4"
   dependencies:
     prop-types "^15.6.1"
 

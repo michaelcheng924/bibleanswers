@@ -1,46 +1,84 @@
 import React, { useEffect } from "react";
-import styled from "styled-components";
 import fetch from "isomorphic-unfetch";
 
-import Container from "../components/Container";
-import ListItem from "../components/ListItem";
+import { Container } from "../components/Container";
+import { ListItem } from "../components/ListItem";
 import ReadingContainer from "../components/ReadingContainer";
 
-const Title = styled.h2`
-  align-items: center;
-  display: flex;
-  font-size: 34px;
-  line-height: 1.15;
-  padding: 0 20px;
+const Title = ({ children }) => (
+  <div className="title">
+    {children}{" "}
+    <style jsx>{`
+      .title {
+        align-items: center;
+        display: flex;
+        font-size: 34px;
+        font-weight: bold;
+        line-height: 1.15;
+        margin-top: 20px;
+        padding: 0 20px;
+      }
 
-  @media screen and (max-width: 768px) {
-    font-size: 30px;
-  }
-`;
+      @media screen and (max-width: 768px) {
+        .title {
+          font-size: 30px;
+        }
+      }
+    `}</style>
+  </div>
+);
 
-const PostsTagsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`;
+const PostsTagsContainer = ({ children }) => (
+  <div className="post-tags-container">
+    {children}{" "}
+    <style jsx>{`
+      .post-tags-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    `}</style>
+  </div>
+);
 
-const TagText = styled.div`
-  color: #689f38;
-  cursor: pointer;
-  font-size: 18px;
-  margin-bottom: 6px;
-`;
+const TagText = ({ children }) => (
+  <div className="tag-text">
+    {children}{" "}
+    <style jsx>{`
+      .tag-text {
+        color: #689f38;
+        cursor: pointer;
+        font-size: 18px;
+        margin-bottom: 6px;
+      }
+    `}</style>
+  </div>
+);
 
-const LinkTag = styled.a`
-  text-decoration: none;
-`;
+const LinkTag = ({ children, href }) => (
+  <a className="link-tag" href={href}>
+    {children}{" "}
+    <style jsx>{`
+      .link-tag {
+        text-decoration: none;
+      }
+    `}</style>
+  </a>
+);
 
-const MoreLink = styled.a`
-  color: #689f38;
-  cursor: pointer;
-  font-size: 18px;
-  margin-top: 10px;
-  text-decoration: none;
-`;
+const MoreLink = ({ children, href }) => (
+  <a className="more-link" href={href}>
+    {children}{" "}
+    <style jsx>{`
+      .more-link {
+        color: #689f38;
+        cursor: pointer;
+        font-size: 18px;
+        margin-top: 10px;
+        text-decoration: none;
+      }
+    `}</style>
+  </a>
+);
 
 const Home = ({ recentPosts = [], tags = [], postsCount }) => {
   useEffect(() => {

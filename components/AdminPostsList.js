@@ -3,7 +3,6 @@ import { some } from "lodash";
 import styled from "styled-components";
 
 import Search from "./Search";
-import ListItem from "./ListItem";
 
 const BIBLE_BOOKS = {
   Genesis: true,

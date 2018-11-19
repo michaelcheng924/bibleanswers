@@ -11,7 +11,19 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 
 export default class MyDocument extends Document {
-  static getInitialProps({ req, renderPage }) {
+  static async getInitialProps(ctx) {
+    const { req, renderPage } = ctx;
+
+    const noAmp =
+      req.url === "/admin" ||
+      req.url === "/" ||
+      req.url.indexOf("/confessions") !== -1;
+
+    if (noAmp) {
+      const initialProps = await Document.getInitialProps(ctx);
+      return { ...initialProps, noAmp: true };
+    }
+
     const ampScripts = new AmpScripts();
     const sheet = new ServerStyleSheet();
 
@@ -68,8 +80,7 @@ export default class MyDocument extends Document {
       schemaInfo,
       url: req.url,
       ampScriptTags,
-      ampStyleTag,
-      noAmp: req.url === "/admin" || req.url === "/"
+      ampStyleTag
     };
   }
 
@@ -135,7 +146,7 @@ export default class MyDocument extends Document {
         <body>
           <Nav isAmp />
           <div dangerouslySetInnerHTML={{ __html: html }} />
-          <Footer />
+          <Footer isAmp />
         </body>
       </Amp.Html>
     );
