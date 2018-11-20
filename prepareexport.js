@@ -23,7 +23,7 @@ request.get("https://bibleanswersapi.herokuapp.com/export", function(
           .map(function(post) {
             return `"${
               post.url
-            }": { page: "/post", query: { slug: "${post.slug}" } },\n`;
+            }": { page: "/${post.url.indexOf("/confessions") !== -1 ? "confession" : "post"}", query: { slug: "${post.slug}" } },\n`;
           })
           .concat(
             parsedBody.tags.map(function(tag, index) {
