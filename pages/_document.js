@@ -21,7 +21,7 @@ export default class MyDocument extends Document {
 
     if (noAmp) {
       const initialProps = await Document.getInitialProps(ctx);
-      return { ...initialProps, noAmp: true };
+      return { ...initialProps, noAmp: true, url: req.url };
     }
 
     const ampScripts = new AmpScripts();
@@ -110,6 +110,15 @@ export default class MyDocument extends Document {
         <html>
           <Head>
             <link rel="icon" href="https://i.imgur.com/lnlvtFf.png" />
+            <meta
+              name="viewport"
+              content="width=device-width,minimum-scale=1,initial-scale=1"
+            />
+            <link
+              rel="canonical"
+              href={`https://bibleanswers.io${this.props.url}`}
+            />
+
             {this.props.url === "/" ? this.renderWebsiteScript() : null}
             <style>{`body { margin: 0 } /* custom! */`}</style>
           </Head>
@@ -137,13 +146,9 @@ export default class MyDocument extends Document {
       <Amp.Html specName="html ⚡ for top-level html" lang="en" amp="amp">
         <head>
           <link rel="icon" href="https://i.imgur.com/lnlvtFf.png" />
-          <meta
-            name="viewport"
-            content="width=device-width,minimum-scale=1,initial-scale=1"
-          />
           {title}
           {schemaInfo}
-          {headerBoilerplate(url)}
+          {headerBoilerplate(`https://bibleanswers.io${url}`)}
           {ampScriptTags}
           {ampStyleTag}
         </head>

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import * as Amp from "react-amphtml";
 import fetch from "isomorphic-unfetch";
 
-import { AmpGlobalStyle } from "../components/GlobalStyle";
+import { createAmpGlobalStyle } from "../components/GlobalStyle";
 import { AmpContainer } from "../components/Container";
 import ReadingContainer from "../components/ReadingContainer";
 import { AmpTitleSection } from "../components/TitleSection";
@@ -36,6 +36,8 @@ const Post = ({ post, slug }) => {
   } = post;
 
   const datePublished = date_added ? new Date(date_added) : new Date();
+
+  const AmpGlobalStyle = createAmpGlobalStyle(slug);
 
   return (
     <AmpContainer>
@@ -79,7 +81,7 @@ const Post = ({ post, slug }) => {
         />
       </Head>
 
-      <AmpGlobalStyle />
+      <AmpGlobalStyle slug={slug} />
 
       <AmpTitleSection {...post} />
 
@@ -112,15 +114,16 @@ const Post = ({ post, slug }) => {
   );
 };
 
-Post.getInitialProps = async function({ query }) {
+Post.getInitialProps = async function({ req, query }) {
   const res = await fetch(
-    `https://bibleanswersapi.herokuapp.com/posts/${query.slug}`
+    `https://bibleanswersapi.herokuapp.com/posts/${query.slug ||
+      req.url.slice(1)}`
   );
   const data = await res.json();
 
   return {
     post: data,
-    slug: query.slug
+    slug: query.slug || req.url.slice(1)
   };
 };
 

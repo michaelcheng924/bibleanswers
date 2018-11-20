@@ -3,6 +3,7 @@ import fetch from "isomorphic-unfetch";
 
 import { Container } from "../components/Container";
 import { ListItem } from "../components/ListItem";
+import TopLinks from "../components/TopLinks";
 import ReadingContainer from "../components/ReadingContainer";
 
 const Title = ({ children }) => (
@@ -105,6 +106,8 @@ const Home = ({ recentPosts = [], tags = [], postsCount }) => {
       <title>
         Bible Answers | Explaining and Defending the Christian Worldview
       </title>
+
+      <TopLinks />
 
       <PostsTagsContainer>
         <ReadingContainer style={{ padding: 0, width: "initial" }}>
