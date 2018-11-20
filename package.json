@@ -9,13 +9,16 @@
     "start": "next build & NODE_ENV=production node server.js",
     "deploy": "git push heroku master",
     "heroku-postbuild": "yarn run build",
-    "export": "next build && next export && cp ./constants/sitemap.xml ./out"
+    "export": "node prepareexport && next build && next export && cp ./constants/sitemap.xml ./out"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
+    "classnames": "^2.2.6",
+    "css-vendor": "^1.1.0",
+    "debug": "^4.1.0",
     "express": "^4.16.4",
     "isomorphic-unfetch": "^3.0.0",
     "lodash": "^4.17.11",
@@ -32,5 +35,8 @@
     "react-simple-code-editor": "^0.7.1",
     "react-textarea-autosize": "^7.1.0-1",
     "styled-components": "^4.1.1"
+  },
+  "devDependencies": {
+    "request": "^2.88.0"
   }
 }

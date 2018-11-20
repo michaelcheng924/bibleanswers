@@ -18437,7 +18437,6 @@ var Script = function Script(_ref) {
   var extension = _ref.extension,
       isCustomTemplate = _ref.isCustomTemplate;
 
-  console.log("======", extension);
   return React__default.createElement("script", __chunk_1._extends({
     async: true
   }, __chunk_1.defineProperty({}, "custom-" + (isCustomTemplate ? "template" : "element"), extension), {
@@ -32282,7 +32281,7 @@ _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function 
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -32307,5 +32306,5 @@ module.exports = dll_4fa5fe59a0158b551b2e;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]));;
+},[[4,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=index.js.map

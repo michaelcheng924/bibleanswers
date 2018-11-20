@@ -1,797 +1,975 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+  <urlset
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+              http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
   <loc>https://bibleanswers.io/</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://bibleanswers.io/answers/god-author-confusion-babel</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/is-anyone-righteous-have-all-sinned</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/does-god-change-his-mind</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/did-anyone-ascend-heaven-before-jesus</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/did-people-live-hundreds-years-genesis-5</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/genesis-4-17-cain-wife</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/genesis-3-16-pain-women-child-bearing</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/genesis-3-9-gods-omniscience</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/baptism-necessary-acts-2-38</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/are-there-one-many-gods</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/baptism-necessary-acts-22-16</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/baptism-necessary-galatians-3-27</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/baptism-necessary-salvation-1-peter-3-21</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/resurrection-narratives-harmony</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://bibleanswers.io/all-posts</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/1%20corinthians</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/1%20john</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/agnosticism</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/apologetics</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/authorship</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/bad-logic</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/baptism</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/contradictions</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/calvinism</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/creation</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/creeds-confessions</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/deuteronomy</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/faith</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/genesis</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/baptism-necessary</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/is-god-good</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/isaiah</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/jesus-existence</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/john</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/luke</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/mark</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/matthew</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/presuppositional-apologetics</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/resurrection-narratives-harmony</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/textual-criticism</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/gospel</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/theology</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/trinity</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/tags/worldview</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://bibleanswers.io/posts-in-progress</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/privacy-policy</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/terms-of-service</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/baptism-necessary-salvation-1-peter-3-21</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/baptism-necessary-galatians-3-27</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/chalcedonian-creed</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/jesus-appear-first</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/thirty-nine-articles</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/are-there-one-many-gods</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/resurrection-narratives-harmony</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/baptism-necessary-acts-22-16</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/were-one-two-animals-brought-jesus</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/when-stone-rolled-away</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/problem-of-evil</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/is-it-sin-make-graven-images</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/was-immoral-god-command-destruction-women-children</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/is-wrong-psalmist-talk-about-killing-children</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/is-god-good-bad-people</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/should-we-acquire-wisdom</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/did-god-destroy-nineveh</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/did-old-testament-prophecy-jesus-coming-from-nazareth</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/where-did-devil-take-jesus-first</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/where-did-jesus-first-meet-simon-peter-andrew</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/did-jesus-exist</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/athanasian-creed</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-11-justification</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/papias-authorship</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/genesis-1-2-plants</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/where-were-angels</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/lucian</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/nicene-creed</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-10-effectual-calling</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-15-repentance-unto-life-salvation</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-20-gospel-extent-grace-thereof</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-25-marriage</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://bibleanswers.io/answers/agnosticism</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/genesis-1-2-plants</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/matthew-luke-genealogy</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/did-jesus-exist</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://bibleanswers.io/answers/bible-disagreements</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/problem-of-evil</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/how-many-angels-tomb</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/how-many-women-went-tomb</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/irenaeus-authorship</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://bibleanswers.io/answers/is-faith-blind</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://bibleanswers.io/answers/justin-martyr-mark</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-4-creation</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://bibleanswers.io/answers/papias-authorship</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-6-fall-man</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://bibleanswers.io/answers/were-angels-sitting-standing</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-16-good-works</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://bibleanswers.io/answers/tacitus</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-19-law-god</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://bibleanswers.io/answers/lucian</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-24-civil-magistrate</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://bibleanswers.io/answers/rylands-p52</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-26-church</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://bibleanswers.io/answers/what-is-presuppositional-apologetics</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-27-communion-saints</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://bibleanswers.io/answers/when-women-arrive-tomb</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://bibleanswers.io/answers/why-believe-bible</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://bibleanswers.io/answers/when-stone-rolled-away</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-9-free-will</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://bibleanswers.io/answers/where-were-angels</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-17-perserverance-saints</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://bibleanswers.io/answers/jesus-appear-first</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/foreknowledge</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/apostles-creed</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/athanasian-creed</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/chalcedonian-creed</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/nicene-creed</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/thirty-nine-articles</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/gospel</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/how-many-charioteers-were-killed</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/how-many-fighting-men-were-there-in-israel-judah</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/how-many-horsemen-did-david-capture</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/how-many-years-famine-threatened-david-seven-three</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/who-incited-david-to-count-people-israel</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-23-lawful-oaths-vows</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://bibleanswers.io/answers/do-sons-bear-sins-father</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/god-author-confusion-babel</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/should-we-acquire-wisdom</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/does-god-love-hate-people</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/how-many-baths-could-be-held</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/how-many-stalls-horses-did-solomon-have</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/how-many-supervisors-solomon</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/was-it-wrong-god-send-lying-spirit</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/should-we-let-good-works-be-seen</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/did-saul-know-who-david-was</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/who-killed-goliath-david-elhanan</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/who-killed-saul-saul-or-amalekite</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/has-anyone-seen-god</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/how-long-jehoiachin-rule-jerusalem</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/how-old-ahaziah-began-to-rule-over-jerusalem</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/how-old-jehoiachin-when-he-became-king</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/is-bible-wrong-about-diameter-bowl</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/who-king-abijahs-mother-maacah-micaiah</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/did-anyone-ascend-heaven-before-jesus</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/was-god-immoral-kill-42-lads-for-saying-elisha-bald</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/was-lot-righteous-gave-daughters-to-crows</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/will-earth-remain-forever</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/did-michal-have-any-children</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/does-god-create-evil</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/are-genesis-1-2-contradictory</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/can-we-call-someone-fool</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/did-abraham-have-one-or-two-children</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/did-all-of-egypts-livestock-die</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/did-coniah-have-children</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/did-god-destroy-nineveh</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/did-god-speak-about-sacrifices-at-exodus</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/did-jacob-worship-head-bed-or-leaning-staff</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/did-jesus-abolish-the-law</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/did-old-testament-prophecy-jesus-coming-from-nazareth</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/do-job-1-21-ecclesiastes-5-15-teach-reincarnation</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/do-badger-rabbit-chew-cud</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/do-we-still-need-to-keep-sabbath</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/does-god-change-his-mind</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/does-god-exist</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/does-god-tempt-people</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/baptism-necessary-john-3-5</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/does-song-solomon-8-8-promote-child-marriage</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/noah-how-many-kinds</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/if-god-not-man-can-jesus-be-god</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/if-job-blameless-why-god-allow-satan-afflict-him</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/is-god-god-peace-war</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/is-god-good-bad-people</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/is-jesus-god-creator-all-things</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/isaiah-7-14-maiden-virgin</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/is-it-sin-make-graven-images</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/is-it-wrong-man-wear-womens-clothing-vice-versa</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/is-bad-bird</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/should-we-call-anyone-father-besides-god</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/cosmological-argument-gods-existence</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/moral-argument-gods-existence</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/ontological-argument-gods-existence</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/teleological-argument-gods-existence</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/to-whom-jesus-teach-lords-prayer</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/was-god-not-able-to-drive-out-inhabitants-valley</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/was-immoral-god-command-destruction-women-children</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/was-immoral-god-command-stoning-rebellious-sin</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/was-immoral-god-command-stoning-woman-not-being-virgin</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://bibleanswers.io/answers/was-it-immoral-leave-only-virgins-alive</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://bibleanswers.io/answers/was-it-immoral-israelites-destroy-all-people</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/was-it-wrong-man-killed-gathering-sticks-sabbath</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/was-it-wrong-god-give%20laws-buying%20slaves</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/was-it-wrong-for-slaves-to-be-property</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/is-wrong-psalmist-talk-about-killing-children</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/were-one-two-animals-brought-jesus</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/where-did-jesus-first-meet-simon-peter-andrew</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/where-did-devil-take-jesus-first</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/who-bought-joseph-ishmaelites-midianites</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/sons-of-god-genesis-6</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/why-statistics-ezra-2-nehemiah-7-different</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/why-did-god-command-abraham-to-kill-son-isaac</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://bibleanswers.io/answers/why-did-god-kill-man-spilling-seed</loc>
-  <lastmod>2018-11-15T00:31:49+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://bibleanswers.io/answers/teleological-argument-gods-existence</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://bibleanswers.io/answers/why-sacrifice-animals-without-blemish</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/was-immoral-god-command-stoning-rebellious-sin</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/is-it-wrong-man-wear-womens-clothing-vice-versa</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/was-immoral-god-command-stoning-woman-not-being-virgin</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/was-god-not-able-to-drive-out-inhabitants-valley</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/did-saul-know-who-david-was</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/does-song-solomon-8-8-promote-child-marriage</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/was-it-immoral-israelites-destroy-all-people</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/isaiah-7-14-maiden-virgin</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/should-we-call-anyone-father-besides-god</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://bibleanswers.io/answers/born-of-water-meaning</loc>
-  <lastmod>2018-11-15T00:31:50+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/apostles-creed</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/noah-how-many-kinds</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/do-we-still-need-to-keep-sabbath</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/did-god-speak-about-sacrifices-at-exodus</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/was-it-wrong-for-slaves-to-be-property</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/who-killed-saul-saul-or-amalekite</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/do-badger-rabbit-chew-cud</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/is-bad-bird</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/who-killed-goliath-david-elhanan</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/did-michal-have-any-children</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/foreknowledge</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/irenaeus-authorship</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/who-incited-david-to-count-people-israel</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-22-religious-worship-sabbath-day</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/how-many-fighting-men-were-there-in-israel-judah</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/how-many-years-famine-threatened-david-seven-three</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/how-many-horsemen-did-david-capture</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/how-many-charioteers-were-killed</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/how-many-stalls-horses-did-solomon-have</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/how-many-supervisors-solomon</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/how-many-baths-could-be-held</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/was-it-wrong-god-send-lying-spirit</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/was-god-immoral-kill-42-lads-for-saying-elisha-bald</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/how-old-ahaziah-began-to-rule-over-jerusalem</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/tacitus</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/is-bible-wrong-say-houses-plundered-wives-ravished</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/was-it-wrong-god-give-laws-buying-slaves</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/has-anyone-seen-god</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/how-old-jehoiachin-when-he-became-king</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-28-baptism-lords-supper</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/is-bible-wrong-about-diameter-bowl</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/who-king-abijahs-mother-maacah-micaiah</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/is-jesus-god-creator-all-things</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/does-god-create-evil</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/did-coniah-have-children</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-29-baptism</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-30-lords-supper</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-31-state-man-after-death-resurrection-dead</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-32-last-judgement</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/matthew-luke-genealogy</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/were-angels-sitting-standing</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-3-gods-decree</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/was-lot-righteous-gave-daughters-to-crows</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-5-divine-providence</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/does-god-tempt-people</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/why-did-god-command-abraham-to-kill-son-isaac</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/did-abraham-have-one-or-two-children</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-7-gods-covenant</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/who-bought-joseph-ishmaelites-midianites</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/why-did-god-kill-man-spilling-seed</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/did-jacob-worship-head-bed-or-leaning-staff</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-8-christ-mediator</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-13-sanctification</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-18-assurance-grace-salvation</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/baptism-necessary-acts-2-38</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/how-long-jehoiachin-rule-jerusalem</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/did-all-of-egypts-livestock-die</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/is-god-god-peace-war</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/was-it-wrong-man-killed-gathering-sticks-sabbath</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/why-statistics-ezra-2-nehemiah-7-different</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/if-god-not-man-can-jesus-be-god</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/if-job-blameless-why-god-allow-satan-afflict-him</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/do-job-1-21-ecclesiastes-5-15-teach-reincarnation</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/sons-of-god-genesis-6</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/does-god-love-hate-people</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/can-we-call-someone-fool</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/will-earth-remain-forever</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/when-women-arrive-tomb</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/justin-martyr-mark</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/cosmological-argument-gods-existence</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/does-god-exist</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/are-genesis-1-2-contradictory</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/ontological-argument-gods-existence</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/moral-argument-gods-existence</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/how-many-angels-tomb</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/how-many-women-went-tomb</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/what-is-presuppositional-apologetics</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-preface</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/should-we-let-good-works-be-seen</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/did-jesus-abolish-the-law</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/to-whom-jesus-teach-lords-prayer</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/genesis-3-9-gods-omniscience</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/did-anyone-ascend-heaven-before-jesus</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/is-anyone-righteous-have-all-sinned</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-1-holy-scriptures</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/genesis-3-16-pain-women-child-bearing</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/genesis-4-17-cain-wife</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/does-god-change-his-mind</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/god-author-confusion-babel</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-list</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/rylands-p52</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/gospel</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/did-people-live-hundreds-years-genesis-5</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/answers/baptism-necessary-john-3-5</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-2-god-holy-trinity</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-12-adoption</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-14-saving-faith</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bibleanswers.io/confessions/1689-london-baptist-confession-chapter-21-christian-liberty-liberty-conscience</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
 </url>
 
-
+<url>
+  <loc>https://bibleanswers.io/tags/textual-criticism</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/calvinism</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/creation</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/presuppositional-apologetics</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/gospel</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/theology</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/authorship</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/baptism</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/is-god-good</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/deuteronomy</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/genesis</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/apologetics</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/exodus</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/2-kings</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/hebrews</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/1-john</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/romans</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/psalms</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/luke</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/isaiah</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/1-corinthians</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/matthew</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/john</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/jonah</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/job</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/malachi</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/mark</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/contradictions</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/trinity</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/bad-logic</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/agnosticism</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/baptism-necessary</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/jesus-existence</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/creeds-confessions</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/faith</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/resurrection-narratives-harmony</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url><url>
+  <loc>https://bibleanswers.io/tags/worldview</loc>
+  <lastmod>2018-11-20T17:44:52.209Z</lastmod>
+  <priority>0.80</priority>
+</url>
+    
 </urlset>

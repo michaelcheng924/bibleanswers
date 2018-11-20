@@ -137,6 +137,10 @@ export default class MyDocument extends Document {
       <Amp.Html specName="html ⚡ for top-level html" lang="en" amp="amp">
         <head>
           <link rel="icon" href="https://i.imgur.com/lnlvtFf.png" />
+          <meta
+            name="viewport"
+            content="width=device-width,minimum-scale=1,initial-scale=1"
+          />
           {title}
           {schemaInfo}
           {headerBoilerplate(url)}

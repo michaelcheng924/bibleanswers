@@ -12,8 +12,8 @@ const ConfessionNav = ({ previous, next }) => {
         </a>
       </p>
 
-      <p className="nomargin chapter-nav-item">
-        <a href={next.href}>{next.label}</a>
+      <p className="chapter-nav-item">
+        {next ? <a href={next.href}>{next.label}</a> : null}
       </p>
 
       <style jsx>{`
@@ -30,7 +30,7 @@ const ConfessionNav = ({ previous, next }) => {
         }
 
         @media screen and (max-width: 768px) {
-          .writing p {
+          p {
             font-size: 18px;
             margin-top: 21px;
           }

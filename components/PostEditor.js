@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Textarea from "react-textarea-autosize";
 import axios from "axios";
 import Select from "react-select";
-import { find, throttle } from "lodash";
+import { find } from "lodash";
 import Editor from "react-simple-code-editor";
 import { highlight, languages } from "prismjs/components/prism-core";
 import "prismjs/components/prism-clike";
@@ -350,7 +350,7 @@ class PostEditor extends Component {
         <div className="post-editor__html-container">
           <Editor
             className="post-editor__html-content"
-            value={post.html}
+            value={post.html || ""}
             onValueChange={this.onHtmlChange}
             onKeyDown={this.onHtmlPress}
             onKeyUp={this.onHtmlPress}
@@ -432,7 +432,7 @@ class PostEditor extends Component {
             placeholder="Description"
             value={description || ""}
           />
-          <div>{160 - (description || "").length}</div>
+          <div>{description ? 160 - (description || "").length : null}</div>
           <div>
             <strong>tags: </strong>
           </div>

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1396,7 +1396,7 @@ function (_Component) {
         className: "post-editor__html-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_simple_code_editor__WEBPACK_IMPORTED_MODULE_5___default.a, {
         className: "post-editor__html-content",
-        value: post.html,
+        value: post.html || "",
         onValueChange: this.onHtmlChange,
         onKeyDown: this.onHtmlPress,
         onKeyUp: this.onHtmlPress,
@@ -1465,7 +1465,7 @@ function (_Component) {
         name: "description",
         placeholder: "Description",
         value: description || ""
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, 160 - (description || "").length), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "tags: ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_select__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, description ? 160 - (description || "").length : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "tags: ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_select__WEBPACK_IMPORTED_MODULE_3___default.a, {
         value: this.getMappedTags(post.tags),
         isMulti: true,
         name: "colors",
@@ -2101,7 +2101,7 @@ function getContentWithReferences(content, references) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/admin.js ***!
   \******************************/
