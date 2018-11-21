@@ -3,7 +3,7 @@ import axios from "axios";
 import keyBy from "lodash/keyBy";
 
 import { Container } from "../components/Container";
-import { AmpGlobalStyle } from "../components/GlobalStyle";
+import { createAmpGlobalStyle } from "../components/GlobalStyle";
 import AdminStyles from "../components/AdminStyles";
 import Login from "../components/Login";
 import AdminMain from "../components/AdminMain";
@@ -156,6 +156,10 @@ const Admin = () => {
       />
     );
   }
+
+  const AmpGlobalStyle = createAmpGlobalStyle(
+    "resurrection-narratives-harmony"
+  );
 
   return (
     <Container>
