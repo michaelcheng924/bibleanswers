@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import styled from "styled-components";
 import fetch from "isomorphic-unfetch";
 import { FaTag } from "react-icons/fa";
@@ -81,7 +82,16 @@ const PostsInProgress = ({ posts = [] }) => {
 
   return (
     <AmpContainer>
-      <title>{title}</title>
+      <Head>
+        <title>{title}</title>
+
+        <meta
+          name="description"
+          content={`All ${
+            posts.length
+          } of Bible Questions questions and answers that are in progress. Learn how to explain and defend the Christian faith.`}
+        />
+      </Head>
 
       <ReadingContainer style={{ marginBottom: 0 }}>
         <Title>{posts.length} Bible Questions and Answers (In Progress)</Title>

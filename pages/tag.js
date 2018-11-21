@@ -68,6 +68,9 @@ const Tag = ({
       <Head>
         <title>{pageTitle} | Bible Answers</title>
 
+        <meta name="description" content={description} />
+        <meta property="og:image" content={image_url} />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

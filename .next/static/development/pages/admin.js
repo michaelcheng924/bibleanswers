@@ -351,6 +351,9 @@ function (_Component) {
     value: function renderAll() {
       var _this2 = this;
 
+      this.props.posts.sort(function (a, b) {
+        return new Date(b.updated_at) - new Date(a.updated_at);
+      });
       return this.props.posts.map(function (post) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostItem, {
           key: post.id,

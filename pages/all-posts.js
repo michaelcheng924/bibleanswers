@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import styled from "styled-components";
 import fetch from "isomorphic-unfetch";
 
@@ -59,7 +60,16 @@ const AllPosts = ({ posts = [] }) => {
 
   return (
     <AmpContainer>
-      <title>{title}</title>
+      <Head>
+        <title>{title}</title>
+
+        <meta
+          name="description"
+          content={`All ${
+            posts.length
+          } of Bible Questions questions and answers. Learn how to explain and defend the Christian faith.`}
+        />
+      </Head>
 
       <ReadingContainer style={{ marginBottom: 0 }}>
         <Title>{posts.length} Bible Questions and Answers</Title>
@@ -84,11 +94,15 @@ const AllPosts = ({ posts = [] }) => {
   );
 };
 
-AllPosts.getInitialProps = async function({ query }) {
+AllPosts.getInitialProps = async function() {
   const res = await fetch(`https://bibleanswersapi.herokuapp.com/all_posts`);
   const data = await res.json();
 
-  return { posts: data };
+  data.sort((a, b) => new Date(b.date_added) - new Date(a.date_added));
+
+  return {
+    posts: data
+  };
 };
 
 export default AllPosts;

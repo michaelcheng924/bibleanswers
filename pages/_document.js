@@ -65,7 +65,18 @@ export default class MyDocument extends Document {
       .filter(({ type }) => {
         return type === "title";
       })
-      .slice(0, 1) || <title>ampreact</title>;
+      .slice(0, 1) || (
+      <title>
+        Bible Answers: Explaining and Defending the Christian Worldview
+      </title>
+    );
+
+    const descriptionAndImage =
+      page.head
+        .filter(({ type }) => {
+          return type === "meta";
+        })
+        .slice(1, 3) || null;
 
     const schemaInfo =
       page.head
@@ -77,6 +88,7 @@ export default class MyDocument extends Document {
     return {
       ...page,
       title,
+      descriptionAndImage,
       schemaInfo,
       url: req.url,
       ampScriptTags,
@@ -134,6 +146,7 @@ export default class MyDocument extends Document {
 
     const {
       title,
+      descriptionAndImage,
       schemaInfo,
       url,
       ampScriptTags,
@@ -147,6 +160,7 @@ export default class MyDocument extends Document {
         <head>
           <link rel="icon" href="https://i.imgur.com/lnlvtFf.png" />
           {title}
+          {descriptionAndImage}
           {schemaInfo}
           {headerBoilerplate(`https://bibleanswers.io${url}`)}
           {ampScriptTags}

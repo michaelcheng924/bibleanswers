@@ -1247,24 +1247,35 @@
       "static/51VdwH_pPPrj0Yx5tixcY/pages/tag.js": 21,
       "static/51VdwH_pPPrj0Yx5tixcY/pages/terms-of-service.js": 22,
       "static/51VdwH_pPPrj0Yx5tixcY/pages/_app.js": 23,
-      "static/51VdwH_pPPrj0Yx5tixcY/pages/_error.js": 24
+      "static/51VdwH_pPPrj0Yx5tixcY/pages/_error.js": 24,
+      "static/ICp78l3rLAwBnDmRqBV1O/pages/admin.js": 3,
+      "static/ICp78l3rLAwBnDmRqBV1O/pages/all-posts.js": 4,
+      "static/ICp78l3rLAwBnDmRqBV1O/pages/confession.js": 5,
+      "static/ICp78l3rLAwBnDmRqBV1O/pages/index.js": 6,
+      "static/ICp78l3rLAwBnDmRqBV1O/pages/post.js": 7,
+      "static/ICp78l3rLAwBnDmRqBV1O/pages/posts-in-progress.js": 8,
+      "static/ICp78l3rLAwBnDmRqBV1O/pages/privacy-policy.js": 9,
+      "static/ICp78l3rLAwBnDmRqBV1O/pages/tag.js": 10,
+      "static/ICp78l3rLAwBnDmRqBV1O/pages/terms-of-service.js": 11,
+      "static/ICp78l3rLAwBnDmRqBV1O/pages/_app.js": 12,
+      "static/ICp78l3rLAwBnDmRqBV1O/pages/_error.js": 13
     },
     "bySource": {},
     "usedIds": [
       0,
       1,
-      14,
-      15,
-      16,
-      17,
-      18,
-      19,
+      10,
+      11,
+      12,
+      13,
       2,
-      20,
-      21,
-      22,
-      23,
-      24
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
     ]
   }
 }

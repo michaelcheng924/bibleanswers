@@ -354,6 +354,7 @@ function (_Document) {
 
       var _this$props = this.props,
           title = _this$props.title,
+          descriptionAndImage = _this$props.descriptionAndImage,
           schemaInfo = _this$props.schemaInfo,
           url = _this$props.url,
           ampScriptTags = _this$props.ampScriptTags,
@@ -368,7 +369,7 @@ function (_Document) {
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("head", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
         rel: "icon",
         href: "https://i.imgur.com/lnlvtFf.png"
-      }), title, schemaInfo, Object(react_amphtml_setup__WEBPACK_IMPORTED_MODULE_4__["headerBoilerplate"])("https://bibleanswers.io".concat(url)), ampScriptTags, ampStyleTag), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      }), title, descriptionAndImage, schemaInfo, Object(react_amphtml_setup__WEBPACK_IMPORTED_MODULE_4__["headerBoilerplate"])("https://bibleanswers.io".concat(url)), ampScriptTags, ampStyleTag), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], {
         isAmp: true
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         dangerouslySetInnerHTML: {
@@ -384,7 +385,7 @@ function (_Document) {
       var _getInitialProps = _asyncToGenerator(
       /*#__PURE__*/
       _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(ctx) {
-        var req, renderPage, noAmp, initialProps, ampScripts, sheet, page, ampScriptTags, ampStyleTag, title, schemaInfo;
+        var req, renderPage, noAmp, initialProps, ampScripts, sheet, page, ampScriptTags, ampStyleTag, title, descriptionAndImage, schemaInfo;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -446,20 +447,25 @@ function (_Document) {
                 title = page.head.filter(function (_ref2) {
                   var type = _ref2.type;
                   return type === "title";
-                }).slice(0, 1) || react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, "ampreact");
-                schemaInfo = page.head.filter(function (_ref3) {
+                }).slice(0, 1) || react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, "Bible Answers: Explaining and Defending the Christian Worldview");
+                descriptionAndImage = page.head.filter(function (_ref3) {
                   var type = _ref3.type;
+                  return type === "meta";
+                }).slice(1, 3) || null;
+                schemaInfo = page.head.filter(function (_ref4) {
+                  var type = _ref4.type;
                   return type === "script";
                 }).slice(0, 1) || null;
                 return _context.abrupt("return", _objectSpread({}, page, {
                   title: title,
+                  descriptionAndImage: descriptionAndImage,
                   schemaInfo: schemaInfo,
                   url: req.url,
                   ampScriptTags: ampScriptTags,
                   ampStyleTag: ampStyleTag
                 }));
 
-              case 15:
+              case 16:
               case "end":
                 return _context.stop();
             }

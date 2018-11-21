@@ -15,7 +15,15 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/confession": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/admin": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/all-posts": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],

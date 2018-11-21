@@ -161,6 +161,10 @@ export default class PostsList extends Component {
   }
 
   renderAll() {
+    this.props.posts.sort((a, b) => {
+      return new Date(b.updated_at) - new Date(a.updated_at);
+    });
+
     return this.props.posts.map(post => {
       return (
         <PostItem key={post.id} onClick={() => this.props.onSetPost(post)}>

@@ -31,6 +31,7 @@ const Confession = ({
         name="description"
         content={`This is "${chapter}. ${title}" of the ${name}. Read the ${name} while easily viewing Scripture references.`}
       />
+      <meta property="og:image" content={image_url} />
     </Head>
 
     <TitleSection
