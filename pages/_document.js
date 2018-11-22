@@ -76,7 +76,7 @@ export default class MyDocument extends Document {
         .filter(({ type }) => {
           return type === "meta";
         })
-        .slice(1, 3) || null;
+        .slice(1) || null;
 
     const schemaInfo =
       page.head

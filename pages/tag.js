@@ -46,6 +46,7 @@ const LinkTag = styled.a`
 `;
 
 const Tag = ({
+  url,
   title,
   subtitle,
   description,
@@ -69,6 +70,9 @@ const Tag = ({
         <title>{pageTitle} | Bible Answers</title>
 
         <meta name="description" content={description} />
+        <meta property="og:url" content={`https://bibleanswers.io${url}`} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta property="og:image" content={image_url} />
 
         <script

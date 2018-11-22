@@ -9,7 +9,7 @@
     "start": "next build & NODE_ENV=production node server.js",
     "deploy": "git push heroku master",
     "heroku-postbuild": "yarn run build",
-    "export": "node prepareexport && next build && next export && cp ./constants/sitemap.xml ./out"
+    "export": "node prepareexport && next build && next export && cp ./constants/sitemap.xml ./out && cd out && now"
   },
   "keywords": [],
   "author": "",

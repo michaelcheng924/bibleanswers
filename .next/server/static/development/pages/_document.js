@@ -451,7 +451,7 @@ function (_Document) {
                 descriptionAndImage = page.head.filter(function (_ref3) {
                   var type = _ref3.type;
                   return type === "meta";
-                }).slice(1, 3) || null;
+                }).slice(1) || null;
                 schemaInfo = page.head.filter(function (_ref4) {
                   var type = _ref4.type;
                   return type === "script";

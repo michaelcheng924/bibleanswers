@@ -351,6 +351,9 @@ function (_Component) {
     value: function renderAll() {
       var _this2 = this;
 
+      this.props.posts.sort(function (a, b) {
+        return new Date(b.updated_at) - new Date(a.updated_at);
+      });
       return this.props.posts.map(function (post) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostItem, {
           key: post.id,
@@ -989,6 +992,11 @@ var HTML_PRESS_MAPPINGS = [{
   cursorOffset: 8
 }, {
   key1: 17,
+  key2: 69,
+  addition: "<em></em>",
+  cursorOffset: 8
+}, {
+  key1: 17,
   key2: 85,
   addition: "<ul>\n    <li></li>\n  </ul>",
   cursorOffset: 13
@@ -1004,10 +1012,9 @@ var HTML_PRESS_MAPPINGS = [{
   cursorOffset: 4
 }, {
   key1: 17,
-  key2: 70,
-  addition: ' class="first"',
-  cursorOffset: 15,
-  nowrap: true
+  key2: 82,
+  addition: '<p><a href="" rel="nofollow" target="_blank"></a></p>',
+  cursorOffset: 12
 }];
 
 var PostEditor =

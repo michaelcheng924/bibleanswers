@@ -45,6 +45,12 @@ const HTML_PRESS_MAPPINGS = [
   },
   {
     key1: 17,
+    key2: 69,
+    addition: "<em></em>",
+    cursorOffset: 8
+  },
+  {
+    key1: 17,
     key2: 85,
     addition: `<ul>
     <li></li>
@@ -67,10 +73,9 @@ const HTML_PRESS_MAPPINGS = [
   },
   {
     key1: 17,
-    key2: 70,
-    addition: ' class="first"',
-    cursorOffset: 15,
-    nowrap: true
+    key2: 82,
+    addition: '<p><a href="" rel="nofollow" target="_blank"></a></p>',
+    cursorOffset: 12
   }
 ];
 

@@ -111,12 +111,22 @@ const Home = ({ recentPosts = [], tags = [], postsCount }) => {
 
       <PostsTagsContainer>
         <ReadingContainer style={{ padding: 0, width: "initial" }}>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: "<gcse:search placeholder='Search'></gcse:search>"
-            }}
-            style={{ width: 320, margin: "0 auto" }}
-          />
+          <div style={{ marginTop: 20 }}>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: "<gcse:searchbox></gcse:searchbox>"
+              }}
+              style={{ width: 320, margin: "0 auto" }}
+            />
+
+            <div
+              dangerouslySetInnerHTML={{
+                __html: "<gcse:searchresults></gcse:searchresults>"
+              }}
+              style={{ margin: "0 auto" }}
+            />
+          </div>
+
           <Title>Recent posts</Title>
           {recentPosts.map(post => {
             return (
