@@ -101,26 +101,6 @@ const Post = ({ post, slug }) => {
         )}
 
         <div className="writing">
-          <h3>Related posts</h3>
-          <RelativeAmpList
-            specName="default"
-            src={`https://bibleanswersapi.herokuapp.com/relatedposts/${slug}`}
-            items="items"
-            layout="fill"
-          >
-            <Amp.Template specName="default" type="amp-mustache">
-              <a href="{{url}}">
-                <AmpListItem
-                  title={"{{title}}"}
-                  subtitle={"{{subtitle}}"}
-                  image_url_small={"{{image_url_small}}"}
-                />
-              </a>
-            </Amp.Template>
-          </RelativeAmpList>
-        </div>
-
-        <div className="writing">
           <h4>Take your study of the Bible to the next level</h4>
           <p>
             Note: We do <strong>not</strong> earn any commision on these
@@ -138,6 +118,26 @@ const Post = ({ post, slug }) => {
               Accordance Bible Software
             </a>
           </p>
+        </div>
+
+        <div className="writing">
+          <h3>Related posts</h3>
+          <RelativeAmpList
+            specName="default"
+            src={`https://bibleanswersapi.herokuapp.com/relatedposts/${slug}`}
+            items="items"
+            layout="fill"
+          >
+            <Amp.Template specName="default" type="amp-mustache">
+              <a href="{{url}}">
+                <AmpListItem
+                  title={"{{title}}"}
+                  subtitle={"{{subtitle}}"}
+                  image_url_small={"{{image_url_small}}"}
+                />
+              </a>
+            </Amp.Template>
+          </RelativeAmpList>
         </div>
       </ReadingContainer>
     </AmpContainer>
