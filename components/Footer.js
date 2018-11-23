@@ -21,6 +21,12 @@ const Footer = ({ isAmp }) => {
           }}
         >
           <a
+            href="/contact"
+            style={{ color: "#fff", marginRight: 20, textDecoration: "none" }}
+          >
+            Contact
+          </a>
+          <a
             href="/privacy-policy"
             style={{ color: "#fff", marginRight: 20, textDecoration: "none" }}
           >

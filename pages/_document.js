@@ -12,11 +12,13 @@ import Footer from "../components/Footer";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
-    const { req, renderPage } = ctx;
+    const { req, res, renderPage } = ctx;
 
     const noAmp =
-      req.url === "/admin" ||
+      req.url.indexOf("/admin") !== -1 ||
       req.url === "/" ||
+      req.url.indexOf("/?") !== -1 ||
+      req.url.indexOf("/contact") !== -1 ||
       req.url.indexOf("/confessions") !== -1;
 
     if (noAmp) {
@@ -133,6 +135,20 @@ export default class MyDocument extends Document {
 
             {this.props.url === "/" ? this.renderWebsiteScript() : null}
             <style>{`body { margin: 0 } /* custom! */`}</style>
+
+            <script
+              async
+              src="https://www.googletagmanager.com/gtag/js?id=UA-125895534-1"
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125895534-1');`
+              }}
+            />
           </Head>
           <body className="custom_class">
             <Nav />

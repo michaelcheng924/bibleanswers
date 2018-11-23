@@ -178,6 +178,13 @@ var Footer = function Footer(_ref) {
       justifyContent: "center"
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/contact",
+    style: {
+      color: "#fff",
+      marginRight: 20,
+      textDecoration: "none"
+    }
+  }, "Contact"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "/privacy-policy",
     style: {
       color: "#fff",
@@ -347,7 +354,14 @@ function (_Document) {
         }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
           rel: "canonical",
           href: "https://bibleanswers.io".concat(this.props.url)
-        }), this.props.url === "/" ? this.renderWebsiteScript() : null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("style", null, "body { margin: 0 } /* custom! */")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("body", {
+        }), this.props.url === "/" ? this.renderWebsiteScript() : null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("style", null, "body { margin: 0 } /* custom! */"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("script", {
+          async: true,
+          src: "https://www.googletagmanager.com/gtag/js?id=UA-125895534-1"
+        }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("script", {
+          dangerouslySetInnerHTML: {
+            __html: "window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-125895534-1');"
+          }
+        })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("body", {
           className: "custom_class"
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["Main"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_2__["NextScript"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], null)));
       }
@@ -385,13 +399,13 @@ function (_Document) {
       var _getInitialProps = _asyncToGenerator(
       /*#__PURE__*/
       _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(ctx) {
-        var req, renderPage, noAmp, initialProps, ampScripts, sheet, page, ampScriptTags, ampStyleTag, title, descriptionAndImage, schemaInfo;
+        var req, res, renderPage, noAmp, initialProps, ampScripts, sheet, page, ampScriptTags, ampStyleTag, title, descriptionAndImage, schemaInfo;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                req = ctx.req, renderPage = ctx.renderPage;
-                noAmp = req.url === "/admin" || req.url === "/" || req.url.indexOf("/confessions") !== -1;
+                req = ctx.req, res = ctx.res, renderPage = ctx.renderPage;
+                noAmp = req.url.indexOf("/admin") !== -1 || req.url === "/" || req.url.indexOf("/?") !== -1 || req.url.indexOf("/contact") !== -1 || req.url.indexOf("/confessions") !== -1;
 
                 if (!noAmp) {
                   _context.next = 7;

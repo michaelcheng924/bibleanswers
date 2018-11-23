@@ -18,6 +18,7 @@ request.get("https://bibleanswersapi.herokuapp.com/export", function(
         "/posts-in-progress": { page: "/posts-in-progress" },
         "/privacy-policy": { page: "/privacy-policy" },
         "/terms-of-service": { page: "/terms-of-service" },
+        "/contact": { page: "/contact" },
         "/admin": { page: "/admin" },
         ${parsedBody.posts
           .map(function(post) {

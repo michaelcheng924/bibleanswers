@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import styled from "styled-components";
 import * as Amp from "react-amphtml";
@@ -89,6 +89,27 @@ const Post = ({ post, slug }) => {
         />
       </Head>
 
+      <script
+        async
+        custom-element="amp-analytics"
+        src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+      />
+      <amp-analytics type="gtag" data-credentials="include">
+        <script
+          type="application/json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              vars: {
+                gtag_id: "UA-125895534-1",
+                config: {
+                  "UA-125895534-1": { groups: "default" }
+                }
+              }
+            })
+          }}
+        />
+      </amp-analytics>
+
       <AmpGlobalStyle slug={slug} />
 
       <AmpTitleSection {...post} />
@@ -99,6 +120,8 @@ const Post = ({ post, slug }) => {
         ) : (
           <Help description={description} title={title} />
         )}
+
+        <div className="divider">...</div>
 
         <div className="writing">
           <h4>Take your study of the Bible to the next level</h4>

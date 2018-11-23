@@ -182,6 +182,13 @@ function createAmpGlobalStyle(slug) {
     position: relative;
     top: -5px;
   }
+
+  .divider {
+    display: block;
+    font-size: 35px;
+    letter-spacing: 0.6em;
+    text-align: center;
+  }
   
   @media screen and (max-width: 768px) {
     .writing h3 {
