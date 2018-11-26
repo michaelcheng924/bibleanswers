@@ -22,9 +22,15 @@ request.get("https://bibleanswersapi.herokuapp.com/export", function(
         "/admin": { page: "/admin" },
         ${parsedBody.posts
           .map(function(post) {
+            let page = "post";
+
+            if (post.url.indexOf("/confessions")) {
+              page = "confession";
+            }
+
             return `"${
               post.url
-            }": { page: "/${post.url.indexOf("/confessions") !== -1 ? "confession" : "post"}", query: { slug: "${post.slug}" } },\n`;
+            }": { page: "/${page}", query: { slug: "${post.slug}" } },\n`;
           })
           .concat(
             parsedBody.tags.map(function(tag, index) {

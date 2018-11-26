@@ -7,57 +7,32 @@ import { AmpContainer } from "../components/Container";
 import { AmpTitleSection } from "../components/TitleSection";
 import ReadingContainer from "../components/ReadingContainer";
 import { AmpListItem } from "../components/ListItem";
-
-const Title = styled.h2`
-  align-items: center;
-  display: flex;
-  font-size: 34px;
-  line-height: 1.15;
-
-  @media screen and (max-width: 768px) {
-    font-size: 30px;
-  }
-`;
-
-const Subtitle = styled.div`
-  color: rgba(0, 0, 0, 0.54);
-  font-size: 23px;
-  font-weight: 400;
-  line-height: 28px;
-  margin-bottom: 30px;
-
-  @media screen and (max-width: 1199px) {
-    font-size: 20px;
-    line-height: 24px;
-    margin-bottom: 10px;
-  }
-`;
-
-const Divider = styled.div`
-  display: block;
-  font-size: 35px;
-  letter-spacing: 0.6em;
-  text-align: center;
-`;
+import BibleContradictions from "../components/BibleContradictions";
 
 const LinkTag = styled.a`
   color: #689f38;
   text-decoration: none;
 `;
 
-const Tag = ({
-  url,
-  title,
-  subtitle,
-  description,
-  image_url,
-  date_added,
-  updated_at,
-  posts = [],
-  user = {}
-}) => {
+const Tag = props => {
+  const {
+    url,
+    title,
+    subtitle,
+    description,
+    image_url,
+    date_added,
+    updated_at,
+    posts = [],
+    user = {}
+  } = props;
+
   if (!title) {
     return [<h1>Tag not found</h1>, <a href="/">Bible Answers Home</a>];
+  }
+
+  if (title === 'Bible "contradictions"') {
+    return <BibleContradictions {...props} />;
   }
 
   const pageTitle = `${posts.length} "${title}" Questions and Answers`;

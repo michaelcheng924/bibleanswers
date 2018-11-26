@@ -279,24 +279,30 @@ const Divider = ({ children }) => (
   </div>
 );
 
-const TitleSection = ({ title, subtitle, image_url, date_added, user }) => (
-  <TitleSectionContainer>
-    <TitleInfoContainer>
-      <TitleInfo>
-        <TitleText>{title}</TitleText>
-        <Subtitle>{subtitle || "Help us write this article!"}</Subtitle>
+const TitleSection = ({ title, subtitle, image_url, date_added, user }) => {
+  return (
+    <TitleSectionContainer>
+      <TitleInfoContainer>
+        <TitleInfo>
+          <TitleText>{title}</TitleText>
+          <Subtitle>{subtitle || "Help us write this article!"}</Subtitle>
 
-        {user ? (
-          <Author date_added={date_added} image={user.image} name={user.name} />
-        ) : null}
+          {user ? (
+            <Author
+              date_added={date_added}
+              image={user.image}
+              name={user.name}
+            />
+          ) : null}
 
-        <Divider>...</Divider>
-      </TitleInfo>
-    </TitleInfoContainer>
-    <CoverImageContainer>
-      <img src={image_url} style={{ width: "100%" }} />
-    </CoverImageContainer>
-  </TitleSectionContainer>
-);
+          <Divider>...</Divider>
+        </TitleInfo>
+      </TitleInfoContainer>
+      <CoverImageContainer>
+        <img src={image_url} style={{ width: "100%" }} />
+      </CoverImageContainer>
+    </TitleSectionContainer>
+  );
+};
 
 export { AmpTitleSection, TitleSection };

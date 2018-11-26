@@ -11,15 +11,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/index": [
+    "/admin": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/confession": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/": [
+    "/tag": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

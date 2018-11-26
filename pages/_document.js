@@ -81,11 +81,9 @@ export default class MyDocument extends Document {
         .slice(1) || null;
 
     const schemaInfo =
-      page.head
-        .filter(({ type }) => {
-          return type === "script";
-        })
-        .slice(0, 1) || null;
+      page.head.filter(({ type }) => {
+        return type === "script";
+      }) || null;
 
     return {
       ...page,
@@ -181,8 +179,30 @@ export default class MyDocument extends Document {
           {headerBoilerplate(`https://bibleanswers.io${url}`)}
           {ampScriptTags}
           {ampStyleTag}
+
+          <script
+            async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+          />
         </head>
         <body>
+          <amp-analytics type="gtag" data-credentials="include">
+            <script
+              type="application/json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  vars: {
+                    gtag_id: "UA-125895534-1",
+                    config: {
+                      "UA-125895534-1": { groups: "default" }
+                    }
+                  }
+                })
+              }}
+            />
+          </amp-analytics>
+
           <Nav isAmp />
           <div dangerouslySetInnerHTML={{ __html: html }} />
           <Footer isAmp />

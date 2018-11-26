@@ -89,27 +89,6 @@ const Post = ({ post, slug }) => {
         />
       </Head>
 
-      <script
-        async
-        custom-element="amp-analytics"
-        src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
-      />
-      <amp-analytics type="gtag" data-credentials="include">
-        <script
-          type="application/json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              vars: {
-                gtag_id: "UA-125895534-1",
-                config: {
-                  "UA-125895534-1": { groups: "default" }
-                }
-              }
-            })
-          }}
-        />
-      </amp-analytics>
-
       <AmpGlobalStyle slug={slug} />
 
       <AmpTitleSection {...post} />

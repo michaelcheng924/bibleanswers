@@ -383,7 +383,28 @@ function (_Document) {
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("head", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
         rel: "icon",
         href: "https://i.imgur.com/lnlvtFf.png"
-      }), title, descriptionAndImage, schemaInfo, Object(react_amphtml_setup__WEBPACK_IMPORTED_MODULE_4__["headerBoilerplate"])("https://bibleanswers.io".concat(url)), ampScriptTags, ampStyleTag), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      }), title, descriptionAndImage, schemaInfo, Object(react_amphtml_setup__WEBPACK_IMPORTED_MODULE_4__["headerBoilerplate"])("https://bibleanswers.io".concat(url)), ampScriptTags, ampStyleTag, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("script", {
+        async: true,
+        "custom-element": "amp-analytics",
+        src: "https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("amp-analytics", {
+        type: "gtag",
+        "data-credentials": "include"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("script", {
+        type: "application/json",
+        dangerouslySetInnerHTML: {
+          __html: JSON.stringify({
+            vars: {
+              gtag_id: "UA-125895534-1",
+              config: {
+                "UA-125895534-1": {
+                  groups: "default"
+                }
+              }
+            }
+          })
+        }
+      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], {
         isAmp: true
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         dangerouslySetInnerHTML: {
@@ -469,7 +490,7 @@ function (_Document) {
                 schemaInfo = page.head.filter(function (_ref4) {
                   var type = _ref4.type;
                   return type === "script";
-                }).slice(0, 1) || null;
+                }) || null;
                 return _context.abrupt("return", _objectSpread({}, page, {
                   title: title,
                   descriptionAndImage: descriptionAndImage,
