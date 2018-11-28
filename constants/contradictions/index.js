@@ -3,6 +3,7 @@ import exodus from "./exodus";
 import { leviticus, numbers } from "./leviticus-numbers";
 import deuteronomy from "./deuteronomy";
 import { judges, samuel1, samuel2 } from "./judges-2-samuel";
+import { kings1, kings2 } from "./1-2-kings";
 import {
   job,
   psalms,
@@ -11,6 +12,16 @@ import {
   songOfSolomon
 } from "./job-song-solomon";
 import isaiah from "./isaiah";
+import {
+  jeremiah,
+  lamentations,
+  ezekiel,
+  hosea,
+  joel,
+  jonah,
+  zechariah,
+  malachi
+} from "./jeremiah-malachi";
 import matthew from "./matthew";
 import mark from "./mark";
 import luke from "./luke";
@@ -38,12 +49,22 @@ const CONTRADICTIONS = [
   judges,
   samuel1,
   samuel2,
+  kings1,
+  kings2,
   job,
   psalms,
   proverbs,
   ecclesiastes,
   songOfSolomon,
   isaiah,
+  jeremiah,
+  lamentations,
+  ezekiel,
+  hosea,
+  joel,
+  jonah,
+  zechariah,
+  malachi,
   matthew,
   mark,
   luke,

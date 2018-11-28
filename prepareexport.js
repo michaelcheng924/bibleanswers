@@ -24,7 +24,7 @@ request.get("https://bibleanswersapi.herokuapp.com/export", function(
           .map(function(post) {
             let page = "post";
 
-            if (post.url.indexOf("/confessions")) {
+            if (post.url.indexOf("/confessions") !== -1) {
               page = "confession";
             }
 

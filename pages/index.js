@@ -60,6 +60,7 @@ const LinkTag = ({ children, href }) => (
     {children}{" "}
     <style jsx>{`
       .link-tag {
+        color: rgba(0, 0, 0, 0.84);
         text-decoration: none;
       }
     `}</style>
@@ -140,7 +141,7 @@ const Home = ({ recentPosts = [], tags = [], postsCount }) => {
           </center>
         </ReadingContainer>
 
-        <ReadingContainer>
+        <ReadingContainer style={{ width: "initial" }}>
           <Title style={{ padding: 0 }}>Tags</Title>
           <ul>
             {tags.map(tag => {

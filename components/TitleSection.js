@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import * as Amp from "react-amphtml";
 
-import Author from "./Author";
+import { AmpAuthorComponent, AuthorComponent } from "./Author";
 
 const AmpTitleSectionContainer = styled.div`
   display: flex;
@@ -107,7 +107,11 @@ const AmpTitleSection = ({ title, subtitle, image_url, date_added, user }) => (
         <AmpSubtitle>{subtitle || "Help us write this article!"}</AmpSubtitle>
 
         {user ? (
-          <Author date_added={date_added} image={user.image} name={user.name} />
+          <AmpAuthorComponent
+            date_added={date_added}
+            image={user.image}
+            name={user.name}
+          />
         ) : null}
 
         <AmpDivider>...</AmpDivider>
@@ -288,7 +292,7 @@ const TitleSection = ({ title, subtitle, image_url, date_added, user }) => {
           <Subtitle>{subtitle || "Help us write this article!"}</Subtitle>
 
           {user ? (
-            <Author
+            <AuthorComponent
               date_added={date_added}
               image={user.image}
               name={user.name}

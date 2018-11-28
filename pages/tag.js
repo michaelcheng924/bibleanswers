@@ -7,7 +7,6 @@ import { AmpContainer } from "../components/Container";
 import { AmpTitleSection } from "../components/TitleSection";
 import ReadingContainer from "../components/ReadingContainer";
 import { AmpListItem } from "../components/ListItem";
-import BibleContradictions from "../components/BibleContradictions";
 
 const LinkTag = styled.a`
   color: #689f38;
@@ -29,10 +28,6 @@ const Tag = props => {
 
   if (!title) {
     return [<h1>Tag not found</h1>, <a href="/">Bible Answers Home</a>];
-  }
-
-  if (title === 'Bible "contradictions"') {
-    return <BibleContradictions {...props} />;
   }
 
   const pageTitle = `${posts.length} "${title}" Questions and Answers`;

@@ -48,8 +48,8 @@ const isaiah = {
       see: ["genesis", "1:26"]
     },
     {
-      bookVerses: "",
-      question: ``,
+      bookVerses: "44:24",
+      question: `Is God or Jesus the creator of all things?`,
       allPassages: [
         {
           heading: ``,
@@ -63,8 +63,12 @@ const isaiah = {
       ]
     },
     {
-      bookVerses: "",
-      question: ``,
+      bookVerses: "45:7",
+      see: ["psalms", "145:9"]
+    },
+    {
+      bookVerses: "45:7",
+      question: `Does God create evil?`,
       allPassages: [
         {
           heading: ``,
@@ -78,34 +82,8 @@ const isaiah = {
       ]
     },
     {
-      bookVerses: "",
-      question: ``,
-      allPassages: [
-        {
-          heading: ``,
-          passages: [
-            {
-              passage: "",
-              text: ``
-            }
-          ]
-        }
-      ]
-    },
-    {
-      bookVerses: "",
-      question: ``,
-      allPassages: [
-        {
-          heading: ``,
-          passages: [
-            {
-              passage: "",
-              text: ``
-            }
-          ]
-        }
-      ]
+      bookVerses: "65:17",
+      see: ["psalms", "104:5"]
     }
   ]
 };
