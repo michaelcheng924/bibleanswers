@@ -47331,7 +47331,7 @@ function getContentWithReferences(content, references) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/admin.js ***!
   \******************************/
@@ -47356,5 +47356,5 @@ module.exports = dll_4fa5fe59a0158b551b2e;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]));;
+},[[5,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=admin.js.map

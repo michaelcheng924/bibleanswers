@@ -14,6 +14,7 @@ request.get("https://bibleanswersapi.herokuapp.com/export", function(
     exportPathMap: function() {
       return {
         "/": { page: "/" },
+        "/contradictions-in-the-bible": { page: "/contradictions" },
         "/all-posts": { page: "/all-posts" },
         "/posts-in-progress": { page: "/posts-in-progress" },
         "/privacy-policy": { page: "/privacy-policy" },

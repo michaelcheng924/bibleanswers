@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
       req.url.indexOf("/?") !== -1 ||
       req.url.indexOf("/contact") !== -1 ||
       req.url.indexOf("/confessions") !== -1 ||
-      req.url.indexOf("/bible-contradictions") !== -1;
+      req.url.indexOf("/contradictions-in-the-bible") !== -1;
 
     if (noAmp) {
       const initialProps = await Document.getInitialProps(ctx);

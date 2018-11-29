@@ -79,14 +79,23 @@ function renderAnswer({
   toggleDetail
 }) {
   return (
-    <div key={index}>
-      <a href={`#top`} style={{ display: "inline-block", marginTop: 28 }}>
+    <div
+      key={index}
+      style={{
+        border: "3px solid rgba(0, 0, 0, .54)",
+        borderBottom: 0,
+        borderLeft: 0,
+        borderRight: 0,
+        marginTop: 20
+      }}
+    >
+      <a href={`#top`} style={{ display: "inline-block", marginTop: 20 }}>
         <FaChevronUp /> Top
       </a>
       <a
         href={`#${book}`}
         id={`${book}_${bookVerses}`}
-        style={{ display: "inline-block", marginLeft: 20, marginTop: 28 }}
+        style={{ display: "inline-block", marginLeft: 20, marginTop: 20 }}
       >
         <FaChevronUp /> {book}
       </a>

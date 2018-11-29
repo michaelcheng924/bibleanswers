@@ -426,7 +426,7 @@ function (_Document) {
             switch (_context.prev = _context.next) {
               case 0:
                 req = ctx.req, res = ctx.res, renderPage = ctx.renderPage;
-                noAmp = req.url.indexOf("/admin") !== -1 || req.url === "/" || req.url.indexOf("/?") !== -1 || req.url.indexOf("/contact") !== -1 || req.url.indexOf("/confessions") !== -1 || req.url.indexOf("/bible-contradictions") !== -1;
+                noAmp = req.url.indexOf("/admin") !== -1 || req.url === "/" || req.url.indexOf("/?") !== -1 || req.url.indexOf("/contact") !== -1 || req.url.indexOf("/confessions") !== -1 || req.url.indexOf("/contradictions-in-the-bible") !== -1;
 
                 if (!noAmp) {
                   _context.next = 7;

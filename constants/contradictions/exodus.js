@@ -8,13 +8,32 @@ const exodus = {
     {
       bookVerses: "9:1-7",
       question: `Did all of Egypt's livestock die?`,
+      quickAnswer: `<p>There are at least five possible explanations:</p>
+  
+      <ol>
+        <li>"All" may not refer to every single animal (see Matthew 3:5, Mark 1:5).</li>
+        <li>The Egyptians gained livestock between verses 1-7 and verses 18-21.</li>
+        <li>Only livestock "in the field" were killed, so some livestock survived.</li>
+        <li>Verses 1-7 do not mention one important animal: the goat. It is possible that goats were not killed in verses 1-7.</li>
+        <li>In verses 19-20, those who "feared the word of the Lord" were warned about the coming plague. Perhaps some were warned during the plague in verses 1-7 also.</li>
+      </ol>`,
+      fullPost: "/answers/did-all-of-egypts-livestock-die",
       allPassages: [
         {
-          heading: ``,
+          heading: `All of the livestock died`,
           passages: [
             {
-              passage: "",
-              text: ``
+              passage: "Exodus 9:1-7",
+              text: `9 Then the Lord said to Moses, “Go in to Pharaoh and say to him, ‘Thus says the Lord, the God of the Hebrews, “Let my people go, that they may serve me. 2 For if you refuse to let them go and still hold them, 3 behold, the hand of the Lord will fall with a very severe plague upon your livestock that are in the field, the horses, the donkeys, the camels, the herds, and the flocks. 4 But the Lord will make a distinction between the livestock of Israel and the livestock of Egypt, so that nothing of all that belongs to the people of Israel shall die.” 5 And the Lord set a time, saying, “Tomorrow the Lord will do this thing in the land.” 6 And the next day the Lord did this thing. <strong>All the livestock of the Egyptians died</strong>, but not one of the livestock of the people of Israel died. 7 And Pharaoh sent, and behold, not one of the livestock of Israel was dead. But the heart of Pharaoh was hardened, and he did not let the people go.`
+            }
+          ]
+        },
+        {
+          heading: `Not all of the livestock died`,
+          passages: [
+            {
+              passage: "Exodus 9:18-21",
+              text: `18 Behold, about this time tomorrow I will cause very heavy hail to fall, such as never has been in Egypt from the day it was founded until now. 19 <strong>Now therefore send, get your livestock and all that you have in the field into safe shelter, for every man and beast that is in the field and is not brought home will die when the hail falls on them</strong>.” 20 Then whoever feared the word of the Lord among the servants of Pharaoh hurried his slaves and his livestock into the houses, 21 but whoever did not pay attention to the word of the Lord left his slaves and his livestock in the field.`
             }
           ]
         }
@@ -27,13 +46,32 @@ const exodus = {
     {
       bookVerses: "15:3",
       question: `Is God a God of peace or a God of war?`,
+      quickAnswer: `<p>God's ultimate plan is peace, but there is a spiritual war that must be fought before full peace arrives. Thus, God is both a God of peace and a God of war. There is simply no contradiction between these passages.</p>`,
+      fullPost: "/answers/is-god-god-peace-war",
       allPassages: [
         {
-          heading: ``,
+          heading: `God is a God of peace`,
           passages: [
             {
-              passage: "",
-              text: ``
+              passage: "Isaiah 2:4",
+              text: `He shall judge between the nations, and shall decide disputes for many peoples; and they shall beat their swords into plowshares, and their spears into pruning hooks; neither shall they learn war anymore.`
+            },
+            {
+              passage: "Romans 15:33",
+              text: `May the God of peace be with you all. Amen.`
+            }
+          ]
+        },
+        {
+          heading: `God is a God of war`,
+          passages: [
+            {
+              passage: "Exodus 15:3",
+              text: `The Lord is a man of war; the Lord is his name.`
+            },
+            {
+              passage: "Joel 3:9-10",
+              text: `Proclaim this among the nations: Consecrate for war; stir up the mighty men. Let all the men of war draw near; let them come up. Beat your plowshares into swords, and your pruning hooks into spears; let the weak say, "I am a warrior."`
             }
           ]
         }

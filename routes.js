@@ -1,7 +1,7 @@
 const routes = (module.exports = require("next-routes")());
 
 routes.add("post", "/answers/:slug");
-routes.add("contradictions", "/bible-contradictions");
+routes.add("contradictions", "/contradictions-in-the-bible");
 routes.add("tag", "/tags/:slug");
 routes.add("confession", "/confessions/:slug");
 

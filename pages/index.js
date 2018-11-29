@@ -74,6 +74,7 @@ const MoreLink = ({ children, href }) => (
       .more-link {
         color: #689f38;
         cursor: pointer;
+        display: block;
         font-size: 18px;
         margin-top: 10px;
         text-decoration: none;
@@ -156,6 +157,9 @@ const Home = ({ recentPosts = [], tags = [], postsCount }) => {
               );
             })}
           </ul>
+          <MoreLink href="/contradictions-in-the-bible">
+            "Contradictions" in the Bible
+          </MoreLink>
           <MoreLink href="/posts-in-progress">Posts in progress</MoreLink>
         </ReadingContainer>
       </PostsTagsContainer>

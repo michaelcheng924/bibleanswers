@@ -4,13 +4,37 @@ const matthew = {
     {
       bookVerses: "1:16",
       question: `Are Matthew and Luke's genealogies contradictory?`,
+      quickAnswer: `<p>Matthew and Luke clearly have different objectives with their genealogies, so we should expect differences. Here are two possible explanations for the differences:</p>
+ 
+      <ol>
+         <li>Luke's genealogy may be tracing Jesus' lineage through Mary</li>
+         <li>Matthew's may be a biological genealogy, while Luke's may be a legal genealogy</li>
+       </ol>`,
+      fullPost: "/answers/matthew-luke-genealogy",
       allPassages: [
         {
-          heading: ``,
+          heading: `Matthew's genealogy`,
           passages: [
             {
-              passage: "",
-              text: ``
+              passage: "Matthew 1:6",
+              text: `and <strong>Jacob the father of Joseph</strong> the husband of Mary, of whom Jesus was born, who is called Christ.`
+            },
+            {
+              passage: "Matthew 1:16",
+              text: `and <strong>Jacob the father of Joseph</strong> the husband of Mary, of whom Jesus was born, who is called Christ.`
+            }
+          ]
+        },
+        {
+          heading: `Luke's genealogy`,
+          passages: [
+            {
+              passage: "Luke 3:23",
+              text: `Jesus, when he began his ministry, was about thirty years of age, being the son (as was supposed) of <strong>Joseph, the son of Heli</strong>...`
+            },
+            {
+              passage: "Luke 3:31",
+              text: `the son of Melea, the son of Menna, the son of Mattatha, the son of <strong>Nathan, the son of David</strong>...`
             }
           ]
         }
