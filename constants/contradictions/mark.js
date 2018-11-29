@@ -151,6 +151,10 @@ const mark = {
       see: ["matthew", "28:2"]
     },
     {
+      bookVerses: "16:5-6",
+      see: ["matthew", "28:2-5"]
+    },
+    {
       bookVerses: "16:6-7",
       see: ["matthew", "28:6-7"]
     },

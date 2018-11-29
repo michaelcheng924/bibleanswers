@@ -26,7 +26,7 @@ const genesis = {
       bookVerses: "1:26",
       question: "Are there one or many Gods?",
       quickAnswer:
-        'The doctrine of the Trinity teaches that there is one God who exists in three persons. "God" and "person" are not the same thing, so there is no contradiction. The plural pronouns in Genesis could either be referring to the Trinity, or they could be a "royal we," which is sometimes used for monarchs.',
+        '<p>The doctrine of the Trinity teaches that there is one God who exists in three persons. "God" and "person" are not the same thing, so there is no contradiction. The plural pronouns in Genesis could either be referring to the Trinity, or they could be a "royal we," which is sometimes used for monarchs.</p>',
       fullPost: "/answers/are-there-one-many-gods",
       allPassages: [
         {

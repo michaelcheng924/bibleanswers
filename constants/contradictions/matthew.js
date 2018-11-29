@@ -621,13 +621,71 @@ const matthew = {
     {
       bookVerses: "28:1-2",
       question: `When was the stone rolled away from the tomb? Did an earthquake occur?`,
+      quickAnswer: `<p>The stone was rolled away before the women arrived at the tomb. "had occurred" may be a better translation of the passage, and the purpose of the passage would be to explain the lack of guards at the tomb when the women arrived.</p>`,
+      fullPost: "/answers/when-stone-rolled-away",
       allPassages: [
         {
-          heading: ``,
+          heading: `Stone rolled away after the women arrived?`,
           passages: [
             {
-              passage: "",
-              text: ``
+              passage: "Matthew 28:1-5 NASB",
+              text: `Now after the Sabbath, as it began to dawn toward the first day of the week, Mary Magdalene and the other Mary came to look at the grave. And behold, <strong>a severe earthquake had occurred, for an angel of the Lord descended from heaven and came and rolled away the stone and sat upon it</strong>. And his appearance was like lightning, and his clothing as white as snow. The guards shook for fear of him and became like dead men. The angel said to the women, "Do not be afraid; for I know that you are looking for Jesus who has been crucified."`
+            }
+          ]
+        },
+        {
+          heading: `Stone rolled away before the women arrived`,
+          passages: [
+            {
+              passage: "Mark 16:3-4",
+              text: `And they were saying to one another, "Who will roll away the stone for us from the entrance of the tomb?" And looking up, <strong>they saw that the stone had been rolled back</strong>&mdash;it was very large.`
+            },
+            {
+              passage: "Luke 24:2",
+              text: `And they found the stone rolled away from the tomb</strong>...`
+            },
+            {
+              passage: "John 20:1",
+              text: `Now on the first day of the week Mary Magdalene came to the tomb early, while it was still dark, and <strong>saw that the stone had been taken away from the tomb</strong>.`
+            }
+          ]
+        }
+      ]
+    },
+    {
+      bookVerses: "28:2-5",
+      question: `Were the angels sitting or standing in the tomb?`,
+      quickAnswer: `<p>It would be reasonable to believe that the angels were sitting when the women entered the tomb, and then stood up after that. The angel in Matthew was sitting on the stone before the women arrived at the tomb, and had moved into the tomb by the time the women arrived at the tomb.</p>`,
+      fullPost: "/answers/were-angels-sitting-standing",
+      allPassages: [
+        {
+          heading: `Sitting on the stone`,
+          passages: [
+            {
+              passage: "Matthew 28:2-5",
+              text: `And behold, there was a great earthquake, for an angel of the Lord descended from heaven and came and rolled back the stone <strong>and sat on it</strong>. His appearance was like lightning, and his clothing white as snow. And for fear of him the guards trembled and became like dead men. But the angel said to the women, "Do not be afraid, for I know that you seek Jesus who was crucified."`
+            }
+          ]
+        },
+        {
+          heading: "Sitting in the tomb",
+          passages: [
+            {
+              passage: "Mark 16:5-6",
+              text: `And entering the tomb, they saw a young man sitting on the right side, dressed in a white robe, and they were alarmed. And he said to them, "Do not be alarmed. You seek Jesus of Nazareth, who was crucified. He has risen; he is not here. See the place where they laid him."`
+            },
+            {
+              passage: "John 20:12-13",
+              text: `And she saw two angels in white, <strong>sitting where the body of Jesus had lain, one at the head and one at the feet</strong>. They said to her, "Woman, why are you weeping?" She said to them, "They have taken away my Lord, and I do not know where they have laid him."`
+            }
+          ]
+        },
+        {
+          heading: "Standing in the tomb",
+          passages: [
+            {
+              passage: "Luke 24:2-6",
+              text: `And they found the stone rolled away from the tomb, but when <strong>they went in</strong> they did not find the body of the Lord Jesus. While they were perplexed about this, behold, <strong>two men stood by them</strong> in dazzling apparel. And as they were frightened and bowed their faces to the ground, the men said to them, “Why do you seek the living among the dead?`
             }
           ]
         }
@@ -636,13 +694,42 @@ const matthew = {
     {
       bookVerses: "28:2",
       question: `How many angels were at the tomb? Were they angels or men?`,
+      quickAnswer: `There were two angels who looked like men. Matthew does not say that there was only one angel, and Mark does not say that there was only one man. Angels oftentime appeared in the form of men (Genesis 18:1–2; Daniel 9:21).`,
+      fullPost: "/answers/how-many-angels-tomb",
       allPassages: [
         {
-          heading: ``,
+          heading: `One angel`,
           passages: [
             {
-              passage: "",
-              text: ``
+              passage: "Matthew 28:2-5",
+              text: `And behold, there was a great earthquake, for <strong>an angel</strong> of the Lord descended from heaven and came and rolled back the stone and sat on it. <strong>His</strong> appearance was like lightning, and <strong>his</strong> clothing white as snow. And for fear of <strong>him</strong> the guards trembled and became like dead men. But <strong>the angel</strong> said to the women, "Do not be afraid, for I know that you seek Jesus who was crucified."`
+            }
+          ]
+        },
+        {
+          heading: `One man`,
+          passages: [
+            {
+              passage: "Mark 16:5-6",
+              text: `And entering the tomb, they saw <strong>a young man</strong> sitting on the right side, dressed in a white robe, and they were alarmed. And <strong>he</strong> said to them, "Do not be alarmed. You seek Jesus of Nazareth, who was crucified. He has risen; he is not here. See the place where they laid him."`
+            }
+          ]
+        },
+        {
+          heading: `Luke 24:4-6`,
+          passages: [
+            {
+              passage: "Two men",
+              text: `While they were perplexed about this, behold, <strong>two men</strong> stood by them in dazzling apparel. And as they were frightened and bowed their faces to the ground, <strong>the men</strong> said to them, “Why do you seek the living among the dead?`
+            }
+          ]
+        },
+        {
+          heading: `Two angels`,
+          passages: [
+            {
+              passage: "John 20:12-13",
+              text: `And she saw <strong>two angels</strong> in white, sitting where the body of Jesus had lain, one at the head and one at the feet. <strong>They</strong> said to her, "Woman, why are you weeping?" She said to <strong>them</strong>, "They have taken away my Lord, and I do not know where they have laid him."`
             }
           ]
         }
@@ -666,13 +753,32 @@ const matthew = {
     {
       bookVerses: "28:9",
       question: `Who did Jesus appear to first after the resurrection?`,
+      quickAnswer: `<p>Here is one possible order for Jesus' appearances:</p>
+  
+      <ol>
+        <li>Jesus first appeared to Mary Magdelene alone at the tomb.</li>
+        <li>Jesus then appeared to the rest of the women when they were traveling back to Bethany.</li>
+        <li>Or, vice versa</li>
+      </ol>`,
+      fullPost: "/answers/jesus-appear-first",
       allPassages: [
         {
-          heading: ``,
+          heading: `Jesus appeared first to the group of women`,
           passages: [
             {
-              passage: "",
-              text: ``
+              passage: "Matthew 28:8-9",
+              text: `So <strong>they</strong> [the women] departed quickly from the tomb with fear and great joy, and ran to tell his disciples. And behold, <strong>Jesus met them</strong> and said, "Greetings!" And they came up and took hold of his feet and worshiped him.`
+            }
+          ]
+        },
+        {
+          heading: `Jesus appeared first to Mary alone`,
+          passages: [
+            {
+              passage: "John 20:2-14",
+              text: `<p>So she [Mary Magdelene] ran and went to Simon Peter and the other disciple, the one whom Jesus loved, and said to them, "They have taken the Lord out of the tomb, and we do not know where they have laid him." So Peter went out with the other disciple, and they were going toward the tomb... Then the disciples went back to their homes.</p>
+
+              <p>But Mary stood weeping outside the tomb, and as she wept she stooped to look into the tomb. And she saw two angels in white, sitting where the body of Jesus had lain, one at the head and one at the feet. They said to her, "Woman, why are you weeping?" She said to them, "They have taken away my Lord, and I do not know where they have laid him." Having said this, <strong>she turned around and saw Jesus standing</strong>, but she did not know that it was Jesus.</p>`
             }
           ]
         }

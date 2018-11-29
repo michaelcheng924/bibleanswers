@@ -24,7 +24,7 @@ function boldNumbers(text) {
 function renderPassage(passage, index) {
   const text = isArray(passage.text) ? (
     passage.text.map((paragraph, index1) => (
-      <p
+      <div
         key={index1}
         className="first"
         dangerouslySetInnerHTML={{
@@ -33,7 +33,7 @@ function renderPassage(passage, index) {
       />
     ))
   ) : (
-    <p
+    <div
       className="first"
       dangerouslySetInnerHTML={{
         __html: boldNumbers(passage.text)
@@ -117,11 +117,14 @@ function renderAnswer({
       {hideDetails ? null : (
         <div>
           <h4 className="first">Quick answer</h4>
-          <p>{quickAnswer}</p>
+          <div dangerouslySetInnerHTML={{ __html: quickAnswer }} />
           <div>
             <p>
               <strong>
-                Full post: <a href={fullPost}>{question}</a>
+                Full post:{" "}
+                <a href={fullPost} target="_blank">
+                  {question}
+                </a>
               </strong>
             </p>
           </div>
@@ -163,7 +166,7 @@ const BibleContradictions = () => {
   const numbers = CONTRADICTIONS.reduce(
     (result, book) => {
       book.answers.forEach(answer => {
-        if (answer.see) {
+        if (!answer.see) {
           result.total++;
         }
 
@@ -258,34 +261,18 @@ const BibleContradictions = () => {
 
       <ReadingContainer>
         <div className="writing">
-          <h3>Work in progress</h3>
-          <p>
-            This page is still a work in progress. Please check back to see
-            updates!
-          </p>
-
-          <h3>Progress</h3>
-
-          <p>total: {numbers.total}</p>
-          <p>no quick answer: {numbers.noQuickAnswer}</p>
-          <p>no full post: {numbers.noFullPost}</p>
-
-          <h3>Introduction</h3>
-
-          <p>
-            Opponents of the Bible claim that it contains numerous
-            irreconcilable contradictions. However, none of the "alleged"
-            contradictions in the Bible are truly irreconcilable.
-          </p>
-
-          <p>
-            The purpose of this page is to be a comprehensive response to every
-            alleged "contradiction" in the Bible.
-          </p>
-
           <a id="top" style={{ color: "rgba(0, 0, 0, .84)" }}>
             <h3>Table of contents</h3>
           </a>
+
+          <h4>Overview</h4>
+
+          <div className="first">
+            <a href={`#introduction`}>1. Introduction</a>
+          </div>
+          <div className="first">
+            <a href={`#faqs`}>2. Frequently asked questions</a>
+          </div>
 
           <h4>Old Testament</h4>
 
@@ -293,7 +280,7 @@ const BibleContradictions = () => {
             {CONTRADICTIONS.slice(0, matthewIndex).map(book => {
               return (
                 <div className="table-contents-item" key={book.book}>
-                  <a href={`#${book.book}`} id={`top-${book.book}`}>
+                  <a href={`#${book.book}`}>
                     {book.book} ({book.answers.length})
                   </a>
                 </div>
@@ -307,13 +294,48 @@ const BibleContradictions = () => {
             {CONTRADICTIONS.slice(matthewIndex).map(book => {
               return (
                 <div className="table-contents-item" key={book.book}>
-                  <a href={`#${book.book}`} id={`top-${book.book}`}>
+                  <a href={`#${book.book}`}>
                     {book.book} ({book.answers.length})
                   </a>
                 </div>
               );
             })}
           </div>
+
+          <h3>Work in progress</h3>
+          <p>
+            This page is still a work in progress. Please check back to see
+            updates!
+          </p>
+
+          <p className="first">Total explanations: {numbers.total}</p>
+          <p className="first">
+            Quick answers remaining: {numbers.noQuickAnswer}
+          </p>
+          <p className="first">Full post remaining: {numbers.noFullPost}</p>
+
+          <h3>
+            <a id="introduction" className="link-target">
+              Introduction
+            </a>
+          </h3>
+
+          <p>
+            Opponents of the Bible claim that it contains numerous
+            irreconcilable contradictions. However, none of the "alleged"
+            contradictions in the Bible are truly irreconcilable.
+          </p>
+
+          <p>
+            The purpose of this page is to provide possible explanations for
+            every alleged "contradiction" in the Bible.
+          </p>
+
+          <h3>
+            <a id="faqs" className="link-target">
+              Frequently asked questions
+            </a>
+          </h3>
 
           {CONTRADICTIONS.map(book => {
             return (
@@ -431,6 +453,17 @@ const BibleContradictions = () => {
           margin-top: 30px;
         }
 
+        .writing p,
+        .writing ol,
+        .writing ul,
+        .writing blockquote {
+          font-size: 21px;
+          line-height: 1.58;
+          margin: 0;
+          margin-top: 29px;
+        }
+
+        p:first-child,
         .writing h3 + p,
         .writing h3 + ol,
         .writing h3 + ul,
@@ -440,16 +473,6 @@ const BibleContradictions = () => {
         .writing h4 + ul,
         .writing h4 + blockquote {
           margin-top: 8px;
-        }
-
-        .writing p,
-        .writing ol,
-        .writing ul,
-        .writing blockquote {
-          font-size: 21px;
-          line-height: 1.58;
-          margin: 0;
-          margin-top: 29px;
         }
 
         .writing ol,
@@ -554,6 +577,10 @@ const BibleContradictions = () => {
           font-size: 16px;
           margin-top: 10px;
           width: 150px;
+        }
+
+        .writing .link-target {
+          color: rgba(0, 0, 0, 0.84);
         }
       `}</style>
     </Container>

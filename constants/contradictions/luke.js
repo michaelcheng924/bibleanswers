@@ -132,6 +132,10 @@ const luke = {
       see: ["matthew", "28:1-2"]
     },
     {
+      bookVerses: "24:2-6",
+      see: ["matthew", "28:2-5"]
+    },
+    {
       bookVerses: "24:4",
       see: ["matthew", "28:2"]
     },

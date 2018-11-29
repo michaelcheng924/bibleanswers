@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Head from "next/head";
 import styled from "styled-components";
 import * as Amp from "react-amphtml";

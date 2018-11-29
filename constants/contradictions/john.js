@@ -162,6 +162,10 @@ const john = {
       see: ["matthew", "28:2"]
     },
     {
+      bookVerses: "20:12-13",
+      see: ["matthew", "28:2-5"]
+    },
+    {
       bookVerses: "20:13",
       see: ["matthew", "28:6-7"]
     },
