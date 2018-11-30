@@ -2,6 +2,7 @@ module.exports = {
     exportPathMap: function() {
       return {
         "/": { page: "/" },
+        "/contradictions-in-the-bible": { page: "/contradictions" },
         "/all-posts": { page: "/all-posts" },
         "/posts-in-progress": { page: "/posts-in-progress" },
         "/privacy-policy": { page: "/privacy-policy" },
@@ -147,8 +148,8 @@ module.exports = {
 "/answers/genesis-3-9-gods-omniscience": { page: "/post", query: { slug: "genesis-3-9-gods-omniscience" } },
 "/answers/did-anyone-ascend-heaven-before-jesus": { page: "/post", query: { slug: "did-anyone-ascend-heaven-before-jesus" } },
 "/answers/is-anyone-righteous-have-all-sinned": { page: "/post", query: { slug: "is-anyone-righteous-have-all-sinned" } },
-"/answers/was-lot-righteous-gave-daughters-to-crowd-men": { page: "/post", query: { slug: "was-lot-righteous-gave-daughters-to-crowd-men" } },
 "/confessions/1689-london-baptist-confession-chapter-1-holy-scriptures": { page: "/confession", query: { slug: "1689-london-baptist-confession-chapter-1-holy-scriptures" } },
+"/answers/was-lot-righteous-gave-daughters-to-crowd-men": { page: "/post", query: { slug: "was-lot-righteous-gave-daughters-to-crowd-men" } },
 "/answers/genesis-3-16-pain-women-child-bearing": { page: "/post", query: { slug: "genesis-3-16-pain-women-child-bearing" } },
 "/answers/genesis-4-17-cain-wife": { page: "/post", query: { slug: "genesis-4-17-cain-wife" } },
 "/answers/does-god-change-his-mind": { page: "/post", query: { slug: "does-god-change-his-mind" } },

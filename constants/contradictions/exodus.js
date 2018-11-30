@@ -80,13 +80,40 @@ const exodus = {
     {
       bookVerses: "20:4-5",
       question: `Is it a sin to make graven images?`,
+      quickAnswer: `<p>The types of graven, or "carved," images that are sinful to make are ones that are made to be worshipped. The golden cherubin were not made to be worshipped, so they are not "images."</p>`,
+      fullPost: "/answers/is-it-sin-make-graven-images",
       allPassages: [
         {
-          heading: ``,
+          heading: `Should not make graven images`,
           passages: [
             {
-              passage: "",
-              text: ``
+              passage: "Exodus 20:4-5",
+              text: `4 “You shall not make for yourself a carved image, or any likeness of anything that is in heaven above, or that is in the earth beneath, or that is in the water under the earth. 5 You shall not bow down to them or serve them, for I the Lord your God am a jealous God, visiting the iniquity of the fathers on the children to the third and the fourth generation of those who hate me.`
+            },
+            {
+              passage: "Leviticus 26:1",
+              text: `"You shall not make idols for yourselves or erect an image or pillar, and you shall not set up a figured stone in your land to bow down to it, for I am the Lord your God."`
+            },
+            {
+              passage: "Deuteronomy 5:8",
+              text: `"You shall not make for yourself a carved image, or any likeness of anything that is in heaven above, or that is on the earth beneath, or that is in the water under the earth."`
+            },
+            {
+              passage: "Deuteronomy 27:15",
+              text: `"‘Cursed be the man who makes a carved or cast metal image, an abomination to the Lord, a thing made by the hands of a craftsman, and sets it up in secret.’ And all the people shall answer and say, ‘Amen.’"`
+            }
+          ]
+        },
+        {
+          heading: `Make graven images`,
+          passages: [
+            {
+              passage: "Exodus 25:18",
+              text: `And you shall make two cherubim of gold; of hammered work shall you make them, on the two ends of the mercy seat.`
+            },
+            {
+              passage: "Exodus 37:7-8",
+              text: `7 And he made two cherubim of gold. He made them of hammered work on the two ends of the mercy seat, 8 one cherub on the one end, and one cherub on the other end. Of one piece with the mercy seat he made the cherubim on its two ends.`
             }
           ]
         }
@@ -125,13 +152,24 @@ const exodus = {
     {
       bookVerses: "20:12",
       question: `Should we call anyone "father" besides God?`,
+      quickAnswer: `<p>We should not attribute to anyone authority that only belongs to God. There is a difference between calling our earthly parent "father" and giving excessive reverence to a spiritual leader.</p>`,
+      fullPost: "/answers/should-we-call-anyone-father-besides-god",
       allPassages: [
         {
-          heading: ``,
+          heading: `Call someone "father"`,
           passages: [
             {
-              passage: "",
-              text: ``
+              passage: "Exodus 20:12",
+              text: `"Honor your father and your mother, that your days may be long in the land that the Lord your God is giving you."`
+            }
+          ]
+        },
+        {
+          heading: `Call no one "father"`,
+          passages: [
+            {
+              passage: "Matthew 23:8-10",
+              text: `8 But you are not to be called rabbi, for you have one teacher, and you are all brothers. 9 And call no man your father on earth, for you have one Father, who is in heaven. 10 Neither be called instructors, for you have one instructor, the Christ.`
             }
           ]
         }

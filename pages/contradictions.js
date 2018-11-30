@@ -3,23 +3,11 @@ import Head from "next/head";
 import { FaChevronUp } from "react-icons/fa";
 import { find, findIndex, isArray } from "lodash";
 
+import { boldNumbers } from "../utils/writing";
 import CONTRADICTIONS from "../constants/contradictions";
 import { Container } from "../components/Container";
 import { TitleSection } from "../components/TitleSection";
 import ReadingContainer from "../components/ReadingContainer";
-
-function boldNumbers(text) {
-  const splitText = text.split(" ");
-  const mappedText = splitText.map(word => {
-    if (parseInt(word) < 100) {
-      return `<strong>${word}</strong>`;
-    }
-
-    return word;
-  });
-
-  return mappedText.join(" ");
-}
 
 function renderPassage(passage, index) {
   const text = isArray(passage.text) ? (

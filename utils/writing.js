@@ -1,5 +1,18 @@
 import { map } from "lodash";
 
+export function boldNumbers(text) {
+  const splitText = text.split(" ");
+  const mappedText = splitText.map(word => {
+    if (parseInt(word) < 100) {
+      return `<strong>${word}</strong>`;
+    }
+
+    return word;
+  });
+
+  return mappedText.join(" ");
+}
+
 export function textRef(number) {
   return `<span class="superscript"><a class="reference" href="#footnote-${number}" id="text-${number}">[${number}]</a></span>`;
 }
