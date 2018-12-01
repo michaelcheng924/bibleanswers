@@ -11,9 +11,11 @@ const ConfessionParagraph = ({ paragraph, index }) => {
 
   useEffect(() => {
     document.addEventListener("click", handleClick);
+    document.addEventListener("touchstart", handleClick);
 
     return () => {
       document.removeEventListener("click", handleClick);
+      document.removeEventListener("touchstart", handleClick);
     };
   });
 

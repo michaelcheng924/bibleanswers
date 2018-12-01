@@ -472,7 +472,7 @@ function (_Component) {
           postsBySlug = _this$props.postsBySlug,
           tags = _this$props.tags;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, tags.map(function (tag) {
-        if (tag.slug === "apologetics" || tag.slug === "theology" || BIBLE_BOOKS[tag.title]) {
+        if (tag.slug === "apologetics" || tag.slug === "theology" || BIBLE_BOOKS[tag.title] || tag.slug === "creeds-confessions") {
           return null;
         }
 

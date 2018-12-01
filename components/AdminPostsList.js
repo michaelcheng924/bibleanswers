@@ -198,7 +198,8 @@ export default class PostsList extends Component {
           if (
             tag.slug === "apologetics" ||
             tag.slug === "theology" ||
-            BIBLE_BOOKS[tag.title]
+            BIBLE_BOOKS[tag.title] ||
+            tag.slug === "creeds-confessions"
           ) {
             return null;
           }

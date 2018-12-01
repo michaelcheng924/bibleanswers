@@ -1,7 +1,7 @@
 var fs = require("fs");
 var request = require("request");
 
-request.get("https://bibleanswersapi.herokuapp.com/export", function(
+request.get("https://bibleanswersapi.herokuapp.com/initialfetch", function(
   err,
   response,
   body
@@ -107,8 +107,42 @@ ${parsedBody.tags
       .join("")}
     
 </urlset>`,
-    function(err) {
+    function() {
       console.log("SITEMAP.XML FINISHED!");
+    }
+  );
+
+  fs.writeFile(
+    "./backup.js",
+    `const posts = ${JSON.stringify(
+      parsedBody.posts.map(function(post) {
+        let modifiedPost = {
+          ...post,
+          tags: post.tags.map(tag => tag.title)
+        };
+
+        delete modifiedPost["mapped_related_posts_tags"];
+        delete modifiedPost["user"];
+
+        return modifiedPost;
+      })
+    )};
+
+const tags = ${JSON.stringify(
+      parsedBody.tags.map(function(tag) {
+        return {
+          slug: tag.slug,
+          url: tag.url,
+          title: tag.title,
+          subtitle: tag.subtitle,
+          description: tag.description,
+          image_url: tag.image_url,
+          date_added: tag.date_added
+        };
+      })
+    )};`,
+    function() {
+      console.log("BACKUP.JS FINISHED!");
     }
   );
 });
