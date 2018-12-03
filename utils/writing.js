@@ -30,7 +30,7 @@ export function renderRefs(references) {
 }
 
 export function getModifiedContent(post) {
-  return getContentWithReferences(post.html, post.references || "");
+  return getContentWithReferences(post.html || "", post.references || "");
 }
 
 function getContentWithReferences(content, references) {

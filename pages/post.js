@@ -4,7 +4,7 @@ import styled from "styled-components";
 import * as Amp from "react-amphtml";
 import fetch from "isomorphic-unfetch";
 
-import { boldNumbers } from "../utils/writing";
+import { boldNumbers, getModifiedContent } from "../utils/writing";
 import { createAmpGlobalStyle } from "../components/GlobalStyle";
 import { AmpContainer } from "../components/Container";
 import ReadingContainer from "../components/ReadingContainer";
@@ -96,7 +96,11 @@ const Post = ({ post, slug }) => {
 
       <ReadingContainer>
         {published ? (
-          <div dangerouslySetInnerHTML={{ __html: boldNumbers(html) }} />
+          <div
+            dangerouslySetInnerHTML={{
+              __html: boldNumbers(getModifiedContent(post))
+            }}
+          />
         ) : (
           <Help description={description} title={title} />
         )}
