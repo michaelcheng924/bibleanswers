@@ -2086,7 +2086,7 @@ __webpack_require__.r(__webpack_exports__);
 function boldNumbers(text) {
   var splitText = text.split(" ");
   var mappedText = splitText.map(function (word) {
-    if (parseInt(word) < 100) {
+    if (Number(word) < 100) {
       return "<strong>".concat(word, "</strong>");
     }
 

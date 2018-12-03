@@ -98,7 +98,10 @@ const Post = ({ post, slug }) => {
         {published ? (
           <div
             dangerouslySetInnerHTML={{
-              __html: boldNumbers(getModifiedContent(post))
+              __html: getModifiedContent({
+                ...post,
+                html: boldNumbers(html)
+              })
             }}
           />
         ) : (
