@@ -118,13 +118,24 @@ const samuel2 = {
     {
       bookVerses: "8:4",
       question: `How many horsemen did David capture, 1,700 or 7,000?`,
+      quickAnswer: `<p>This discrepancy is likely the result of a copyist error, where 1 Chronicles 18:4 is probably the correct number.</p>`,
+      fullPost: "/answers/how-many-horsemen-did-david-capture",
       allPassages: [
         {
-          heading: ``,
+          heading: `1,700 horsemen`,
           passages: [
             {
-              passage: "",
-              text: ``
+              passage: "2 Samuel 8:4",
+              text: `And David took from him <strong>1,700 horsemen</strong>, and 20,000 foot soldiers. And David hamstrung all the chariot horses but left enough for 100 chariots.`
+            }
+          ]
+        },
+        {
+          heading: `7,000 horsemen`,
+          passages: [
+            {
+              passage: "1 Chronicles 18:4",
+              text: `And David took from him 1,000 chariots, <strong>7,000 horsemen</strong>, and 20,000 foot soldiers. And David hamstrung all the chariot horses, but left enough for 100 chariots.`
             }
           ]
         }
@@ -133,13 +144,24 @@ const samuel2 = {
     {
       bookVerses: "10:18",
       question: `How many charioteers were killed, 700 or 7,000?`,
+      quickAnswer: `<p>This discrepancy is likely the result of a copyist error, where 1 Chronicles 19:8 (7,000) is probably the correct number.</p>`,
+      fullPost: "/answers/how-many-charioteers-were-killed",
       allPassages: [
         {
-          heading: ``,
+          heading: `700 charioteers`,
           passages: [
             {
-              passage: "",
-              text: ``
+              passage: "2 Samuel 10:18",
+              text: `And the Syrians fled before Israel, and David killed of the Syrians <strong>the men of 700 chariots</strong>, and 40,000 horsemen, and wounded Shobach the commander of their army, so that he died there.`
+            }
+          ]
+        },
+        {
+          heading: `7000 charioteers`,
+          passages: [
+            {
+              passage: "1 Chronicles 19:18",
+              text: `And the Syrians fled before Israel, and David killed of the Syrians <strong>the men of 7,000 chariots</strong> and 40,000 foot soldiers, and put to death also Shophach the commander of their army.`
             }
           ]
         }
