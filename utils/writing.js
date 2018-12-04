@@ -3,7 +3,7 @@ import { map } from "lodash";
 export function boldNumbers(text) {
   const splitText = text.split(" ");
   const mappedText = splitText.map(word => {
-    if (Number(word) < 100) {
+    if (Number(word) && Number(word) < 100) {
       return `<strong>${word}</strong>`;
     }
 
