@@ -178,13 +178,24 @@ const exodus = {
     {
       bookVerses: "20:24",
       question: `Did God speak about sacrifices at the Exodus?`,
+      quickAnswer: `Jeremiah 7:22 is referring to one specific day, the day that He brought the Israelites out of Egypt. In Exodus 20:24, God is speaking about sacrifices at Mount Sinai, three months after "the day" that He brought the Israelites out of Egypt.`,
+      fullPost: "/answers/did-god-speak-about-sacrifices-at-exodus",
       allPassages: [
         {
-          heading: ``,
+          heading: `God spoke about sacrifices`,
           passages: [
             {
-              passage: "",
-              text: ``
+              passage: "Exodus 20:24",
+              text: `An altar of earth you shall make for me and sacrifice on it your burnt offerings and your peace offerings, your sheep and your oxen. In every place where I cause my name to be remembered I will come to you and bless you.`
+            }
+          ]
+        },
+        {
+          heading: `God did not speak about sacrifices`,
+          passages: [
+            {
+              passage: "Jeremiah 7:22",
+              text: `For in the day that I brought them out of the land of Egypt, I did not speak to your fathers or command them concerning burnt offerings and sacrifices.`
             }
           ]
         }
@@ -192,16 +203,17 @@ const exodus = {
     },
     {
       bookVerses: "21:20-21",
-      question: `Was it wrong for slaves to be property in the Old Testament?`,
+      question: `Was it wrong for God to give laws about slavery?`,
+      quickAnswer: `It was not wrong for God to give laws about treating a slave as property because God sometimes gave laws that took into account people's "hardness of heart." Jesus iterated this concept when He responded to a question about divorce. He said, in Matthew 19:8, "Because of your hardness of heart Moses allowed you to divorce your wives, but from the beginning it was not so." So, just like divorce, "from the beginning it was not so," but due to fallen humanity, God provided laws about slavery to minimize injustice.`,
+      fullPost: "/answers/was-it-wrong-god-give-laws-buying-slaves",
       allPassages: [
         {
-          heading: ``,
-          passages: [
-            {
-              passage: "",
-              text: ``
-            }
-          ]
+          passage: "Exodus 21:20-21",
+          text: `20 When a man strikes his slave, male or female, with a rod and the slave dies under his hand, he shall be avenged. 21 But if the slave survives a day or two, he is not to be avenged, for the slave is his money.`
+        },
+        {
+          passage: "Leviticus 25:44",
+          text: `As for your male and female slaves whom you may have: you may buy male and female slaves from among the nations that are around you.`
         }
       ]
     },
