@@ -9,7 +9,8 @@
     "start": "next build & NODE_ENV=production node server.js",
     "deploy": "git push heroku master",
     "heroku-postbuild": "yarn run build",
-    "export": "node prepareexport && next build && next export && cp ./constants/sitemap.xml ./out && cd out && now"
+    "export": "node prepareexport && next build && next export && cp ./constants/sitemap.xml ./out && cd out && now",
+    "test": "NODE_ENV=test jest"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +23,6 @@
     "express": "^4.16.4",
     "isomorphic-unfetch": "^3.0.0",
     "lodash": "^4.17.11",
-    "mobx": "^5.6.0",
     "moment": "^2.22.2",
     "next": "^7.0.2",
     "next-routes": "^1.4.2",
@@ -37,6 +37,14 @@
     "styled-components": "^4.1.1"
   },
   "devDependencies": {
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "chai": "^4.2.0",
+    "enzyme": "3.4.3",
+    "enzyme-adapter-react-16": "1.2.0",
+    "jest": "23.5.0",
+    "react-addons-test-utils": "15.6.2",
+    "react-test-renderer": "16.4.2",
     "request": "^2.88.0"
   }
 }
