@@ -14,6 +14,10 @@
     "/contradictions": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
+    ],
+    "/admin": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }

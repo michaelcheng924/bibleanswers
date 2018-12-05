@@ -5,7 +5,6 @@ import { cloneDeep, find, findIndex, isArray, remove, some } from "lodash";
 import TextField from "@material-ui/core/TextField";
 
 import { highlightText, matchesSearch } from "../utils/string";
-import { boldNumbers } from "../utils/writing";
 import CONTRADICTIONS from "../constants/contradictions";
 import { Container } from "../components/Container";
 import { TitleSection } from "../components/TitleSection";
@@ -59,152 +58,8 @@ function getSearchResults(search) {
   return clonedContradictions;
 }
 
-function renderPassage(passage, index) {
-  const text = isArray(passage.text) ? (
-    passage.text.map((paragraph, index1) => (
-      <div
-        key={index1}
-        className="first"
-        dangerouslySetInnerHTML={{
-          __html: boldNumbers(paragraph)
-        }}
-      />
-    ))
-  ) : (
-    <div
-      className="first"
-      dangerouslySetInnerHTML={{
-        __html: boldNumbers(passage.text)
-      }}
-    />
-  );
-
-  return (
-    <div key={index}>
-      <blockquote className={index === 0 ? "first" : ""}>
-        <strong>{passage.passage}</strong>
-        {text}
-      </blockquote>
-    </div>
-  );
-}
-
-function renderLink({ index, book, bookVerses, count, question }) {
-  return (
-    <div key={index} style={{ marginTop: 6 }}>
-      <a
-        href={`#${book}_${bookVerses}`}
-        id={`top_${book}_${bookVerses}`}
-        dangerouslySetInnerHTML={{
-          __html: `${count}) ${bookVerses} - ${question}`
-        }}
-      />
-    </div>
-  );
-}
-
-function renderAnswer({
-  index,
-  book,
-  bookVerses,
-  foundBookVerses,
-  question,
-  allPassages,
-  quickAnswer,
-  fullPost,
-  count,
-  hideDetails,
-  toggleDetail
-}) {
-  return (
-    <div
-      key={index}
-      style={{
-        border: "3px solid rgba(0, 0, 0, .54)",
-        borderBottom: 0,
-        borderLeft: 0,
-        borderRight: 0,
-        marginTop: 20
-      }}
-    >
-      <a href={`#top`} style={{ display: "inline-block", marginTop: 20 }}>
-        <FaChevronUp /> Top
-      </a>
-      <a
-        href={`#${book}`}
-        id={`${book}_${bookVerses}`}
-        style={{ display: "inline-block", marginLeft: 20, marginTop: 20 }}
-      >
-        <FaChevronUp /> {book}
-      </a>
-      <h3
-        className="nomargin"
-        dangerouslySetInnerHTML={{
-          __html: `${count}) ${bookVerses} - ${question}`
-        }}
-      />
-
-      {foundBookVerses ? (
-        <div>
-          <p className="first">
-            Same as{" "}
-            <strong>
-              {book} {foundBookVerses} - {question}
-            </strong>
-          </p>
-          <p
-            className="nomargin"
-            onClick={toggleDetail}
-            style={{ color: "#039BE5", fontSize: 16, cursor: "pointer" }}
-          >
-            {hideDetails ? `Show ` : `Hide `} answer
-          </p>
-        </div>
-      ) : null}
-      {hideDetails ? null : (
-        <div>
-          <h4 className="first">Quick answer</h4>
-          <div dangerouslySetInnerHTML={{ __html: quickAnswer }} />
-          <div>
-            <p>
-              <strong>
-                Full post:{" "}
-                <a href={fullPost} target="_blank">
-                  {question}
-                </a>
-              </strong>
-            </p>
-          </div>
-
-          <h4>Passages</h4>
-          {allPassages.map((passageGroup, index) => {
-            if (passageGroup.heading !== undefined) {
-              return (
-                <div key={index}>
-                  <p className={index === 0 ? "first" : ""}>
-                    <strong>{passageGroup.heading}</strong>
-                  </p>
-                  {passageGroup.passages.map((passage, index1) => {
-                    return renderPassage(passage, index1);
-                  })}
-                </div>
-              );
-            }
-
-            return renderPassage(passageGroup, index);
-          })}
-        </div>
-      )}
-    </div>
-  );
-}
-
 const BibleContradictions = () => {
-  let [details, setDetails] = useState({});
   let [search, setSearch] = useState("");
-
-  let linkCount = 0;
-  let answerCount = 0;
 
   const image_url = "https://i.imgur.com/faAmDhY.png";
   const description = `Explanations for every alleged "contradiction" in the Bible, including passages, quick answer, and a link to a fuller post for each alleged Bible "contradiction."`;
@@ -344,7 +199,14 @@ const BibleContradictions = () => {
                         key={`${answer.bookVerses}_${answer.question}`}
                         href={answer.fullPost}
                         target="_blank"
-                        style={{ display: "block", marginBottom: 5 }}
+                        style={{
+                          color: answer.fullPost
+                            ? "#689F38"
+                            : "rgba(0, 0, 0, .54)",
+                          pointerEvents: answer.fullPost ? "initial" : "none",
+                          display: "block",
+                          marginBottom: 5
+                        }}
                       >
                         {`${answer.bookVerses} - `}
                         {highlightText(answer.question, search)}
@@ -476,70 +338,36 @@ const BibleContradictions = () => {
                     <FaChevronUp />
                     &nbsp;Top
                   </a>
-                  <h3
-                    key={book.book}
-                    className="nomargin"
-                    style={{ borderBottom: "1px solid rgba(0, 0, 0, .54)" }}
-                  >
+                  <h3 key={book.book} className="nomargin">
                     {book.book}
                   </h3>
 
                   {book.answers.map((answer, index) => {
-                    linkCount++;
-
                     if (answer.see) {
-                      const foundAnswer = getFoundAnswer(answer.see);
-
-                      return renderLink({
-                        index,
-                        book: book.book,
-                        bookVerses: answer.bookVerses,
-                        question: foundAnswer.question,
-                        count: linkCount
-                      });
+                      answer = {
+                        ...getFoundAnswer(answer.see),
+                        bookVerses: answer.bookVerses
+                      };
                     }
 
-                    return renderLink({
-                      index,
-                      book: book.book,
-                      ...answer,
-                      count: linkCount
-                    });
-                  })}
-
-                  {book.answers.map((answer, index) => {
-                    answerCount++;
-
-                    if (answer.see) {
-                      const foundAnswer = getFoundAnswer(answer.see);
-
-                      const detailsKey = `${book.book}_${answer.bookVerses}`;
-
-                      const hideDetails = !details[detailsKey];
-
-                      return renderAnswer({
-                        index,
-                        book: book.book,
-                        ...foundAnswer,
-                        foundBookVerses: foundAnswer.bookVerses,
-                        bookVerses: answer.bookVerses,
-                        count: answerCount,
-                        hideDetails,
-                        toggleDetail() {
-                          setDetails({
-                            ...details,
-                            [detailsKey]: !details[detailsKey]
-                          });
-                        }
-                      });
-                    }
-
-                    return renderAnswer({
-                      index,
-                      book: book.book,
-                      ...answer,
-                      count: answerCount
-                    });
+                    return (
+                      <a
+                        key={`${answer.bookVerses}_${answer.question}`}
+                        href={answer.fullPost}
+                        target="_blank"
+                        style={{
+                          color: answer.fullPost
+                            ? "#689F38"
+                            : "rgba(0, 0, 0, .54)",
+                          pointerEvents: answer.fullPost ? "initial" : "none",
+                          display: "block",
+                          marginBottom: 5
+                        }}
+                        dangerouslySetInnerHTML={{
+                          __html: `${answer.bookVerses} - ${answer.question}`
+                        }}
+                      />
+                    );
                   })}
                 </div>
               );
