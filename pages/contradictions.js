@@ -1,13 +1,63 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import { FaChevronUp } from "react-icons/fa";
-import { find, findIndex, isArray } from "lodash";
+import { FaChevronUp, FaSearch } from "react-icons/fa";
+import { cloneDeep, find, findIndex, isArray, remove, some } from "lodash";
+import TextField from "@material-ui/core/TextField";
 
+import { highlightText, matchesSearch } from "../utils/string";
 import { boldNumbers } from "../utils/writing";
 import CONTRADICTIONS from "../constants/contradictions";
 import { Container } from "../components/Container";
 import { TitleSection } from "../components/TitleSection";
 import ReadingContainer from "../components/ReadingContainer";
+
+function getFoundAnswer(see) {
+  const foundBook = find(CONTRADICTIONS, book => {
+    return book.book.toLowerCase() === see[0];
+  });
+
+  return find(
+    foundBook.answers,
+    answerData => answerData.bookVerses === see[1]
+  );
+}
+
+function hasPassageMatch(allPassages, search) {
+  return some(allPassages, data => {
+    if (data.passages) {
+      return some(data.passages, passage =>
+        matchesSearch(passage.passage, search)
+      );
+    }
+
+    return some(data, passage => matchesSearch(passage.passage, search));
+  });
+}
+
+function getSearchResults(search) {
+  const clonedContradictions = cloneDeep(CONTRADICTIONS);
+
+  remove(clonedContradictions, book => {
+    const matchesBook = matchesSearch(book.book, search);
+    remove(book.answers, answer => {
+      if (answer.see) {
+        answer = {
+          ...getFoundAnswer(answer.see),
+          bookVerses: answer.bookVerses
+        };
+      }
+
+      const matchesQuestion = matchesSearch(answer.question, search);
+      const matchesPassage = hasPassageMatch(answer.allPassages, search);
+
+      return !matchesQuestion && !matchesPassage;
+    });
+
+    return !matchesBook && !book.answers.length;
+  });
+
+  return clonedContradictions;
+}
 
 function renderPassage(passage, index) {
   const text = isArray(passage.text) ? (
@@ -151,6 +201,7 @@ function renderAnswer({
 
 const BibleContradictions = () => {
   let [details, setDetails] = useState({});
+  let [search, setSearch] = useState("");
 
   let linkCount = 0;
   let answerCount = 0;
@@ -193,6 +244,12 @@ const BibleContradictions = () => {
     CONTRADICTIONS,
     book => book.book === "Matthew"
   );
+
+  let searchResults;
+
+  if (search) {
+    searchResults = getSearchResults(search);
+  }
 
   return (
     <Container>
@@ -257,182 +314,238 @@ const BibleContradictions = () => {
       />
 
       <ReadingContainer>
-        <div className="writing">
-          <a id="top" style={{ color: "rgba(0, 0, 0, .84)" }}>
-            <h3>Table of contents</h3>
-          </a>
+        <div className="search">
+          <FaSearch />
+          <TextField
+            className="search__input"
+            onChange={e => setSearch(e.target.value)}
+            placeholder="Search by passage or keyword"
+            value={search}
+          />
+        </div>
+        {search ? (
+          <div className="writing">
+            <h3 className="first">Search results</h3>
 
-          <h4>Overview</h4>
+            {searchResults.length ? (
+              searchResults.map(book => (
+                <div key={book.book}>
+                  <h4>{highlightText(book.book, search)}</h4>
+                  {book.answers.map(answer => {
+                    if (answer.see) {
+                      answer = {
+                        ...getFoundAnswer(answer.see),
+                        bookVerses: answer.bookVerses
+                      };
+                    }
 
-          <div className="first">
-            <a href={`#introduction`}>1. Introduction</a>
-          </div>
-          <div className="first">
-            <a href={`#faqs`}>2. Frequently asked questions</a>
-          </div>
+                    return (
+                      <a
+                        key={`${answer.bookVerses}_${answer.question}`}
+                        href={answer.fullPost}
+                        target="_blank"
+                        style={{ display: "block", marginBottom: 5 }}
+                      >
+                        {`${answer.bookVerses} - `}
+                        {highlightText(answer.question, search)}
+                        {hasPassageMatch(answer.allPassages, search) ? (
+                          <span>
+                            {` (`}
+                            {answer.allPassages.map((data, index) => {
+                              if (data.passages) {
+                                return data.passages.map((passage, index1) => (
+                                  <span key={index1}>
+                                    {highlightText(passage.passage, search)}
+                                    {index1 === data.passages.length - 1 &&
+                                    index === data.length - 1
+                                      ? ""
+                                      : `, `}
+                                  </span>
+                                ));
+                              }
 
-          <h4>Old Testament</h4>
-
-          <div className="table-contents-container">
-            {CONTRADICTIONS.slice(0, matthewIndex).map(book => {
-              return (
-                <div className="table-contents-item" key={book.book}>
-                  <a href={`#${book.book}`}>
-                    {book.book} ({book.answers.length})
-                  </a>
-                </div>
-              );
-            })}
-          </div>
-
-          <h4>New Testament</h4>
-
-          <div className="table-contents-container">
-            {CONTRADICTIONS.slice(matthewIndex).map(book => {
-              return (
-                <div className="table-contents-item" key={book.book}>
-                  <a href={`#${book.book}`}>
-                    {book.book} ({book.answers.length})
-                  </a>
-                </div>
-              );
-            })}
-          </div>
-
-          <h3>Work in progress</h3>
-          <p>
-            This page is still a work in progress. Please check back to see
-            updates!
-          </p>
-
-          <p className="first">Total explanations: {numbers.total}</p>
-          <p className="first">
-            Quick answers remaining: {numbers.noQuickAnswer}
-          </p>
-          <p className="first">Full post remaining: {numbers.noFullPost}</p>
-
-          <h3>
-            <a id="introduction" className="link-target">
-              Introduction
-            </a>
-          </h3>
-
-          <p>
-            Opponents of the Bible claim that it contains numerous
-            irreconcilable contradictions. However, none of the "alleged"
-            contradictions in the Bible are truly irreconcilable.
-          </p>
-
-          <p>
-            The purpose of this page is to provide possible explanations for
-            every alleged "contradiction" in the Bible.
-          </p>
-
-          <h3>
-            <a id="faqs" className="link-target">
-              Frequently asked questions
-            </a>
-          </h3>
-
-          {CONTRADICTIONS.map(book => {
-            return (
-              <div key={book.book}>
-                <a
-                  href={`#top`}
-                  id={book.book}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    marginTop: 28
-                  }}
-                >
-                  <FaChevronUp />
-                  &nbsp;Top
-                </a>
-                <h3
-                  key={book.book}
-                  className="nomargin"
-                  style={{ borderBottom: "1px solid rgba(0, 0, 0, .54)" }}
-                >
-                  {book.book}
-                </h3>
-
-                {book.answers.map((answer, index) => {
-                  linkCount++;
-
-                  if (answer.see) {
-                    const foundBook = find(CONTRADICTIONS, book => {
-                      return book.book.toLowerCase() === answer.see[0];
-                    });
-
-                    const foundAnswer = find(
-                      foundBook.answers,
-                      answerData => answerData.bookVerses === answer.see[1]
+                              return (
+                                <span key={index}>
+                                  {highlightText(passage.passage, search)}
+                                  {index === data.length - 1 ? "" : `, `}
+                                </span>
+                              );
+                            })}
+                            )
+                          </span>
+                        ) : null}
+                      </a>
                     );
+                  })}
+                </div>
+              ))
+            ) : (
+              <h4>No search results</h4>
+            )}
+          </div>
+        ) : (
+          <div className="writing">
+            <a id="top" style={{ color: "rgba(0, 0, 0, .84)" }}>
+              <h3 className="first">Table of contents</h3>
+            </a>
+
+            <h4>Overview</h4>
+
+            <div className="first">
+              <a href={`#introduction`}>1. Introduction</a>
+            </div>
+            <div className="first">
+              <a href={`#faqs`}>2. Frequently asked questions</a>
+            </div>
+
+            <h4>Old Testament</h4>
+
+            <div className="table-contents-container">
+              {CONTRADICTIONS.slice(0, matthewIndex).map(book => {
+                return (
+                  <div className="table-contents-item" key={book.book}>
+                    <a href={`#${book.book}`}>
+                      {book.book} ({book.answers.length})
+                    </a>
+                  </div>
+                );
+              })}
+            </div>
+
+            <h4>New Testament</h4>
+
+            <div className="table-contents-container">
+              {CONTRADICTIONS.slice(matthewIndex).map(book => {
+                return (
+                  <div className="table-contents-item" key={book.book}>
+                    <a href={`#${book.book}`}>
+                      {book.book} ({book.answers.length})
+                    </a>
+                  </div>
+                );
+              })}
+            </div>
+
+            <h3>Work in progress</h3>
+            <p>
+              This page is still a work in progress. Please check back to see
+              updates!
+            </p>
+
+            <p className="first">Total explanations: {numbers.total}</p>
+            <p className="first">
+              Quick answers remaining: {numbers.noQuickAnswer}
+            </p>
+            <p className="first">Full post remaining: {numbers.noFullPost}</p>
+
+            <h3>
+              <a id="introduction" className="link-target">
+                Introduction
+              </a>
+            </h3>
+
+            <p>
+              Opponents of the Bible claim that it contains numerous
+              irreconcilable contradictions. However, none of the "alleged"
+              contradictions in the Bible are truly irreconcilable.
+            </p>
+
+            <p>
+              The purpose of this page is to provide possible explanations for
+              every alleged "contradiction" in the Bible.
+            </p>
+
+            <h3>
+              <a id="faqs" className="link-target">
+                Frequently asked questions
+              </a>
+            </h3>
+
+            {CONTRADICTIONS.map(book => {
+              return (
+                <div key={book.book}>
+                  <a
+                    href={`#top`}
+                    id={book.book}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      marginTop: 28
+                    }}
+                  >
+                    <FaChevronUp />
+                    &nbsp;Top
+                  </a>
+                  <h3
+                    key={book.book}
+                    className="nomargin"
+                    style={{ borderBottom: "1px solid rgba(0, 0, 0, .54)" }}
+                  >
+                    {book.book}
+                  </h3>
+
+                  {book.answers.map((answer, index) => {
+                    linkCount++;
+
+                    if (answer.see) {
+                      const foundAnswer = getFoundAnswer(answer.see);
+
+                      return renderLink({
+                        index,
+                        book: book.book,
+                        bookVerses: answer.bookVerses,
+                        question: foundAnswer.question,
+                        count: linkCount
+                      });
+                    }
 
                     return renderLink({
                       index,
                       book: book.book,
-                      bookVerses: answer.bookVerses,
-                      question: foundAnswer.question,
+                      ...answer,
                       count: linkCount
                     });
-                  }
+                  })}
 
-                  return renderLink({
-                    index,
-                    book: book.book,
-                    ...answer,
-                    count: linkCount
-                  });
-                })}
+                  {book.answers.map((answer, index) => {
+                    answerCount++;
 
-                {book.answers.map((answer, index) => {
-                  answerCount++;
+                    if (answer.see) {
+                      const foundAnswer = getFoundAnswer(answer.see);
 
-                  if (answer.see) {
-                    const foundBook = find(
-                      CONTRADICTIONS,
-                      book => book.book.toLowerCase() === answer.see[0]
-                    );
+                      const detailsKey = `${book.book}_${answer.bookVerses}`;
 
-                    const foundAnswer = find(
-                      foundBook.answers,
-                      answerData => answerData.bookVerses === answer.see[1]
-                    );
+                      const hideDetails = !details[detailsKey];
 
-                    const detailsKey = `${book.book}_${answer.bookVerses}`;
-
-                    const hideDetails = !details[detailsKey];
+                      return renderAnswer({
+                        index,
+                        book: book.book,
+                        ...foundAnswer,
+                        foundBookVerses: foundAnswer.bookVerses,
+                        bookVerses: answer.bookVerses,
+                        count: answerCount,
+                        hideDetails,
+                        toggleDetail() {
+                          setDetails({
+                            ...details,
+                            [detailsKey]: !details[detailsKey]
+                          });
+                        }
+                      });
+                    }
 
                     return renderAnswer({
                       index,
                       book: book.book,
-                      ...foundAnswer,
-                      foundBookVerses: foundAnswer.bookVerses,
-                      bookVerses: answer.bookVerses,
-                      count: answerCount,
-                      hideDetails,
-                      toggleDetail() {
-                        setDetails({
-                          ...details,
-                          [detailsKey]: !details[detailsKey]
-                        });
-                      }
+                      ...answer,
+                      count: answerCount
                     });
-                  }
-
-                  return renderAnswer({
-                    index,
-                    book: book.book,
-                    ...answer,
-                    count: answerCount
-                  });
-                })}
-              </div>
-            );
-          })}
-        </div>
+                  })}
+                </div>
+              );
+            })}
+          </div>
+        )}
       </ReadingContainer>
 
       <style jsx global>{`
@@ -578,6 +691,28 @@ const BibleContradictions = () => {
 
         .writing .link-target {
           color: rgba(0, 0, 0, 0.84);
+        }
+
+        .search {
+          align-items: center;
+          color: #bdbdbd;
+          display: flex;
+          justify-content: center;
+          margin: 20px 0;
+        }
+
+        .search__input {
+          margin-left: 10px;
+          width: 320px;
+        }
+
+        .search__input input {
+          text-align: center;
+        }
+
+        .highlight {
+          color: #039be5;
+          font-weight: bold;
         }
       `}</style>
     </Container>
