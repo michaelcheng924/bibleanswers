@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
+import Head from "next/head";
 import fetch from "isomorphic-unfetch";
 
 import { Container } from "../components/Container";
 import { ListItem } from "../components/ListItem";
 import TopLinks from "../components/TopLinks";
 import ReadingContainer from "../components/ReadingContainer";
+import Search from "../components/Search";
 
 const Title = ({ children }) => (
   <div className="title">
@@ -41,20 +43,6 @@ const PostsTagsContainer = ({ children }) => (
   </div>
 );
 
-const TagText = ({ children }) => (
-  <div className="tag-text">
-    {children}{" "}
-    <style jsx>{`
-      .tag-text {
-        color: #689f38;
-        cursor: pointer;
-        font-size: 18px;
-        margin-bottom: 6px;
-      }
-    `}</style>
-  </div>
-);
-
 const LinkTag = ({ children, href }) => (
   <a className="link-tag" href={href}>
     {children}{" "}
@@ -83,84 +71,40 @@ const MoreLink = ({ children, href }) => (
   </a>
 );
 
-const Home = ({ recentPosts = [], tags = [], postsCount }) => {
-  useEffect(() => {
-    var cx = "002602022467339721509:o7qkawmakey";
-    var gcse = document.createElement("script");
-    gcse.type = "text/javascript";
-    gcse.async = true;
-    gcse.src = "https://cse.google.com/cse.js?cx=" + cx;
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(gcse, s);
-
-    const placeholderInterval = setInterval(() => {
-      const searchBox = document.getElementById("gsc-i-id1");
-
-      if (searchBox) {
-        searchBox.placeholder = "Search Bible Answers";
-        clearInterval(placeholderInterval);
-      }
-    }, 50);
-  });
+const Home = ({ posts = [], tags = [] }) => {
+  const [search, setSearch] = useState("");
 
   return (
     <Container>
-      <title>
-        Bible Answers | Explaining and Defending the Christian Worldview
-      </title>
+      <Head>
+        <title>
+          Bible Answers | Explaining and Defending the Christian Worldview
+        </title>
+      </Head>
 
       <TopLinks />
 
       <PostsTagsContainer>
         <ReadingContainer style={{ padding: 0, width: "initial" }}>
-          <div style={{ marginTop: 20 }}>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: "<gcse:searchbox></gcse:searchbox>"
-              }}
-              style={{ width: 320, margin: "0 auto" }}
-            />
-
-            <div
-              dangerouslySetInnerHTML={{
-                __html: "<gcse:searchresults></gcse:searchresults>"
-              }}
-              style={{ margin: "0 auto" }}
-            />
-          </div>
-
-          <Title>Recent posts</Title>
-          {recentPosts.map(post => {
+          <Search
+            onChange={setSearch}
+            placeholder="Search Bible Answers"
+            value={search}
+          />
+          <Title>Posts</Title>
+          {posts.map(post => {
             return (
               <LinkTag key={post.url} href={post.url}>
                 <ListItem {...post} noAmp />
               </LinkTag>
             );
           })}
-          <center>
-            <MoreLink href="all-posts">All {postsCount} posts</MoreLink>
-          </center>
         </ReadingContainer>
 
         <ReadingContainer style={{ width: "initial" }}>
-          <Title style={{ padding: 0 }}>Tags</Title>
-          <ul>
-            {tags.map(tag => {
-              return (
-                <LinkTag key={tag.url} href={tag.url}>
-                  <li>
-                    <TagText>
-                      {tag.title} ({tag.posts_count})
-                    </TagText>
-                  </li>
-                </LinkTag>
-              );
-            })}
-          </ul>
           <MoreLink href="/contradictions-in-the-bible">
             "Contradictions" in the Bible
           </MoreLink>
-          <MoreLink href="/posts-in-progress">Posts in progress</MoreLink>
         </ReadingContainer>
       </PostsTagsContainer>
     </Container>
@@ -173,9 +117,8 @@ Home.getInitialProps = async function() {
   const data = await res.json();
 
   return {
-    recentPosts: data.recent_posts,
-    tags: data.tags,
-    postsCount: data.posts_count
+    posts: data.posts,
+    tags: data.tags
   };
 };
 

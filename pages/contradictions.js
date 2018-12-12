@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import { FaChevronUp, FaSearch } from "react-icons/fa";
-import { cloneDeep, find, findIndex, isArray, remove, some } from "lodash";
+import { cloneDeep, find, findIndex, remove, some } from "lodash";
 import TextField from "@material-ui/core/TextField";
 
 import { highlightText, matchesSearch } from "../utils/string";
@@ -9,6 +9,7 @@ import CONTRADICTIONS from "../constants/contradictions";
 import { Container } from "../components/Container";
 import { TitleSection } from "../components/TitleSection";
 import ReadingContainer from "../components/ReadingContainer";
+import Search from "../components/Search";
 
 function getFoundAnswer(see) {
   const foundBook = find(CONTRADICTIONS, book => {
@@ -169,15 +170,11 @@ const BibleContradictions = () => {
       />
 
       <ReadingContainer>
-        <div className="search">
-          <FaSearch />
-          <TextField
-            className="search__input"
-            onChange={e => setSearch(e.target.value)}
-            placeholder="Search by passage or keyword"
-            value={search}
-          />
-        </div>
+        <Search
+          onChange={setSearch}
+          placeholder="Search by passage or keyword"
+          value={search}
+        />
         {search ? (
           <div className="writing">
             <h3 className="first">Search results</h3>
@@ -519,23 +516,6 @@ const BibleContradictions = () => {
 
         .writing .link-target {
           color: rgba(0, 0, 0, 0.84);
-        }
-
-        .search {
-          align-items: center;
-          color: #bdbdbd;
-          display: flex;
-          justify-content: center;
-          margin: 20px 0;
-        }
-
-        .search__input {
-          margin-left: 10px;
-          width: 320px;
-        }
-
-        .search__input input {
-          text-align: center;
         }
 
         .highlight {

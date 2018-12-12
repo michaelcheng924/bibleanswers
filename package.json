@@ -32,7 +32,7 @@
     "react-amphtml": "git+https://git@github.com/michaelcheng924/react-amphtml.git",
     "react-dom": "^16.7.0-alpha",
     "react-icons": "^3.2.2",
-    "react-select": "^2.1.1",
+    "react-select": "^2.1.2",
     "react-simple-code-editor": "^0.7.1",
     "react-textarea-autosize": "^7.1.0-1",
     "styled-components": "^4.1.1"

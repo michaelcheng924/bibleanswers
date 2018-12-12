@@ -1,56 +1,41 @@
-import React, { Component } from "react";
-import { FaTimes, FaSearch } from "react-icons/fa";
+import { useState } from "react";
+import { FaSearch } from "react-icons/fa";
+import TextField from "@material-ui/core/TextField";
 
-class Search extends Component {
-  state = {
-    inputFocused: false
-  };
+const Search = ({ onChange, placeholder, value }) => {
+  const [focused, setFocused] = useState;
 
-  onChange = event => {
-    this.props.onChange(event.target.value);
-  };
+  return (
+    <div className="search">
+      <FaSearch color={focused ? "#039BE5" : "#bdbdbd"} />
+      <TextField
+        className="search__input"
+        onChange={e => onChange(e.target.value)}
+        onFocus={() => setFocused(true)}
+        onBlur={() => setFocused(false)}
+        placeholder={placeholder}
+        value={value}
+      />
 
-  render() {
-    const { inputFocused } = this.state;
-    const { search, showing, total } = this.props;
+      <style jsx global>{`
+        .search {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          margin: 20px 0;
+        }
 
-    return (
-      <div className="search-container">
-        <FaSearch
-          style={{
-            color: inputFocused ? "#039be5" : "rgba(0,0,0,.54)",
-            position: "relative",
-            top: 5
-          }}
-        />
-        <div>
-          <input
-            className="search"
-            onChange={this.onChange}
-            onFocus={() => this.setState({ inputFocused: true })}
-            onBlur={() => this.setState({ inputFocused: false })}
-            placeholder="Search"
-            style={{
-              borderBottom: inputFocused ? "1px solid #039be5" : ""
-            }}
-            value={search}
-          />
-          <div className="results">{`Showing ${showing}/${total} results`}</div>
-        </div>
-        {search ? (
-          <FaTimes
-            style={{
-              color: "#F44336",
-              cursor: "pointer",
-              position: "relative",
-              top: 5
-            }}
-            onClick={this.props.onClearSearch}
-          />
-        ) : null}
-      </div>
-    );
-  }
-}
+        .search__input {
+          margin-left: 10px;
+          width: 320px;
+        }
+
+        .search__input input {
+          text-align: center;
+        }
+      `}</style>
+    </div>
+  );
+};
 
 export default Search;
